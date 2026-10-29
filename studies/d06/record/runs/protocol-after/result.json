@@ -1,0 +1,8 @@
+{
+  "id": "protocol-after",
+  "status": "done",
+  "error": null,
+  "answer_match": false,
+  "answer_match_method": "recorded result; not a semantic judge",
+  "text": "Version 1 of the GridLens API will be shut down on **2027-08-25**.\n\nThis date is confirmed in the \"GridLens Release Notes, 2025 to 2026\" document (ID: `gridlens-release-notes`), which states under the GridLens 4.10 release section that requests to API version 1 paths now return a warning header stating the shutdown date. The document also notes in the GridLens 4.8 release that this shutdown date is stated in the API specification, and the last update to the release notes is dated 2026-08-25, aligning with the planned release cycle ending in August 2027."
+}

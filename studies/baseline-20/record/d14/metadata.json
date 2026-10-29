@@ -1,0 +1,20 @@
+{
+  "settings": {
+    "model": "qwen3.5:4b-q4_K_M",
+    "max_turns": 12
+  },
+  "started": "2026-10-24T15:49:58.490240+00:00",
+  "run_context": {
+    "id": "d14",
+    "question": "How many days of unused PTO can I carry over into the next calendar year?",
+    "kind": "full",
+    "environment": "E0",
+    "expected_answers": [
+      "10 days",
+      "ten days",
+      "80 hours",
+      "10 working days"
+    ],
+    "document_result_budget": 6000
+  }
+}

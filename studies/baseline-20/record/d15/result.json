@@ -1,0 +1,8 @@
+{
+  "id": "d15",
+  "status": "done",
+  "error": null,
+  "answer_match": true,
+  "answer_match_method": "archived fixture matcher; not a semantic judge",
+  "text": "Based on the retrieved documents, specifically the announcement titled \"Announcement: Three In-Office Days for Hybrid Teams\" (doc_id: `people-announcement-2026-05-office-days`), hybrid employees are required to work from their assigned office at least 3 days each week. The anchor days for these in-office requirements are **Tuesday, Wednesday, and Thursday**.\n\nThis policy update is effective starting June 1, 2026, replacing the previous expectation of two days.\n\n**Answer:** Tuesday, Wednesday, and Thursday.\n\n**Relevant Email ID:** `people-announcement-2026-05-office-days`"
+}

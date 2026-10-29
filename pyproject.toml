@@ -1,0 +1,28 @@
+[project]
+name = "agent-trace"
+version = "0.2.0"
+description = "Evidence-backed research on LLM tool routing, retrieval and prompt changes"
+requires-python = ">=3.11"
+dependencies = ["jsonschema>=4.20"]
+
+[project.optional-dependencies]
+test = ["pytest>=8"]
+
+[project.scripts]
+agent-trace = "agent_trace.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["agent_trace"]
+
+[tool.hatch.build.targets.wheel.force-include]
+"studies" = "agent_trace/studies"
+"datasets" = "agent_trace/datasets"
+"configs" = "agent_trace/configs"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

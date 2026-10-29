@@ -1,0 +1,21 @@
+{
+  "profile_version": 1,
+  "id": "baseline",
+  "label": "Original 20-question baseline",
+  "environment": "E0",
+  "system_prompt": "configs/prompts/E0.system.txt",
+  "system_sha256": "b4175ce770533e292335930b7fb969f5a8fbe615ef9584c207050207d6d88651",
+  "tool_catalogue": "configs/prompts/E0.tools.json",
+  "tool_catalogue_sha256": "3ad3e1b9966334b626bede0c2da97a83bd407a7dbe82ea6369393e3bc19df972",
+  "model": "qwen3.5:4b-q4_K_M",
+  "temperature": 0,
+  "think": false,
+  "num_ctx": 8192,
+  "max_turns": 12,
+  "token_budget": 400000,
+  "aux_json_mode": true,
+  "runtime": "agent_trace 0.2.0",
+  "historical_note": "15/20 refers to the original E0 prompt/tool descriptions; original batch did not save HTTP sampling parameters. Values above are explicit reproduction settings, not recovered HTTP evidence.",
+  "documents": "datasets/d06/docs",
+  "model_digest": "d8b0f5e9760cd1682034f292d7ef72ec46f432149be0df7574bf2d6e92e38c04"
+}

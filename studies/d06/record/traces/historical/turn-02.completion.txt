@@ -1,0 +1,7 @@
+The search results do not contain information about the shutdown date for Version 1 of the GridLens API. The emails returned are related to financial instruments (API Weekly Comment), operations calls, and congressional events, but none mention the GridLens API or its versioning/shutdown schedule.
+
+I will try a more specific search query focusing on "GridLens" and "shutdown".
+
+<<<TOOL_CALL>>>
+{"name":"search_emails","args":{"query":"GridLens shutdown date"}}
+<<<END_TOOL_CALL>>>

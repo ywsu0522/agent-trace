@@ -1,0 +1,8 @@
+{
+  "id": "d07",
+  "status": "done",
+  "error": null,
+  "answer_match": true,
+  "answer_match_method": "archived fixture matcher; not a semantic judge",
+  "text": "Cardinal Energy pays full salary for **5 working days** during jury duty.\n\nThis is confirmed in the **Employee Handbook (Section 10)**, which states: \"Employees are paid their regular salary for up to five working days of jury duty.\"\n\n**Evidence:**\n*   **Doc ID:** `employee-handbook`\n*   **Snippet:** \"Employees are paid their regular salary for up to five working days of jury duty. Employees must provide proof of jury service to People Operations within 10 business days of returning from service.\" (Section 10)"
+}

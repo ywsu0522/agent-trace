@@ -1,0 +1,8 @@
+{
+  "id": "replay-new-old",
+  "status": "decision_only",
+  "error": null,
+  "answer_match": null,
+  "answer_match_method": "recorded result; not a semantic judge",
+  "text": "The search results continue to show general API specifications, release notes, and architecture overviews, but still do not contain specific information regarding the shutdown date for GridLens API Version 1. The documents mention API version 2.1 as current, but lack deprecation notices or end-of-support dates for earlier versions. I will try searching for \"API v1\" specifically to see if there is a dedicated document or email thread about it.\n\n<<<TOOL_CALL>>>\n{\"name\":\"search_docs\",\"args\":{\"query\":\"API v1 shutdown\"}}\n<<<END_TOOL_CALL>>>"
+}

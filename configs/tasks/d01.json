@@ -1,0 +1,15 @@
+{
+  "id": "d01",
+  "question": "Who manages the Firmware team?",
+  "expected_answers": [
+    "Nadia Ferreira",
+    "Ferreira"
+  ],
+  "docs": "datasets/d06/docs",
+  "document_result_budget": 6000,
+  "reference": {
+    "doc_id": "org-chart",
+    "line": 33
+  },
+  "category": "direct"
+}

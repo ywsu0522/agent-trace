@@ -1,0 +1,7 @@
+The search results for "GridLens API v1 deprecated" returned emails from 2001 related to PIRA (Power Industry Research Association) and energy litigation, which are unrelated to the GridLens API shutdown date. The documents searched earlier (Release Notes, API Spec, FAQ) mention API version 2.1 as current but do not explicitly state when Version 1 was shut down.
+
+I will try searching for "API v1 sunset" or look for a specific document about API lifecycle management.
+
+<<<TOOL_CALL>>>
+{"name":"search_docs","args":{"query":"API v1 sunset date"}}
+<<<END_TOOL_CALL>>>

@@ -1,0 +1,32 @@
+[
+  {
+    "id": "E0",
+    "label": "原始 email_qa 示例",
+    "parent": null,
+    "sha256": "b4175ce770533e292335930b7fb969f5a8fbe615ef9584c207050207d6d88651"
+  },
+  {
+    "id": "E1",
+    "label": "將 interaction 示例改為 search_docs",
+    "parent": "E0",
+    "sha256": "734d91b737cc1dbd9ca025d1a1ff549bc8bb23061257289ceb2b67b7f055beec"
+  },
+  {
+    "id": "E2",
+    "label": "直接移除 interaction 示例",
+    "parent": "E0",
+    "sha256": "f6a835fb69c20b1ed858ed67a0592fce83bad4fe7926ccddeb5806753f03297b"
+  },
+  {
+    "id": "E3",
+    "label": "明確格式＋摘要限制，無 interaction 示例",
+    "parent": "E0",
+    "sha256": "69b57f6bc9df6b11f65d39199c3c1709cf5199fd8893eac007cead39394a60c1"
+  },
+  {
+    "id": "E4",
+    "label": "明確 read_doc 分頁描述",
+    "parent": "E3",
+    "sha256": "e22ad82e59eb0f4f59639dbc7eacdc407ac3507c5731d29fd174a32a12b37284"
+  }
+]

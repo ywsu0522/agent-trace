@@ -1,0 +1,17 @@
+{
+  "settings": {
+    "model": "qwen3.5:4b-q4_K_M",
+    "max_turns": 12
+  },
+  "started": "2026-10-24T15:47:50.427846+00:00",
+  "run_context": {
+    "id": "d13",
+    "question": "Above what amount does a single expense need approval from my department's vice president?",
+    "kind": "full",
+    "environment": "E0",
+    "expected_answers": [
+      "750"
+    ],
+    "document_result_budget": 6000
+  }
+}

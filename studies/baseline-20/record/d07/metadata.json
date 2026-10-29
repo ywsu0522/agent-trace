@@ -1,0 +1,21 @@
+{
+  "settings": {
+    "model": "qwen3.5:4b-q4_K_M",
+    "max_turns": 12
+  },
+  "started": "2026-10-24T15:11:07.322458+00:00",
+  "run_context": {
+    "id": "d07",
+    "question": "For how many working days does Cardinal Energy pay full salary during jury duty?",
+    "kind": "full",
+    "environment": "E0",
+    "expected_answers": [
+      "10 working days",
+      "ten working days",
+      "10 days",
+      "ten days",
+      "10 business days"
+    ],
+    "document_result_budget": 6000
+  }
+}

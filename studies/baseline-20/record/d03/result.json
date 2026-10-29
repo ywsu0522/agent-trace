@@ -1,0 +1,8 @@
+{
+  "id": "d03",
+  "status": "done",
+  "error": null,
+  "answer_match": true,
+  "answer_match_method": "archived fixture matcher; not a semantic judge",
+  "text": "One client may make up to **600 requests per minute** to the GridLens Ingestion API.\n\nThis limit is defined in section 4.1 of the *GridLens Ingestion API Specification* (API-SPEC-002). Requests exceeding this limit receive a status code of 429 with a `Retry-After` header indicating the wait time in seconds. Enterprise customers can request higher limits through their Customer Success Manager.\n\n**Evidence:**\n*   **Document ID:** `gridlens-api-spec`\n*   **Section:** 4.1\n*   **Snippet:** \"Each client may make up to 600 requests per minute. A request over the limit receives status 429 with a `Retry-After` header that gives the number of seconds to wait.\""
+}

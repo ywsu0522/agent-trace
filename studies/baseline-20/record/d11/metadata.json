@@ -1,0 +1,20 @@
+{
+  "settings": {
+    "model": "qwen3.5:4b-q4_K_M",
+    "max_turns": 12
+  },
+  "started": "2026-10-24T15:37:53.505667+00:00",
+  "run_context": {
+    "id": "d11",
+    "question": "What is the recovery time objective for GridLens after a regional failure?",
+    "kind": "full",
+    "environment": "E0",
+    "expected_answers": [
+      "4 hours",
+      "four hours",
+      "4 hour",
+      "4h"
+    ],
+    "document_result_budget": 6000
+  }
+}

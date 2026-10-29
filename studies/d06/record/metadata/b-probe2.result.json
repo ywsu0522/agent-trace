@@ -1,0 +1,18 @@
+{
+  "condition": "B_document_example",
+  "trial": "probe2",
+  "tool_executed": false,
+  "prompt_course_tokens": 1007,
+  "selection": "search_docs",
+  "parse_error": null,
+  "tool_call": {
+    "name": "search_docs",
+    "args": {
+      "query": "GridLens API version 1 shutdown"
+    }
+  },
+  "response": "I need to find information about the shutdown date for Version 1 of the GridLens API. I will search for relevant documents or emails regarding this topic.\n\n<<<TOOL_CALL>>>\n{\"name\":\"search_docs\",\"args\":{\"query\":\"GridLens API version 1 shutdown\"}}\n<<<END_TOOL_CALL>>>",
+  "error": null,
+  "seconds": 17.04,
+  "events": "B_document_example_probe2\\ollama-chat-20261028T020151Z-68d8e84e.jsonl"
+}

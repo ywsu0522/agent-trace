@@ -1,0 +1,8 @@
+{
+  "id": "d05",
+  "status": "done",
+  "error": null,
+  "answer_match": true,
+  "answer_match_method": "archived fixture matcher; not a semantic judge",
+  "text": "Based on the retrieved document \"Project Kestrel Brief\" (doc_id: project-kestrel-brief), the technical lead for Project Kestrel is **Jonas Weber**, a Senior Data Scientist.\n\n**Answer:** Jonas Weber (Senior Data Scientist)\n**Evidence ID:** project-kestrel-brief"
+}

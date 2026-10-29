@@ -1,0 +1,8 @@
+{
+  "id": "d13",
+  "status": "done",
+  "error": null,
+  "answer_match": true,
+  "answer_match_method": "archived fixture matcher; not a semantic judge",
+  "text": "Based on the document \"Finance Memo: Expense Approval Thresholds\" (doc_id: finance-memo-2026-08-approval-thresholds), effective from 2026-09-01, any single expense over **$750** requires approval from your department's vice president.\n\nThis change was made because travel spending in the first half of 2026 ran 14 percent over plan, with most of the overrun coming from individual expenses between $750 and $1,000 that previously only required a manager's approval.\n\n**Answer:** Over $750."
+}

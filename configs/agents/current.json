@@ -1,0 +1,21 @@
+{
+  "profile_version": 1,
+  "id": "current",
+  "label": "Current concise research configuration",
+  "environment": "E4",
+  "system_prompt": "configs/prompts/E4.system.txt",
+  "system_sha256": "e22ad82e59eb0f4f59639dbc7eacdc407ac3507c5731d29fd174a32a12b37284",
+  "tool_catalogue": "configs/prompts/E4.tools.json",
+  "tool_catalogue_sha256": "929ae0d6f0c1198e0c9aa8e705f6cdcee969393b2258a4683882227227ae837d",
+  "model": "qwen3.5:4b-q4_K_M",
+  "temperature": 0,
+  "think": false,
+  "num_ctx": 8192,
+  "max_turns": 12,
+  "token_budget": 400000,
+  "aux_json_mode": true,
+  "runtime": "agent_trace 0.2.0",
+  "historical_note": "Default for future research; E3 and all earlier stages remain archived. No 20-question score is available for E4.",
+  "documents": "datasets/d06/docs",
+  "model_digest": "d8b0f5e9760cd1682034f292d7ef72ec46f432149be0df7574bf2d6e92e38c04"
+}

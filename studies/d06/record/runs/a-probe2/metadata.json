@@ -1,0 +1,334 @@
+{
+  "settings": {
+    "model": "qwen3.5:4b-q4_K_M",
+    "base_url": "http://127.0.0.1:11434",
+    "temperature": 0,
+    "think": false,
+    "num_ctx": 8192,
+    "timeout": 600,
+    "max_turns": 12
+  },
+  "question": "On what date will version 1 of the GridLens API be shut down?",
+  "conditions": [
+    "A_original_email",
+    "B_document_example",
+    "C_no_example"
+  ],
+  "probes": [
+    {
+      "condition": "A_original_email",
+      "trial": "probe1",
+      "tool_executed": false,
+      "prompt_course_tokens": 1006,
+      "selection": "email_qa",
+      "parse_error": null,
+      "tool_call": {
+        "name": "email_qa",
+        "args": {
+          "question": "When will version 1 of the GridLens API be shut down?"
+        }
+      },
+      "response": "I need to find information about the shutdown date for Version 1 of the GridLens API. I will search for relevant emails and documents.\n\n<<<TOOL_CALL>>>\n{\"name\":\"email_qa\",\"args\":{\"question\":\"When will version 1 of the GridLens API be shut down?\"}}\n<<<END_TOOL_CALL>>>",
+      "error": null,
+      "seconds": 56.56,
+      "events": "A_original_email_probe1\\ollama-chat-20261028T020006Z-67235e47.jsonl"
+    },
+    {
+      "condition": "B_document_example",
+      "trial": "probe1",
+      "tool_executed": false,
+      "prompt_course_tokens": 1007,
+      "selection": "search_docs",
+      "parse_error": null,
+      "tool_call": {
+        "name": "search_docs",
+        "args": {
+          "query": "GridLens API version 1 shutdown"
+        }
+      },
+      "response": "I need to find information about the shutdown date for Version 1 of the GridLens API. I will search for relevant documents or emails regarding this topic.\n\n<<<TOOL_CALL>>>\n{\"name\":\"search_docs\",\"args\":{\"query\":\"GridLens API version 1 shutdown\"}}\n<<<END_TOOL_CALL>>>",
+      "error": null,
+      "seconds": 18.01,
+      "events": "B_document_example_probe1\\ollama-chat-20261028T020103Z-606edff1.jsonl"
+    },
+    {
+      "condition": "C_no_example",
+      "trial": "probe1",
+      "tool_executed": false,
+      "prompt_course_tokens": 917,
+      "selection": "parse_error",
+      "parse_error": "Malformed tool call: Tool call requires string \"name\" and object \"args\"; nest all tool parameters inside \"args\", not beside \"name\"",
+      "tool_call": null,
+      "response": "To answer this question, I need to find information regarding the shutdown date for Version 1 of the GridLens API. I will search for relevant documents or emails containing this specific detail.\n\n<<<TOOL_CALL>>>\n{\"query\":\"GridLens API version 1 shutdown date\", \"k\":5}\n<<<END_TOOL_CALL>>>",
+      "error": null,
+      "seconds": 16.57,
+      "events": "C_no_example_probe1\\ollama-chat-20261028T020121Z-ac44ecf5.jsonl"
+    },
+    {
+      "condition": "C_no_example",
+      "trial": "probe2",
+      "tool_executed": false,
+      "prompt_course_tokens": 917,
+      "selection": "parse_error",
+      "parse_error": "Malformed tool call: Tool call requires string \"name\" and object \"args\"; nest all tool parameters inside \"args\", not beside \"name\"",
+      "tool_call": null,
+      "response": "To answer this question, I need to find information regarding the shutdown date for Version 1 of the GridLens API. I will search for relevant documents or emails containing this specific detail.\n\n<<<TOOL_CALL>>>\n{\"query\":\"GridLens API version 1 shutdown date\", \"k\":5}\n<<<END_TOOL_CALL>>>",
+      "error": null,
+      "seconds": 13.59,
+      "events": "C_no_example_probe2\\ollama-chat-20261028T020138Z-8a89c814.jsonl"
+    },
+    {
+      "condition": "B_document_example",
+      "trial": "probe2",
+      "tool_executed": false,
+      "prompt_course_tokens": 1007,
+      "selection": "search_docs",
+      "parse_error": null,
+      "tool_call": {
+        "name": "search_docs",
+        "args": {
+          "query": "GridLens API version 1 shutdown"
+        }
+      },
+      "response": "I need to find information about the shutdown date for Version 1 of the GridLens API. I will search for relevant documents or emails regarding this topic.\n\n<<<TOOL_CALL>>>\n{\"name\":\"search_docs\",\"args\":{\"query\":\"GridLens API version 1 shutdown\"}}\n<<<END_TOOL_CALL>>>",
+      "error": null,
+      "seconds": 17.04,
+      "events": "B_document_example_probe2\\ollama-chat-20261028T020151Z-68d8e84e.jsonl"
+    },
+    {
+      "condition": "A_original_email",
+      "trial": "probe2",
+      "tool_executed": false,
+      "prompt_course_tokens": 1006,
+      "selection": "email_qa",
+      "parse_error": null,
+      "tool_call": {
+        "name": "email_qa",
+        "args": {
+          "question": "When will version 1 of the GridLens API be shut down?"
+        }
+      },
+      "response": "I need to find information about the shutdown date for Version 1 of the GridLens API. I will search for relevant emails and documents.\n\n<<<TOOL_CALL>>>\n{\"name\":\"email_qa\",\"args\":{\"question\":\"When will version 1 of the GridLens API be shut down?\"}}\n<<<END_TOOL_CALL>>>",
+      "error": null,
+      "seconds": 17.24,
+      "events": "A_original_email_probe2\\ollama-chat-20261028T020208Z-7fcd6ea3.jsonl"
+    },
+    {
+      "condition": "C_no_example",
+      "trial": "probe3",
+      "tool_executed": false,
+      "prompt_course_tokens": 917,
+      "selection": "parse_error",
+      "parse_error": "Malformed tool call: Tool call requires string \"name\" and object \"args\"; nest all tool parameters inside \"args\", not beside \"name\"",
+      "tool_call": null,
+      "response": "To answer this question, I need to find information regarding the shutdown date for Version 1 of the GridLens API. I will search for relevant documents or emails containing this specific detail.\n\n<<<TOOL_CALL>>>\n{\"query\":\"GridLens API version 1 shutdown date\", \"k\":5}\n<<<END_TOOL_CALL>>>",
+      "error": null,
+      "seconds": 29.93,
+      "events": "C_no_example_probe3\\ollama-chat-20261028T020822Z-78ead991.jsonl"
+    }
+  ],
+  "runs": [
+    {
+      "condition": "A_original_email",
+      "trial": "full_first_response",
+      "first_response": {
+        "selection": "email_qa",
+        "parse_error": null,
+        "tool_call": {
+          "name": "email_qa",
+          "args": {
+            "question": "When will version 1 of the GridLens API be shut down?"
+          }
+        }
+      },
+      "first_document_turn": 2,
+      "tool_sequence": [
+        "email_qa",
+        "search_docs",
+        "search_emails",
+        "search_docs",
+        "search_docs"
+      ],
+      "tool_events": [
+        {
+          "turn": 1,
+          "name": "email_qa",
+          "args": {
+            "question": "When will version 1 of the GridLens API be shut down?"
+          }
+        },
+        {
+          "turn": 2,
+          "name": "search_docs",
+          "args": {
+            "query": "GridLens API version 1 shutdown date"
+          }
+        },
+        {
+          "turn": 3,
+          "name": "search_emails",
+          "args": {
+            "query": "GridLens API version 1 shutdown",
+            "k": 5
+          }
+        },
+        {
+          "turn": 4,
+          "name": "search_docs",
+          "args": {
+            "query": "GridLens API deprecation end of support"
+          }
+        },
+        {
+          "turn": 5,
+          "name": "search_docs",
+          "args": {
+            "query": "GridLens API v1 end of life"
+          }
+        }
+      ],
+      "agent_requests": 6,
+      "aux_requests": 4,
+      "status": "done",
+      "text": "Based on the retrieved documents and emails, there is no information available regarding a shutdown date for Version 1 of the GridLens API. The available documentation focuses on API version 2.1 (current as of early 2026) and recent releases up to August 2026, but does not mention any deprecation or end-of-life schedule for an older Version 1.\n\n**Answer:** There is no evidence in the retrieved documents or emails stating a shutdown date for GridLens API Version 1. The available information only confirms that API Version 2.1 is currently active and ships with GridLens 4.8.",
+      "answer_match": false,
+      "doc_result_tokens": 2635,
+      "error": null,
+      "seconds": 348.63,
+      "events": "A_original_email_full\\ollama-chat-20261028T020225Z-f09e1889.jsonl",
+      "conversation": "A_original_email_full\\ollama-chat-20261028T020225Z-f09e1889.json"
+    },
+    {
+      "condition": "B_document_example",
+      "trial": "full_first_response",
+      "first_response": {
+        "selection": "search_docs",
+        "parse_error": null,
+        "tool_call": {
+          "name": "search_docs",
+          "args": {
+            "query": "GridLens API version 1 shutdown"
+          }
+        }
+      },
+      "first_document_turn": 1,
+      "tool_sequence": [
+        "search_docs",
+        "search_docs",
+        "search_emails"
+      ],
+      "tool_events": [
+        {
+          "turn": 1,
+          "name": "search_docs",
+          "args": {
+            "query": "GridLens API version 1 shutdown"
+          }
+        },
+        {
+          "turn": 2,
+          "name": "search_docs",
+          "args": {
+            "query": "GridLens API version 1 deprecation"
+          }
+        },
+        {
+          "turn": 3,
+          "name": "search_emails",
+          "args": {
+            "query": "GridLens API version 1 deprecate"
+          }
+        }
+      ],
+      "agent_requests": 4,
+      "aux_requests": 0,
+      "status": "done",
+      "text": "The search results for \"GridLens API version 1 deprecate\" returned emails from 2001 related to PIRA (Platts International Research Association) and crude oil/API data, which are unrelated to the internal GridLens product API versions discussed in the documents. The retrieved documents consistently show that the current active API specification is **Version 2.1** (as of February 2026), but there is no mention of a specific shutdown date for Version 1 in either the search results or the document snippets provided.\n\nSince the search results do not contain information about the shutdown date for GridLens API v1, and the available documents only confirm that v2.1 is the current version without explicitly stating when v1 was shut down (it may have been deprecated long ago or the notice might be in a different format), I cannot provide a specific date based on the retrieved evidence.\n\n**Answer:** Based on the available evidence, there is no information regarding the shutdown date for GridLens API Version 1. The latest documented API specification is Version 2.1 (API-SPEC-002), but no deprecation notice or shutdown date for v1 has been found in the retrieved documents or emails.",
+      "answer_match": false,
+      "doc_result_tokens": 1758,
+      "error": null,
+      "seconds": 344.58,
+      "events": "B_document_example_full\\ollama-chat-20261028T020852Z-53993238.jsonl",
+      "conversation": "B_document_example_full\\ollama-chat-20261028T020852Z-53993238.json"
+    }
+  ],
+  "historical_first_tool": "search_emails",
+  "historical_status": "done",
+  "complete": true,
+  "source_hashes": {
+    "cs329z_hw1/agent/protocol.py": "1e3a57d2f0959875852beaf2e41597e33e58f769a356279c5e88c8e514034f86",
+    "cs329z_hw1/agent/session.py": "99df6739a59641a8bc5eb2ce9abcadd248e0c473c66923a349f206a8311b9e11",
+    "cs329z_hw1/agent/tools.py": "25a87ceb7512be8ea5ae66168571721a0d4131603e0934e3663c5dc7e9dd4245",
+    "cs329z_hw1/agent/registry.py": "05e2031f55653a1f03240ab444a9feafda9ef730424290b186f01e5dcc727632",
+    "cs329z_hw1/pipelines/doc_retrieval.py": "53ae134d7511343a3b5114ad826f3add9593e606b612de289f9b1163187ecc5d",
+    "cs329z_hw1/pipelines/bm25.py": "55934c4610756db1d18d31f857f77029c51348bcb478de9e0930ffacf4d0a07a",
+    "cs329z_hw1/llm_ollama.py": "aeb53f8a534387d131c9e5a4a29c5c8d3a3d98accd6923777eb4c3d2d165ed3d"
+  },
+  "ollama_version": {
+    "version": "0.40.8"
+  },
+  "model_tag": {
+    "name": "qwen3.5:4b-q4_K_M",
+    "model": "qwen3.5:4b-q4_K_M",
+    "modified_at": "2026-10-09T00:18:30.3067336+08:00",
+    "size": 3324173934,
+    "digest": "d8b0f5e9760cd1682034f292d7ef72ec46f432149be0df7574bf2d6e92e38c04",
+    "details": {
+      "parent_model": "model.gguf",
+      "format": "gguf",
+      "family": "qwen35",
+      "families": [
+        "qwen35"
+      ],
+      "parameter_size": "4.2B",
+      "quantization_level": "Q4_K_M",
+      "context_length": 262144,
+      "embedding_length": 2560,
+      "runner": "llamacpp"
+    },
+    "capabilities": [
+      "completion",
+      "vision",
+      "tools",
+      "thinking"
+    ]
+  },
+  "seconds": 892.68,
+  "verification": {
+    "source_hashes_unchanged": true,
+    "first_requests_verified": 9,
+    "first_requests_contain_only_system_and_question": true,
+    "unique_first_responses": {
+      "A_original_email": 1,
+      "B_document_example": 1,
+      "C_no_example": 1
+    },
+    "native_first_prompt_tokens": {
+      "A_original_email": [
+        996,
+        996,
+        996
+      ],
+      "B_document_example": [
+        994,
+        994,
+        994
+      ],
+      "C_no_example": [
+        913,
+        913,
+        913
+      ]
+    }
+  },
+  "run_context": {
+    "id": "a-probe2",
+    "question": "On what date will version 1 of the GridLens API be shut down?",
+    "kind": "probe",
+    "environment": "E0",
+    "expected_answers": [
+      "2026-12-31"
+    ],
+    "document_result_budget": null
+  }
+}

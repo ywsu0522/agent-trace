@@ -1,0 +1,8 @@
+{
+  "id": "protocol-before",
+  "status": "done",
+  "error": null,
+  "answer_match": false,
+  "answer_match_method": "recorded result; not a semantic judge",
+  "text": "Based on the retrieved documents and emails, there is no information available regarding a shutdown date for Version 1 of the GridLens API. The available documentation focuses on API version 2.1 (current as of early 2026) and recent releases up to August 2026, but does not mention any deprecation or end-of-life schedule for an older Version 1.\n\n**Answer:** There is no evidence in the retrieved documents or emails stating a shutdown date for GridLens API Version 1. The available information only confirms that API Version 2.1 is currently active and ships with GridLens 4.8."
+}

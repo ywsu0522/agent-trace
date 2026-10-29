@@ -1,0 +1,8 @@
+{
+  "id": "d11",
+  "status": "done",
+  "error": null,
+  "answer_match": false,
+  "answer_match_method": "archived fixture matcher; not a semantic judge",
+  "text": "Based on the search results, there is no specific Recovery Time Objective (RTO) defined for GridLens after a regional failure in the retrieved documents or emails. The \"GridLens Architecture Overview\" document mentions system scale and data rates but does not include SLA or disaster recovery metrics. The emails returned are unrelated to GridLens's technical resilience specifications.\n\n**Answer:** There is no publicly available Recovery Time Objective (RTO) for GridLens after a regional failure in the provided company documents or internal communications."
+}

@@ -1,0 +1,19 @@
+{
+  "settings": {
+    "model": "qwen3.5:4b-q4_K_M",
+    "max_turns": 12
+  },
+  "started": "2026-10-24T15:20:30.464052+00:00",
+  "run_context": {
+    "id": "d08",
+    "question": "What is the phone number of the anonymous ethics hotline?",
+    "kind": "full",
+    "environment": "E0",
+    "expected_answers": [
+      "1-800-555-0142",
+      "800-555-0142",
+      "555-0142"
+    ],
+    "document_result_budget": 6000
+  }
+}

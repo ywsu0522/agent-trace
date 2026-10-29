@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "raw_hashes": {
+    "historical": "dae1222e30cd4333e19ba4a95a0dc9bf2e209baf01107a724adc7ed990daea80",
+    "a-probe1": "e90e2a167bd811ba0c582817731cde666cdd27aa765c6150043c3366149bef67",
+    "a-probe2": "89dc8c8a3ce5622bba664e510871cb31b4e134e6774fd63fea09e1f85ff21604",
+    "a-full": "ffdfb0cc981b43e52cdcf4c6d650ceabd771b1c03f33209f0d5c46181055ed55",
+    "b-probe1": "dcd5dcbbe519bbbf1b650acc31e631ce592e7ba567806a547623f429105a444b",
+    "b-probe2": "9a02cc2a7eaf0492fd8ac833c14cd47f979e8610c7d7632e85d4841e9ca5f7e0",
+    "b-full": "17fa2cf1d89239da0b3b22bfb15147582d66397290b9a2d7039cb9b32c9d67ac",
+    "c-probe1": "8da840be5f99125e4c90870449eaedb109f05eb2393e0a6995785360ab713db2",
+    "c-probe2": "2d20db19597b0a03a75c0a6497c49907bd73d9ef352b99429968288a56c42bca",
+    "c-probe3": "c9134e0f6a6928b60c215f6afd373b0c84fe303f39bfbca6b78df42c4903b890",
+    "protocol-before": "642db756aaff3b8ead7473582d17861ac4ade99546b9ac7d420072cf0956e66e",
+    "protocol-after": "3dd3c2f7904ba68103b79455d6b04cbdbd14a9953d27a847e064f27c684039a3",
+    "paging-after": "196489fb5a170626c6d62b28c6e184de856c85a24be4024edd041a484ce2269e",
+    "replay-old-old": "3287696ab90182aee3fd21fe9956dc989de193ac8893cf6c0ddf6118823ebada",
+    "replay-old-new": "1832455a1936a0c42a8d3fb305b90ed073ee9b5a9e6d56c0c0d5bd8b1fa7f551",
+    "replay-new-new": "ca6224a517a296959412ae380831f6afe9038da8c1a35c321fa25ee05c63881d",
+    "replay-new-old": "51d0aed2d2b305110555e38885b38f97f69b6737bff7578063b38556cf53588f"
+  },
+  "raw_copies_verified": true,
+  "request_exports_verified": true,
+  "native_http_requests": 39,
+  "application_only_requests": 7
+}

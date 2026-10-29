@@ -1,0 +1,17 @@
+{
+  "settings": {
+    "model": "qwen3.5:4b-q4_K_M",
+    "max_turns": 12
+  },
+  "started": "2026-10-24T15:53:16.659085+00:00",
+  "run_context": {
+    "id": "d16",
+    "question": "How much is the weekly stipend for the primary on-call engineer?",
+    "kind": "full",
+    "environment": "E0",
+    "expected_answers": [
+      "500"
+    ],
+    "document_result_budget": 6000
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "settings": {
+    "model": "qwen3.5:4b-q4_K_M",
+    "max_turns": 12
+  },
+  "started": "2026-10-24T14:44:09.772008+00:00",
+  "run_context": {
+    "id": "d02",
+    "question": "What is the minimum password length under the IT and Security Policy?",
+    "kind": "full",
+    "environment": "E0",
+    "expected_answers": [
+      "14 characters",
+      "14 character",
+      "fourteen characters",
+      "14 chars",
+      "fourteen",
+      "14"
+    ],
+    "document_result_budget": 6000
+  }
+}

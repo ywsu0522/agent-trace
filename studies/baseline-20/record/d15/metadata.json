@@ -1,0 +1,18 @@
+{
+  "settings": {
+    "model": "qwen3.5:4b-q4_K_M",
+    "max_turns": 12
+  },
+  "started": "2026-10-24T15:51:48.188578+00:00",
+  "run_context": {
+    "id": "d15",
+    "question": "Which days of the week are hybrid employees required to work from the office?",
+    "kind": "full",
+    "environment": "E0",
+    "expected_answers": [
+      "Tuesday, Wednesday, and Thursday",
+      "Wednesday"
+    ],
+    "document_result_budget": 6000
+  }
+}

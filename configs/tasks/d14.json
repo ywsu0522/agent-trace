@@ -1,0 +1,17 @@
+{
+  "id": "d14",
+  "question": "How many days of unused PTO can I carry over into the next calendar year?",
+  "expected_answers": [
+    "10 days",
+    "ten days",
+    "80 hours",
+    "10 working days"
+  ],
+  "docs": "datasets/d06/docs",
+  "document_result_budget": 6000,
+  "reference": {
+    "doc_id": "people-announcement-2025-11-pto-carryover",
+    "line": 11
+  },
+  "category": "superseded"
+}

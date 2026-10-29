@@ -1,0 +1,8 @@
+{
+  "id": "d10",
+  "status": "done",
+  "error": null,
+  "answer_match": true,
+  "answer_match_method": "archived fixture matcher; not a semantic judge",
+  "text": "The postmortem draft is due within **5 business days** after the incident is resolved.\n\nThis information is found in the \"On-Call and Incident Process\" document (ENG-300), which states: \"The draft is due within 5 business days of resolution.\"\n\n**Relevant Email ID:** `oncall-incident-process`"
+}

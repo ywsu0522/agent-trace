@@ -1,0 +1,8 @@
+{
+  "id": "d02",
+  "status": "done",
+  "error": null,
+  "answer_match": true,
+  "answer_match_method": "archived fixture matcher; not a semantic judge",
+  "text": "The minimum password length under the IT and Security Policy is **14 characters**.\n\nThis is stated in Section 3 (\"Accounts and passwords\") of the policy document (doc_id: it-security-policy): \"Passwords must be at least 14 characters long.\"\n\n**Email ID:** N/A (Information found in company policy document)\n**Document ID:** it-security-policy"
+}

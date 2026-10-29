@@ -1,0 +1,17 @@
+{
+  "settings": {
+    "model": "qwen3.5:4b-q4_K_M",
+    "max_turns": 12
+  },
+  "started": "2026-10-24T15:59:38.311924+00:00",
+  "run_context": {
+    "id": "d18",
+    "question": "My laptop was stolen. What phone extension do I call to report it?",
+    "kind": "full",
+    "environment": "E0",
+    "expected_answers": [
+      "4911"
+    ],
+    "document_result_budget": 6000
+  }
+}

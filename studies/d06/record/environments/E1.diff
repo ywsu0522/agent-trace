@@ -1,0 +1,14 @@
+--- E0
++++ E1
+@@ -43,9 +43,9 @@
+ Parameters JSON Schema: {"type": "object", "properties": {"question": {"type": "string"}}, "required": ["question"], "additionalProperties": false}
+ 
+ Example interaction (format demonstration only):
+-User: Use email_qa to find the deadline for the Harbor migration.
++User: Use search_docs to find the deadline for the Harbor migration.
+ Assistant:
+ <<<TOOL_CALL>>>
+-{"name":"email_qa","args":{"question":"What is the deadline for the Harbor migration?"}}
++{"name":"search_docs","args":{"query":"What is the deadline for the Harbor migration?"}}
+ <<<END_TOOL_CALL>>>
+ End of example. Respond to the actual user request using the same tool-call format when calling a tool.

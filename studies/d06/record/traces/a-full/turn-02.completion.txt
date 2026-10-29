@@ -1,0 +1,5 @@
+The initial search did not yield a direct answer. I will now search for company documents and policy updates regarding the GridLens API shutdown.
+
+<<<TOOL_CALL>>>
+{"name":"search_docs","args":{"query":"GridLens API version 1 shutdown date"}}
+<<<END_TOOL_CALL>>>

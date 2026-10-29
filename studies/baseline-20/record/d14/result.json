@@ -1,0 +1,8 @@
+{
+  "id": "d14",
+  "status": "done",
+  "error": null,
+  "answer_match": true,
+  "answer_match_method": "archived fixture matcher; not a semantic judge",
+  "text": "Based on the document \"Announcement: PTO Carryover Limit Raised\" (ID: `people-announcement-2025-11-pto-carryover`), you may carry over up to **10 days** (80 hours) of unused PTO into the next calendar year. This rule applies starting with the rollover from 2025 into 2026, and carried-over PTO must be used by June 30 of that year.\n\n**Email ID:** `people-announcement-2025-11-pto-carryover`"
+}

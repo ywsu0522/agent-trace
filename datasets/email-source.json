@@ -1,0 +1,7 @@
+{
+  "url": "https://web.stanford.edu/class/cs329z/hw1/emails.jsonl.gz",
+  "sha256": "eb7e4558f1a207e70593e545ff8cd75afff69415aef0348d2ba3b683cb251e9b",
+  "bytes": 19168094,
+  "emails": 26278,
+  "uncompressed_sha256": "906d0cbc2b8cbabc76d7706056414495fd11c6bcedebe52cc7bf4bf55161cdd6"
+}

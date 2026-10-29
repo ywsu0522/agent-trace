@@ -1,0 +1,17 @@
+{
+  "settings": {
+    "model": "qwen3.5:4b-q4_K_M",
+    "max_turns": 12
+  },
+  "started": "2026-10-24T14:45:27.713075+00:00",
+  "run_context": {
+    "id": "d03",
+    "question": "How many requests per minute may one client make to the GridLens Ingestion API?",
+    "kind": "full",
+    "environment": "E0",
+    "expected_answers": [
+      "600"
+    ],
+    "document_result_budget": 6000
+  }
+}

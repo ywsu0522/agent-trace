@@ -1,0 +1,14 @@
+{
+  "id": "d18",
+  "question": "My laptop was stolen. What phone extension do I call to report it?",
+  "expected_answers": [
+    "4911"
+  ],
+  "docs": "datasets/d06/docs",
+  "document_result_budget": 6000,
+  "reference": {
+    "doc_id": "it-security-policy",
+    "line": 57
+  },
+  "category": "lexical"
+}

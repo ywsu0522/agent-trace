@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>d06 · Agent 研究紀錄</title>
+<style>
+:root{color-scheme:light;--bg:#f5f6f8;--paper:#fff;--ink:#202a38;--muted:#526173;--line:#d5dde7;--accent:#164b70;--soft:#eaf2f8;--bad:#9e2937;--badbg:#fff0f1;--good:#21674d;--code:#f3f5f8}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.7 system-ui,"Microsoft JhengHei",sans-serif}main,header{max-width:1260px;margin:auto;padding:26px 32px}header{padding-bottom:10px}h1{font-size:30px;line-height:1.3;margin:8px 0}h2{font-size:22px;margin:0 0 16px}h3{font-size:18px;margin:22px 0 10px}p{margin:10px 0}a{color:var(--accent);text-underline-offset:3px}button,select,input{font:inherit;color:inherit}button,select{min-height:42px;border:1px solid var(--line);border-radius:6px;background:var(--paper);padding:7px 12px}button{cursor:pointer}button:hover,a.button:hover{background:var(--soft)}button[aria-selected=true]{background:var(--accent);color:white;border-color:var(--accent)}:focus-visible{outline:3px solid #b86b00;outline-offset:3px}label{display:flex;flex-direction:column;gap:5px;font-weight:600}select{width:100%;max-width:100%}pre{white-space:pre-wrap;overflow-wrap:anywhere;word-break:break-word;background:var(--code);border:1px solid var(--line);border-radius:6px;padding:16px;font:14px/1.65 ui-monospace,Consolas,monospace;margin:12px 0}code{font-family:ui-monospace,Consolas,monospace;font-size:.92em;overflow-wrap:anywhere}summary{cursor:pointer;padding:10px 0;font-weight:600;overflow-wrap:anywhere}details{border-bottom:1px solid var(--line)}details[open]>summary{color:var(--accent)}.muted{color:var(--muted)}.small{font-size:14px}.tabs,.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}.tabs{border-bottom:1px solid var(--line);padding:14px 0}.tabs button{border-bottom-left-radius:0;border-bottom-right-radius:0}.panel{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:24px;margin:18px 0}.tag{display:inline-block;font-size:13px;padding:2px 8px;border-radius:5px;background:var(--soft);color:var(--accent);margin:3px 5px 3px 0;overflow-wrap:anywhere}.bad{color:var(--bad);background:var(--badbg)}.good{color:var(--good)}.notice{border-left:4px solid var(--accent);padding:8px 16px;background:var(--soft);margin:16px 0}.danger{border-left-color:var(--bad);background:var(--badbg)}.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.controls{display:grid;grid-template-columns:1fr 1fr 2fr;gap:14px}.table{overflow-x:auto}table{border-collapse:collapse;width:100%;font-size:14px;text-align:left}th,td{border-bottom:1px solid var(--line);padding:10px 12px;vertical-align:top}th{background:var(--code);font-weight:600}td button{font-size:14px;text-align:left}.phase{position:relative;padding-left:24px;border-left:3px solid var(--line);margin:26px 0}.phase:before{content:"";position:absolute;left:-8px;top:8px;width:13px;height:13px;background:var(--accent);border-radius:50%}.phase h2{margin-bottom:8px}.phase ul{padding-left:24px}.workspace{display:grid;grid-template-columns:220px minmax(0,1fr);gap:18px}.turns{align-self:start;position:sticky;top:16px;display:grid;gap:8px}.turns button{text-align:left}.turns .selected{border:2px solid var(--accent);background:var(--soft)}.turn-content{min-width:0}.turn-content .panel:first-child{margin-top:0}.kv{display:grid;grid-template-columns:150px minmax(0,1fr);gap:6px 14px}.kv dt{color:var(--muted)}.kv dd{margin:0;overflow-wrap:anywhere}.completion{border-left:4px solid var(--accent)}.diff-add{color:#155a36;background:#e8f6ee}.diff-remove{color:#9e2937;background:#fff0f1}.diff-line{display:block;min-height:1.65em}.viewbar{display:flex;justify-content:space-between;gap:10px;align-items:center;flex-wrap:wrap}.message-label{font:13px ui-monospace,Consolas,monospace;letter-spacing:.03em}.hash{font:12px/1.7 ui-monospace,Consolas,monospace;overflow-wrap:anywhere}.skip{position:absolute;top:-90px;left:16px;background:white;padding:10px}.skip:focus{top:10px}.empty{padding:20px;background:var(--code)}[hidden]{display:none!important}.footer{padding:20px 0;color:var(--muted);font-size:13px}
+@media(max-width:800px){main,header{padding:20px 18px}.controls,.grid,.workspace{grid-template-columns:1fr}.turns{position:static;grid-template-columns:repeat(auto-fit,minmax(120px,1fr))}.panel{padding:18px}.kv{grid-template-columns:1fr}.kv dd{margin-bottom:8px}h1{font-size:26px}.tabs{gap:6px}.tabs button{font-size:14px;padding:7px 9px}pre{font-size:13px;padding:12px}.phase{padding-left:16px}.table td{min-width:90px}}
+@media print{header .tabs,.controls,.turns,button{display:none!important}.workspace{display:block}.panel{break-inside:avoid}body{background:white}main,header{max-width:none;padding:10px}}
+</style></head>
+<body><a class="skip" href="#content">跳至研究內容</a>
+<header><div class="muted small">AGENT TRACE · d06 STUDY</div><h1>d06：從 Prompt 修改追蹤 Agent 失敗路徑</h1><p id="question"></p><p class="muted small" id="scope"></p>
+<nav class="tabs" role="tablist" aria-label="研究紀錄頁面">
+<button role="tab" id="nav-timeline" aria-controls="timeline" aria-selected="true" data-page="timeline">實驗時間線</button>
+<button role="tab" id="nav-explorer" aria-controls="explorer" aria-selected="false" data-page="explorer">逐 turn 瀏覽</button>
+<button role="tab" id="nav-environments" aria-controls="environments" aria-selected="false" data-page="environments">環境與差異</button>
+<button role="tab" id="nav-method" aria-controls="method" aria-selected="false" data-page="method">名詞與證據界線</button></nav></header>
+<main id="content">
+<section id="timeline" role="tabpanel" aria-labelledby="nav-timeline"></section>
+<section id="explorer" role="tabpanel" aria-labelledby="nav-explorer" hidden>
+<div class="panel"><div class="controls"><label>實驗階段<select id="stage-filter"></select></label><label>紀錄類型<select id="kind-filter"><option value="all">全部類型</option><option value="full">完整 run</option><option value="probe">起手 probe</option><option value="replay">固定歷史 replay</option></select></label><label>選擇紀錄<select id="run-select"></select></label></div><div id="run-summary"></div></div>
+<div class="workspace"><nav id="turn-list" class="turns" aria-label="主 LLM turns"></nav><article id="turn-detail" class="turn-content" aria-live="polite"></article></div>
+</section>
+<section id="environments" role="tabpanel" aria-labelledby="nav-environments" hidden><div class="panel"><h2>比較實際送出的 system prompt</h2><p class="muted">依完整文字的 SHA-256 去重。每個快照包含當時的工具描述與 Parameters JSON Schema。</p><div class="grid"><label>修改前<select id="env-before"></select></label><label>修改後<select id="env-after"></select></label></div><div id="env-comparison"></div></div></section>
+<section id="method" role="tabpanel" aria-labelledby="nav-method" hidden>
+<div class="panel"><h2>閱讀方式與一致名詞</h2><dl class="kv"><dt>完整 run</dt><dd>agent 處理一次原始問題；可包含多個主 turn、工具執行與 aux requests。</dd><dt>Turn</dt><dd>一次主 LLM request / response。工具內的 aux 不另外增加主 turn。</dd><dt>Request / prompt</dt><dd>Request 的 messages 是模型輸入；含 system、原始問題、先前 completion 與工具 feedback。畫面中的「完整 request」不刪除重複歷史。</dd><dt>Completion</dt><dd>本頁指 response.message.content，也就是模型輸出的文字，可能包含工具呼叫。完整 HTTP response 若有保存，可另外展開。</dd><dt>Tool calling</dt><dd>分開記錄「解析出的意圖」與「實際執行狀態」。合法不代表執行過；執行成功不代表答案正確。</dd><dt>Probe / replay</dt><dd>只觀察一次主 request 的決策，不執行工具。replay 使用保存的歷史；原 turn 4 在重播 recorder 中是第 1 個 request。</dd><dt>Aux request</dt><dd>工具內部額外呼叫模型，例如 email_qa；完整輸入與 completion 另外展開，不能重複計入主 turns。</dd><dt>Tokens</dt><dd>Native 數值來自 Ollama HTTP response；課程估算來自字元數計算，兩者不同。未保存 native 數值的歷史紀錄標示「未記錄」。</dd></dl></div>
+<div class="panel"><h2>事實、解讀與限制</h2><ul><li>觀察：直接來自 request、completion、tool result 或原始設定。</li><li>解讀：研究者對錯誤模式的歸納，與原始輸出分開呈現。</li><li><code>done</code> 只表示流程結束。日期字串比對也不是完整語義評分。</li><li>本紀錄只涵蓋 d06 與既有本機模型測試；不是 Problem 9 的 20 題整體成績。</li><li>temperature=0 的重複呼叫不是獨立統計樣本，且控制重播的 completion 曾未逐字一致。</li><li>歷史紀錄未全部保存 HTTP JSON、模型 digest 或完整程式碼快照；未知處保持未記錄。應用程式 messages 不等於可直接觀測後端最終 token 序列或模型內部推理。</li><li>畫面只解讀資料文字，不執行 retrieved text 中的 HTML、Markdown 或指令。</li></ul><p><a href="integrity.json">完整性檢查</a> · <a href="records.json">完整結構化紀錄</a> · <a href="manifest.snapshot.json">研究 manifest 快照</a> · <a href="../README.md">GitHub README 與 Mermaid</a></p></div>
+</section><div class="footer">本頁離線可用；沒有外部資源、追蹤或模型請求。所有時間以 Asia/Taipei 顯示。</div>
+</main>
+<script id="research-data" type="application/json">__RESEARCH_DATA__</script>
+<script>
+'use strict';
+const data=JSON.parse(document.getElementById('research-data').textContent);
+const byId=Object.fromEntries(data.runs.map(r=>[r.id,r]));
+const envs=Object.fromEntries(data.environments.map(e=>[e.id,e]));
+const state={run:'historical',turn:1,detail:'completion',messages:'all',diffFull:false};
+const $=id=>document.getElementById(id);
+function el(tag,text,cls){const n=document.createElement(tag);if(text!==undefined)n.textContent=String(text);if(cls)n.className=cls;return n;}
+function add(parent,...nodes){for(const n of nodes)if(n)parent.append(n);return parent;}
+function pre(text){return el('pre',text===null||text===undefined?'未記錄':text);}
+function json(value){return pre(JSON.stringify(value,null,2));}
+function link(label,href){const a=el('a',label);a.href=href;return a;}
+function button(label,fn,cls){const b=el('button',label,cls);b.type='button';b.addEventListener('click',fn);return b;}
+function tag(text,bad=false){return el('span',text,'tag'+(bad?' bad':''));}
+function note(text,bad=false){return el('div',text,'notice'+(bad?' danger':''));}
+function details(label,content,open=false){const d=el('details');d.open=open;add(d,el('summary',label),content);return d;}
+function options(select,items,value){select.replaceChildren();for(const [v,t] of items){const o=el('option',t);o.value=v;select.append(o);}if(value!==undefined)select.value=value;}
+function datetime(value){return new Intl.DateTimeFormat('zh-TW',{timeZone:'Asia/Taipei',dateStyle:'medium',timeStyle:'short',hour12:false}).format(new Date(value));}
+function syncHash(){history.replaceState(null,'','#'+new URLSearchParams({run:state.run,turn:String(state.turn),view:state.detail}));}
+function showPage(name){for(const s of ['timeline','explorer','environments','method']){$(s).hidden=s!==name;$('nav-'+s).setAttribute('aria-selected',String(s===name));}if(name==='environments')renderEnvironments();}
+function activateTabs(container){const buttons=[...container.querySelectorAll('[role=tab]')];buttons.forEach((b,i)=>b.addEventListener('keydown',e=>{let next;if(e.key==='ArrowRight')next=(i+1)%buttons.length;else if(e.key==='ArrowLeft')next=(i+buttons.length-1)%buttons.length;else if(e.key==='Home')next=0;else if(e.key==='End')next=buttons.length-1;else return;e.preventDefault();buttons[next].focus();buttons[next].click();}));}
+document.querySelectorAll('[data-page]').forEach(b=>b.addEventListener('click',()=>showPage(b.dataset.page)));
+activateTabs(document.querySelector('header nav'));
+$('question').textContent=data.question;
+$('scope').textContent=`${data.counts.full_runs} 個完整 runs · ${data.runs.filter(r=>r.kind==='probe').length} 個起手 probes · ${data.runs.filter(r=>r.kind==='replay').length} 個固定歷史 replays · ${data.counts.main_requests} 次主 requests / ${data.counts.aux_requests} 次 aux`;
+function navigateRun(id,turn=1,view='completion'){
+ if(!byId[id])return;state.run=id;state.turn=turn;state.detail=view;
+ $('stage-filter').value='all';$('kind-filter').value='all';filterRuns();$('run-select').value=id;state.turn=turn;renderRun();showPage('explorer');
+ history.replaceState(null,'','#'+new URLSearchParams({run:id,turn:String(turn),view}));
+}
+function renderTimeline(){
+ const host=$('timeline');host.replaceChildren();
+ add(host,note('研究問題：如何讓模型在沒有偏向 email 的 interaction 示例下，產生合法 tool call，並讀到足以支持答案的文件內容？'));
+ const truth=el('div',undefined,'panel');add(truth,el('h2','先確認評判基準'),el('p','d06 的正確關閉日期是 2026-12-31，位於 gridlens-api-spec 第 120 行。此答案僅作事後分析，不加入模型的 system prompt。'),link('核對原始規格文件','evidence/ground-truth-api-spec.md'));host.append(truth);
+ for(const stage of data.stages){
+  const section=el('section',undefined,'phase');add(section,el('h2',stage.title),el('p','假設：'+stage.hypothesis),el('p','修改：'+stage.change));
+  const obs=el('ul');stage.observations.forEach(x=>obs.append(el('li',x)));add(section,el('h3','觀察'),obs,note('解讀與限制：'+stage.interpretation));
+  const actions=el('div',undefined,'row');for(const pin of stage.pins)actions.append(button(pin.label+' → T'+pin.turn,()=>navigateRun(pin.run,pin.turn)));
+  actions.append(button('比較環境文字',()=>{const [before,after]=stage.compare.map(id=>byId[id].environment);$('env-before').value=before;$('env-after').value=after;showPage('environments');}));
+  section.append(actions);
+  const table=el('table');add(table,el('caption','此階段的紀錄（probe / replay 不執行工具）'));const head=el('tr');['紀錄','類型／環境','主／aux','read_doc','觀察結果'].forEach(x=>head.append(el('th',x)));const thead=el('thead');thead.append(head);table.append(thead);const tbody=el('tbody');
+  for(const run of data.runs.filter(r=>r.stage===stage.id)){const row=el('tr');const first=el('td');first.append(button(run.label,()=>navigateRun(run.id)));add(row,first,el('td',`${run.kind} · ${run.environment}`),el('td',`${run.main_count} / ${run.aux_count}`),el('td',run.read_count),el('td',run.kind==='full'?(run.answer_match?'日期符合':'日期不符合'):(run.turns[0].decision)));tbody.append(row);}table.append(tbody);const wrap=el('div',undefined,'table');wrap.append(table);section.append(wrap);host.append(section);
+ }
+}
+options($('stage-filter'),[['all','全部實驗階段'],...data.stages.map(s=>[s.id,s.title])],'all');
+function filterRuns(){const stage=$('stage-filter').value,kind=$('kind-filter').value;const runs=data.runs.filter(r=>(stage==='all'||r.stage===stage)&&(kind==='all'||r.kind===kind));options($('run-select'),runs.map(r=>[r.id,r.label]),runs.some(r=>r.id===state.run)?state.run:runs[0]?.id);if(runs.length){state.run=$('run-select').value;state.turn=1;renderRun();}else{$('run-summary').replaceChildren(note('此篩選條件沒有紀錄。'));$('turn-list').replaceChildren();$('turn-detail').replaceChildren();}}
+for(const id of ['stage-filter','kind-filter'])$(id).addEventListener('change',()=>{filterRuns();syncHash();});
+$('run-select').addEventListener('change',()=>{state.run=$('run-select').value;state.turn=1;renderRun();syncHash();});
+function renderRun(){
+ const run=byId[state.run];if(!run)return;const host=$('run-summary');host.replaceChildren();
+ add(host,el('h2',run.label),el('p',run.notes),el('p',`${datetime(run.started)} · ${run.kind} · ${run.environment} · ${run.main_count} 主 requests / ${run.aux_count} aux`));
+ const status=el('div');add(status,tag('status: '+run.status),tag(run.kind==='full'?(run.answer_match?'日期字串符合':'日期字串不符合'):'未做答案評分',run.kind==='full'&&!run.answer_match),tag(`read_doc ${run.read_count} 次`),tag(`解析錯誤 ${run.parse_errors} 次`,run.parse_errors>0));host.append(status);
+ if(run.kind!=='full')host.append(note(run.kind==='replay'?`固定 ${run.history_from} 的原 turn ${run.source_turn} 歷史；以下是重播 request 1，工具不執行。`:'僅觀察第一個模型決策；解析出工具呼叫不代表工具已執行。'));
+ const model=el('div');const first=run.turns[0];const settings=first.http_payload?Object.fromEntries(Object.entries(first.http_payload).filter(([k])=>k!=='messages')):run.settings_recorded;
+ add(model,el('p',first.http_payload?'以下設定來自保存的實際 HTTP payload。':'以下僅為當時保存的設定；未記錄的參數無法事後補證。'),json(settings),el('p','Model digest：'+(run.model_digest||'未記錄')),json(run.source_hashes||'程式碼 hash 未記錄'),link('環境完整 system prompt',`environments/${run.environment}.system.txt`));
+ host.append(details('模型設定與環境快照',model));
+ const evidence=el('div');add(evidence,el('p','原始來源：'+run.source),el('p','SHA-256：'+run.raw_sha256,'hash'),link('原始 JSONL 副本',`evidence/${run.id}.jsonl`),el('span',' · '),link('GitHub 逐 turn Markdown',`traces/${run.id}.md`),el('span',' · '),link('當時 metadata',`metadata/${run.id}.json`));host.append(details('原始證據與來源',evidence));
+ const nav=$('turn-list');nav.replaceChildren();for(const t of run.turns){const b=button(`T${t.number} · ${t.decision}`,()=>{state.turn=t.number;renderRun();history.replaceState(null,'','#'+new URLSearchParams({run:run.id,turn:String(t.number),view:state.detail}));},t.number===state.turn?'selected':'');b.setAttribute('aria-current',t.number===state.turn?'step':'false');nav.append(b);}renderTurn();
+}
+function renderMessages(request,host,changed=0){
+ add(host,el('p',`完整 request 含 ${request.messages.length} 個 messages。以下文字為原始 content，沒有摘要或省略。`,'small'));
+ request.messages.forEach((m,i)=>{if(state.messages==='new'&&i<changed)return;const box=el('div');add(box,pre(m.content));const preview=m.content.replace(/\s+/g,' ').slice(0,90);host.append(details(`Message ${i} · ${m.role} · ${m.content.length} 字元 · ${preview}`,box,i===request.messages.length-1));});
+}
+function renderRequest(t,host,run){
+ const row=el('div',undefined,'row');for(const [value,label] of [['all','全部 messages'],['new','只看本輪新增']]){const b=button(label,()=>{state.messages=value;renderTurn();});b.setAttribute('aria-pressed',String(state.messages===value));row.append(b);}host.append(row);
+ if(state.messages==='new')host.append(note(`目前隱藏 ${t.unchanged_prefix} 個與前輪相同的前綴 messages；這些內容仍實際送給模型。點「全部 messages」可查看完整 request。`));
+ renderMessages(t,host,t.unchanged_prefix);
+ add(host,link('完整 request JSON',`traces/${run.id}/turn-${String(t.number).padStart(2,'0')}.request.json`));
+ if(t.http_payload)host.append(details('實際 HTTP request body（含完整 messages）',json(t.http_payload)));
+ else host.append(note('此歷史紀錄只保存 application messages，沒有保存完整 HTTP request body。'));
+}
+function renderTools(t,host,run){
+ add(host,el('h3','解析結果'),json({error:t.parse.error,tool_call:t.parse.tool_call}));
+ if(!t.tools.length){host.append(note(t.parse.error?'格式不合法，未執行工具。':t.parse.tool_call?'呼叫意圖已解析；此紀錄為 probe / replay，工具未執行。':'此 completion 沒有工具呼叫，完整 run 會由 agent loop 結束。',Boolean(t.parse.error)));return;}
+ for(const c of t.tools){add(host,el('h3',c.name),tag('執行狀態：'+c.status,c.status!=='ok'),json(c.args));
+  if(Array.isArray(c.value)){
+   host.append(el('p',`回傳 ${c.value.length} 筆結果。每筆可展開原文；下方保留完整原始結果字串。`));
+   c.value.forEach((doc,i)=>{const body=el('div');const text=doc.snippet??doc.preview??doc.body;const fields=Object.fromEntries(Object.entries(doc).filter(([key])=>!['snippet','preview','body'].includes(key)));add(body,json(fields));if(text!==undefined)add(body,el('p',doc.snippet!==undefined?'摘要原文':'預覽原文','small muted'),pre(text));body.append(details('此筆完整 JSON',json(doc)));host.append(details(`${i+1}. ${doc.doc_id||doc.id||'item'} · ${doc.title||doc.subject||''}`,body));});
+  }else if(c.value&&c.value.doc_id){add(host,note(`${c.value.doc_id}：第 ${c.value.start_line}–${c.value.end_line} 行／共 ${c.value.total_lines} 行。`),pre(c.value.text));}
+  host.append(details('完整工具結果（原始字串）',pre(c.content),!Array.isArray(c.value)&&!c.value?.doc_id));
+ }
+}
+function renderAux(t,host){
+ if(!t.aux.length){host.append(el('p','此 turn 沒有 aux requests。'));return;}
+ host.append(note('以下發生在工具內部，不增加主 turn。'));
+ for(const a of t.aux){const box=el('div');add(box,el('h3','Completion'),pre(a.completion));renderMessages(a,box);if(a.http_payload)box.append(details('完整 HTTP request body',json(a.http_payload)));if(a.http_response)box.append(details('完整 HTTP response',json(a.http_response)));host.append(details(`AUX ${a.number} · native prompt tokens ${a.native_prompt_tokens??'未記錄'}`,box));}
+}
+function renderTurn(){
+ const run=byId[state.run],t=run.turns[state.turn-1];if(!t)return;const host=$('turn-detail');host.replaceChildren();const panel=el('section',undefined,'panel');add(panel,el('h2',`Turn ${t.number} · ${t.decision}`));
+ const badges=el('div');add(badges,tag(`${t.messages.length} messages`),tag(`native prompt: ${t.native_prompt_tokens??'未記錄'}`),tag(`課程估算: ${t.course_prompt_tokens}`),tag(`aux: ${t.aux.length}`));panel.append(badges);
+ add(panel,el('p',`Request 含正確日期字串：${t.answer_in_request?'有':'沒有'}`,'small muted'));
+ const tabs=el('nav',undefined,'tabs');tabs.setAttribute('role','tablist');tabs.setAttribute('aria-label','Turn 證據內容');const content=el('div');content.id='turn-evidence';content.setAttribute('role','tabpanel');
+ for(const [value,label] of [['completion','Completion'],['request','完整 request'],['tools','Tool calling'],['aux',`Aux (${t.aux.length})`],['raw','Response 與來源']]){const b=button(label,()=>{state.detail=value;renderTurn();syncHash();});b.id='detail-'+value;b.setAttribute('role','tab');b.setAttribute('aria-controls','turn-evidence');b.setAttribute('aria-selected',String(state.detail===value));tabs.append(b);}content.setAttribute('aria-labelledby','detail-'+state.detail);add(panel,tabs,content);activateTabs(tabs);
+ if(state.detail==='completion'){
+  if(t.parse.error)content.append(note(t.parse.error,true));
+  content.append(pre(t.completion));
+  if(t.parse.tool_call&&!t.tools.length)content.append(note('已解析的工具呼叫尚未執行（probe / replay）。'));
+  if(!t.parse.tool_call&&!t.parse.error)content.append(note('沒有工具呼叫；這是模型給出的最終文字，不代表答案正確。'));
+ }else if(state.detail==='request')renderRequest(t,content,run);
+ else if(state.detail==='tools')renderTools(t,content,run);
+ else if(state.detail==='aux')renderAux(t,content);
+ else{add(content,el('p',`原始 JSONL 第 ${t.source_lines.request} 行：model_request；第 ${t.source_lines.response} 行：model_response。`),json({call_id:t.call_id,recorded_turn:t.recorded_turn,source_turn:t.source_turn,time:t.time,native_output_tokens:t.native_output_tokens,course_completion_tokens:t.course_completion_tokens,seconds:t.seconds}),details('完整 HTTP response',t.http_response?json(t.http_response):el('p','此紀錄未保存 HTTP response。')),link('原始 JSONL',`evidence/${run.id}.jsonl`));}
+ host.append(panel);
+}
+options($('env-before'),data.environments.map(e=>[e.id,`${e.id} · ${e.label}`]),'E3');options($('env-after'),data.environments.map(e=>[e.id,`${e.id} · ${e.label}`]),'E4');
+function diffLines(a,b){const x=a.split('\n'),y=b.split('\n');const dp=Array.from({length:x.length+1},()=>new Uint16Array(y.length+1));for(let i=x.length-1;i>=0;i--)for(let j=y.length-1;j>=0;j--)dp[i][j]=x[i]===y[j]?dp[i+1][j+1]+1:Math.max(dp[i+1][j],dp[i][j+1]);const lines=[];let i=0,j=0;while(i<x.length||j<y.length){if(i<x.length&&j<y.length&&x[i]===y[j]){lines.push([' ',x[i++]]);j++;}else if(j<y.length&&(i===x.length||dp[i][j+1]>dp[i+1][j]))lines.push(['+',y[j++]]);else lines.push(['-',x[i++]]);}return lines;}
+function renderEnvironments(){
+ const before=envs[$('env-before').value],after=envs[$('env-after').value],host=$('env-comparison');host.replaceChildren();
+ add(host,el('p',`${before.id}：${before.system.length} 字元 → ${after.id}：${after.system.length} 字元`),note(before.sha256===after.sha256?'完整 system prompt 相同；這兩筆差異來自 run 或實驗歷史。':'以下直接比較兩份保存的 system prompt，包括工具說明與 schema。'));
+ const diff=el('pre'),lines=diffLines(before.system,after.system),keep=new Set();lines.forEach(([sign],i)=>{if(sign!==' ')for(let j=Math.max(0,i-3);j<=Math.min(lines.length-1,i+3);j++)keep.add(j);});
+ host.append(button(state.diffFull?'只看變更附近':'顯示完整上下文',()=>{state.diffFull=!state.diffFull;renderEnvironments();}));
+ let omitted=0;for(let i=0;i<lines.length;i++){if(!state.diffFull&&!keep.has(i)){omitted++;continue;}if(omitted){diff.append(el('span',`… ${omitted} 行相同內容未展開 …`,'diff-line muted'));omitted=0;}const [sign,text]=lines[i];diff.append(el('span',sign+' '+text,'diff-line'+(sign==='+'?' diff-add':sign==='-'?' diff-remove':'')));}if(omitted)diff.append(el('span',`… ${omitted} 行相同內容未展開 …`,'diff-line muted'));host.append(diff);
+ const grid=el('div',undefined,'grid');for(const env of [before,after]){const box=el('div');add(box,el('h3',env.id+' · '+env.label),el('p','SHA-256：'+env.sha256,'hash'),link('完整 system prompt',`environments/${env.id}.system.txt`),el('span',' · '),link('工具描述與 schema JSON',`environments/${env.id}.tools.json`),details('展開完整文字',pre(env.system)),details('工具描述與 schema',json(env.tools)));grid.append(box);}host.append(grid);
+}
+for(const id of ['env-before','env-after'])$(id).addEventListener('change',renderEnvironments);
+renderTimeline();filterRuns();
+const initial=new URLSearchParams(location.hash.slice(1));if(byId[initial.get('run')])navigateRun(initial.get('run'),Math.max(1,Math.min(byId[initial.get('run')].turns.length,Number(initial.get('turn'))||1)),['completion','request','tools','aux','raw'].includes(initial.get('view'))?initial.get('view'):'completion');
+</script></body></html>

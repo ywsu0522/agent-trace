@@ -1,0 +1,7 @@
+To answer this question, I need to find information regarding the shutdown date for Version 1 of the GridLens API. This is likely documented in a company policy update or an announcement email.
+
+I will start by searching for documents related to "GridLens API" and "shutdown".
+
+<<<TOOL_CALL>>>
+{"name":"search_docs","args":{"query":"GridLens API shutdown version 1"}}
+<<<END_TOOL_CALL>>>

@@ -1,0 +1,27 @@
+.env
+.env.*
+!.env.example
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.cache/
+/runs/
+dist/
+*.egg-info/
+*.zip
+node_modules/
+
+# Local course reference and workstation validation: never publish.
+/legacy/
+/validation/
+/tests/test_legacy_profile.py
+/tools/legacy_profile.py
+/tools/rerun_legacy_doc_qa.py
+/tools/package_repo.py
+**/cs329z_hw1/
+*.pdf
+*.tar
+*.tar.gz
+*.gz
+/studies/d06/record/qa/

@@ -1,0 +1,8 @@
+{
+  "id": "d16",
+  "status": "done",
+  "error": null,
+  "answer_match": true,
+  "answer_match_method": "archived fixture matcher; not a semantic judge",
+  "text": "Based on the document \"Engineering Announcement: On-Call Stipend Increase\" (ID: engineering-announcement-2026-02-oncall-stipend), the weekly stipend for the primary on-call engineer is **$500**. This amount applies to rotations starting on or after 2026-03-02.\n\n**Answer:** $500 per week\n**Evidence ID:** engineering-announcement-2026-02-oncall-stipend"
+}

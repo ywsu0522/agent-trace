@@ -1,0 +1,16 @@
+{
+  "id": "d08",
+  "question": "What is the phone number of the anonymous ethics hotline?",
+  "expected_answers": [
+    "1-800-555-0142",
+    "800-555-0142",
+    "555-0142"
+  ],
+  "docs": "datasets/d06/docs",
+  "document_result_budget": 6000,
+  "reference": {
+    "doc_id": "employee-handbook",
+    "line": 258
+  },
+  "category": "deep"
+}

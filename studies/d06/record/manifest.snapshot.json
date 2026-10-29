@@ -1,0 +1,429 @@
+{
+  "schema_version": 1,
+  "title": "d06 Agent 研究紀錄",
+  "question": "On what date will version 1 of the GridLens API be shut down?",
+  "expected_answer": "2026-12-31",
+  "expected_source": {
+    "path": "studies/d06/record/evidence/ground-truth-api-spec.md",
+    "line": 120,
+    "sha256": "feb92a784e78ce70743ba1dc6df48df8fd13dc8075171491a697ff271f928da8",
+    "original_path": "data/docs/gridlens-api-spec.md"
+  },
+  "stages": [
+    {
+      "id": "original",
+      "title": "01 原始環境 → 初次錯答",
+      "hypothesis": "先定位原始 d06 的失敗路徑。",
+      "change": "參考環境：email_qa 示例，未明示 search_docs 與 read_doc 的關係。",
+      "compare": [
+        "historical",
+        "historical"
+      ],
+      "observations": [
+        "先做四次 email 搜尋，再搜尋文件。",
+        "未讀 API spec，將 release notes 的更新日期當作關閉日期。"
+      ],
+      "interpretation": "路由與證據使用皆有問題；這是歷史觀察，不是同時期控制組。",
+      "pins": [
+        {
+          "run": "historical",
+          "turn": 5,
+          "label": "搜尋到 API spec"
+        },
+        {
+          "run": "historical",
+          "turn": 7,
+          "label": "錯誤日期"
+        }
+      ]
+    },
+    {
+      "id": "examples",
+      "title": "02 修改／移除示例 → 工具選擇與格式",
+      "hypothesis": "email_qa 示例是否引導模型先用 email 工具？",
+      "change": "A 保留 email 示例；B 只將同一示例換成 search_docs；C 移除完整 interaction 示例。",
+      "compare": [
+        "a-full",
+        "b-full"
+      ],
+      "observations": [
+        "A 的三個起手 response 皆為 email_qa，B 的三個皆為 search_docs。",
+        "C 的三次 probe 都漏掉外層 name、args。",
+        "A/B 完整 run 仍未答對，皆沒有 read_doc。"
+      ],
+      "interpretation": "單題／單模型的描述性結果；temperature=0 的重複呼叫不是獨立統計樣本。",
+      "pins": [
+        {
+          "run": "c-probe1",
+          "turn": 1,
+          "label": "缺少 name / args"
+        },
+        {
+          "run": "b-full",
+          "turn": 2,
+          "label": "摘要不足後仍搜尋"
+        }
+      ]
+    },
+    {
+      "id": "protocol",
+      "title": "03 明確格式與摘要限制 → 開始讀文件但未翻頁",
+      "hypothesis": "不保留 interaction 示例，能否維持合法格式並開始讀取文件？",
+      "change": "移除示例；對齊 Tool 名稱、args 與 schema；search_docs 明示只回傳 snippets，必要時用 read_doc。",
+      "compare": [
+        "protocol-before",
+        "protocol-after"
+      ],
+      "observations": [
+        "新版所有呼叫合法，read_doc 由 0 次變為 2 次。",
+        "API spec 只取得第 1–89/131 行；沒有繼續 start_line=90。",
+        "最終錯答 2027-08-25；正確日期從未進入 request。"
+      ],
+      "interpretation": "這次是兩項文字修改的合併比較，不能分別估計每一項的效果。",
+      "pins": [
+        {
+          "run": "protocol-after",
+          "turn": 5,
+          "label": "讀 API spec 首頁"
+        },
+        {
+          "run": "protocol-after",
+          "turn": 6,
+          "label": "未翻頁便錯答"
+        }
+      ]
+    },
+    {
+      "id": "paging",
+      "title": "04 明確分頁規則 → 重回搜尋迴圈",
+      "hypothesis": "明示部分文件與 end_line < total_lines，是否會促成繼續讀取？",
+      "change": "只改 read_doc 描述：最多 1500 tokens，未讀完且答案未找到時用相同 doc_id、start_line=end_line+1。",
+      "compare": [
+        "protocol-after",
+        "paging-after"
+      ],
+      "observations": [
+        "6 個主 requests，0 個 aux；5 次工具呼叫合法。",
+        "4 次文件搜尋回傳 20 筆、只有 5 份不同文件，完全沒呼叫 read_doc。",
+        "turn 2 已從「摘要沒寫」推成「文件沒寫」。"
+      ],
+      "interpretation": "本次沒有進入翻頁階段，不能宣稱分頁指引已驗證有效。",
+      "pins": [
+        {
+          "run": "paging-after",
+          "turn": 2,
+          "label": "將摘要推成全文"
+        },
+        {
+          "run": "paging-after",
+          "turn": 4,
+          "label": "轉向 email"
+        },
+        {
+          "run": "paging-after",
+          "turn": 6,
+          "label": "搜尋後放棄"
+        }
+      ]
+    },
+    {
+      "id": "replay",
+      "title": "05 固定歷史交叉重播 → 區分描述與歷史",
+      "hypothesis": "路徑差異來自新描述，還是前幾輪累積的不同歷史？",
+      "change": "固定兩次各自 turn 4 的歷史，各用新／舊描述重播一次，共四個 requests，不執行工具。",
+      "compare": [
+        "replay-old-old",
+        "replay-old-new"
+      ],
+      "observations": [
+        "前次歷史：舊描述選 read_doc，新描述選 search_docs。",
+        "本次歷史：舊描述選 search_docs，新描述選 search_emails。",
+        "控制重播工具選擇相同，但 completion 文句未逐字相同。"
+      ],
+      "interpretation": "支持描述與歷史共同影響路徑；每格一次，無法推論模型內部心理原因或一般穩定效果。",
+      "pins": [
+        {
+          "run": "replay-old-old",
+          "turn": 1,
+          "label": "前次歷史＋舊描述"
+        },
+        {
+          "run": "replay-old-new",
+          "turn": 1,
+          "label": "相同歷史＋新描述"
+        }
+      ]
+    }
+  ],
+  "runs": [
+    {
+      "id": "historical",
+      "label": "最初的 d06",
+      "kind": "full",
+      "source": "studies/d06/record/evidence/historical.jsonl",
+      "metadata": "studies/d06/record/metadata/historical.json",
+      "result": "studies/d06/record/metadata/historical.result.json",
+      "stage": "original",
+      "notes": "先查 email；只讀 release notes，將更新日期誤認成關閉日期。",
+      "failure_modes": [
+        "routing",
+        "unsupported-date"
+      ],
+      "original_source": "runs/doc-qa-ollama-20261024T143648Z/d06/ollama-chat-20261024T150423Z-618cc483.jsonl"
+    },
+    {
+      "id": "a-probe1",
+      "label": "A：email 示例／probe1",
+      "kind": "probe",
+      "source": "studies/d06/record/evidence/a-probe1.jsonl",
+      "metadata": "studies/d06/record/metadata/a-probe1.json",
+      "result": "studies/d06/record/metadata/a-probe1.result.json",
+      "stage": "examples",
+      "notes": "僅觀察第一個 request 的決策，不執行工具。",
+      "failure_modes": [],
+      "original_source": "runs/d06-icl-ablation-20261028T020006Z/A_original_email_probe1/ollama-chat-20261028T020006Z-67235e47.jsonl"
+    },
+    {
+      "id": "a-probe2",
+      "label": "A：email 示例／probe2",
+      "kind": "probe",
+      "source": "studies/d06/record/evidence/a-probe2.jsonl",
+      "metadata": "studies/d06/record/metadata/a-probe2.json",
+      "result": "studies/d06/record/metadata/a-probe2.result.json",
+      "stage": "examples",
+      "notes": "僅觀察第一個 request 的決策，不執行工具。",
+      "failure_modes": [],
+      "original_source": "runs/d06-icl-ablation-20261028T020006Z/A_original_email_probe2/ollama-chat-20261028T020208Z-7fcd6ea3.jsonl"
+    },
+    {
+      "id": "a-full",
+      "label": "A：email 示例／完整 run",
+      "kind": "full",
+      "source": "studies/d06/record/evidence/a-full.jsonl",
+      "metadata": "studies/d06/record/metadata/a-full.json",
+      "result": "studies/d06/record/metadata/a-full.result.json",
+      "stage": "examples",
+      "notes": "沒有呼叫 read_doc，最終回答無法找到日期。",
+      "failure_modes": [
+        "snippet-as-document",
+        "search-loop"
+      ],
+      "original_source": "runs/d06-icl-ablation-20261028T020006Z/A_original_email_full/ollama-chat-20261028T020225Z-f09e1889.jsonl"
+    },
+    {
+      "id": "b-probe1",
+      "label": "B：文件示例／probe1",
+      "kind": "probe",
+      "source": "studies/d06/record/evidence/b-probe1.jsonl",
+      "metadata": "studies/d06/record/metadata/b-probe1.json",
+      "result": "studies/d06/record/metadata/b-probe1.result.json",
+      "stage": "examples",
+      "notes": "僅觀察第一個 request 的決策，不執行工具。",
+      "failure_modes": [],
+      "original_source": "runs/d06-icl-ablation-20261028T020006Z/B_document_example_probe1/ollama-chat-20261028T020103Z-606edff1.jsonl"
+    },
+    {
+      "id": "b-probe2",
+      "label": "B：文件示例／probe2",
+      "kind": "probe",
+      "source": "studies/d06/record/evidence/b-probe2.jsonl",
+      "metadata": "studies/d06/record/metadata/b-probe2.json",
+      "result": "studies/d06/record/metadata/b-probe2.result.json",
+      "stage": "examples",
+      "notes": "僅觀察第一個 request 的決策，不執行工具。",
+      "failure_modes": [],
+      "original_source": "runs/d06-icl-ablation-20261028T020006Z/B_document_example_probe2/ollama-chat-20261028T020151Z-68d8e84e.jsonl"
+    },
+    {
+      "id": "b-full",
+      "label": "B：文件示例／完整 run",
+      "kind": "full",
+      "source": "studies/d06/record/evidence/b-full.jsonl",
+      "metadata": "studies/d06/record/metadata/b-full.json",
+      "result": "studies/d06/record/metadata/b-full.result.json",
+      "stage": "examples",
+      "notes": "沒有呼叫 read_doc，最終回答無法找到日期。",
+      "failure_modes": [
+        "snippet-as-document",
+        "search-loop"
+      ],
+      "original_source": "runs/d06-icl-ablation-20261028T020006Z/B_document_example_full/ollama-chat-20261028T020852Z-53993238.jsonl"
+    },
+    {
+      "id": "c-probe1",
+      "label": "C：直接移除示例／probe1",
+      "kind": "probe",
+      "source": "studies/d06/record/evidence/c-probe1.jsonl",
+      "metadata": "studies/d06/record/metadata/c-probe1.json",
+      "result": "studies/d06/record/metadata/c-probe1.result.json",
+      "stage": "examples",
+      "notes": "僅觀察第一個 request 的決策，不執行工具。",
+      "failure_modes": [
+        "format"
+      ],
+      "original_source": "runs/d06-icl-ablation-20261028T020006Z/C_no_example_probe1/ollama-chat-20261028T020121Z-ac44ecf5.jsonl"
+    },
+    {
+      "id": "c-probe2",
+      "label": "C：直接移除示例／probe2",
+      "kind": "probe",
+      "source": "studies/d06/record/evidence/c-probe2.jsonl",
+      "metadata": "studies/d06/record/metadata/c-probe2.json",
+      "result": "studies/d06/record/metadata/c-probe2.result.json",
+      "stage": "examples",
+      "notes": "僅觀察第一個 request 的決策，不執行工具。",
+      "failure_modes": [
+        "format"
+      ],
+      "original_source": "runs/d06-icl-ablation-20261028T020006Z/C_no_example_probe2/ollama-chat-20261028T020138Z-8a89c814.jsonl"
+    },
+    {
+      "id": "c-probe3",
+      "label": "C：直接移除示例／probe3",
+      "kind": "probe",
+      "source": "studies/d06/record/evidence/c-probe3.jsonl",
+      "metadata": "studies/d06/record/metadata/c-probe3.json",
+      "result": "studies/d06/record/metadata/c-probe3.result.json",
+      "stage": "examples",
+      "notes": "僅觀察第一個 request 的決策，不執行工具。",
+      "failure_modes": [
+        "format"
+      ],
+      "original_source": "runs/d06-icl-ablation-20261028T020006Z/C_no_example_probe3/ollama-chat-20261028T020822Z-78ead991.jsonl"
+    },
+    {
+      "id": "protocol-before",
+      "label": "格式改善前／控制組",
+      "kind": "full",
+      "source": "studies/d06/record/evidence/protocol-before.jsonl",
+      "metadata": "studies/d06/record/metadata/protocol-before.json",
+      "result": "studies/d06/record/metadata/protocol-before.result.json",
+      "stage": "protocol",
+      "notes": "email_qa 起手；未讀文件，答不出日期。",
+      "failure_modes": [
+        "routing",
+        "search-loop"
+      ],
+      "original_source": "runs/d06-prompt-update-20261028T030716Z/before/ollama-chat-20261028T030934Z-9e4f75af.jsonl"
+    },
+    {
+      "id": "protocol-after",
+      "label": "格式與 search_docs 說明改善後",
+      "kind": "full",
+      "source": "studies/d06/record/evidence/protocol-after.jsonl",
+      "metadata": "studies/d06/record/metadata/protocol-after.json",
+      "result": "studies/d06/record/metadata/protocol-after.result.json",
+      "stage": "protocol",
+      "notes": "工具格式合法；讀了 API spec 第 1–89/131 行，未翻頁；錯答 2027-08-25。",
+      "failure_modes": [
+        "pagination",
+        "unsupported-date"
+      ],
+      "original_source": "runs/d06-prompt-update-20261028T030716Z/after/ollama-chat-20261028T031616Z-699da243.jsonl"
+    },
+    {
+      "id": "paging-after",
+      "label": "明確分頁說明後",
+      "kind": "full",
+      "source": "studies/d06/record/evidence/paging-after.jsonl",
+      "metadata": "studies/d06/record/metadata/paging-after.json",
+      "result": "studies/d06/record/metadata/paging-after.result.json",
+      "stage": "paging",
+      "notes": "反覆搜尋摘要，完全沒有呼叫 read_doc；無法確認日期。",
+      "failure_modes": [
+        "snippet-as-document",
+        "search-loop"
+      ],
+      "original_source": "runs/d06-read-doc-paging-20261028T125220Z/read_doc_paging/ollama-chat-20261028T125344Z-d92a912a.jsonl"
+    },
+    {
+      "id": "replay-old-old",
+      "label": "前次歷史 × 舊描述",
+      "kind": "replay",
+      "source": "studies/d06/record/evidence/replay-old-old.jsonl",
+      "metadata": "studies/d06/record/metadata/replay-old-old.json",
+      "result": "studies/d06/record/metadata/replay-old-old.result.json",
+      "stage": "replay",
+      "notes": "固定 turn 4 前的完整歷史，只切換 read_doc 描述；不執行工具。",
+      "source_turn": 4,
+      "history_from": "protocol-after",
+      "failure_modes": [],
+      "original_source": "runs/d06-read-doc-paging-20261028T125220Z/analysis/replay-history-old-description-old/ollama-chat-20261028T140631Z-fec235ce.jsonl"
+    },
+    {
+      "id": "replay-old-new",
+      "label": "前次歷史 × 新描述",
+      "kind": "replay",
+      "source": "studies/d06/record/evidence/replay-old-new.jsonl",
+      "metadata": "studies/d06/record/metadata/replay-old-new.json",
+      "result": "studies/d06/record/metadata/replay-old-new.result.json",
+      "stage": "replay",
+      "notes": "固定 turn 4 前的完整歷史，只切換 read_doc 描述；不執行工具。",
+      "source_turn": 4,
+      "history_from": "protocol-after",
+      "failure_modes": [],
+      "original_source": "runs/d06-read-doc-paging-20261028T125220Z/analysis/replay-history-old-description-new/ollama-chat-20261028T140912Z-0831a4cb.jsonl"
+    },
+    {
+      "id": "replay-new-new",
+      "label": "本次歷史 × 新描述",
+      "kind": "replay",
+      "source": "studies/d06/record/evidence/replay-new-new.jsonl",
+      "metadata": "studies/d06/record/metadata/replay-new-new.json",
+      "result": "studies/d06/record/metadata/replay-new-new.result.json",
+      "stage": "replay",
+      "notes": "固定 turn 4 前的完整歷史，只切換 read_doc 描述；不執行工具。",
+      "source_turn": 4,
+      "history_from": "paging-after",
+      "failure_modes": [],
+      "original_source": "runs/d06-read-doc-paging-20261028T125220Z/analysis/replay-history-new-description-new/ollama-chat-20261028T141104Z-af815914.jsonl"
+    },
+    {
+      "id": "replay-new-old",
+      "label": "本次歷史 × 舊描述",
+      "kind": "replay",
+      "source": "studies/d06/record/evidence/replay-new-old.jsonl",
+      "metadata": "studies/d06/record/metadata/replay-new-old.json",
+      "result": "studies/d06/record/metadata/replay-new-old.result.json",
+      "stage": "replay",
+      "notes": "固定 turn 4 前的完整歷史，只切換 read_doc 描述；不執行工具。",
+      "source_turn": 4,
+      "history_from": "paging-after",
+      "failure_modes": [],
+      "original_source": "runs/d06-read-doc-paging-20261028T125220Z/analysis/replay-history-new-description-old/ollama-chat-20261028T141314Z-b5b15bb8.jsonl"
+    }
+  ],
+  "environment_versions": [
+    {
+      "id": "E0",
+      "label": "原始 email_qa 示例",
+      "parent": null,
+      "sha256": "b4175ce770533e292335930b7fb969f5a8fbe615ef9584c207050207d6d88651"
+    },
+    {
+      "id": "E1",
+      "label": "將 interaction 示例改為 search_docs",
+      "parent": "E0",
+      "sha256": "734d91b737cc1dbd9ca025d1a1ff549bc8bb23061257289ceb2b67b7f055beec"
+    },
+    {
+      "id": "E2",
+      "label": "直接移除 interaction 示例",
+      "parent": "E0",
+      "sha256": "f6a835fb69c20b1ed858ed67a0592fce83bad4fe7926ccddeb5806753f03297b"
+    },
+    {
+      "id": "E3",
+      "label": "明確格式＋摘要限制，無 interaction 示例",
+      "parent": "E0",
+      "sha256": "69b57f6bc9df6b11f65d39199c3c1709cf5199fd8893eac007cead39394a60c1"
+    },
+    {
+      "id": "E4",
+      "label": "明確 read_doc 分頁描述",
+      "parent": "E3",
+      "sha256": "e22ad82e59eb0f4f59639dbc7eacdc407ac3507c5731d29fd174a32a12b37284"
+    }
+  ],
+  "viewer_template": "viewer.html"
+}

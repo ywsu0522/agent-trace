@@ -1,0 +1,9 @@
+* text=auto eol=lf
+*.png binary
+*.jsonl -text
+studies/** -text -whitespace
+studies/d06/record/metadata/** -text
+studies/d06/record/evidence/** -text
+studies/d06/record/environments/** -text
+configs/prompts/** -text -whitespace
+datasets/** -text -whitespace

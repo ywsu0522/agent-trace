@@ -1,0 +1,18 @@
+{
+  "settings": {
+    "model": "qwen3.5:4b-q4_K_M",
+    "max_turns": 12
+  },
+  "started": "2026-10-24T15:30:10.907675+00:00",
+  "run_context": {
+    "id": "d09",
+    "question": "Which EmberOS error code means that the sensor mesh link was lost?",
+    "kind": "full",
+    "environment": "E0",
+    "expected_answers": [
+      "E-214",
+      "E214"
+    ],
+    "document_result_budget": 6000
+  }
+}

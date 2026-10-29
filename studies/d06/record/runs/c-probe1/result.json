@@ -1,0 +1,8 @@
+{
+  "id": "c-probe1",
+  "status": "decision_only",
+  "error": null,
+  "answer_match": null,
+  "answer_match_method": "recorded result; not a semantic judge",
+  "text": "To answer this question, I need to find information regarding the shutdown date for Version 1 of the GridLens API. I will search for relevant documents or emails containing this specific detail.\n\n<<<TOOL_CALL>>>\n{\"query\":\"GridLens API version 1 shutdown date\", \"k\":5}\n<<<END_TOOL_CALL>>>"
+}

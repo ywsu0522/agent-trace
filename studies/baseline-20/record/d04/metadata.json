@@ -1,0 +1,18 @@
+{
+  "settings": {
+    "model": "qwen3.5:4b-q4_K_M",
+    "max_turns": 12
+  },
+  "started": "2026-10-24T14:48:14.832807+00:00",
+  "run_context": {
+    "id": "d04",
+    "question": "What is the price per meter per month of the GridLens Professional tier?",
+    "kind": "full",
+    "environment": "E0",
+    "expected_answers": [
+      "1.40",
+      "1.4"
+    ],
+    "document_result_budget": 6000
+  }
+}

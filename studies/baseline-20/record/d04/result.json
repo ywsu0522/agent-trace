@@ -1,0 +1,8 @@
+{
+  "id": "d04",
+  "status": "done",
+  "error": null,
+  "answer_match": true,
+  "answer_match_method": "archived fixture matcher; not a semantic judge",
+  "text": "The price per meter per month for the GridLens Professional tier is **$1.40**. This information is found in the \"Pricing and contracts\" section of the GridLens Product FAQ document (doc_id: gridlens-product-faq).\n\nAnswer: $1.40 per meter per month.\nEvidence ID: gridlens-product-faq"
+}

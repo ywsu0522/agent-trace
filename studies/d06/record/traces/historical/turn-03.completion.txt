@@ -1,0 +1,7 @@
+The search results still do not contain information about the shutdown date for Version 1 of the GridLens API. The emails returned are related to server room power shutdowns (Obsidian project) and gas/electric estimates, but none mention "GridLens" or its API versions.
+
+I will try searching for "GridLens API" specifically to see if there are any announcements or documentation about it.
+
+<<<TOOL_CALL>>>
+{"name":"search_emails","args":{"query":"GridLens API"}}
+<<<END_TOOL_CALL>>>

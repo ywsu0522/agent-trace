@@ -1,0 +1,11 @@
+--- E3
++++ E4
+@@ -27,7 +27,7 @@
+ Description: Search company documents and policy updates by keywords; return doc_id, title and short snippets, NOT full documents. If a relevant snippet lacks the exact answer, use read_doc with its doc_id. Check for newer policies before answering.
+ Parameters JSON Schema: {"type": "object", "properties": {"query": {"type": "string"}, "k": {"type": "integer", "minimum": 1, "default": 5}}, "required": ["query"], "additionalProperties": false}
+ Tool: read_doc
+-Description: Read a company document from start_line (1-based, default 1). Returns text, start_line, end_line and total_lines; continue at end_line + 1 if needed.
++Description: Read part of a company document from start_line (1-based, default 1), up to 1500 tokens. If end_line < total_lines, more content remains. If the answer is not yet found, call read_doc with the same doc_id and start_line=end_line+1.
+ Parameters JSON Schema: {"type": "object", "properties": {"doc_id": {"type": "string"}, "start_line": {"type": "integer", "minimum": 1, "default": 1}}, "required": ["doc_id"], "additionalProperties": false}
+ Tool: run_terminal
+ Description: run_terminal: not implemented yet; do not call.

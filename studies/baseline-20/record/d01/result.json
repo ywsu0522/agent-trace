@@ -1,0 +1,8 @@
+{
+  "id": "d01",
+  "status": "done",
+  "error": null,
+  "answer_match": true,
+  "answer_match_method": "archived fixture matcher; not a semantic judge",
+  "text": "Based on the document \"EmberOS 3 Firmware Specification\" (FW-SPEC-003), the owner of the Firmware team is **Nadia Ferreira**, who holds the title of Firmware Engineering Manager.\n\n**Answer:** Nadia Ferreira manages the Firmware team.\n\n**Evidence ID:** firmware-spec-emberos"
+}

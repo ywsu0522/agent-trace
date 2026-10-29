@@ -1,0 +1,31 @@
+{
+  "source_repository": "https://github.com/cs329z/assignment1-harness",
+  "commit": "c6cab03d161e4e8db8a9e2c12caf8e353b079beb",
+  "purpose": "Document corpus for the archived d06 study; source paths were data/docs/*.md",
+  "sha256": {
+    "architecture-overview.md": "af434f8e57ce2f3e1a564b9064beef57647fa9b2c5fdd29eeba9e8cd4203103c",
+    "benefits-summary-2026.md": "ddaa4de19ae54f07942a113836baa24d7cc885c938d7a3f54f9b2c898feed922",
+    "employee-handbook.md": "efdaf01b4005efe2bf3855d16c55facbf7928f404bedde4eb0c7f2e95dc63343",
+    "engineering-announcement-2026-02-oncall-stipend.md": "643fcf1ac7713db763209fd59f18c942f5eddddc8e559d2536c1998c2ea4ee0d",
+    "expense-policy-2025.md": "3638ec874bbf0999eaab3879f3022c2b71e29f660b3fb9593342369a5a80d337",
+    "expense-policy-2026.md": "c6aa8e40a090880ea96c7a14187d6ab678298e40215148fcb0be1475b4f5e24e",
+    "finance-memo-2026-08-approval-thresholds.md": "b786bb7f7b2d4a1ce8e98935082325605f2e227eefa65610215898e2f6a31120",
+    "firmware-spec-emberos.md": "0da2300798f9e7bcc3dd4576607e9c9229120deca94f64b9724e972896170f28",
+    "gridlens-api-spec.md": "feb92a784e78ce70743ba1dc6df48df8fd13dc8075171491a697ff271f928da8",
+    "gridlens-product-faq.md": "36dd1109fbafbec50711b260970f178a29feeff3a22c91a159310abcaaa96450",
+    "gridlens-release-notes.md": "bb5cf334a20a2b676da39a1e4bea041c4c9826716b87a68cda4ca277349d7b05",
+    "it-security-policy.md": "fe8bd10194fec0d7e52e08c7936aefa8a48e79be1f756eb7d74c1222bc2f0c03",
+    "oakland-office-guide.md": "038b86942a080b3109fe2aabd39a63d60e14c8e5df5977f26253777002e9e251",
+    "onboarding-guide.md": "9fbc04778da42b07ffcabdbb1f130a57b89bb94e95a27c488b16a24a7ea39bcb",
+    "oncall-incident-process.md": "cb835a8042b7c639266bce27d69d8a549ff99463e92532841b0aa7f06eef26c1",
+    "org-chart.md": "e70141f7995c4961fd9ff5eb15011fa96ca80ae634238b5ccef133042a8d9dbe",
+    "parental-leave-policy.md": "5c3f7455d625b02f78a70a63974fe1d370260f02b6c3ff4c19b6d225729fcfcc",
+    "people-announcement-2025-11-pto-carryover.md": "0e4193bf4d96cc0de9a554661cb29238aba2279921e6b1bc5f1f6f2bd7da3a77",
+    "people-announcement-2026-04-parental-leave.md": "a0f849dff369f2753dacf11ced7f1fbc1915c444f06d951dfe5596daee240561",
+    "people-announcement-2026-05-office-days.md": "7f7fa0d9b8de489f93455ac30bc1d047da2681e7e46066a9b70ad5996a4e9fb0",
+    "project-heron-brief.md": "ce5770ad6f5cca5d81ba92979cedc522864748efb021c2477e9398140bc71f5a",
+    "project-kestrel-brief.md": "d7d494dd2108245faea29257c028ef48d0459643fa473a3420234c0e4dacd650",
+    "pto-policy.md": "ed676147a0e0d5d9289b4a506572c3ed9ad146dc80a01884fdc47940c5d7d082",
+    "remote-work-policy.md": "67a42ceedc963f1aa1699d82cf8fc91b3ec4e1ab6d974d6960df7f06f3febeae"
+  }
+}

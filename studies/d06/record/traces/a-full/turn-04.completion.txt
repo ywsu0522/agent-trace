@@ -1,0 +1,7 @@
+The search results for "GridLens API version 1 shutdown" returned emails from 2001 related to PIRA (Platts International Research Association) and Enron, which are unrelated to the GridLens product mentioned in the recent documents (dated 2025-2026). The previous document search found a "GridLens Release Notes" document but did not mention a shutdown for Version 1.
+
+I will try searching specifically for "API deprecation" or "end of support" within the GridLens context to find the specific date.
+
+<<<TOOL_CALL>>>
+{"name":"search_docs","args":{"query":"GridLens API deprecation end of support"}}
+<<<END_TOOL_CALL>>>

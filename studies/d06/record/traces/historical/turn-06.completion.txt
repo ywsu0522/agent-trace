@@ -1,0 +1,7 @@
+The search results for company documents show information about GridLens API versions (specifically Version 2.1 in the "gridlens-api-spec" document dated 2026-02-20) and release notes, but none of the retrieved snippets mention a shutdown date for Version 1 of the GridLens API. The documents focus on current or future versions (4.x series) and do not contain historical deprecation notices for an older version 1.
+
+I will read the full "GridLens Release Notes" document to check if there is any information about deprecated versions or shutdown schedules that might be listed in the full text rather than the snippet.
+
+<<<TOOL_CALL>>>
+{"name":"read_doc","args":{"doc_id":"gridlens-release-notes"}}
+<<<END_TOOL_CALL>>>

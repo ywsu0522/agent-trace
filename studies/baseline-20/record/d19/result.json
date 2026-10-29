@@ -1,0 +1,8 @@
+{
+  "id": "d19",
+  "status": "max_turns",
+  "error": null,
+  "answer_match": false,
+  "answer_match_method": "archived fixture matcher; not a semantic judge",
+  "text": "Stopped: maximum model turns reached."
+}

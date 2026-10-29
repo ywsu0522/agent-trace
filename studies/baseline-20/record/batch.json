@@ -1,0 +1,403 @@
+{
+  "source_sha256": "8857052e6d71176f80e180a8c989e776a1538bb47b7228c7017c3057f6ccbb05",
+  "new_model_requests": 0,
+  "runs": 20,
+  "answer_matches": 15,
+  "matched_within_document_budget": 13,
+  "evidence_support": "not_reviewed",
+  "rows": [
+    {
+      "id": "d01",
+      "question": "Who manages the Firmware team?",
+      "category": "direct",
+      "environment": "E0",
+      "answer_match": true,
+      "within_document_budget": true,
+      "status": "done",
+      "main_requests": 3,
+      "aux_requests": 4,
+      "document_result_tokens_estimate": 878,
+      "route": [
+        "email_qa({ \"question\": \"Who manages the Firmware team?\" })",
+        "search_docs({ \"query\": \"Firmware team manager\" })",
+        "final_answer"
+      ],
+      "raw_sha256": "c858e1419ce26d35cff3fe5401ffcd410bcab5875091a25c2692e2702cad9410"
+    },
+    {
+      "id": "d02",
+      "question": "What is the minimum password length under the IT and Security Policy?",
+      "category": "direct",
+      "environment": "E0",
+      "answer_match": true,
+      "within_document_budget": true,
+      "status": "done",
+      "main_requests": 3,
+      "aux_requests": 0,
+      "document_result_tokens_estimate": 2391,
+      "route": [
+        "search_docs({ \"query\": \"minimum password length IT Security Policy\" })",
+        "read_doc({ \"doc_id\": \"it-security-policy\" })",
+        "final_answer"
+      ],
+      "raw_sha256": "480721bcd313aeb8f9084cc8e3059a5e3517ce26177725f558929a3ea1889bdc"
+    },
+    {
+      "id": "d03",
+      "question": "How many requests per minute may one client make to the GridLens Ingestion API?",
+      "category": "direct",
+      "environment": "E0",
+      "answer_match": true,
+      "within_document_budget": true,
+      "status": "done",
+      "main_requests": 4,
+      "aux_requests": 0,
+      "document_result_tokens_estimate": 3263,
+      "route": [
+        "search_docs({ \"query\": \"GridLens Ingestion API requests per minute rate limit\" })",
+        "search_docs({ \"query\": \"GridLens Ingestion API rate limit requests per minute\" })",
+        "read_doc({ \"doc_id\": \"gridlens-api-spec\" })",
+        "final_answer"
+      ],
+      "raw_sha256": "cd3a8291d0f2cc88306054592e095b1f169de91ca873fb1802e189dd206f09ea"
+    },
+    {
+      "id": "d04",
+      "question": "What is the price per meter per month of the GridLens Professional tier?",
+      "category": "direct",
+      "environment": "E0",
+      "answer_match": true,
+      "within_document_budget": true,
+      "status": "done",
+      "main_requests": 5,
+      "aux_requests": 0,
+      "document_result_tokens_estimate": 2426,
+      "route": [
+        "search_emails({ \"query\": \"GridLens Professional tier price per meter per month\" })",
+        "search_emails({ \"query\": \"GridLens\" })",
+        "search_docs({ \"query\": \"GridLens pricing professional tier\" })",
+        "read_doc({ \"doc_id\": \"gridlens-product-faq\" })",
+        "final_answer"
+      ],
+      "raw_sha256": "cc218b21102bb7a5f7e90b0a831740f745f396fefcff9b85bb4daf864bdcf211"
+    },
+    {
+      "id": "d05",
+      "question": "Who is the technical lead for Project Kestrel?",
+      "category": "direct",
+      "environment": "E0",
+      "answer_match": true,
+      "within_document_budget": true,
+      "status": "done",
+      "main_requests": 6,
+      "aux_requests": 4,
+      "document_result_tokens_estimate": 861,
+      "route": [
+        "email_qa({ \"question\": \"Who is the technical lead for Project Kestrel?\" })",
+        "search_emails({ \"query\": \"Project Kestrel technical lead\", \"k\": 5 })",
+        "search_emails({ \"query\": \"Project Kestrel\", \"k\": 5 })",
+        "search_emails({ \"query\": \"technical lead project\", \"k\": 5 })",
+        "search_docs({ \"query\": \"Project Kestrel\", \"k\": 5 })",
+        "final_answer"
+      ],
+      "raw_sha256": "0353b8508094fa1e82b231eb960fa0e461599427e8c3fb6b16dde0fc699f810b"
+    },
+    {
+      "id": "d06",
+      "question": "On what date will version 1 of the GridLens API be shut down?",
+      "category": "direct",
+      "environment": "E0",
+      "answer_match": false,
+      "within_document_budget": true,
+      "status": "done",
+      "main_requests": 7,
+      "aux_requests": 0,
+      "document_result_tokens_estimate": 1875,
+      "route": [
+        "search_emails({ \"query\": \"GridLens API version 1 shutdown\" })",
+        "search_emails({ \"query\": \"GridLens shutdown date\" })",
+        "search_emails({ \"query\": \"GridLens API\" })",
+        "search_emails({ \"query\": \"GridLens\" })",
+        "search_docs({ \"query\": \"API shutdown version 1\" })",
+        "read_doc({ \"doc_id\": \"gridlens-release-notes\" })",
+        "final_answer"
+      ],
+      "raw_sha256": "dae1222e30cd4333e19ba4a95a0dc9bf2e209baf01107a724adc7ed990daea80"
+    },
+    {
+      "id": "d07",
+      "question": "For how many working days does Cardinal Energy pay full salary during jury duty?",
+      "category": "deep",
+      "environment": "E0",
+      "answer_match": true,
+      "within_document_budget": false,
+      "status": "done",
+      "main_requests": 6,
+      "aux_requests": 0,
+      "document_result_tokens_estimate": 6790,
+      "route": [
+        "search_docs({ \"query\": \"jury duty salary compensation\" })",
+        "read_doc({ \"doc_id\": \"employee-handbook\" })",
+        "read_doc({ \"doc_id\": \"employee-handbook\", \"start_line\": 8 })",
+        "read_doc({ \"doc_id\": \"employee-handbook\", \"start_line\": 8 })",
+        "read_doc({ \"doc_id\": \"employee-handbook\", \"start_line\": 8 })",
+        "final_answer"
+      ],
+      "raw_sha256": "ce88f2b0a80771bc19049535d721515318812348ffae4327ee77be1e27beea74"
+    },
+    {
+      "id": "d08",
+      "question": "What is the phone number of the anonymous ethics hotline?",
+      "category": "deep",
+      "environment": "E0",
+      "answer_match": true,
+      "within_document_budget": false,
+      "status": "done",
+      "main_requests": 8,
+      "aux_requests": 0,
+      "document_result_tokens_estimate": 8910,
+      "route": [
+        "search_docs({ \"query\": \"ethics hotline phone number\" })",
+        "search_docs({ \"query\": \"ethics hotline phone\" })",
+        "read_doc({ \"doc_id\": \"employee-handbook\", \"start_line\": 1 })",
+        "read_doc({ \"doc_id\": \"employee-handbook\", \"start_line\": 69 })",
+        "read_doc({ \"doc_id\": \"employee-handbook\", \"start_line\": 121 })",
+        "read_doc({ \"doc_id\": \"employee-handbook\", \"start_line\": 175 })",
+        "read_doc({ \"doc_id\": \"employee-handbook\", \"start_line\": 229 })",
+        "final_answer"
+      ],
+      "raw_sha256": "400f9174de88756205a44494c9ce973d2abf11250e1d17ab1fdc95badb3bbce1"
+    },
+    {
+      "id": "d09",
+      "question": "Which EmberOS error code means that the sensor mesh link was lost?",
+      "category": "deep",
+      "environment": "E0",
+      "answer_match": true,
+      "within_document_budget": true,
+      "status": "done",
+      "main_requests": 5,
+      "aux_requests": 0,
+      "document_result_tokens_estimate": 4430,
+      "route": [
+        "search_docs({ \"query\": \"EmberOS sensor mesh link lost error code\" })",
+        "search_docs({ \"query\": \"EmberOS error code mesh link\" })",
+        "read_doc({ \"doc_id\": \"firmware-spec-emberos\", \"start_line\": 1 })",
+        "read_doc({ \"doc_id\": \"firmware-spec-emberos\", \"start_line\": 89 })",
+        "final_answer"
+      ],
+      "raw_sha256": "9259d75baec252711294a74c0dbf622a86d3ddbf7886e6dc6b7f88006db97a6a"
+    },
+    {
+      "id": "d10",
+      "question": "How many business days after an incident is resolved is the postmortem draft due?",
+      "category": "deep",
+      "environment": "E0",
+      "answer_match": true,
+      "within_document_budget": true,
+      "status": "done",
+      "main_requests": 5,
+      "aux_requests": 0,
+      "document_result_tokens_estimate": 3979,
+      "route": [
+        "search_docs({ \"query\": \"postmortem draft due date incident resolved business days\" })",
+        "read_doc({ \"doc_id\": \"oncall-incident-process\" })",
+        "search_docs({ \"query\": \"postmortem draft due business days incident resolved\" })",
+        "search_docs({ \"query\": \"postmortem draft submission deadline\" })",
+        "final_answer"
+      ],
+      "raw_sha256": "bef50d46bed18c22757321391b59e5aa6af597977ca9ec58a6066bf633951c4a"
+    },
+    {
+      "id": "d11",
+      "question": "What is the recovery time objective for GridLens after a regional failure?",
+      "category": "deep",
+      "environment": "E0",
+      "answer_match": false,
+      "within_document_budget": true,
+      "status": "done",
+      "main_requests": 7,
+      "aux_requests": 0,
+      "document_result_tokens_estimate": 1741,
+      "route": [
+        "search_docs({ \"query\": \"GridLens recovery time objective RTO regional failure\" })",
+        "search_docs({ \"query\": \"GridLens RTO disaster recovery regional failure\" })",
+        "search_emails({ \"query\": \"GridLens recovery time objective RTO regional failure\" })",
+        "search_emails({ \"query\": \"GridLens recovery time\" })",
+        "search_emails({ \"query\": \"GridLens SLA disaster recovery\" })",
+        "search_emails({ \"query\": \"GridLens uptime availability\" })",
+        "final_answer"
+      ],
+      "raw_sha256": "6f9a33deed165236a2d0429d0a9fb9e11a72b45f661f8d64839e0fcccc31ee26"
+    },
+    {
+      "id": "d12",
+      "question": "What is the daily meal limit when I travel on business within the United States?",
+      "category": "superseded",
+      "environment": "E0",
+      "answer_match": true,
+      "within_document_budget": true,
+      "status": "done",
+      "main_requests": 3,
+      "aux_requests": 0,
+      "document_result_tokens_estimate": 2410,
+      "route": [
+        "search_docs({ \"query\": \"daily meal limit travel United States business\" })",
+        "read_doc({ \"doc_id\": \"expense-policy-2026\" })",
+        "final_answer"
+      ],
+      "raw_sha256": "5e512e78c9ff9307ad0b1c8cd8e5190dba9d325283e84d88267c92980c55235c"
+    },
+    {
+      "id": "d13",
+      "question": "Above what amount does a single expense need approval from my department's vice president?",
+      "category": "superseded",
+      "environment": "E0",
+      "answer_match": true,
+      "within_document_budget": true,
+      "status": "done",
+      "main_requests": 2,
+      "aux_requests": 0,
+      "document_result_tokens_estimate": 881,
+      "route": [
+        "search_docs({ \"query\": \"expense approval limit vice president\" })",
+        "final_answer"
+      ],
+      "raw_sha256": "4c07f70a70e1ef693cf991a6159eecf8f9265b37422d09687afd01b1046274f4"
+    },
+    {
+      "id": "d14",
+      "question": "How many days of unused PTO can I carry over into the next calendar year?",
+      "category": "superseded",
+      "environment": "E0",
+      "answer_match": true,
+      "within_document_budget": true,
+      "status": "done",
+      "main_requests": 2,
+      "aux_requests": 0,
+      "document_result_tokens_estimate": 874,
+      "route": [
+        "search_docs({ \"query\": \"PTO carry over unused days limit\" })",
+        "final_answer"
+      ],
+      "raw_sha256": "761e5acca3d49c03a388de75c35fff0ebef8701a370e923da214a7d22965568d"
+    },
+    {
+      "id": "d15",
+      "question": "Which days of the week are hybrid employees required to work from the office?",
+      "category": "superseded",
+      "environment": "E0",
+      "answer_match": true,
+      "within_document_budget": true,
+      "status": "done",
+      "main_requests": 2,
+      "aux_requests": 0,
+      "document_result_tokens_estimate": 885,
+      "route": [
+        "search_docs({ \"query\": \"hybrid employees required work from office days\" })",
+        "final_answer"
+      ],
+      "raw_sha256": "6744f664e4f6dd51b131d013a532c4a87c5967e083a6a0c2af4b8bf09dbbf0f0"
+    },
+    {
+      "id": "d16",
+      "question": "How much is the weekly stipend for the primary on-call engineer?",
+      "category": "superseded",
+      "environment": "E0",
+      "answer_match": true,
+      "within_document_budget": true,
+      "status": "done",
+      "main_requests": 3,
+      "aux_requests": 3,
+      "document_result_tokens_estimate": 887,
+      "route": [
+        "email_qa({ \"question\": \"What is the weekly stipend for the primary on-call engineer?\" })",
+        "search_docs({ \"query\": \"on-call engineer weekly stipend compensation\" })",
+        "final_answer"
+      ],
+      "raw_sha256": "4116162c47b76e652d358747b441f105e859f9a901513c1d48fe6d27f07ed3e2"
+    },
+    {
+      "id": "d17",
+      "question": "How much will Cardinal Energy reimburse each month for my gym membership?",
+      "category": "lexical",
+      "environment": "E0",
+      "answer_match": false,
+      "within_document_budget": true,
+      "status": "malformed",
+      "main_requests": 3,
+      "aux_requests": 0,
+      "document_result_tokens_estimate": 0,
+      "route": [
+        "parse_error",
+        "parse_error",
+        "parse_error"
+      ],
+      "raw_sha256": "9a70921d97349472fe764ce434a8481af73e5d304263593dd146ff3776b3b80a"
+    },
+    {
+      "id": "d18",
+      "question": "My laptop was stolen. What phone extension do I call to report it?",
+      "category": "lexical",
+      "environment": "E0",
+      "answer_match": false,
+      "within_document_budget": true,
+      "status": "malformed",
+      "main_requests": 3,
+      "aux_requests": 0,
+      "document_result_tokens_estimate": 0,
+      "route": [
+        "parse_error",
+        "parse_error",
+        "parse_error"
+      ],
+      "raw_sha256": "0e381b30f4fcc2d9e9c3d2530f7e2a22ac5ba81a937676f4481e4cd268f33720"
+    },
+    {
+      "id": "d19",
+      "question": "When is payday?",
+      "category": "lexical",
+      "environment": "E0",
+      "answer_match": false,
+      "within_document_budget": true,
+      "status": "max_turns",
+      "main_requests": 12,
+      "aux_requests": 3,
+      "document_result_tokens_estimate": 0,
+      "route": [
+        "email_qa({ \"question\": \"What is the payday date?\" })",
+        "search_emails({ \"query\": \"payday\" })",
+        "search_emails({ \"query\": \"payroll date\" })",
+        "search_emails({ \"query\": \"pay date\" })",
+        "search_emails({ \"query\": \"regular pay\" })",
+        "search_emails({ \"query\": \"pay period\" })",
+        "search_emails({ \"query\": \"when do we get paid\" })",
+        "search_emails({ \"query\": \"pay schedule\" })",
+        "search_emails({ \"query\": \"check date\" })",
+        "search_emails({ \"query\": \"payroll policy\" })",
+        "search_emails({ \"query\": \"pay period end\" })",
+        "search_emails({ \"query\": \"paycheck date\" })"
+      ],
+      "raw_sha256": "81545fbd97cb5cf2bd63ccf403187ddea8ea6acc0ab81f1d74a400edc2326568"
+    },
+    {
+      "id": "d20",
+      "question": "How much can I spend per year on conferences and online courses for my own development?",
+      "category": "lexical",
+      "environment": "E0",
+      "answer_match": true,
+      "within_document_budget": true,
+      "status": "done",
+      "main_requests": 4,
+      "aux_requests": 0,
+      "document_result_tokens_estimate": 2820,
+      "route": [
+        "search_docs({ \"query\": \"personal development budget conferences online courses\" })",
+        "search_docs({ \"query\": \"Benefits Summary professional development allowance 2026\" })",
+        "read_doc({ \"doc_id\": \"benefits-summary-2026\" })",
+        "final_answer"
+      ],
+      "raw_sha256": "f634c961209adfeea967aa12742ed097616a1d21c91f21297df0a215d945031d"
+    }
+  ]
+}

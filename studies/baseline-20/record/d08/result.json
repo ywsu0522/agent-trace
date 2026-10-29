@@ -1,0 +1,8 @@
+{
+  "id": "d08",
+  "status": "done",
+  "error": null,
+  "answer_match": true,
+  "answer_match_method": "archived fixture matcher; not a semantic judge",
+  "text": "The **ethics hotline** phone number is **1-800-555-0142**, as stated in Section 34 of the *Cardinal Energy Employee Handbook*.\n\n**Relevant Evidence:**\n*   **Document:** *Cardinal Energy Employee Handbook*, Version 4.2 (Effective: 2025-09-01)\n*   **Section:** 34. Raising concerns and the ethics hotline\n*   **Quote:** \"If you prefer to report anonymously, call the ethics hotline at **1-800-555-0142**.\"\n\n**Email ID:** `employee-handbook` (Section 34)"
+}

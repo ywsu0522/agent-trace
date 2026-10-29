@@ -1,0 +1,18 @@
+{
+  "settings": {
+    "model": "qwen3.5:4b-q4_K_M",
+    "max_turns": 12
+  },
+  "started": "2026-10-24T14:36:48.208234+00:00",
+  "run_context": {
+    "id": "d01",
+    "question": "Who manages the Firmware team?",
+    "kind": "full",
+    "environment": "E0",
+    "expected_answers": [
+      "Nadia Ferreira",
+      "Ferreira"
+    ],
+    "document_result_budget": 6000
+  }
+}

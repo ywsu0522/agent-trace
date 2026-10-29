@@ -1,0 +1,18 @@
+{
+  "settings": {
+    "model": "qwen3.5:4b-q4_K_M",
+    "max_turns": 12
+  },
+  "started": "2026-10-24T14:53:22.294400+00:00",
+  "run_context": {
+    "id": "d05",
+    "question": "Who is the technical lead for Project Kestrel?",
+    "kind": "full",
+    "environment": "E0",
+    "expected_answers": [
+      "Jonas Weber",
+      "Weber"
+    ],
+    "document_result_budget": 6000
+  }
+}

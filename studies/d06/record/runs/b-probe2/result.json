@@ -1,0 +1,8 @@
+{
+  "id": "b-probe2",
+  "status": "decision_only",
+  "error": null,
+  "answer_match": null,
+  "answer_match_method": "recorded result; not a semantic judge",
+  "text": "I need to find information about the shutdown date for Version 1 of the GridLens API. I will search for relevant documents or emails regarding this topic.\n\n<<<TOOL_CALL>>>\n{\"name\":\"search_docs\",\"args\":{\"query\":\"GridLens API version 1 shutdown\"}}\n<<<END_TOOL_CALL>>>"
+}
