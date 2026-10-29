@@ -36,6 +36,20 @@ uv run agent-trace replay --request runs/my-run/initial-request.json --agent cur
 
 需要彙整研究時，可執行 `uv run agent-trace register runs/my-run --label "我的實驗"`，再執行 `uv run agent-trace build`。
 
+## 重建 HTML 閱讀頁
+
+Git 保留 Markdown、JSON／JSONL 與 `studies/d06/viewer.html` 模板；產生的 HTML 不追蹤，也不打包進 wheel。
+
+```sh
+# 重建單次執行；開啟 runs/d02-report/trace.html
+uv run agent-trace report studies/baseline-20/record/d02 --out runs/d02-report
+
+# 重建 d06 的全部報告與比較頁；開啟 studies/d06/record/index.html
+uv run agent-trace build
+```
+
+兩者皆離線處理保存紀錄，不呼叫模型。
+
 ## 歷史實驗
 
 [20 題紀錄](../studies/baseline-20/README.md) 使用 E0；保存的答案字串命中為 15/20。E4 尚未完整重跑全部 20 題。[d06](../studies/d06/README.md) 保存 prompt 修改與固定 request 重播比較。

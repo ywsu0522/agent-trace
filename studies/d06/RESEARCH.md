@@ -8,7 +8,7 @@
 
 - **快速閱讀：**下面的探索流程、實驗結果與錯誤模式。
 - **核對證據：**[所有紀錄總表](record/OVERVIEW.md) → 各 run → 各 turn 的完整 request / completion / tool result。
-- **深入瀏覽：**下載此目錄後，用瀏覽器開啟 [record/index.html](record/index.html)。這是離線互動頁，GitHub 原始檔頁面不會執行它。
+- **深入瀏覽：**在 repo 根目錄執行 `uv run agent-trace build`，再用瀏覽器開啟本機的 `studies/d06/record/index.html`。HTML 閱讀頁由保存紀錄重建，不納入版本控制。
 - **可重建資料：**[manifest](manifest.json)、[結構化紀錄](record/records.json)、[SHA-256 與完整性驗證](record/integrity.json)。
 
 ## 問題與判準

@@ -22,6 +22,8 @@ def audit():
         if (any(p in forbidden_parts for p in path.parts) or path.suffix.lower() in {'.pdf', '.zip', '.gz', '.tar', '.pyc'}
                 or path.name in {'.env', 'test_legacy_profile.py', 'legacy_profile.py', 'rerun_legacy_doc_qa.py', 'package_repo.py'}):
             failures.append({'path': name, 'reason': 'excluded publication material'})
+        if name.startswith('studies/') and 'record' in path.parts and path.suffix == '.html':
+            failures.append({'path': name, 'reason': 'rebuildable HTML report'})
         payload = (ROOT / path).read_bytes()
         total += len(payload)
         if any(re.search(pattern, payload) for pattern in patterns):

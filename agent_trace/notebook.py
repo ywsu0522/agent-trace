@@ -272,7 +272,7 @@ def build(manifest_path, out, repo=ROOT):
               'native_http_requests': sum(t['http_payload'] is not None for r in runs for t in r['turns']),
               'application_only_requests': sum(t['http_payload'] is None for r in runs for t in r['turns'])}
     write_json(out / 'integrity.json', checks)
-    overview = ['# ' + manifest['title'] + '：實驗總表', '', '[研究首頁](../README.md) · [離線互動頁](index.html)', '',
+    overview = ['# ' + manifest['title'] + '：實驗總表', '', '[研究首頁](../README.md)', '',
                 '| 紀錄 | 類型 | 環境 | 主 / aux | read_doc | 格式錯誤 | 接受答案比對 |', '|---|---|---|---:|---:|---:|---|']
     for r in runs:
         verdict = ('符合' if r['answer_match'] else '不符合') if r['kind'] == 'full' else '不評分'

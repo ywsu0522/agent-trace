@@ -4,7 +4,7 @@
 
 接受日期為 **2026-12-31**，位於 [API spec 第 120 行](record/evidence/ground-truth-api-spec.md)。這是事後判準，不加入模型 request。已保存 5 個環境、6 個完整 runs、7 個 probes、4 個 replays；所有完整 runs 仍未命中日期。
 
-先看[精簡 run 總覽](record/OVERVIEW.md)，或在瀏覽器開啟 [record/index.html](record/index.html)。每次 run 使用通用 trace 格式；完整 request、completion、工具結果與 aux 預設收合。
+先看[精簡 run 總覽](record/OVERVIEW.md)。每次 run 使用通用 trace 格式；完整 request、completion、工具結果與 aux 預設收合。
 
 | 修改 | 觀察 | 代表紀錄 |
 |---|---|---|
@@ -27,6 +27,6 @@ flowchart LR
 
 工具格式、選擇正確文件、讀到支持段落與答案命中分開評估。d09 曾在 E0 成功翻頁，見[20 題對照](../baseline-20/README.md)；不能將 d06 歸因為模型完全不具備翻頁能力。這是單題探索，不能代替 E4 全體評估。
 
-[完整研究解讀與限制](RESEARCH.md) · [詳細比較介面](record/research.html) · [原始證據 hashes](record/integrity.json) · [研究 manifest](manifest.json)
+[完整研究解讀與限制](RESEARCH.md) · [原始證據 hashes](record/integrity.json) · [研究 manifest](manifest.json)
 
-重跑：`uv run agent-trace run --task d06 --agent current`。預設新 run 會直接產生 trace，不需要 build；只有整理歷史研究頁才執行 `uv run agent-trace build`。
+重跑：`uv run agent-trace run --task d06 --agent current`。預設新 run 會直接產生 trace，不需要 build；需要離線 HTML 索引與比較頁時執行 `uv run agent-trace build`，再於本機開啟 `studies/d06/record/index.html`；產生的 HTML 不納入版本控制。

@@ -230,7 +230,7 @@ def markdown(trace):
              f"環境：{trace['environment'] or '未標記'} · 類型：{trace['kind']} · 狀態：{trace['status']}", '',
              f"主 requests：{trace['main_count']} · aux requests：{trace['aux_count']} · 工具嘗試：{trace['tool_attempts']}", '',
              f"答案比對：{trace['answer_match']}（{trace['answer_match_method']}）；證據支持：尚未審查。", '',
-             '[離線閱讀頁](trace.html) · [結構化 trace](trace.json) · [原始事件](events.jsonl)', '',
+             '[結構化 trace](trace.json) · [原始事件](events.jsonl)', '',
              '| Turn | 路徑 | 工具結果狀態 | AUX | 事實註解 |', '|---:|---|---|---:|---|']
     for t in trace['turns']:
         cells = [f"[T{t['number']}](#turn-{t['number']})", route(t),

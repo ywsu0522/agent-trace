@@ -10,7 +10,7 @@ What is the recovery time objective for GridLens after a regional failure?
 
 答案比對：False（archived fixture matcher; not a semantic judge）；證據支持：尚未審查。
 
-[離線閱讀頁](trace.html) · [結構化 trace](trace.json) · [原始事件](events.jsonl)
+[結構化 trace](trace.json) · [原始事件](events.jsonl)
 
 | Turn | 路徑 | 工具結果狀態 | AUX | 事實註解 |
 |---:|---|---|---:|---|

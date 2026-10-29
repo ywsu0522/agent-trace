@@ -47,6 +47,8 @@ uv run pytest
 - `datasets/`：實驗文件與 email 來源描述。
 - `studies/`：已保存的實驗紀錄與比較。
 
+HTML 閱讀頁可在本機重建，不納入 Git；已保存的紀錄可直接閱讀 Markdown。
+
 [其他用法](docs/reproducibility.md) · [20 題歷史紀錄](studies/baseline-20/README.md) · [d06 prompt 比較](studies/d06/README.md)
 
 實驗使用 [CS329Z Assignment 1](https://github.com/cs329z/assignment1-harness) 整理的文件與 email 資料；詳見[資料來源](datasets/SOURCES.md)。

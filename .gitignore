@@ -25,3 +25,6 @@ node_modules/
 *.tar.gz
 *.gz
 /studies/d06/record/qa/
+
+# Rebuildable study reports; keep the viewer template outside record/.
+/studies/**/record/**/*.html
