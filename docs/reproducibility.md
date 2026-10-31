@@ -11,6 +11,8 @@ uv run agent-trace run --task d02 --dry-run
 
 `current` 使用 E4 prompt；`baseline` 使用 E0。任意問題預設不評分；使用 `--expected-answer` 提供接受字串，或使用 `--task d01` 至 `d20`。答案字串命中與證據是否充分是不同判準。
 
+`d01` 至 `d20` 直接讀取 `tests/fixtures/doc_questions.json`，這是 HW1 P09 `search_docs` 專用的 20 題 live 測試資料，沿用原始陣列與欄位格式。`answers` 供評分使用；`doc_id`、`line` 是參考證據，`stale` 是部分題目的過時答案，目前不自動核對證據或過時答案。模型只收到問題，這些標準答案欄位不會加入 prompt。自訂單題仍可使用 `--task FILE.json`。
+
 可用 `--docs DIR`、`--emails PATH` 指定自己的 corpus，或用 `--system PATH` 修改 prompt。缺少工具所需資料時會在模型呼叫前停止。`--probe` 只觀察起手決策，不執行工具。
 
 ```sh

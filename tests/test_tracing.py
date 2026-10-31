@@ -176,6 +176,7 @@ def test_custom_question_is_unscored_and_task_can_run_without_study_files(tmp_pa
     import shutil
     import agent_trace.execution as execution
     shutil.copytree(ROOT / 'configs', tmp_path / 'configs')
+    shutil.copytree(ROOT / 'tests/fixtures', tmp_path / 'tests/fixtures')
     monkeypatch.setattr(execution, 'asset_root', lambda: tmp_path)
     assert main(['run', 'An unrelated question?', '--dry-run']) == 0
     config = json.loads(capsys.readouterr().out)

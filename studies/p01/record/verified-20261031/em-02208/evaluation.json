@@ -1,0 +1,15 @@
+{
+  "id": "em-02208",
+  "output": {
+    "category": "normal",
+    "reason": "This is a personal message from an acquaintance sharing family photos and updates without any work-related deadlines or obligations."
+  },
+  "error": null,
+  "reused_classifications": 0,
+  "fresh_model_calls": 1,
+  "passed": true,
+  "correct": true,
+  "valid_contract": true,
+  "unknown": false,
+  "reasons": []
+}

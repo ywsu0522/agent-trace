@@ -1,0 +1,10 @@
+{
+  "output": {
+    "category": "urgent",
+    "reason": "The recipient must approve a $4.2 million wire transfer by 2:00 PM today to prevent suspension of deliveries, which is within the two-working-day deadline."
+  },
+  "reused_classifications": 0,
+  "fresh_model_calls": 1,
+  "seconds": 38.983,
+  "error": null
+}

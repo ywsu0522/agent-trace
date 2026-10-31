@@ -1,0 +1,10 @@
+{
+  "output": {
+    "category": "normal",
+    "reason": "This email contains a status update and a request for decision-making regarding a sale negotiation with a deadline of next week, which exceeds the two-working-day threshold required for an urgent classification."
+  },
+  "reused_classifications": 0,
+  "fresh_model_calls": 1,
+  "seconds": 22.651,
+  "error": null
+}

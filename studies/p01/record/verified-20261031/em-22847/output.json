@@ -1,0 +1,10 @@
+{
+  "output": {
+    "category": "normal",
+    "reason": "This is a routine work request from a colleague asking for document summaries to be forwarded, with no specified deadline or indication of an immediate outage."
+  },
+  "reused_classifications": 0,
+  "fresh_model_calls": 1,
+  "seconds": 16.272,
+  "error": null
+}

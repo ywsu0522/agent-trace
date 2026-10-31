@@ -1,0 +1,10 @@
+{
+  "output": {
+    "category": "urgent",
+    "reason": "The recipient has an immediate obligation to provide a summary valuation by the end of the day or next working day as requested by Lavo regarding live financial options."
+  },
+  "reused_classifications": 0,
+  "fresh_model_calls": 1,
+  "seconds": 20.358,
+  "error": null
+}

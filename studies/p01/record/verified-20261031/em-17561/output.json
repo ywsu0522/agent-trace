@@ -1,0 +1,10 @@
+{
+  "output": {
+    "category": "normal",
+    "reason": "This is a direct request from a known colleague to make a phone call, lacking any specific deadline or indication of an immediate outage."
+  },
+  "reused_classifications": 0,
+  "fresh_model_calls": 1,
+  "seconds": 15.74,
+  "error": null
+}

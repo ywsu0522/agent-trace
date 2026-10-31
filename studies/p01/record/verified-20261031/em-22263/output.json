@@ -1,0 +1,10 @@
+{
+  "output": {
+    "category": "urgent",
+    "reason": "The recipient must act today to replace specific power units following a confirmed outage, as the schedule involves immediate evening operations and Friday deadlines."
+  },
+  "reused_classifications": 0,
+  "fresh_model_calls": 1,
+  "seconds": 15.934,
+  "error": null
+}

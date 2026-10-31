@@ -1,0 +1,10 @@
+{
+  "output": {
+    "category": "ignore",
+    "reason": "This is a mass marketing weather alert and advertisement that requires no action from the recipient."
+  },
+  "reused_classifications": 0,
+  "fresh_model_calls": 1,
+  "seconds": 25.14,
+  "error": null
+}

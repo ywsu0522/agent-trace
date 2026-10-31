@@ -1,0 +1,10 @@
+{
+  "output": {
+    "category": "urgent",
+    "reason": "The sender requires immediate information by the end of the day to prepare for a specific appointment scheduled at 2 pm that same afternoon."
+  },
+  "reused_classifications": 0,
+  "fresh_model_calls": 1,
+  "seconds": 15.506,
+  "error": null
+}

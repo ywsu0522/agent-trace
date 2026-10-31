@@ -1,0 +1,15 @@
+{
+  "id": "em-02354",
+  "output": {
+    "category": "ignore",
+    "reason": "This is a marketing newsletter promoting an event with no requirement for immediate action or deadline."
+  },
+  "error": null,
+  "reused_classifications": 0,
+  "fresh_model_calls": 1,
+  "passed": true,
+  "correct": true,
+  "valid_contract": true,
+  "unknown": false,
+  "reasons": []
+}

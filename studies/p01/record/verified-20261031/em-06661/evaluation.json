@@ -1,0 +1,15 @@
+{
+  "id": "em-06661",
+  "output": {
+    "category": "normal",
+    "reason": "This email contains a status update and a request for decision-making regarding a sale negotiation with a deadline of next week, which exceeds the two-working-day threshold required for an urgent classification."
+  },
+  "error": null,
+  "reused_classifications": 0,
+  "fresh_model_calls": 1,
+  "passed": true,
+  "correct": true,
+  "valid_contract": true,
+  "unknown": false,
+  "reasons": []
+}

@@ -1,0 +1,143 @@
+{
+  "source_run": "p02-verified-20261031",
+  "format": "unaltered byte-for-byte snapshot",
+  "native_calls_verified": 153,
+  "files": {
+    "record/verified-20261031/2001-06-22/evaluation.json": {
+      "sha256": "10a352de4d07a077bd08e84ebe61d7fbb7f3e31f77f317999c1631cf71c2fac0",
+      "bytes": 1107
+    },
+    "record/verified-20261031/2001-06-22/events.jsonl": {
+      "sha256": "607434a93c54003e6e66f3104a41130fafcd8547418962709278250f469e049e",
+      "bytes": 272726
+    },
+    "record/verified-20261031/2001-06-22/output.json": {
+      "sha256": "1ecebcfca2908bf6e72ff4fdfa07cbf1083fda6bd4c279073d4e815dda0fc639",
+      "bytes": 933
+    },
+    "record/verified-20261031/2001-06-22/prepared.json": {
+      "sha256": "a39d142b70ee9720624a8af03b3682266e4511cafa207da17c5abc1e418ad2cd",
+      "bytes": 41215
+    },
+    "record/verified-20261031/2001-06-22/settings.json": {
+      "sha256": "afc7a533e8a8abd5211369578b474e45c3226c4faaf98c22bcea93fffa81dbf7",
+      "bytes": 791
+    },
+    "record/verified-20261031/2001-06-22/written.json": {
+      "sha256": "7fca305cf62e73af7c63a314e66b91fe20afd5a9498b2dfeee827e52b41659e2",
+      "bytes": 832
+    },
+    "record/verified-20261031/2001-07-05/evaluation.json": {
+      "sha256": "aef2d615a21cd3c555fb169c7c62ac274ab8c1282e484e6630f46c31dc468106",
+      "bytes": 786
+    },
+    "record/verified-20261031/2001-07-05/events.jsonl": {
+      "sha256": "70e3e55670c5eb5786ada8a83ec0421ca976a1803d312d07f271aab4215113a6",
+      "bytes": 249617
+    },
+    "record/verified-20261031/2001-07-05/output.json": {
+      "sha256": "ef9004520c12b79f8ca8d2a6279005601b0656d8d063f8d2c99cd67909718411",
+      "bytes": 613
+    },
+    "record/verified-20261031/2001-07-05/prepared.json": {
+      "sha256": "02d4aae58ab524e37e0402a2adbbbe3fa1e6518a80201dedce6390f856073a59",
+      "bytes": 32398
+    },
+    "record/verified-20261031/2001-07-05/settings.json": {
+      "sha256": "afc7a533e8a8abd5211369578b474e45c3226c4faaf98c22bcea93fffa81dbf7",
+      "bytes": 791
+    },
+    "record/verified-20261031/2001-07-05/written.json": {
+      "sha256": "c44a8c5f940b111783036f2cb53228676b59e21383093749d392f27a06beae0e",
+      "bytes": 512
+    },
+    "record/verified-20261031/2001-07-25/evaluation.json": {
+      "sha256": "d2cfae50acb0bc9366886535c40e0b25f18e1b70f9f0d26a142a55cfff3cd9d6",
+      "bytes": 1029
+    },
+    "record/verified-20261031/2001-07-25/events.jsonl": {
+      "sha256": "e9eb8482c7f404364f4b1cbae83cec7a39aeb556c68238b24f8188eb1c3bfad5",
+      "bytes": 271922
+    },
+    "record/verified-20261031/2001-07-25/output.json": {
+      "sha256": "3ba67008e14715a9525c890c4305e0e47658e3b1d757b416bff632910d749712",
+      "bytes": 856
+    },
+    "record/verified-20261031/2001-07-25/prepared.json": {
+      "sha256": "6d2caf3cadeea56d5e491f5f68d87fd2d6c6b59ba0afdfc2dffff1b73fbbed58",
+      "bytes": 28113
+    },
+    "record/verified-20261031/2001-07-25/settings.json": {
+      "sha256": "afc7a533e8a8abd5211369578b474e45c3226c4faaf98c22bcea93fffa81dbf7",
+      "bytes": 791
+    },
+    "record/verified-20261031/2001-07-25/written.json": {
+      "sha256": "197111f32c506cd7d33fb1a1904e4c0b73434fda82a97b735b76491f8bf61613",
+      "bytes": 754
+    },
+    "record/verified-20261031/2001-08-08/evaluation.json": {
+      "sha256": "8b899108d2d8719538c4c57ce0fa50f5e0624e670eca05c9e3919fbbf273b158",
+      "bytes": 1158
+    },
+    "record/verified-20261031/2001-08-08/events.jsonl": {
+      "sha256": "ed29c21eaf81ffc4d49b412e99193fb68f486dba5d0b2d7b596162db1a07ad39",
+      "bytes": 248782
+    },
+    "record/verified-20261031/2001-08-08/output.json": {
+      "sha256": "03ca67d6df8957de4912e3f5543800dfa8760c253b2d42cd4a5f53b9a3453265",
+      "bytes": 984
+    },
+    "record/verified-20261031/2001-08-08/prepared.json": {
+      "sha256": "6f6fa9fe4b7e4a5574fd020f68322abbbdebd27a21fb7c01d57ad61cce1c8faa",
+      "bytes": 29650
+    },
+    "record/verified-20261031/2001-08-08/settings.json": {
+      "sha256": "afc7a533e8a8abd5211369578b474e45c3226c4faaf98c22bcea93fffa81dbf7",
+      "bytes": 791
+    },
+    "record/verified-20261031/2001-08-08/written.json": {
+      "sha256": "508ad59b20178b9b5f967d7dc64830bb07cc0521f0b8a2b0bc5164cd2875edca",
+      "bytes": 883
+    },
+    "record/verified-20261031/2001-08-21/evaluation.json": {
+      "sha256": "939b17e3596624f32e4696ae473cb46f4b2065c4fe23d255676dc171b0872438",
+      "bytes": 1142
+    },
+    "record/verified-20261031/2001-08-21/events.jsonl": {
+      "sha256": "9612d963cbd2c099f3a005a63223f0b363069c0de557c7157955843583e951b3",
+      "bytes": 268692
+    },
+    "record/verified-20261031/2001-08-21/output.json": {
+      "sha256": "27d69cc4b51521a11d2fb1c266e6581747362165f84c384503a01da289637dcf",
+      "bytes": 968
+    },
+    "record/verified-20261031/2001-08-21/prepared.json": {
+      "sha256": "ffbd7f3711c489a1880da657ac8b525fc6e3bdc3290da56250212a450e9673e1",
+      "bytes": 31772
+    },
+    "record/verified-20261031/2001-08-21/settings.json": {
+      "sha256": "afc7a533e8a8abd5211369578b474e45c3226c4faaf98c22bcea93fffa81dbf7",
+      "bytes": 791
+    },
+    "record/verified-20261031/2001-08-21/written.json": {
+      "sha256": "1d484482b72a1ce408abb3ffd0da1bbf2140f0f22350918d8d9d0ca0dffac91e",
+      "bytes": 867
+    },
+    "record/verified-20261031/fixture.json": {
+      "sha256": "2f99d35f123cc0ea77bf9eb5493cf76648c871c3ae1b9a917c8e1e9dea61d25c",
+      "bytes": 4881
+    },
+    "record/verified-20261031/metadata.json": {
+      "sha256": "c8342e8971c2d6232eed5b62440628333b22c355d32001401a33a27b970365e7",
+      "bytes": 5115
+    },
+    "record/verified-20261031/progress.json": {
+      "sha256": "ac9c6c7b9505683d2ec1c11006239a3afa9f75b77f878c8e36ee8f2371af7ea2",
+      "bytes": 5584
+    },
+    "record/verified-20261031/results.json": {
+      "sha256": "54011f5f57b26a8ffd88c2b8be2cddd08cf701ec0d0288b47507fee668b8148c",
+      "bytes": 5826
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "id": "em-13565",
+  "output": {
+    "category": "urgent",
+    "reason": "The recipient has an immediate obligation to provide a live price by the end of the day because the client requires a contract today."
+  },
+  "error": null,
+  "reused_classifications": 0,
+  "fresh_model_calls": 1,
+  "passed": true,
+  "correct": true,
+  "valid_contract": true,
+  "unknown": false,
+  "reasons": []
+}

@@ -1,0 +1,15 @@
+{
+  "id": "em-08125",
+  "output": {
+    "category": "urgent",
+    "reason": "The recipient must approve a $4.2 million wire transfer by 2:00 PM today to prevent suspension of deliveries, which is within the two-working-day deadline."
+  },
+  "error": null,
+  "reused_classifications": 0,
+  "fresh_model_calls": 1,
+  "passed": true,
+  "correct": true,
+  "valid_contract": true,
+  "unknown": false,
+  "reasons": []
+}

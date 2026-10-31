@@ -1,0 +1,10 @@
+{
+  "output": {
+    "category": "ignore",
+    "reason": "This is an unsolicited marketing email from a third party promoting Father's Day gifts and sweepstakes with no requirement for the recipient to take action."
+  },
+  "reused_classifications": 0,
+  "fresh_model_calls": 1,
+  "seconds": 27.825,
+  "error": null
+}

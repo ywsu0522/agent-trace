@@ -1,0 +1,10 @@
+{
+  "output": {
+    "category": "ignore",
+    "reason": "This is an automated newsletter announcement from a conference organizer that requires no action from the recipient."
+  },
+  "reused_classifications": 0,
+  "fresh_model_calls": 1,
+  "seconds": 17.145,
+  "error": null
+}

@@ -1,0 +1,10 @@
+{
+  "output": {
+    "category": "ignore",
+    "reason": "This is an automated marketing offer sent to a subscriber who opted in, requiring no action and fitting the definition of advertising or newsletters."
+  },
+  "reused_classifications": 0,
+  "fresh_model_calls": 1,
+  "seconds": 19.757,
+  "error": null
+}

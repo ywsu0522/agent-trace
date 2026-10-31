@@ -1,0 +1,10 @@
+{
+  "output": {
+    "category": "ignore",
+    "reason": "This email is a mass marketing newsletter about industry news that requires no action from the recipient."
+  },
+  "reused_classifications": 0,
+  "fresh_model_calls": 1,
+  "seconds": 54.934,
+  "error": null
+}

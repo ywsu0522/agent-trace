@@ -1,0 +1,10 @@
+{
+  "output": {
+    "category": "normal",
+    "reason": "This is a status update regarding an ongoing issue with no immediate deadline or live outage requiring urgent action."
+  },
+  "reused_classifications": 0,
+  "fresh_model_calls": 1,
+  "seconds": 14.074,
+  "error": null
+}

@@ -1,0 +1,10 @@
+{
+  "output": {
+    "category": "ignore",
+    "reason": "This is an automated marketing newsletter from RealNetworks promoting free games and containing no actionable request for the recipient."
+  },
+  "reused_classifications": 0,
+  "fresh_model_calls": 1,
+  "seconds": 30.098,
+  "error": null
+}

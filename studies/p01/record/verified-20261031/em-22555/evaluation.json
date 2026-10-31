@@ -1,0 +1,15 @@
+{
+  "id": "em-22555",
+  "output": {
+    "category": "normal",
+    "reason": "This is a follow-up email from a candidate thanking the recruiter for a meeting and requesting resume review, which does not meet the strict deadline criteria for urgency."
+  },
+  "error": null,
+  "reused_classifications": 0,
+  "fresh_model_calls": 1,
+  "passed": true,
+  "correct": true,
+  "valid_contract": true,
+  "unknown": false,
+  "reasons": []
+}

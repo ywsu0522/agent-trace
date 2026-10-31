@@ -1,0 +1,10 @@
+{
+  "output": {
+    "category": "normal",
+    "reason": "This email requests a status update and decision on legal agreements but provides no specific deadline, allowing the recipient to respond at their convenience."
+  },
+  "reused_classifications": 0,
+  "fresh_model_calls": 1,
+  "seconds": 19.792,
+  "error": null
+}

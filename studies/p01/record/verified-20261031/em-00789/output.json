@@ -1,0 +1,10 @@
+{
+  "output": {
+    "category": "ignore",
+    "reason": "This is an automated newsletter from CNN that requires no action from the recipient and can be safely left unread."
+  },
+  "reused_classifications": 0,
+  "fresh_model_calls": 1,
+  "seconds": 21.213,
+  "error": null
+}

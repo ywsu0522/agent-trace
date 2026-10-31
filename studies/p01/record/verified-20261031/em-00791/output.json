@@ -1,0 +1,10 @@
+{
+  "output": {
+    "category": "ignore",
+    "reason": "This is an automated newsletter and advertisement from a third-party service that requires no action from the recipient."
+  },
+  "reused_classifications": 0,
+  "fresh_model_calls": 1,
+  "seconds": 24.542,
+  "error": null
+}

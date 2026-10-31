@@ -1,0 +1,17 @@
+{
+  "id": "em-08173",
+  "output": {
+    "category": "normal",
+    "reason": "This is a direct request for status and action from a known colleague without an explicit near-term deadline or indication of a live outage."
+  },
+  "error": null,
+  "reused_classifications": 0,
+  "fresh_model_calls": 1,
+  "passed": false,
+  "correct": false,
+  "valid_contract": true,
+  "unknown": false,
+  "reasons": [
+    "expected urgent, got normal"
+  ]
+}

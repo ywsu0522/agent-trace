@@ -1,0 +1,15 @@
+{
+  "id": "em-00014",
+  "output": {
+    "category": "urgent",
+    "reason": "The recipient must act immediately today to prevent a live operational outage caused by an improperly scheduled shift."
+  },
+  "error": null,
+  "reused_classifications": 0,
+  "fresh_model_calls": 1,
+  "passed": true,
+  "correct": true,
+  "valid_contract": true,
+  "unknown": false,
+  "reasons": []
+}

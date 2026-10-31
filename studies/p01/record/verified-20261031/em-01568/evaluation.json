@@ -1,0 +1,15 @@
+{
+  "id": "em-01568",
+  "output": {
+    "category": "ignore",
+    "reason": "This is a mass marketing announcement from an automated system to all employees with no specific action required by the recipient."
+  },
+  "error": null,
+  "reused_classifications": 0,
+  "fresh_model_calls": 1,
+  "passed": true,
+  "correct": true,
+  "valid_contract": true,
+  "unknown": false,
+  "reasons": []
+}

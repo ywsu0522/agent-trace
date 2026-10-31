@@ -1,0 +1,17 @@
+{
+  "id": "em-22865",
+  "output": {
+    "category": "ignore",
+    "reason": "This email is a personal update from an acquaintance containing an unsolicited advertisement for MSN Explorer, which the recipient can safely ignore."
+  },
+  "error": null,
+  "reused_classifications": 0,
+  "fresh_model_calls": 1,
+  "passed": false,
+  "correct": false,
+  "valid_contract": true,
+  "unknown": false,
+  "reasons": [
+    "expected normal, got ignore"
+  ]
+}

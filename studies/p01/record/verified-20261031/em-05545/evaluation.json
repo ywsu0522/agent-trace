@@ -1,0 +1,15 @@
+{
+  "id": "em-05545",
+  "output": {
+    "category": "ignore",
+    "reason": "This is an unsolicited marketing newsletter from a vendor promoting their services and soliciting attendance at an event."
+  },
+  "error": null,
+  "reused_classifications": 0,
+  "fresh_model_calls": 1,
+  "passed": true,
+  "correct": true,
+  "valid_contract": true,
+  "unknown": false,
+  "reasons": []
+}

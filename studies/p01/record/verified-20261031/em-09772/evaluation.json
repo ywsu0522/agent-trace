@@ -1,0 +1,15 @@
+{
+  "id": "em-09772",
+  "output": {
+    "category": "ignore",
+    "reason": "This is an automated out-of-office notification intended for general inquiries rather than a specific recipient requiring immediate action."
+  },
+  "error": null,
+  "reused_classifications": 0,
+  "fresh_model_calls": 1,
+  "passed": true,
+  "correct": true,
+  "valid_contract": true,
+  "unknown": false,
+  "reasons": []
+}

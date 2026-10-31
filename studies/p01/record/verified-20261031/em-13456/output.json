@@ -1,0 +1,10 @@
+{
+  "output": {
+    "category": "normal",
+    "reason": "This is a personal status update from a colleague discussing workload and requesting suggestions without any near-term deadlines or critical actions required."
+  },
+  "reused_classifications": 0,
+  "fresh_model_calls": 1,
+  "seconds": 17.256,
+  "error": null
+}

@@ -8,3 +8,8 @@
 - `configs/` 與歷史 trace 的工具名稱、參數格式保留與原實驗相容的介面；文件問答的參考規格也保留在研究紀錄中。
 
 課程 repository 隨附的 MIT 條文與原 copyright notice 保留於 [LICENSE.cs329z](LICENSE.cs329z)，適用於取用的上游素材；不代表本專案的程式碼整體採用 MIT，亦不替第三方 email 內容另行授權。
+
+- `tests/fixtures/priority_gold.json`：HW1 P01 `priority` 的 60 封分類測試信件與標準分類，原始 JSON 原封保留。
+- `tests/fixtures/doc_questions.json`：HW1 P09 `search_docs` 的 20 題問題、答案別名與文件證據，原始 JSON 原封保留；執行時不讀取外部課程目錄。
+- `tests/fixtures/digest_days.json`：HW1 P02 `daily_digest` 的 5 天指定信件 ID、必提別名群組與禁提詞，原始 JSON 原封保留；信件本身由 email archive 取得。
+- `tests/test_priority.py`、`tests/test_daily_digest.py`：原始 deterministic 案例移植，僅調整 imports、API 呼叫及離線模型替身；不匯入課程程式包。Live 評分腳本位於 `scripts/test01.py`、`scripts/test02.py`，沿用原始門檻與比對規則。

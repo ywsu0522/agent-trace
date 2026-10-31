@@ -1,0 +1,15 @@
+{
+  "id": "em-00810",
+  "output": {
+    "category": "ignore",
+    "reason": "This email is an automated newsletter containing a PDF attachment and copyright notices that requires no action from the recipient."
+  },
+  "error": null,
+  "reused_classifications": 0,
+  "fresh_model_calls": 1,
+  "passed": true,
+  "correct": true,
+  "valid_contract": true,
+  "unknown": false,
+  "reasons": []
+}

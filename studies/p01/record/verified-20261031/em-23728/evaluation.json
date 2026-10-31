@@ -1,0 +1,15 @@
+{
+  "id": "em-23728",
+  "output": {
+    "category": "normal",
+    "reason": "This is a personal status update from a known colleague regarding an immediate action that will be completed within the same day."
+  },
+  "error": null,
+  "reused_classifications": 0,
+  "fresh_model_calls": 1,
+  "passed": true,
+  "correct": true,
+  "valid_contract": true,
+  "unknown": false,
+  "reasons": []
+}

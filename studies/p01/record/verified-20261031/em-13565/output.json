@@ -1,0 +1,10 @@
+{
+  "output": {
+    "category": "urgent",
+    "reason": "The recipient has an immediate obligation to provide a live price by the end of the day because the client requires a contract today."
+  },
+  "reused_classifications": 0,
+  "fresh_model_calls": 1,
+  "seconds": 15.262,
+  "error": null
+}

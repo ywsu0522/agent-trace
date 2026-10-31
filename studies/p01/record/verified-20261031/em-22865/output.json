@@ -1,0 +1,10 @@
+{
+  "output": {
+    "category": "ignore",
+    "reason": "This email is a personal update from an acquaintance containing an unsolicited advertisement for MSN Explorer, which the recipient can safely ignore."
+  },
+  "reused_classifications": 0,
+  "fresh_model_calls": 1,
+  "seconds": 17.439,
+  "error": null
+}

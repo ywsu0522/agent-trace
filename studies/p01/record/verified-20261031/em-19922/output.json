@@ -1,0 +1,10 @@
+{
+  "output": {
+    "category": "urgent",
+    "reason": "The recipient has a strict deadline of 1:00 PM today to resolve a failed payment that would result in interest penalties."
+  },
+  "reused_classifications": 0,
+  "fresh_model_calls": 1,
+  "seconds": 15.093,
+  "error": null
+}

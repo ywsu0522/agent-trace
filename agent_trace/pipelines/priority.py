@@ -34,6 +34,23 @@ Return ONLY a JSON object:
 {"category":"urgent|normal|ignore","reason":"One sentence explaining the recipient's obligation and timing."}
 """
 
+# Public backend hints; pipeline callers need not duplicate output schemas.
+MODEL_TASK_OPTIONS = {
+    'classify_priority': {
+        'json_mode': True, 'num_predict': 128,
+        'format': {
+            'type': 'object',
+            'properties': {
+                'category': {'type': 'string', 'enum': ['urgent', 'normal', 'ignore']},
+                'reason': {'type': 'string'},
+            },
+            'required': ['category', 'reason'],
+            'additionalProperties': False,
+        },
+    },
+}
+
+
 _LABEL = re.compile(r"\b(urgent|normal|ignore)\b", re.IGNORECASE)
 _CATEGORIES = {"urgent", "normal", "ignore"}
 

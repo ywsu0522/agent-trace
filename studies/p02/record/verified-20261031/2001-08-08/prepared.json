@@ -1,0 +1,673 @@
+{
+  "labels": [
+    {
+      "category": "normal",
+      "reason": "This is a collaborative status update regarding a draft letter with no immediate deadline or action required by the recipients."
+    },
+    {
+      "category": "ignore",
+      "reason": "This email is a mass distribution of an external news article to a large list of recipients with no specific action required or deadline."
+    },
+    {
+      "category": "ignore",
+      "reason": "This is an unsolicited promotional email from a marketing list that requires no action from the recipient."
+    },
+    {
+      "category": "ignore",
+      "reason": "This email is a promotional link from an external source that requires no action or approval from the recipients."
+    },
+    {
+      "category": "normal",
+      "reason": "This email is a routine status inquiry regarding an employee transfer with no immediate deadline or critical outage."
+    },
+    {
+      "category": "normal",
+      "reason": "This is a personal status update from a colleague regarding a minor logistical detail for an upcoming meeting, with no near-term deadlines or critical actions required."
+    },
+    {
+      "category": "normal",
+      "reason": "This email requests scheduling a meeting for the recipient with no specific deadline or immediate action required."
+    },
+    {
+      "category": "ignore",
+      "reason": "This email contains a list of financial offers without any recipient-specific context, deadline, or request for action."
+    },
+    {
+      "category": "normal",
+      "reason": "This email is a legitimate request for missing employee data regarding a mass layoff, which requires action but lacks an immediate deadline."
+    },
+    {
+      "category": "urgent",
+      "reason": "The recipient has a strict deadline of 1:00 PM today to resolve a failed payment that would result in interest penalties."
+    },
+    {
+      "category": "normal",
+      "reason": "This email is a routine status update providing forms to a colleague without any near-term deadlines or urgent operational issues."
+    },
+    {
+      "category": "normal",
+      "reason": "This email is a standard status update sharing a document for review without any near-term deadlines or urgent operational issues."
+    },
+    {
+      "category": "normal",
+      "reason": "This is a direct request for a meeting scheduled in the future without an immediate deadline or live problem requiring urgent action."
+    },
+    {
+      "category": "normal",
+      "reason": "This email provides a status update on a previously shared spreadsheet without any near-term deadlines or urgent action requirements."
+    },
+    {
+      "category": "normal",
+      "reason": "The email requests data by August 22, which is more than two working days away from the sent date of August 8, and involves ongoing business planning rather than an immediate outage or critical failure."
+    },
+    {
+      "category": "normal",
+      "reason": "This is a routine status update regarding congestion revenue with no immediate deadline or action required from the recipients."
+    },
+    {
+      "category": "ignore",
+      "reason": "This email is a pre-approved credit card advertisement with no requirement for the recipient to act or make a decision."
+    },
+    {
+      "category": "normal",
+      "reason": "This email provides a location for a shared spreadsheet to a large group of colleagues without any near-term deadlines or urgent action requirements."
+    },
+    {
+      "category": "ignore",
+      "reason": "This is a mass mailing to a discussion list announcing a past event that has already occurred, requiring no action from the recipients."
+    },
+    {
+      "category": "ignore",
+      "reason": "This is an automated weather alert broadcast intended for public dissemination rather than a specific recipient requiring immediate action."
+    },
+    {
+      "category": "normal",
+      "reason": "This email is a routine business communication sharing a document for group consideration without any near-term deadlines or critical incidents."
+    },
+    {
+      "category": "normal",
+      "reason": "This email is a standard meeting invitation with no near-term deadline or urgent action required from the recipient."
+    },
+    {
+      "category": "normal",
+      "reason": "This email is a routine informational update about hedging strategies shared among multiple industry contacts without any near-term deadlines or urgent action requirements."
+    },
+    {
+      "category": "normal",
+      "reason": "This is a direct request for a specific document with no stated deadline or urgency."
+    },
+    {
+      "category": "normal",
+      "reason": "This is a standard notification to a discussion list regarding a schedule change for an upcoming meeting, which does not require immediate action or meet a tight deadline."
+    },
+    {
+      "category": "urgent",
+      "reason": "The recipient has a strict deadline of 10:00 AM the next working day to sign a document required by auditors."
+    },
+    {
+      "category": "normal",
+      "reason": "This email is a standard meeting invitation with no near-term deadline or urgent action required from the recipient."
+    },
+    {
+      "category": "ignore",
+      "reason": "This email is an automated notice copied to a discussion list regarding market hour reservations with no direct action required from the recipient."
+    },
+    {
+      "category": "normal",
+      "reason": "This email is a professional inquiry seeking clarification on technical documentation and operational procedures without an immediate deadline."
+    }
+  ],
+  "threads": [
+    {
+      "thread_id": "th-16201",
+      "priority": "urgent",
+      "emails": [
+        {
+          "priority": "urgent",
+          "email": {
+            "id": "em-19922",
+            "thread_id": "th-16201",
+            "reply_to": null,
+            "from": "tadeusz.mroczek@enron.com",
+            "to": [
+              "noriko.hatakeyama@enron.com"
+            ],
+            "date": "2001-08-08T14:25:00Z",
+            "subject": "Wire to Thornbury Pipeline was rejected - must resend by 1:00",
+            "body": "Noriko,\n\nThe bank rejected this morning's $1.9 million payment to Thornbury Pipeline because the account number on the instruction was wrong. If the payment is not resent by 1:00 PM today we are late and the interest penalty applies. I need you to confirm the correct account and approve the new wire right away.\n\nTadeusz"
+          }
+        }
+      ]
+    },
+    {
+      "thread_id": "th-16306",
+      "priority": "urgent",
+      "emails": [
+        {
+          "priority": "urgent",
+          "email": {
+            "id": "em-20054",
+            "thread_id": "th-16306",
+            "reply_to": null,
+            "from": "ezequiel.zubiri@enron.com",
+            "to": [
+              "ignatius.dragomir@enron.com"
+            ],
+            "date": "2001-08-08T20:10:00Z",
+            "subject": "Ketteridge & Lowe need your signature by 10:00 AM tomorrow",
+            "body": "Ignatius,\n\nThe auditors from Ketteridge & Lowe will not sign off on the quarter without your signed reserve schedule. They need it by 10:00 AM tomorrow. I left the schedule with Leocadia. Please review it and sign it tonight or first thing in the morning.\n\nEzequiel"
+          }
+        }
+      ]
+    },
+    {
+      "thread_id": "th-16146",
+      "priority": "normal",
+      "emails": [
+        {
+          "priority": "normal",
+          "email": {
+            "id": "em-19856",
+            "thread_id": "th-16146",
+            "reply_to": null,
+            "from": "linda.robertson@enron.com",
+            "to": [
+              "jeff.dasovich@enron.com",
+              "karen.denne@enron.com",
+              ".palmer@enron.com",
+              "paul.kaufman@enron.com",
+              "b..sanders@enron.com",
+              "richard.shapiro@enron.com",
+              ".scott@enron.com",
+              "j..kean@enron.com",
+              "susan.mara@enron.com"
+            ],
+            "date": "2001-08-08T00:20:59Z",
+            "subject": "Re: FINAL Draft of Letter to Dunn and Rest of Senate",
+            "body": "This is an excellent letter.  When it goes final, I'd like to use it here in DC.  We have some inquiries on what this snit is all about.  \n\n\n\n\n\tJeff Dasovich/ENRON@enronXgate 08/07/2001 07:59 PM \t   To: Richard Shapiro/ENRON@enronXgate, Linda Robertson/NA/Enron@ENRON, Steven J Kean/ENRON@enronXgate, Karen Denne/ENRON@enronXgate, Paul Kaufman/ENRON@enronXgate, Richard B Sanders/Enron@enronXgate, Susan J Mara/ENRON@enronXgate, James D Steffes/ENRON@enronXgate, Mark Palmer/ENRON@enronXgate, \"Scott Govenar (E-mail)\" <sgovenar@govadv.com>@SMTP@enronXgate, hgovenar@govadv.com@SMTP@enronXgate  cc:   Subject: FINAL Draft of Letter to Dunn and Rest of Senate\t\n\n\nAttached is the final draft of the letter to the members of the Senate urging them to reject the Dunn committee's recommendation on contempt and fines.  Richard Sanders, Mark Haedicke and the other lawyers have reviewed and provided comments.\n\nHere is the current game plan.\n\n?\tThe letter will be individually addressed to each member of the Senate.  Scott Govenar will provide the names and addresses of the Senators.\n?\tSteve Kean will make any final changes and sign.\n?\tScott, Hedy and Bev will deliver to the offices of each of the Senators as soon as possible.\n?\tKaren and Mark will disseminate to the press as soon as possible.\n\nIf there are comments/suggestions on the game plan, please let us know.  Thanks to all for the effort.\n\nBest,\nJeff\n\n \n\n\n"
+          }
+        }
+      ]
+    },
+    {
+      "thread_id": "th-16181",
+      "priority": "normal",
+      "emails": [
+        {
+          "priority": "normal",
+          "email": {
+            "id": "em-19896",
+            "thread_id": "th-16181",
+            "reply_to": null,
+            "from": "m..forney@enron.com",
+            "to": [
+              "johnny.palmer@enron.com",
+              "lloyd.will@enron.com"
+            ],
+            "date": "2001-08-08T13:15:27Z",
+            "subject": "George Phillips as RT trader",
+            "body": "\n\nJohnny,\nWhat is the status of George?   I think that you have been speaking with Lloyd Will concerning bringing him over from EES.   George is inquiring about his status and wants to know whether he should mention anything to EES.    I would think not, at this time.\nLloyd is out of town until Monday,  so I am trying to follow up on his behalf.\n\n\nThanks,\nJForney\n3/7160"
+          }
+        }
+      ]
+    },
+    {
+      "thread_id": "th-16183",
+      "priority": "normal",
+      "emails": [
+        {
+          "priority": "normal",
+          "email": {
+            "id": "em-19898",
+            "thread_id": "th-16183",
+            "reply_to": null,
+            "from": "sonia.hennessy@enron.com",
+            "to": [
+              "sonia.hennessy@enron.com",
+              "w..white@enron.com",
+              "casey.evans@enron.com"
+            ],
+            "date": "2001-08-08T13:15:52Z",
+            "subject": "Casey's Review",
+            "body": "This is a Video conf. room so you could get kicked out if they have a video meeting they need to put in there.  I think it's very rare but I wanted to let you know anyway.  :)\n\nSonia"
+          }
+        }
+      ]
+    },
+    {
+      "thread_id": "th-16188",
+      "priority": "normal",
+      "emails": [
+        {
+          "priority": "normal",
+          "email": {
+            "id": "em-19903",
+            "thread_id": "th-16188",
+            "reply_to": null,
+            "from": "marnie.lamb@enron.com",
+            "to": [
+              "dana.davis@enron.com"
+            ],
+            "date": "2001-08-08T13:35:15Z",
+            "subject": "Review",
+            "body": "Hi Dana,\n\nWe need to get together for your review.  When are you unavailable this week or early next week?  I think you have fire marshall training this afternoon.  When is the United Way thing you are participating in?\n\nThanks,\nMarnie"
+          }
+        }
+      ]
+    },
+    {
+      "thread_id": "th-16197",
+      "priority": "normal",
+      "emails": [
+        {
+          "priority": "normal",
+          "email": {
+            "id": "em-19916",
+            "thread_id": "th-16197",
+            "reply_to": null,
+            "from": "janiceavery78@hotmail.com",
+            "to": [
+              "akerr2@enron.com",
+              "jeff.skilling@enron.com"
+            ],
+            "date": "2001-08-08T14:09:39Z",
+            "subject": "mass layoff",
+            "body": "Ashley\n\nPlease provide the information related to the entire EES group of employees\nlaid off at the same time.  I did not receive the entire listing.\nFurthermore, the information should provide information regarding how the\nclass of employees being laid off is defined.\n\nJanice Avery\n\n_________________________________________________________________\nGet your FREE download of MSN Explorer at http://explorer.msn.com/intl.asp"
+          }
+        }
+      ]
+    },
+    {
+      "thread_id": "th-16207",
+      "priority": "normal",
+      "emails": [
+        {
+          "priority": "normal",
+          "email": {
+            "id": "em-19929",
+            "thread_id": "th-16207",
+            "reply_to": null,
+            "from": ".taylor@enron.com",
+            "to": [
+              "mary.cook@enron.com"
+            ],
+            "date": "2001-08-08T14:37:56Z",
+            "subject": "Reviews",
+            "body": "Here are the forms for the paralegals.  I didn't have Marie on my list since she was with EBS reviewed her for the first half of the year.\n      \n\nMark Taylor\nVice President and General Counsel\nEnron Wholesale Services\n(713)853-7459"
+          }
+        }
+      ]
+    },
+    {
+      "thread_id": "th-16208",
+      "priority": "normal",
+      "emails": [
+        {
+          "priority": "normal",
+          "email": {
+            "id": "em-19930",
+            "thread_id": "th-16208",
+            "reply_to": null,
+            "from": "sbishop@gibbs-bruns.com",
+            "to": [
+              "frizzell.jean@enron.com",
+              "reasoner.barrett@enron.com",
+              "gulley.aundrea@enron.com"
+            ],
+            "date": "2001-08-08T14:38:44Z",
+            "subject": "From Robin Gibbs:    Energy Litigation Action Items",
+            "body": " <<Energy Litigation Action Items (FergusGibbs)_v1.DOC>>\n\n - Energy Litigation Action Items (FergusGibbs)_v1.DOC "
+          }
+        }
+      ]
+    },
+    {
+      "thread_id": "th-16211",
+      "priority": "normal",
+      "emails": [
+        {
+          "priority": "normal",
+          "email": {
+            "id": "em-19937",
+            "thread_id": "th-16211",
+            "reply_to": null,
+            "from": "craig.chaney@enron.com",
+            "to": [
+              "craig.chaney@enron.com"
+            ],
+            "date": "2001-08-08T14:59:21Z",
+            "subject": "Review of CreditStream business",
+            "body": "We will go over CreditStream business plan, and Houston Research involvement.\n\nCraig\n"
+          }
+        }
+      ]
+    },
+    {
+      "thread_id": "th-16218",
+      "priority": "normal",
+      "emails": [
+        {
+          "priority": "normal",
+          "email": {
+            "id": "em-19945",
+            "thread_id": "th-16218",
+            "reply_to": null,
+            "from": "chris.stokley@enron.com",
+            "to": [
+              "alan.comnes@enron.com"
+            ],
+            "date": "2001-08-08T15:14:26Z",
+            "subject": "DETAIL",
+            "body": "Alan,\n\tThis is the detail behind the spreadsheet that I sent to you. This was sent to me by Keoni at the ISO.\n\n\t\t\t\t\tChris\n\n\n\n\n "
+          }
+        }
+      ]
+    },
+    {
+      "thread_id": "th-16224",
+      "priority": "normal",
+      "emails": [
+        {
+          "priority": "normal",
+          "email": {
+            "id": "em-19952",
+            "thread_id": "th-16224",
+            "reply_to": null,
+            "from": "john.cobb@enron.com",
+            "to": [
+              "tracy.geaccone@enron.com",
+              "john.keiser@enron.com",
+              "steve.gilbert@enron.com",
+              "betty.studzinski@enron.com"
+            ],
+            "date": "2001-08-08T15:24:12Z",
+            "subject": "Depr./AFUDC Current Estimate",
+            "body": "\tIn order to provide you with timely projections for the 2002 Plan and the Current Estimate update it\n\twould be most helpful if you would provide us with the following information keeping the C.E. projections\n\tin line (Carryover Projects) with the Plan.\n\n\tFor 2001 Current Estimate Update please provide the following information ASAP but no later than August 22\n\tfor us to provide the updated C.E. the week of August 27.\n\t\tRemaining monthly capital expenditures\n\t\t\tMajor Projects\n\t\t\t    2001 In Service Month\n\t\t\t    Carryover to 2002\n\t\t\tOther Projects\n\t\t\t    2001 In Service\n\t\t\t    Carryover to 2002\n\t\n\t\n\tFor 2002 Plan please provide the following and we will incorporate into the \"base depreciation\" and provide a\n\ttotal entity estimate for depreciaiton and AFUDC.  The timing is not clear to us yet but if this data is provided\n\tto us along with the C.E. or shortly thereafter we will be able to provide plan projections immediately after the\n\tAugust close.  If you need this sooner then we must get this project data along with the C.E. data.\n\t\tProjects In service in 2002\n\t\t\tMonthly expenditures\n\t\t\tProject To-Date Exp. (carryover plus 2002)\n\t\t\t2002 In Service Month\n\t\tProjects not In service in 2002\n\t\t\tMonthly expenditures\n\n\tIf this is too confusing, just give Betty Studzinski (3-5434)or myself (3-7402) a call\n\t\t\t"
+          }
+        }
+      ]
+    },
+    {
+      "thread_id": "th-16229",
+      "priority": "normal",
+      "emails": [
+        {
+          "priority": "normal",
+          "email": {
+            "id": "em-19959",
+            "thread_id": "th-16229",
+            "reply_to": null,
+            "from": "bill.williams@enron.com",
+            "to": [
+              "kit.blair@enron.com",
+              "caroline.emmert@enron.com",
+              "eugene.lee@enron.com",
+              "kourtney.nelson@enron.com",
+              "p..o'neil@enron.com",
+              "mike.purcell@enron.com",
+              "jim.reyes@enron.com",
+              "donna.sheidun@enron.com",
+              "chris.stokley@enron.com",
+              "virginia.thompson@enron.com"
+            ],
+            "date": "2001-08-08T15:43:42Z",
+            "subject": "Congestion for 08-07",
+            "body": "Jim,\nWe have congestion revenue again for 08_07.\nWe moved 272 mws at $194.\nTotal revenue should be $52768.\n\nThanks,\nBill"
+          }
+        }
+      ]
+    },
+    {
+      "thread_id": "th-16237",
+      "priority": "normal",
+      "emails": [
+        {
+          "priority": "normal",
+          "email": {
+            "id": "em-19968",
+            "thread_id": "th-16237",
+            "reply_to": null,
+            "from": "monika.causholli@enron.com",
+            "to": [
+              "r..conner@enron.com",
+              "dirk.dimitry@enron.com",
+              "craig.rickard@enron.com",
+              "david.allan@enron.com",
+              "e..carter@enron.com",
+              "james.bryja@enron.com",
+              "greg.bruch@enron.com",
+              "t..robinson@enron.com"
+            ],
+            "date": "2001-08-08T16:13:33Z",
+            "subject": "Cash costs spreadsheet",
+            "body": "Hello everyone,\n\nThe cash costs spreadsheet is located in the O:/Industrial Markets/Fundamentals/Paper/Pulp/CASH COSTS ANALYSIS\n\nthanks,\nMOnika"
+          }
+        }
+      ]
+    },
+    {
+      "thread_id": "th-16285",
+      "priority": "normal",
+      "emails": [
+        {
+          "priority": "normal",
+          "email": {
+            "id": "em-20025",
+            "thread_id": "th-16285",
+            "reply_to": null,
+            "from": "ksumme@isda.org",
+            "to": [
+              "carlin.jane@enron.com",
+              "rpickel@isda.org",
+              "ejelich@isda.org",
+              "teruo.tanaka@ibjbank.co.jp",
+              "goldenj@allenovery.com",
+              "daniel.cunningham@allenovery.com",
+              "tredgetr@allenovery.com",
+              "apapesch@isda.org",
+              "skawano@isda.org",
+              "tmorita@isda.org",
+              "rmetcalfe@isda-eur.org",
+              "pwerner@isda-eur.org"
+            ],
+            "date": "2001-08-08T18:48:29Z",
+            "subject": "Revised Annex 3",
+            "body": "With apologies to Joe Carrico, please find attached the Annex 3 he would\nlike the group to consider.\n\n <<Annex 3 Amended-dr4.doc>>\n\n - Annex 3 Amended-dr4.doc "
+          }
+        }
+      ]
+    },
+    {
+      "thread_id": "th-16292",
+      "priority": "normal",
+      "emails": [
+        {
+          "priority": "normal",
+          "email": {
+            "id": "em-20035",
+            "thread_id": "th-16292",
+            "reply_to": null,
+            "from": "jean.mrha@enron.com",
+            "to": [
+              "gerald.nemec@enron.com"
+            ],
+            "date": "2001-08-08T19:16:59Z",
+            "subject": "Letter to Dow / CA to Marathon",
+            "body": "When: Wednesday, August 08, 2001 4:00 PM-4:30 PM (GMT-06:00) Central Time (US & Canada).\nWhere: EB 3569\n\n*~*~*~*~*~*~*~*~*~*\n"
+          }
+        }
+      ]
+    },
+    {
+      "thread_id": "th-16296",
+      "priority": "normal",
+      "emails": [
+        {
+          "priority": "normal",
+          "email": {
+            "id": "em-20041",
+            "thread_id": "th-16296",
+            "reply_to": null,
+            "from": "mbauer@keyspanenergy.com",
+            "to": [
+              "rlukas@keyspanenergy.com",
+              "mnaeser@naenergy.com",
+              "saulh@econnergy.com",
+              "vferreira@r-techenergy.com",
+              "pbaratz@totalnrg.com",
+              "kinneary@bellatlantic.net",
+              "jgarofalow@castlepower.com",
+              "cruikshankk@conedsolutions.com",
+              "enrgn@aol.com",
+              "gasmaster@worldnet.att.net",
+              "intenergy@aol.com",
+              "lsmorris@metromediaenergy.com",
+              "mcasas@hess.com",
+              "ufogel@aol.com",
+              "tcampo@njne.com",
+              "quartiersm@nmenergy.com",
+              "tkain@worldnet.att.net",
+              "info@ffcenergy.com",
+              "sjfuel@mindspring.com",
+              "cbender22@aol.com",
+              "cmanger@hess.com",
+              "mfleming@enron.com",
+              "dsmollett@lynbrookvillage.com",
+              "austina@conedsolutions.com",
+              "metroenergy@worldnet.att.net",
+              "gasinfo@stuyfuel.com",
+              "lcampbel@enron.com",
+              "pkelly@castleoil.com",
+              "jthomas@allenergy.com",
+              "end.nat@prodigy.net",
+              "aabbate@metromediaenergy.com",
+              "dowens@mitchellsupreme.com",
+              "dstreed@naenergy.com",
+              "geec2000@aol.com",
+              "brownsfuel@mindspring.com",
+              "george.rahal@acnpower.com",
+              "spendegr@enron.com",
+              "akozak@mitchellsupreme.com",
+              "ysanchez@castleoil.com",
+              "cbender@colonialenergy.com",
+              "jschultz@hess.com",
+              "lurie@nmenergy.com",
+              "dhealey@allenergy.com",
+              "karonne@metromediaenergy.com",
+              "mtrombetta@castlepower.com",
+              "mark.warno@acnenergy.com",
+              "columbiautil@mindspring.com",
+              "slayne@castleoil.com",
+              "cahoonc@conedsolutions.com",
+              "hansenr@conedsolutions.com",
+              "rebecca.schaefer@acnenergy.com",
+              "pprezorski@metromediaenergy.com",
+              "jross@hess.com",
+              "cdonohue@worldnet.att.net",
+              "tnutt@naenergy.com",
+              "ehudson@allenergy.com",
+              "tony.cusati@acnenergy.com",
+              "ceine@aol.com",
+              "ncianflone@keyspanenergy.com",
+              "zychowski@enron.com",
+              "fzychowski@keyspanenergy.com",
+              "rubertone\\\"@enron.<??s\"p.@enron.com",
+              "prubertone@keyspanenergy.com",
+              "portalatin@enron.com",
+              "aportalatin@keyspanenergy.com",
+              "azzato@enron.com",
+              "tazzato@keyspanenergy.com"
+            ],
+            "date": "2001-08-08T19:30:09Z",
+            "subject": "KeySpan Hedging",
+            "body": "Please note the attached letter from Nancy Cianflone. The intent here is\nto let you know that KeySpan Energy Delivery has hedged 27% of our\nflowing winter supply. This was done in order to mitigate any spikes in\nthis winters market. You may want to take this into account when pricing\nyour winter contracts.\nMike\n\n - Hedge1.doc "
+          }
+        }
+      ]
+    },
+    {
+      "thread_id": "th-16298",
+      "priority": "normal",
+      "emails": [
+        {
+          "priority": "normal",
+          "email": {
+            "id": "em-20043",
+            "thread_id": "th-16298",
+            "reply_to": null,
+            "from": ".ward@enron.com",
+            "to": [
+              "darla.saucier@enron.com"
+            ],
+            "date": "2001-08-08T19:35:32Z",
+            "subject": "",
+            "body": "Darla,\n\nwill you send me and Ann Bike the June spreadsheet that you are working off of? \n\nThanks,\n\nKim"
+          }
+        }
+      ]
+    },
+    {
+      "thread_id": "th-16305",
+      "priority": "normal",
+      "emails": [
+        {
+          "priority": "normal",
+          "email": {
+            "id": "em-20053",
+            "thread_id": "th-16305",
+            "reply_to": null,
+            "from": "ddechiaro@nyiso.com",
+            "to": [
+              "tie_list_server@nyiso.com"
+            ],
+            "date": "2001-08-08T20:06:24Z",
+            "subject": "NYISO - BAWG Billing Data and Format Subcommittee Working Group Meeting 8/28 - LOCATION CHANGE",
+            "body": "\nDDechiaro@nyiso.com writes to the NYISO_TECH_EXCHANGE Discussion List:\n\nThis is to notify members of the BAWG Billing Data and Format Subcommittee\nWorking Group that the August 28, 2001 meeting from 10:00 AM until 5:00 PM\nhas had a LOCATION CHANGE.\n\nIT WILL NOW BE HELD IN THE WASHINGTON AVENUE EXTENSION OFFICES --\nCONFERENCE ROOM \"WA\".\n\nThe Dial In numbers will remain the same:\n\nDial In:            (954) 797-7657\n\nParticipant Code:   440-162\n\nThank you,\nDenise\n518-356-6060"
+          }
+        }
+      ]
+    },
+    {
+      "thread_id": "th-16310",
+      "priority": "normal",
+      "emails": [
+        {
+          "priority": "normal",
+          "email": {
+            "id": "em-20058",
+            "thread_id": "th-16310",
+            "reply_to": null,
+            "from": "jean.mrha@enron.com",
+            "to": [
+              "gerald.nemec@enron.com"
+            ],
+            "date": "2001-08-08T20:21:33Z",
+            "subject": "Updated: Letter to Dow / CA to Marathon",
+            "body": "When: Wednesday, August 08, 2001 4:30 PM-5:30 PM (GMT-06:00) Central Time (US & Canada).\nWhere: EB 3569\n\n*~*~*~*~*~*~*~*~*~*\n"
+          }
+        }
+      ]
+    },
+    {
+      "thread_id": "th-16354",
+      "priority": "normal",
+      "emails": [
+        {
+          "priority": "normal",
+          "email": {
+            "id": "em-20113",
+            "thread_id": "th-16354",
+            "reply_to": null,
+            "from": "paul.rice@pacificorp.com",
+            "to": [
+              "isas@wscc.com"
+            ],
+            "date": "2001-08-08T23:00:03Z",
+            "subject": "Adjust Function",
+            "body": "\nPacifiCorp Real-Time has recently been requested several times by PSE's to =\nuse their \"Adjust\" function for changing schedules.  This has prompted them=\n to ask for a clarification on the Adjust function \"rules\".  It is Real-Tim=\nes belief that the Adjust function is for Control Area use and only for Rel=\niability/Curtailment issues.  If Merchants/PSE's want to change a schedule =\non an existing tag it should be done through the Termination/replaced funct=\nions at their control and not ask C/A's to use their Adjust function.  I ha=\nve found documentation that tells who has control of the Adjust function an=\nd how it can be used but cannot find any documentation that specifically pr=\nohibits or limits it's use to C/A and/or their curtailment issues.  Does an=\nybody have any help here??  The main issue is, R/T does not have time to pe=\nrform adjust functions for other entities merely at their request.   We can=\n understand doing it when the tag originator has lost control and is unable=\n to terminate a tag but not on a routine basis.    "
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "output": {
+    "category": "ignore",
+    "reason": "This is an unsolicited marketing newsletter from a vendor promoting their services and soliciting attendance at an event."
+  },
+  "reused_classifications": 0,
+  "fresh_model_calls": 1,
+  "seconds": 22.219,
+  "error": null
+}

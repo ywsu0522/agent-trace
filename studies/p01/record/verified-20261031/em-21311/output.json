@@ -1,0 +1,10 @@
+{
+  "output": {
+    "category": "normal",
+    "reason": "This is a direct request for scheduling a meeting with no specific deadline or urgency attached."
+  },
+  "reused_classifications": 0,
+  "fresh_model_calls": 1,
+  "seconds": 14.437,
+  "error": null
+}

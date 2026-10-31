@@ -1,0 +1,10 @@
+{
+  "output": {
+    "category": "urgent",
+    "reason": "The recipient must act immediately to resolve a live security issue regarding an employee's access termination."
+  },
+  "reused_classifications": 0,
+  "fresh_model_calls": 1,
+  "seconds": 18.212,
+  "error": null
+}

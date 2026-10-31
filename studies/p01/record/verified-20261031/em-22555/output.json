@@ -1,0 +1,10 @@
+{
+  "output": {
+    "category": "normal",
+    "reason": "This is a follow-up email from a candidate thanking the recruiter for a meeting and requesting resume review, which does not meet the strict deadline criteria for urgency."
+  },
+  "reused_classifications": 0,
+  "fresh_model_calls": 1,
+  "seconds": 17.021,
+  "error": null
+}

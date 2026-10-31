@@ -1,0 +1,689 @@
+{
+  "labels": [
+    {
+      "category": "ignore",
+      "reason": "This is an automated notification regarding company card transactions that requires no action from the recipient."
+    },
+    {
+      "category": "normal",
+      "reason": "This is a personal social message from a colleague discussing people and sharing a news link without any deadlines or operational obligations."
+    },
+    {
+      "category": "ignore",
+      "reason": "This is a mass marketing advertisement offering a limited-time deal that requires no action from the recipient other than unsubscribing if desired."
+    },
+    {
+      "category": "normal",
+      "reason": "This is a personal request from a known contact with no specific deadline or live problem requiring immediate action."
+    },
+    {
+      "category": "normal",
+      "reason": "This is a job inquiry from an external candidate expressing interest in a position, which does not require immediate action or meet the strict deadline criteria for urgency."
+    },
+    {
+      "category": "ignore",
+      "reason": "This email is a promotional advertisement with no requirement for action or approval from the recipient."
+    },
+    {
+      "category": "normal",
+      "reason": "This is a personal social message from Stuart to Jason regarding a casual discovery, with no deadlines or urgent obligations."
+    },
+    {
+      "category": "normal",
+      "reason": "This is a legitimate business request for pricing information without an immediate deadline or critical outage."
+    },
+    {
+      "category": "urgent",
+      "reason": "The recipient must decide immediately because the trade will be closed out at noon today, and any failure to agree results in a dispute."
+    },
+    {
+      "category": "normal",
+      "reason": "This is a personal invitation from a known contact regarding social plans with no professional deadline or obligation."
+    },
+    {
+      "category": "normal",
+      "reason": "This is a personal request from a known contact regarding travel and administrative tasks without an immediate deadline or live outage."
+    },
+    {
+      "category": "normal",
+      "reason": "This is a personal social message from someone the recipient knows, containing no deadlines or actionable requests."
+    },
+    {
+      "category": "normal",
+      "reason": "This email is a routine status update and meeting note shared with a large group without any immediate deadlines or urgent action required."
+    },
+    {
+      "category": "normal",
+      "reason": "This is a legitimate professional email regarding an upcoming panel discussion with no immediate deadline requiring action today or within two working days."
+    },
+    {
+      "category": "normal",
+      "reason": "This is a standard work request for review without an explicit deadline or indication of a live outage."
+    },
+    {
+      "category": "normal",
+      "reason": "The email requests information for a test run to be completed before an August deadline, which is more than two working days away from the July 5th send date."
+    },
+    {
+      "category": "normal",
+      "reason": "This is a legitimate business inquiry regarding an agreement status without any near-term deadlines or critical outages requiring immediate action."
+    },
+    {
+      "category": "normal",
+      "reason": "This email is a status update and scheduling request for a future meeting with no immediate deadline or live problem requiring action today."
+    },
+    {
+      "category": "urgent",
+      "reason": "The recipient has an immediate obligation to provide specific data by 9:00 AM tomorrow to prevent a filing failure."
+    },
+    {
+      "category": "normal",
+      "reason": "This is a routine status update from a colleague regarding document edits without any near-term deadlines or critical action required."
+    },
+    {
+      "category": "normal",
+      "reason": "This is a legitimate internal request for status updates and discussion regarding annual goals with no specified deadline."
+    },
+    {
+      "category": "normal",
+      "reason": "This email contains a routine status update and data discrepancy notification without any near-term deadlines or urgent action requirements."
+    },
+    {
+      "category": "normal",
+      "reason": "This email is an informational announcement about weekend marketing availability shared with a broad group of personnel without any immediate deadline or action required."
+    },
+    {
+      "category": "normal",
+      "reason": "This is a standard business email sharing an attachment with no specified deadline or immediate action required."
+    },
+    {
+      "category": "normal",
+      "reason": "This email contains a standard work update with tracked changes and no urgent deadlines or critical issues requiring immediate action."
+    },
+    {
+      "category": "normal",
+      "reason": "This is a personal status update from a colleague regarding travel plans and report preparation without any immediate deadline or critical action required."
+    },
+    {
+      "category": "normal",
+      "reason": "This is a personal update from a former classmate sharing news about his move and job, with no deadline or operational obligation for the recipient."
+    },
+    {
+      "category": "ignore",
+      "reason": "This is an automated newsletter digest sent to a large distribution list that requires no action from the recipients."
+    },
+    {
+      "category": "normal",
+      "reason": "This is a job application email sent by a candidate to a specific individual without any near-term deadlines or urgent operational issues."
+    }
+  ],
+  "threads": [
+    {
+      "thread_id": "th-09977",
+      "priority": "urgent",
+      "emails": [
+        {
+          "priority": "urgent",
+          "email": {
+            "id": "em-12053",
+            "thread_id": "th-09977",
+            "reply_to": null,
+            "from": "emeka.obiora@enron.com",
+            "to": [
+              "devrim.aksoy@enron.com"
+            ],
+            "date": "2001-07-05T14:10:00Z",
+            "subject": "Trade break with Castellan Refining - need your answer by noon",
+            "body": "Devrim,\n\nCastellan Refining is disputing yesterday's August swap. Their confirm shows 15,000 a day and ours shows 50,000. Their back office closes the book at noon today, and if we have not agreed on a number by then the trade goes to dispute. Which is right? I need your answer this morning.\n\nEmeka"
+          }
+        }
+      ]
+    },
+    {
+      "thread_id": "th-10066",
+      "priority": "urgent",
+      "emails": [
+        {
+          "priority": "urgent",
+          "email": {
+            "id": "em-12167",
+            "thread_id": "th-10066",
+            "reply_to": null,
+            "from": "thaddeus.brightwater@enron.com",
+            "to": [
+              "annika.steenkamp@enron.com"
+            ],
+            "date": "2001-07-05T19:45:00Z",
+            "subject": "Larchfield audit data due 9:00 AM tomorrow",
+            "body": "Annika,\n\nThe commission staff moved up the Larchfield audit. Our response is now due at 9:00 AM tomorrow, not next week. I still do not have the June throughput data from your group, and I cannot file without it. Please send it to me tonight. Call me at home if there is a problem.\n\nThaddeus"
+          }
+        }
+      ]
+    },
+    {
+      "thread_id": "th-09931",
+      "priority": "normal",
+      "emails": [
+        {
+          "priority": "normal",
+          "email": {
+            "id": "em-11997",
+            "thread_id": "th-09931",
+            "reply_to": null,
+            "from": "susan.mara@enron.com",
+            "to": [
+              "cfi1@tca-us.com",
+              "dave.perrino@enron.com",
+              "jeff.dasovich@enron.com",
+              "steve.walton@enron.com",
+              "alan.comnes@enron.com"
+            ],
+            "date": "2001-07-05T10:04:00Z",
+            "subject": "People on the Dole",
+            "body": "I know all these people except Susan Lee. Can't believe some of the money \ntheu are making. Lee must be the one on the Frontline report who look stunned \non the phone when she got a price from someone then said \"Oh, that's high\"  \nHey, where is Viram Budraja\n\nhttp://www.latimes.com/news/state/20010704/t000055118.html\n\nSue Mara\nEnron Corp.\nTel: (415) 782-7802\nFax:(415) 782-7854"
+          }
+        }
+      ]
+    },
+    {
+      "thread_id": "th-09938",
+      "priority": "normal",
+      "emails": [
+        {
+          "priority": "normal",
+          "email": {
+            "id": "em-12005",
+            "thread_id": "th-09938",
+            "reply_to": null,
+            "from": "jeff.dasovich@enron.com",
+            "to": [
+              "7409949@skytel.com"
+            ],
+            "date": "2001-07-05T11:00:00Z",
+            "subject": "",
+            "body": "plz call when you find a minute.  thx, jeff 415.782.7822."
+          }
+        }
+      ]
+    },
+    {
+      "thread_id": "th-09949",
+      "priority": "normal",
+      "emails": [
+        {
+          "priority": "normal",
+          "email": {
+            "id": "em-12017",
+            "thread_id": "th-09949",
+            "reply_to": null,
+            "from": "dennis.brown@enron.com",
+            "to": [
+              "don.baughman@enron.com"
+            ],
+            "date": "2001-07-05T12:19:04Z",
+            "subject": "Power trader",
+            "body": "\nGood Morning!\n\nI am very interested in this position.  I would like to know more.  \n\nPower Trader - 24 hr real time\n\nJob ID  0000108727  \n--------------------------------------------------------------------------------\n Department  ENA EAST POWER SERVICE DE  \n--------------------------------------------------------------------------------\n Company  WHOLESALE, RETAIL & COMM\nNORTH AMERICA  \n  \n  \n\nRegards\n\nDennis Brown \next: 55050\n"
+          }
+        }
+      ]
+    },
+    {
+      "thread_id": "th-09840",
+      "priority": "normal",
+      "emails": [
+        {
+          "priority": "normal",
+          "email": {
+            "id": "em-12030",
+            "thread_id": "th-09840",
+            "reply_to": "em-11890",
+            "from": "tcm41894@jetson.uh.edu",
+            "to": [
+              "jason.wolfe@enron.com"
+            ],
+            "date": "2001-07-05T12:52:31Z",
+            "subject": "Re: Hola",
+            "body": "Jason-\n\nStuart!!!  Matt and I found out on Monday...wow, huh.\n\nTamara"
+          }
+        }
+      ]
+    },
+    {
+      "thread_id": "th-09963",
+      "priority": "normal",
+      "emails": [
+        {
+          "priority": "normal",
+          "email": {
+            "id": "em-12036",
+            "thread_id": "th-09963",
+            "reply_to": null,
+            "from": "kate.joslyn@enron.com",
+            "to": [
+              "jonathan.mckay@enron.com"
+            ],
+            "date": "2001-07-05T13:20:03Z",
+            "subject": "Indicative Pricies",
+            "body": "Jon\nCould you please provide us with some indicative prices based on a typical load profile.  Out of October 01.\n(1,3,5yrs)\n\n\nMonth\tVolume\t\n1\t    188,091 \t\n2\t    128,452 \t\n3\t    126,159 \t\n4\t      84,870 \t\n5\t      64,226 \t\n6\t      34,407 \t\n7\t      34,407 \t\n8\t      30,966 \t\n9\t      64,226 \t\n10\t      86,017 \t\n11\t    133,040 \t\n12\t    172,034 \t\nTotal:\t 1,146,896 \t\n\nThanks\nKJ"
+          }
+        }
+      ]
+    },
+    {
+      "thread_id": "th-09988",
+      "priority": "normal",
+      "emails": [
+        {
+          "priority": "normal",
+          "email": {
+            "id": "em-12069",
+            "thread_id": "th-09988",
+            "reply_to": null,
+            "from": "m..scott@enron.com",
+            "to": [
+              "celeahy@hotmail.com"
+            ],
+            "date": "2001-07-05T14:49:18Z",
+            "subject": "This weekend",
+            "body": "Hope you had fun yesterday...I was actually writing to see if you had any interest in going to Austin this weekend.  Emily, Katy, myself and possibly Lisa are talking about making a trip up there tomorrow.  We would be going out with some guy friends of ours so if Doug wanted to come he wouldn't be completely outnumbered.  Also, one of Katy's friends manages Pat Green and he's playing at Gruene Hall so we were thinking about trying to go see him on Saturday.  Drop me a line and let me know if you have any interest.\n\nSue"
+          }
+        }
+      ]
+    },
+    {
+      "thread_id": "th-09991",
+      "priority": "normal",
+      "emails": [
+        {
+          "priority": "normal",
+          "email": {
+            "id": "em-12072",
+            "thread_id": "th-09991",
+            "reply_to": null,
+            "from": "beth.cherry@enform.com",
+            "to": [
+              "jason.wolfe@enron.com"
+            ],
+            "date": "2001-07-05T14:57:59Z",
+            "subject": "Things that need your attention this week",
+            "body": "\n1. Schedule flight  for both of us to your dad's [I will pay my part], and then let me know  what days I need to take off.\n \n2. Mail your  packages.\n \n3. Get the check,  and then pick up your car.\n \n4. Find your  checkbook.\n \nDid you reschedule  your doctor appointment?\n \n*Print this out.  Then check things off as you take care of  them."
+          }
+        }
+      ]
+    },
+    {
+      "thread_id": "th-09992",
+      "priority": "normal",
+      "emails": [
+        {
+          "priority": "normal",
+          "email": {
+            "id": "em-12073",
+            "thread_id": "th-09992",
+            "reply_to": null,
+            "from": "jeff.dasovich@enron.com",
+            "to": [
+              "7409949@skytel.com"
+            ],
+            "date": "2001-07-05T15:00:00Z",
+            "subject": "",
+            "body": "got it strapped on.  off to sacramento.  nice knowin' ya.  jeff"
+          }
+        }
+      ]
+    },
+    {
+      "thread_id": "th-09998",
+      "priority": "normal",
+      "emails": [
+        {
+          "priority": "normal",
+          "email": {
+            "id": "em-12082",
+            "thread_id": "th-09998",
+            "reply_to": null,
+            "from": "beth.apollo@enron.com",
+            "to": [
+              "rogers.herndon@enron.com",
+              "don.black@enron.com",
+              "jeff.richter@enron.com",
+              "c..gossett@enron.com",
+              "scott.mills@enron.com",
+              "f..herod@enron.com",
+              "leslie.reeves@enron.com",
+              "sally.beck@enron.com",
+              "andrew.parsons@enron.com",
+              "robert.superty@enron.com",
+              "kelly.lovvorn@enron.com",
+              "m.hall@enron.com",
+              "jim.homco@enron.com",
+              "p..o'neil@enron.com",
+              "chris.stokley@enron.com"
+            ],
+            "date": "2001-07-05T15:33:51Z",
+            "subject": "Follow up from Tuesday afternoon EES/EWS Operations coordination meeting",
+            "body": "\n\nDear all,\n\n\nJust for everyone's record, the atendees of the meeting on Tuesday are copied on this note.\n\nAs promised a list of the team members focusing on the Gas solution for EES follows.\n\nWe will be processing some \"practice\" transactions tomorrow - to see how the wholesale systems perform.\n\nRisk (will Sitara/RGS solution work for EES Gas Industrial and Commercial deals)\nDarren Draper  - EWS/EES\nScott Mills - EWS/EES\nJeff Gossett - EWS/EA (or designee)\n\nLogistics\nBob Superty EWS/EA\nDonna Greif EWS/EA\nKelly Lovorne EWS/EES\nJim Homco  EWS/EES\n\nVolume Management\nCathy Pittenger EWS/EES\nRita Wynne EWS/EA\n\nSettlements  (can we use UNIFY)\nBrenda Herod - EWS/EES\nRichard Miller - EWS/EES\nCathy Pittenger EWS/EES from a flash to actual standpoint\nLeslie Reeves - EWS/EA\nBryce Baxter - EWS/EA\n\nOverall coordination   Scott Mills, Beth Apollo and Bob Hall\nProject Manager to be named by the end of next week\n\nHope this helps\nBeth Apollo x35014\n"
+          }
+        }
+      ]
+    },
+    {
+      "thread_id": "th-10011",
+      "priority": "normal",
+      "emails": [
+        {
+          "priority": "normal",
+          "email": {
+            "id": "em-12098",
+            "thread_id": "th-10011",
+            "reply_to": null,
+            "from": "sslater@epsa.org",
+            "to": [
+              "richard.shapiro@enron.com"
+            ],
+            "date": "2001-07-05T16:03:00Z",
+            "subject": "Re: Panel Moderator",
+            "body": "Thank you!  The panel is July 25 from 10:45 a.m. until 12:00 p.m.  I've \nattached Scott Smith's bio.  I'll send you the other bios as soon as I get \nthem.\n\nSamantha\n\n>>> <Richard.Shapiro@enron.com> 07/05/01 03:54PM >>>\n\nI'll do it- Please send me details.\n\n\n\n\n\"Samantha Slater\" <SSLATER@epsa.org> on 07/05/2001 02:40:30 PM\n\nTo:   <Richard.Shapiro@enron.com>\ncc:\n\nSubject:  Re: Panel Moderator\n\nBilly Stiles, Florida Energy 2020 Study Commission\nScott Smith, Wisconsin PSC\nAnd I should know by tomorrow if someone from the Indiana URC (hopefully\nChairman McCarty) can join us.\n\nSamantha\n\nSamantha M. Slater\nManager of State & Regional Affairs\nElectric Power Supply Association\n1401 New York Avenue, N.W.\n11th Floor\nWashington, D.C.  20005\nPhone: 202-628-8200\nFax: 202-628-8260\nE-mail: sslater@epsa.org\n\n>>> <Richard.Shapiro@enron.com> 07/05/01 03:38PM >>>\n\nWho's on it?\n\n\n\n\n\"Samantha Slater\" <SSLATER@epsa.org> on 07/05/2001 02:21:45 PM\n\nTo:   <rshapiro@enron.com>\ncc:\n\nSubject:  Panel Moderator\n\nWould you be interested in moderating the panel on Competition in Wholesale\nPower Markets at the State Issues & Summer Membership Meeting?  The panel\nwill be held on the morning of Wednesday, July 25th.\n\nJust let me know.  Thanks!\n\nSamantha\n\nSamantha M. Slater\nManager of State & Regional Affairs\nElectric Power Supply Association\n1401 New York Avenue, N.W.\n11th Floor\nWashington, D.C.  20005\nPhone: 202-628-8200\nFax: 202-628-8260\nE-mail: sslater@epsa.org\n\n\n\n\n\n\n\n\n\n\n\n\n\n - Bio-Smith.doc"
+          }
+        }
+      ]
+    },
+    {
+      "thread_id": "th-10022",
+      "priority": "normal",
+      "emails": [
+        {
+          "priority": "normal",
+          "email": {
+            "id": "em-12111",
+            "thread_id": "th-10022",
+            "reply_to": null,
+            "from": "sgovenar@govadv.com",
+            "to": [
+              "jdasovic@enron.com"
+            ],
+            "date": "2001-07-05T16:36:00Z",
+            "subject": "Bonding",
+            "body": "Jeff,\n\nHere are some bullets for your review and comment.  These are for discussion\npurposes only and not for physical distribution.\n\nScott\n\n - BONDING BULLETS.doc"
+          }
+        }
+      ]
+    },
+    {
+      "thread_id": "th-10041",
+      "priority": "normal",
+      "emails": [
+        {
+          "priority": "normal",
+          "email": {
+            "id": "em-12132",
+            "thread_id": "th-10041",
+            "reply_to": null,
+            "from": "stweet@deloitte.ca",
+            "to": [
+              "jonathan.mckay@enron.com"
+            ],
+            "date": "2001-07-05T17:36:49Z",
+            "subject": "Test run - July 1, 2001",
+            "body": "\nJon, \nI am wondering if you can have someone at your office send over the information for July near month so that we can complete a test run before we go live with the pie chart in August.  This will also allow us to see what kind of percentages to expect, the kind of information we will get, etc.  This will allow us to troubleshoot the process as well. If this is a problem please let me know at the number listed below.  \nAlso, within the next week or so I will let you know who to forward the information to on a monthly basis beginning on the last business day of July.\nRegards, \nShyla M. Tweet, B. Comm. \nStaff Accountant II \nDeloitte & Touche LLP \nCalgary, AB \nPhone:    (403) 267-1705 \nFax:        (403) 264-2871 \nE-mail:    stweet@deloitte.ca "
+          }
+        }
+      ]
+    },
+    {
+      "thread_id": "th-10060",
+      "priority": "normal",
+      "emails": [
+        {
+          "priority": "normal",
+          "email": {
+            "id": "em-12159",
+            "thread_id": "th-10060",
+            "reply_to": null,
+            "from": "skelly9@bloomberg.net",
+            "to": [
+              "jonathan.mckay@enron.com"
+            ],
+            "date": "2001-07-05T19:16:54Z",
+            "subject": "Status of Agreement for Order# 773190",
+            "body": "Hello Mr. McKay\n     Please advise on the status of the Powermatch agreement for the above order\n number,and and the estimated return date so I can update the order accordingly.\n Please let me know if you have any questions. Be sure to reference your order\n        number on any return correspondence.\n\n        Regards,\n        Sean Kelly\n        Bloomberg Contracts\n        (ph) 212-318-3540\n        (fx) 917-369-5540\n\n"
+          }
+        }
+      ]
+    },
+    {
+      "thread_id": "th-10064",
+      "priority": "normal",
+      "emails": [
+        {
+          "priority": "normal",
+          "email": {
+            "id": "em-12164",
+            "thread_id": "th-10064",
+            "reply_to": null,
+            "from": "lynn.blair@enron.com",
+            "to": [
+              "shelley.corman@enron.com",
+              "kimberly.watson@enron.com",
+              "lindy.donoho@enron.com",
+              "terry.kowalke@enron.com",
+              "steven.january@enron.com",
+              "tk.lohman@enron.com",
+              "ava.garcia@enron.com",
+              "donna.scott@enron.com",
+              "bradley.holmes@enron.com",
+              "rick.dietz@enron.com",
+              "ricki.winters@enron.com",
+              "lynn.blair@enron.com",
+              "sharon.brown@enron.com",
+              "alma.carrillo@enron.com"
+            ],
+            "date": "2001-07-05T19:31:33Z",
+            "subject": "TW Customer Meeting - 10/23/01",
+            "body": "\t\n\tThere will be an update meeting on the status of the TW customer meeting on\n\tTuesday, July 10 at 1:00 p.m. in EB4194.\n\n\tThe meeting will focus on the following:\n\n\t\tFinalizing date - October 23 or October 24, 2001\n\t\tEnsuring everyone has seen the customer list\n\t\tBoat - Size\n\t\tMeals\n\t\tGifts\n\t\tAccess to training room in Enron Building on 5\n\t\tAgreement on invitation (Mark your Calendar) to be sent mid July\n\n\t\tStatus of Agenda\n\n\tThanks. Lynn"
+          }
+        }
+      ]
+    },
+    {
+      "thread_id": "th-10068",
+      "priority": "normal",
+      "emails": [
+        {
+          "priority": "normal",
+          "email": {
+            "id": "em-12169",
+            "thread_id": "th-10068",
+            "reply_to": null,
+            "from": "deirdre.mccaffrey@enron.com",
+            "to": [
+              ".taylor@enron.com"
+            ],
+            "date": "2001-07-05T19:53:44Z",
+            "subject": "DOE Index",
+            "body": " \nMark - \n\nI've added some more language regarding taxes.  \n\nThanks -\nDeirdre\n39685"
+          }
+        }
+      ]
+    },
+    {
+      "thread_id": "th-10071",
+      "priority": "normal",
+      "emails": [
+        {
+          "priority": "normal",
+          "email": {
+            "id": "em-12177",
+            "thread_id": "th-10071",
+            "reply_to": null,
+            "from": "d..hogan@enron.com",
+            "to": [
+              "david.baumbach@enron.com",
+              "kam.keiser@enron.com",
+              "anne.bike@enron.com",
+              "m..love@enron.com",
+              "greg.couch@enron.com",
+              "errol.mclaughlin@enron.com",
+              "john.valdes@enron.com"
+            ],
+            "date": "2001-07-05T20:13:35Z",
+            "subject": "Preparing for RisK Off-site",
+            "body": "Per Jeff Gossett,\n\n\tBeing so that we have a new member to our team, Jeff wants to discuss the Goals and Objectives that you will/have set to accomplish for your individual group this year.  In doing so, he  wants you to think of  the following two things:\n\n\t1) How Jeff should measure what  goals/objectives you are planning to accomplish?\n\n\t2) What impact do you feel this should have on your review?\n\n\t\tJeff wants to hear these two things verbally.  Do not include these two anwsers into your Goals and Objectives Presentation!!!\n\nWe will keep the same format, as per out last objectives meeting.  Please see the attached documents to print and reveiw; then give me any updates or changes you may have for your objectives.  If you have any questions or need any additional information, please let me know.\n\n \n\nThank you,\n\nIrena"
+          }
+        }
+      ]
+    },
+    {
+      "thread_id": "th-10083",
+      "priority": "normal",
+      "emails": [
+        {
+          "priority": "normal",
+          "email": {
+            "id": "em-12192",
+            "thread_id": "th-10083",
+            "reply_to": null,
+            "from": "frank.vickers@enron.com",
+            "to": [
+              "louise.kitchen@enron.com",
+              "faith.killen@enron.com"
+            ],
+            "date": "2001-07-05T21:07:00Z",
+            "subject": "Mid Year East Origination",
+            "body": "Louise, please find attached the info requested.  The total Origination shown is greater then the value that you had provided.  The attached values were taken off of the itemized report that you had previously forwarded.  \n\nFrank\n\n "
+          }
+        }
+      ]
+    },
+    {
+      "thread_id": "th-10086",
+      "priority": "normal",
+      "emails": [
+        {
+          "priority": "normal",
+          "email": {
+            "id": "em-12196",
+            "thread_id": "th-10086",
+            "reply_to": null,
+            "from": "fhill@epelectric.com",
+            "to": [
+              "pserrano@epelectric.com",
+              "jrust@epelectric.com",
+              "epec@epelectric.com",
+              "jwhitacr@epelectric.com",
+              "hpuente@epelectric.com"
+            ],
+            "date": "2001-07-05T21:27:50Z",
+            "subject": "EPE MARKETING AVAILABILITY",
+            "body": "Marketing personnel will again be taking call on weekends and holidays.\nThe 5808 extension will be forwarded to EPE's prescheduling personnel and\nunit commitment plans will be developed over the weekend.\n\nPlease call me at 915-543-4335 or Pete Serrano at 915-543-2045 if questions\narise.\n\nPlease share this with other personnel as appropriate.\n"
+          }
+        }
+      ]
+    },
+    {
+      "thread_id": "th-10088",
+      "priority": "normal",
+      "emails": [
+        {
+          "priority": "normal",
+          "email": {
+            "id": "em-12200",
+            "thread_id": "th-10088",
+            "reply_to": null,
+            "from": "coganja@aol.com",
+            "to": [
+              "cfoster@enron.com"
+            ],
+            "date": "2001-07-05T21:38:14Z",
+            "subject": "Enron/Citizens PPL - June 2001 Sales Spreadsheet",
+            "body": "Here is the attachment.  Sorry.\n\nJohn\n\nThe Johnco Group, LLC\n3629 Lake Kristin Drive\nGretna, LA 70056\n\nPhone  (504) 392-7557\nCell      (504) 491-2784\nFax      (208) 730-4713\n\n - accrualspreadsheetJAC.xls "
+          }
+        }
+      ]
+    },
+    {
+      "thread_id": "th-10095",
+      "priority": "normal",
+      "emails": [
+        {
+          "priority": "normal",
+          "email": {
+            "id": "em-12207",
+            "thread_id": "th-10095",
+            "reply_to": null,
+            "from": "shahnaz.lakho@enron.com",
+            "to": [
+              "gerald.nemec@enron.com"
+            ],
+            "date": "2001-07-05T22:13:58Z",
+            "subject": "",
+            "body": "\n      Hi.\n\n     Below is the tpa initiated by Mojave.   My changes are highlighted in red.  See section 5 and 7\n\n\n     \n\n   Shane\n\n   3-7689"
+          }
+        }
+      ]
+    },
+    {
+      "thread_id": "th-10096",
+      "priority": "normal",
+      "emails": [
+        {
+          "priority": "normal",
+          "email": {
+            "id": "em-12208",
+            "thread_id": "th-10096",
+            "reply_to": null,
+            "from": "christopher.calger@enron.com",
+            "to": [
+              "louise.kitchen@enron.com"
+            ],
+            "date": "2001-07-05T22:19:00Z",
+            "subject": "PRC Contingency",
+            "body": "Louise,\n\nAs of today, I intend to be at Monday's PRC (Sue is doing fine) and catch an 8:30PM flight back.  I am preparing a PRC report for you and Tim in the event I do not make it.  The report will be easier to deal with than the PEP reports and will reflect my summary evaluation of Analysts, Associates, Managers, Directors, and VPs in my group.  \n\n\nChris Calger\n503-464-3735"
+          }
+        }
+      ]
+    },
+    {
+      "thread_id": "th-10099",
+      "priority": "normal",
+      "emails": [
+        {
+          "priority": "normal",
+          "email": {
+            "id": "em-12214",
+            "thread_id": "th-10099",
+            "reply_to": null,
+            "from": "pdl8@cornell.edu",
+            "to": [
+              "benjamin.rogers@enron.com"
+            ],
+            "date": "2001-07-05T22:48:29Z",
+            "subject": "",
+            "body": "Ben!\nWhats happening down in HOuston?  Got some big news on my end - I am moving\nout to San Diego to start a job with Nicholas-Applegate Capital Management.\nI've been on vaca, working on my golf game and tan since graduating Cornell\nin May and move out this week.  Looking forward to the job and the\nlifestyle - I'll be living a few blocks from the beach and never have to see\nsnow again!  I'll send along full contact info once I get fully settled in a\ncouple of weeks.  COme visit if you are ever out that way.  Hope all is\nwell.\nPete"
+          }
+        }
+      ]
+    },
+    {
+      "thread_id": "th-10102",
+      "priority": "normal",
+      "emails": [
+        {
+          "priority": "normal",
+          "email": {
+            "id": "em-12218",
+            "thread_id": "th-10102",
+            "reply_to": null,
+            "from": "kmclark@cinternet.net",
+            "to": [
+              ".taylor@enron.com"
+            ],
+            "date": "2001-07-05T23:20:17Z",
+            "subject": "Kelly Clarks resume",
+            "body": "\nDear Mr. Mark Taylor,\nThank you for allowing me to briefly talk to  you.  As indicated in our conversation, Mr. Ivan Byers (513-874-1113)  personally suggested that I call you about employment opportunities at  Enron.  Maybe you can forward this onto your Human Resources in the  Enron Energy Services Division.  \n \nAgain, please let me tell you a little about  myself:\nI am a detailed, dependable, proactive, self-starting  Mechanical Engineer that began in research and development. I have progressively  moved into project management as a project engineer. I have enhanced these  management skills by learning new software while managing and tracking cost and  schedule of projects. I have managed small construction projects from inception  through completion on schedule and under cost. I am a past member of the Project  Management Institute (PMI) and have taken the Study Seminars so that I can take  the test to earn the Certificate PMP, Project Manager Professional. I plan to  sit for the PMP test next spring. I have excellent communication skills both up  and down the organization chart whether good or requiring immediate attention. I  am a team builder by teaching, training, and mentoring.\nI look forward to hearing from you in the near  future,\nAgain, thank you,\nRespectfully submitted,\nKelly M. Clark\n - Resume Kelly Clark 070401.doc "
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "model": "qwen3.5:4b-q4_K_M",
+  "base_url": "http://127.0.0.1:11434",
+  "timeout": 600,
+  "temperature": 0,
+  "num_ctx": 4096,
+  "think": false,
+  "json_mode": false,
+  "task_options": {
+    "classify_priority": {
+      "json_mode": true,
+      "num_predict": 128,
+      "format": {
+        "type": "object",
+        "properties": {
+          "category": {
+            "type": "string",
+            "enum": [
+              "urgent",
+              "normal",
+              "ignore"
+            ]
+          },
+          "reason": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "category",
+          "reason"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "num_gpu": 12,
+  "num_batch": 64
+}

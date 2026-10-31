@@ -1,0 +1,10 @@
+{
+  "output": {
+    "category": "urgent",
+    "reason": "The recipient faces an immediate operational outage preventing communication with the CAISO, creating a potential violation of their generator agreement that requires action today or by the next working day."
+  },
+  "reused_classifications": 0,
+  "fresh_model_calls": 1,
+  "seconds": 18.934,
+  "error": null
+}

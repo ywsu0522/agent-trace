@@ -1,0 +1,15 @@
+{
+  "id": "em-05304",
+  "output": {
+    "category": "normal",
+    "reason": "This is a routine administrative update regarding a new contact address without any immediate deadline or critical action required."
+  },
+  "error": null,
+  "reused_classifications": 0,
+  "fresh_model_calls": 1,
+  "passed": true,
+  "correct": true,
+  "valid_contract": true,
+  "unknown": false,
+  "reasons": []
+}

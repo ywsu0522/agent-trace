@@ -1,0 +1,928 @@
+{
+  "passed": true,
+  "correct": 54,
+  "total": 60,
+  "accuracy": 0.9,
+  "required_accuracy": 0.85,
+  "unknown": 0,
+  "valid_contracts": true,
+  "reused_classifications": 0,
+  "fresh_model_calls": 60,
+  "problem": "HW1 p01",
+  "backend": "local Ollama",
+  "model": "qwen3.5:4b-q4_K_M",
+  "rows": [
+    {
+      "id": "em-00014",
+      "output": {
+        "category": "urgent",
+        "reason": "The recipient must act immediately today to prevent a live operational outage caused by an improperly scheduled shift."
+      },
+      "error": null,
+      "reused_classifications": 0,
+      "fresh_model_calls": 1,
+      "passed": true,
+      "correct": true,
+      "valid_contract": true,
+      "unknown": false,
+      "reasons": []
+    },
+    {
+      "id": "em-00199",
+      "output": {
+        "category": "normal",
+        "reason": "This is a personal contact update from an individual to another known person without any deadlines or urgent operational issues."
+      },
+      "error": null,
+      "reused_classifications": 0,
+      "fresh_model_calls": 1,
+      "passed": true,
+      "correct": true,
+      "valid_contract": true,
+      "unknown": false,
+      "reasons": []
+    },
+    {
+      "id": "em-00789",
+      "output": {
+        "category": "ignore",
+        "reason": "This is an automated newsletter from CNN that requires no action from the recipient and can be safely left unread."
+      },
+      "error": null,
+      "reused_classifications": 0,
+      "fresh_model_calls": 1,
+      "passed": true,
+      "correct": true,
+      "valid_contract": true,
+      "unknown": false,
+      "reasons": []
+    },
+    {
+      "id": "em-00791",
+      "output": {
+        "category": "ignore",
+        "reason": "This is an automated newsletter and advertisement from a third-party service that requires no action from the recipient."
+      },
+      "error": null,
+      "reused_classifications": 0,
+      "fresh_model_calls": 1,
+      "passed": true,
+      "correct": true,
+      "valid_contract": true,
+      "unknown": false,
+      "reasons": []
+    },
+    {
+      "id": "em-00810",
+      "output": {
+        "category": "ignore",
+        "reason": "This email is an automated newsletter containing a PDF attachment and copyright notices that requires no action from the recipient."
+      },
+      "error": null,
+      "reused_classifications": 0,
+      "fresh_model_calls": 1,
+      "passed": true,
+      "correct": true,
+      "valid_contract": true,
+      "unknown": false,
+      "reasons": []
+    },
+    {
+      "id": "em-00887",
+      "output": {
+        "category": "ignore",
+        "reason": "This is an automated marketing newsletter from RealNetworks promoting free games and containing no actionable request for the recipient."
+      },
+      "error": null,
+      "reused_classifications": 0,
+      "fresh_model_calls": 1,
+      "passed": true,
+      "correct": true,
+      "valid_contract": true,
+      "unknown": false,
+      "reasons": []
+    },
+    {
+      "id": "em-01027",
+      "output": {
+        "category": "ignore",
+        "reason": "This email is unsolicited spam advertising merchant account services with no specific recipient obligation or deadline."
+      },
+      "error": null,
+      "reused_classifications": 0,
+      "fresh_model_calls": 1,
+      "passed": true,
+      "correct": true,
+      "valid_contract": true,
+      "unknown": false,
+      "reasons": []
+    },
+    {
+      "id": "em-01546",
+      "output": {
+        "category": "ignore",
+        "reason": "This email is a mass marketing newsletter about industry news that requires no action from the recipient."
+      },
+      "error": null,
+      "reused_classifications": 0,
+      "fresh_model_calls": 1,
+      "passed": true,
+      "correct": true,
+      "valid_contract": true,
+      "unknown": false,
+      "reasons": []
+    },
+    {
+      "id": "em-01568",
+      "output": {
+        "category": "ignore",
+        "reason": "This is a mass marketing announcement from an automated system to all employees with no specific action required by the recipient."
+      },
+      "error": null,
+      "reused_classifications": 0,
+      "fresh_model_calls": 1,
+      "passed": true,
+      "correct": true,
+      "valid_contract": true,
+      "unknown": false,
+      "reasons": []
+    },
+    {
+      "id": "em-02152",
+      "output": {
+        "category": "ignore",
+        "reason": "This is an automated newsletter containing stock quotes and advertisements that requires no action from the recipient."
+      },
+      "error": null,
+      "reused_classifications": 0,
+      "fresh_model_calls": 1,
+      "passed": true,
+      "correct": true,
+      "valid_contract": true,
+      "unknown": false,
+      "reasons": []
+    },
+    {
+      "id": "em-02208",
+      "output": {
+        "category": "normal",
+        "reason": "This is a personal message from an acquaintance sharing family photos and updates without any work-related deadlines or obligations."
+      },
+      "error": null,
+      "reused_classifications": 0,
+      "fresh_model_calls": 1,
+      "passed": true,
+      "correct": true,
+      "valid_contract": true,
+      "unknown": false,
+      "reasons": []
+    },
+    {
+      "id": "em-02354",
+      "output": {
+        "category": "ignore",
+        "reason": "This is a marketing newsletter promoting an event with no requirement for immediate action or deadline."
+      },
+      "error": null,
+      "reused_classifications": 0,
+      "fresh_model_calls": 1,
+      "passed": true,
+      "correct": true,
+      "valid_contract": true,
+      "unknown": false,
+      "reasons": []
+    },
+    {
+      "id": "em-03101",
+      "output": {
+        "category": "normal",
+        "reason": "This email requests a status update and decision on legal agreements but provides no specific deadline, allowing the recipient to respond at their convenience."
+      },
+      "error": null,
+      "reused_classifications": 0,
+      "fresh_model_calls": 1,
+      "passed": true,
+      "correct": true,
+      "valid_contract": true,
+      "unknown": false,
+      "reasons": []
+    },
+    {
+      "id": "em-03950",
+      "output": {
+        "category": "normal",
+        "reason": "This is a legitimate business email requesting an opinion on a contract issue without specifying an immediate deadline or live outage."
+      },
+      "error": null,
+      "reused_classifications": 0,
+      "fresh_model_calls": 1,
+      "passed": true,
+      "correct": true,
+      "valid_contract": true,
+      "unknown": false,
+      "reasons": []
+    },
+    {
+      "id": "em-04038",
+      "output": {
+        "category": "ignore",
+        "reason": "This is an unsolicited marketing email from a third party promoting Father's Day gifts and sweepstakes with no requirement for the recipient to take action."
+      },
+      "error": null,
+      "reused_classifications": 0,
+      "fresh_model_calls": 1,
+      "passed": true,
+      "correct": true,
+      "valid_contract": true,
+      "unknown": false,
+      "reasons": []
+    },
+    {
+      "id": "em-04260",
+      "output": {
+        "category": "urgent",
+        "reason": "The sender explicitly requests immediate action due to being on endless conference calls, creating an obligation to act today."
+      },
+      "error": null,
+      "reused_classifications": 0,
+      "fresh_model_calls": 1,
+      "passed": true,
+      "correct": true,
+      "valid_contract": true,
+      "unknown": false,
+      "reasons": []
+    },
+    {
+      "id": "em-04298",
+      "output": {
+        "category": "normal",
+        "reason": "This is a direct business request from a colleague asking for documentation, but it lacks a specific deadline or indication of an immediate outage."
+      },
+      "error": null,
+      "reused_classifications": 0,
+      "fresh_model_calls": 1,
+      "passed": false,
+      "correct": false,
+      "valid_contract": true,
+      "unknown": false,
+      "reasons": [
+        "expected urgent, got normal"
+      ]
+    },
+    {
+      "id": "em-04703",
+      "output": {
+        "category": "ignore",
+        "reason": "This is a mass marketing weather alert and advertisement that requires no action from the recipient."
+      },
+      "error": null,
+      "reused_classifications": 0,
+      "fresh_model_calls": 1,
+      "passed": true,
+      "correct": true,
+      "valid_contract": true,
+      "unknown": false,
+      "reasons": []
+    },
+    {
+      "id": "em-04863",
+      "output": {
+        "category": "ignore",
+        "reason": "This is an automated marketing email from a prize machine service that the recipient agreed to receive, requiring no action."
+      },
+      "error": null,
+      "reused_classifications": 0,
+      "fresh_model_calls": 1,
+      "passed": true,
+      "correct": true,
+      "valid_contract": true,
+      "unknown": false,
+      "reasons": []
+    },
+    {
+      "id": "em-05304",
+      "output": {
+        "category": "normal",
+        "reason": "This is a routine administrative update regarding a new contact address without any immediate deadline or critical action required."
+      },
+      "error": null,
+      "reused_classifications": 0,
+      "fresh_model_calls": 1,
+      "passed": true,
+      "correct": true,
+      "valid_contract": true,
+      "unknown": false,
+      "reasons": []
+    },
+    {
+      "id": "em-05545",
+      "output": {
+        "category": "ignore",
+        "reason": "This is an unsolicited marketing newsletter from a vendor promoting their services and soliciting attendance at an event."
+      },
+      "error": null,
+      "reused_classifications": 0,
+      "fresh_model_calls": 1,
+      "passed": true,
+      "correct": true,
+      "valid_contract": true,
+      "unknown": false,
+      "reasons": []
+    },
+    {
+      "id": "em-05826",
+      "output": {
+        "category": "urgent",
+        "reason": "The recipient must act today to locate documents required to open an account, as the sender is leaving for a conference call and has no time to retrieve them personally."
+      },
+      "error": null,
+      "reused_classifications": 0,
+      "fresh_model_calls": 1,
+      "passed": true,
+      "correct": true,
+      "valid_contract": true,
+      "unknown": false,
+      "reasons": []
+    },
+    {
+      "id": "em-06532",
+      "output": {
+        "category": "urgent",
+        "reason": "The recipient must act immediately to resolve a live security issue regarding an employee's access termination."
+      },
+      "error": null,
+      "reused_classifications": 0,
+      "fresh_model_calls": 1,
+      "passed": true,
+      "correct": true,
+      "valid_contract": true,
+      "unknown": false,
+      "reasons": []
+    },
+    {
+      "id": "em-06661",
+      "output": {
+        "category": "normal",
+        "reason": "This email contains a status update and a request for decision-making regarding a sale negotiation with a deadline of next week, which exceeds the two-working-day threshold required for an urgent classification."
+      },
+      "error": null,
+      "reused_classifications": 0,
+      "fresh_model_calls": 1,
+      "passed": true,
+      "correct": true,
+      "valid_contract": true,
+      "unknown": false,
+      "reasons": []
+    },
+    {
+      "id": "em-06734",
+      "output": {
+        "category": "normal",
+        "reason": "This is a professional request for information regarding a future lunch meeting with no specific deadline or immediate operational impact."
+      },
+      "error": null,
+      "reused_classifications": 0,
+      "fresh_model_calls": 1,
+      "passed": false,
+      "correct": false,
+      "valid_contract": true,
+      "unknown": false,
+      "reasons": [
+        "expected urgent, got normal"
+      ]
+    },
+    {
+      "id": "em-07202",
+      "output": {
+        "category": "normal",
+        "reason": "This is a legitimate operational update regarding a transmission schedule with no immediate deadline or critical outage requiring urgent action."
+      },
+      "error": null,
+      "reused_classifications": 0,
+      "fresh_model_calls": 1,
+      "passed": false,
+      "correct": false,
+      "valid_contract": true,
+      "unknown": false,
+      "reasons": [
+        "expected urgent, got normal"
+      ]
+    },
+    {
+      "id": "em-07427",
+      "output": {
+        "category": "normal",
+        "reason": "This email is a status update regarding financial data with no immediate deadline or action required from the recipients."
+      },
+      "error": null,
+      "reused_classifications": 0,
+      "fresh_model_calls": 1,
+      "passed": true,
+      "correct": true,
+      "valid_contract": true,
+      "unknown": false,
+      "reasons": []
+    },
+    {
+      "id": "em-07767",
+      "output": {
+        "category": "ignore",
+        "reason": "This email is an automated conference call playback notice with no specific deadline or action required from the recipient."
+      },
+      "error": null,
+      "reused_classifications": 0,
+      "fresh_model_calls": 1,
+      "passed": true,
+      "correct": true,
+      "valid_contract": true,
+      "unknown": false,
+      "reasons": []
+    },
+    {
+      "id": "em-08086",
+      "output": {
+        "category": "ignore",
+        "reason": "This is an automated marketing offer sent to a subscriber who opted in, requiring no action and fitting the definition of advertising or newsletters."
+      },
+      "error": null,
+      "reused_classifications": 0,
+      "fresh_model_calls": 1,
+      "passed": true,
+      "correct": true,
+      "valid_contract": true,
+      "unknown": false,
+      "reasons": []
+    },
+    {
+      "id": "em-08125",
+      "output": {
+        "category": "urgent",
+        "reason": "The recipient must approve a $4.2 million wire transfer by 2:00 PM today to prevent suspension of deliveries, which is within the two-working-day deadline."
+      },
+      "error": null,
+      "reused_classifications": 0,
+      "fresh_model_calls": 1,
+      "passed": true,
+      "correct": true,
+      "valid_contract": true,
+      "unknown": false,
+      "reasons": []
+    },
+    {
+      "id": "em-08173",
+      "output": {
+        "category": "normal",
+        "reason": "This is a direct request for status and action from a known colleague without an explicit near-term deadline or indication of a live outage."
+      },
+      "error": null,
+      "reused_classifications": 0,
+      "fresh_model_calls": 1,
+      "passed": false,
+      "correct": false,
+      "valid_contract": true,
+      "unknown": false,
+      "reasons": [
+        "expected urgent, got normal"
+      ]
+    },
+    {
+      "id": "em-08472",
+      "output": {
+        "category": "urgent",
+        "reason": "The recipient has an immediate obligation to provide a summary valuation by the end of the day or next working day as requested by Lavo regarding live financial options."
+      },
+      "error": null,
+      "reused_classifications": 0,
+      "fresh_model_calls": 1,
+      "passed": true,
+      "correct": true,
+      "valid_contract": true,
+      "unknown": false,
+      "reasons": []
+    },
+    {
+      "id": "em-08511",
+      "output": {
+        "category": "urgent",
+        "reason": "The recipient faces an immediate operational outage preventing communication with the CAISO, creating a potential violation of their generator agreement that requires action today or by the next working day."
+      },
+      "error": null,
+      "reused_classifications": 0,
+      "fresh_model_calls": 1,
+      "passed": true,
+      "correct": true,
+      "valid_contract": true,
+      "unknown": false,
+      "reasons": []
+    },
+    {
+      "id": "em-09772",
+      "output": {
+        "category": "ignore",
+        "reason": "This is an automated out-of-office notification intended for general inquiries rather than a specific recipient requiring immediate action."
+      },
+      "error": null,
+      "reused_classifications": 0,
+      "fresh_model_calls": 1,
+      "passed": true,
+      "correct": true,
+      "valid_contract": true,
+      "unknown": false,
+      "reasons": []
+    },
+    {
+      "id": "em-12027",
+      "output": {
+        "category": "ignore",
+        "reason": "This email is a promotional advertisement with no requirement for action or approval from the recipient."
+      },
+      "error": null,
+      "reused_classifications": 0,
+      "fresh_model_calls": 1,
+      "passed": true,
+      "correct": true,
+      "valid_contract": true,
+      "unknown": false,
+      "reasons": []
+    },
+    {
+      "id": "em-12167",
+      "output": {
+        "category": "urgent",
+        "reason": "The recipient has an immediate obligation to provide specific data by 9:00 AM tomorrow to prevent a filing failure."
+      },
+      "error": null,
+      "reused_classifications": 0,
+      "fresh_model_calls": 1,
+      "passed": true,
+      "correct": true,
+      "valid_contract": true,
+      "unknown": false,
+      "reasons": []
+    },
+    {
+      "id": "em-12417",
+      "output": {
+        "category": "urgent",
+        "reason": "The sender requires immediate information by the end of the day to prepare for a specific appointment scheduled at 2 pm that same afternoon."
+      },
+      "error": null,
+      "reused_classifications": 0,
+      "fresh_model_calls": 1,
+      "passed": true,
+      "correct": true,
+      "valid_contract": true,
+      "unknown": false,
+      "reasons": []
+    },
+    {
+      "id": "em-13229",
+      "output": {
+        "category": "normal",
+        "reason": "This email is a personal update sharing an overheard comment about company leadership without any deadlines, action requests, or critical issues requiring immediate decision-making."
+      },
+      "error": null,
+      "reused_classifications": 0,
+      "fresh_model_calls": 1,
+      "passed": true,
+      "correct": true,
+      "valid_contract": true,
+      "unknown": false,
+      "reasons": []
+    },
+    {
+      "id": "em-13456",
+      "output": {
+        "category": "normal",
+        "reason": "This is a personal status update from a colleague discussing workload and requesting suggestions without any near-term deadlines or critical actions required."
+      },
+      "error": null,
+      "reused_classifications": 0,
+      "fresh_model_calls": 1,
+      "passed": true,
+      "correct": true,
+      "valid_contract": true,
+      "unknown": false,
+      "reasons": []
+    },
+    {
+      "id": "em-13458",
+      "output": {
+        "category": "ignore",
+        "reason": "This is an automated newsletter announcement from a conference organizer that requires no action from the recipient."
+      },
+      "error": null,
+      "reused_classifications": 0,
+      "fresh_model_calls": 1,
+      "passed": true,
+      "correct": true,
+      "valid_contract": true,
+      "unknown": false,
+      "reasons": []
+    },
+    {
+      "id": "em-13565",
+      "output": {
+        "category": "urgent",
+        "reason": "The recipient has an immediate obligation to provide a live price by the end of the day because the client requires a contract today."
+      },
+      "error": null,
+      "reused_classifications": 0,
+      "fresh_model_calls": 1,
+      "passed": true,
+      "correct": true,
+      "valid_contract": true,
+      "unknown": false,
+      "reasons": []
+    },
+    {
+      "id": "em-16386",
+      "output": {
+        "category": "ignore",
+        "reason": "This email is an automated newsletter from a word-of-the-day service that requires no action from the recipient."
+      },
+      "error": null,
+      "reused_classifications": 0,
+      "fresh_model_calls": 1,
+      "passed": true,
+      "correct": true,
+      "valid_contract": true,
+      "unknown": false,
+      "reasons": []
+    },
+    {
+      "id": "em-16483",
+      "output": {
+        "category": "urgent",
+        "reason": "The recipient has an immediate obligation to call the CFO before 4:00 PM today to prevent a termination notice scheduled for tomorrow."
+      },
+      "error": null,
+      "reused_classifications": 0,
+      "fresh_model_calls": 1,
+      "passed": true,
+      "correct": true,
+      "valid_contract": true,
+      "unknown": false,
+      "reasons": []
+    },
+    {
+      "id": "em-17379",
+      "output": {
+        "category": "normal",
+        "reason": "This is a legitimate business request with no specific deadline mentioned, asking the recipient to research contracts and call a colleague for questions."
+      },
+      "error": null,
+      "reused_classifications": 0,
+      "fresh_model_calls": 1,
+      "passed": true,
+      "correct": true,
+      "valid_contract": true,
+      "unknown": false,
+      "reasons": []
+    },
+    {
+      "id": "em-17457",
+      "output": {
+        "category": "ignore",
+        "reason": "This is a sales advertisement for a corporate profile that requires no action from the recipient."
+      },
+      "error": null,
+      "reused_classifications": 0,
+      "fresh_model_calls": 1,
+      "passed": true,
+      "correct": true,
+      "valid_contract": true,
+      "unknown": false,
+      "reasons": []
+    },
+    {
+      "id": "em-17561",
+      "output": {
+        "category": "normal",
+        "reason": "This is a direct request from a known colleague to make a phone call, lacking any specific deadline or indication of an immediate outage."
+      },
+      "error": null,
+      "reused_classifications": 0,
+      "fresh_model_calls": 1,
+      "passed": false,
+      "correct": false,
+      "valid_contract": true,
+      "unknown": false,
+      "reasons": [
+        "expected urgent, got normal"
+      ]
+    },
+    {
+      "id": "em-18551",
+      "output": {
+        "category": "normal",
+        "reason": "This email is an internal status update regarding financial data discrepancies without a near-term deadline or requirement for immediate decision-making."
+      },
+      "error": null,
+      "reused_classifications": 0,
+      "fresh_model_calls": 1,
+      "passed": true,
+      "correct": true,
+      "valid_contract": true,
+      "unknown": false,
+      "reasons": []
+    },
+    {
+      "id": "em-18646",
+      "output": {
+        "category": "urgent",
+        "reason": "The recipient has a direct obligation to provide an explanation for business variances by noon the next working day."
+      },
+      "error": null,
+      "reused_classifications": 0,
+      "fresh_model_calls": 1,
+      "passed": true,
+      "correct": true,
+      "valid_contract": true,
+      "unknown": false,
+      "reasons": []
+    },
+    {
+      "id": "em-19922",
+      "output": {
+        "category": "urgent",
+        "reason": "The recipient has a strict deadline of 1:00 PM today to resolve a failed payment that would result in interest penalties."
+      },
+      "error": null,
+      "reused_classifications": 0,
+      "fresh_model_calls": 1,
+      "passed": true,
+      "correct": true,
+      "valid_contract": true,
+      "unknown": false,
+      "reasons": []
+    },
+    {
+      "id": "em-20650",
+      "output": {
+        "category": "urgent",
+        "reason": "The recipient has a live problem with an OSHA charge response deadline set for today, requiring immediate action or escalation."
+      },
+      "error": null,
+      "reused_classifications": 0,
+      "fresh_model_calls": 1,
+      "passed": true,
+      "correct": true,
+      "valid_contract": true,
+      "unknown": false,
+      "reasons": []
+    },
+    {
+      "id": "em-21311",
+      "output": {
+        "category": "normal",
+        "reason": "This is a direct request for scheduling a meeting with no specific deadline or urgency attached."
+      },
+      "error": null,
+      "reused_classifications": 0,
+      "fresh_model_calls": 1,
+      "passed": true,
+      "correct": true,
+      "valid_contract": true,
+      "unknown": false,
+      "reasons": []
+    },
+    {
+      "id": "em-21318",
+      "output": {
+        "category": "normal",
+        "reason": "This email is a routine status update regarding desk availability with no immediate deadline or critical action required."
+      },
+      "error": null,
+      "reused_classifications": 0,
+      "fresh_model_calls": 1,
+      "passed": true,
+      "correct": true,
+      "valid_contract": true,
+      "unknown": false,
+      "reasons": []
+    },
+    {
+      "id": "em-22263",
+      "output": {
+        "category": "urgent",
+        "reason": "The recipient must act today to replace specific power units following a confirmed outage, as the schedule involves immediate evening operations and Friday deadlines."
+      },
+      "error": null,
+      "reused_classifications": 0,
+      "fresh_model_calls": 1,
+      "passed": true,
+      "correct": true,
+      "valid_contract": true,
+      "unknown": false,
+      "reasons": []
+    },
+    {
+      "id": "em-22503",
+      "output": {
+        "category": "normal",
+        "reason": "This is a status update regarding an ongoing issue with no immediate deadline or live outage requiring urgent action."
+      },
+      "error": null,
+      "reused_classifications": 0,
+      "fresh_model_calls": 1,
+      "passed": true,
+      "correct": true,
+      "valid_contract": true,
+      "unknown": false,
+      "reasons": []
+    },
+    {
+      "id": "em-22555",
+      "output": {
+        "category": "normal",
+        "reason": "This is a follow-up email from a candidate thanking the recruiter for a meeting and requesting resume review, which does not meet the strict deadline criteria for urgency."
+      },
+      "error": null,
+      "reused_classifications": 0,
+      "fresh_model_calls": 1,
+      "passed": true,
+      "correct": true,
+      "valid_contract": true,
+      "unknown": false,
+      "reasons": []
+    },
+    {
+      "id": "em-22847",
+      "output": {
+        "category": "normal",
+        "reason": "This is a routine work request from a colleague asking for document summaries to be forwarded, with no specified deadline or indication of an immediate outage."
+      },
+      "error": null,
+      "reused_classifications": 0,
+      "fresh_model_calls": 1,
+      "passed": true,
+      "correct": true,
+      "valid_contract": true,
+      "unknown": false,
+      "reasons": []
+    },
+    {
+      "id": "em-22865",
+      "output": {
+        "category": "ignore",
+        "reason": "This email is a personal update from an acquaintance containing an unsolicited advertisement for MSN Explorer, which the recipient can safely ignore."
+      },
+      "error": null,
+      "reused_classifications": 0,
+      "fresh_model_calls": 1,
+      "passed": false,
+      "correct": false,
+      "valid_contract": true,
+      "unknown": false,
+      "reasons": [
+        "expected normal, got ignore"
+      ]
+    },
+    {
+      "id": "em-23322",
+      "output": {
+        "category": "normal",
+        "reason": "This email is a routine status update regarding financial variances with no immediate deadline or action required."
+      },
+      "error": null,
+      "reused_classifications": 0,
+      "fresh_model_calls": 1,
+      "passed": true,
+      "correct": true,
+      "valid_contract": true,
+      "unknown": false,
+      "reasons": []
+    },
+    {
+      "id": "em-23534",
+      "output": {
+        "category": "normal",
+        "reason": "This is a legitimate business email requesting an action with no specific deadline mentioned and well beyond the two-working-day threshold."
+      },
+      "error": null,
+      "reused_classifications": 0,
+      "fresh_model_calls": 1,
+      "passed": true,
+      "correct": true,
+      "valid_contract": true,
+      "unknown": false,
+      "reasons": []
+    },
+    {
+      "id": "em-23728",
+      "output": {
+        "category": "normal",
+        "reason": "This is a personal status update from a known colleague regarding an immediate action that will be completed within the same day."
+      },
+      "error": null,
+      "reused_classifications": 0,
+      "fresh_model_calls": 1,
+      "passed": true,
+      "correct": true,
+      "valid_contract": true,
+      "unknown": false,
+      "reasons": []
+    }
+  ]
+}

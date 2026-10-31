@@ -28,6 +28,9 @@ class OllamaClient:
         temperature: float = 0,
         num_ctx: int = 8192,
         think: bool = False,
+        num_batch: int | None = None,
+        num_gpu: int | None = None,
+        task_options: dict | None = None,
     ) -> None:
         self.model = model
         self.base_url = base_url.rstrip("/")
@@ -36,6 +39,9 @@ class OllamaClient:
         self.temperature = temperature
         self.num_ctx = num_ctx
         self.think = think
+        self.num_batch = num_batch
+        self.num_gpu = num_gpu
+        self.task_options = task_options or {}
 
     def _request(self, endpoint: str, payload: dict | None = None) -> dict:
         body = None if payload is None else json.dumps(payload).encode("utf-8")
@@ -60,6 +66,18 @@ class OllamaClient:
                 f"Original error: {exc}"
             ) from exc
 
+    def _task_options(self, messages):
+        if not self.task_options or not messages:
+            return {}
+        try:
+            value = json.loads(messages[-1]['content'])
+            return self.task_options.get(value.get('task'), {}) if isinstance(value, dict) else {}
+        except (ValueError, TypeError, KeyError):
+            return {}
+
+    def request_json_mode(self, messages):
+        return self._task_options(messages).get('json_mode', self.json_mode)
+
     def __call__(self, messages: list[dict]) -> str:
         payload = {
             "model": self.model,
@@ -68,8 +86,15 @@ class OllamaClient:
             "think": self.think,
             "options": {"temperature": self.temperature, "num_ctx": self.num_ctx},
         }
-        if self.json_mode:
-            payload["format"] = "json"
+        if self.num_gpu is not None:
+            payload['options']['num_gpu'] = self.num_gpu
+        if self.num_batch is not None:
+            payload['options']['num_batch'] = self.num_batch
+        overrides = self._task_options(messages)
+        if 'num_predict' in overrides:
+            payload['options']['num_predict'] = overrides['num_predict']
+        if self.request_json_mode(messages):
+            payload["format"] = overrides.get("format", "json")
         result = self._request("/api/chat", payload)
         content = result.get("message", {}).get("content")
         if not isinstance(content, str) or not content.strip():

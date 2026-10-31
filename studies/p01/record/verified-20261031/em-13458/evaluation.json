@@ -1,0 +1,15 @@
+{
+  "id": "em-13458",
+  "output": {
+    "category": "ignore",
+    "reason": "This is an automated newsletter announcement from a conference organizer that requires no action from the recipient."
+  },
+  "error": null,
+  "reused_classifications": 0,
+  "fresh_model_calls": 1,
+  "passed": true,
+  "correct": true,
+  "valid_contract": true,
+  "unknown": false,
+  "reasons": []
+}

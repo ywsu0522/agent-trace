@@ -1,0 +1,10 @@
+{
+  "output": {
+    "category": "normal",
+    "reason": "This is a legitimate operational update regarding a transmission schedule with no immediate deadline or critical outage requiring urgent action."
+  },
+  "reused_classifications": 0,
+  "fresh_model_calls": 1,
+  "seconds": 18.7,
+  "error": null
+}

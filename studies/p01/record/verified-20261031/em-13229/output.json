@@ -1,0 +1,10 @@
+{
+  "output": {
+    "category": "normal",
+    "reason": "This email is a personal update sharing an overheard comment about company leadership without any deadlines, action requests, or critical issues requiring immediate decision-making."
+  },
+  "reused_classifications": 0,
+  "fresh_model_calls": 1,
+  "seconds": 17.399,
+  "error": null
+}

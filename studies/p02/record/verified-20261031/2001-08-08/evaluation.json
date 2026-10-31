@@ -1,0 +1,15 @@
+{
+  "id": "2001-08-08",
+  "output": "Urgent\n*   **Thornbury Pipeline**: Confirm the correct bank account number and approve a new $1.9 million wire transfer immediately to avoid interest penalties, as the previous payment was rejected due to an incorrect account number. Deadline: 1:00 PM today.\n*   **Ketteridge & Lowe**: Review and sign the reserve schedule by tonight or first thing in the morning, as auditors require it by 10:00 AM tomorrow to finalize their quarter sign-off.\n\nOther updates\n*   A draft letter regarding Dunn and the Senate is being prepared for use in DC; inquiries about its content are expected soon.\n*   Status of George Phillips (potential move from EES) is being discussed with Lloyd Will, though he has not yet confirmed what to say to his new team.\n*   A reminder was provided regarding video conference etiquette to prevent accidental ejection during meetings.",
+  "error": null,
+  "reused_classifications": 0,
+  "fresh_model_calls": 30,
+  "passed": true,
+  "words": 138,
+  "length_ok": true,
+  "must_mention_ok": true,
+  "must_not_mention_ok": true,
+  "missing": [],
+  "forbidden": [],
+  "reasons": []
+}

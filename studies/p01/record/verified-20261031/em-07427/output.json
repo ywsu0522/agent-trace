@@ -1,0 +1,10 @@
+{
+  "output": {
+    "category": "normal",
+    "reason": "This email is a status update regarding financial data with no immediate deadline or action required from the recipients."
+  },
+  "reused_classifications": 0,
+  "fresh_model_calls": 1,
+  "seconds": 18.295,
+  "error": null
+}

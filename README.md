@@ -43,7 +43,8 @@ uv run pytest
 ## 程式與實驗紀錄
 
 - `agent_trace/`：agent loop、工具註冊與參數驗證、BM25 retrieval、Ollama client、trace 與報告。
-- `configs/`：agent profiles、prompt 與題目設定。
+- `configs/`：agent profiles 與 prompt。
+- `tests/fixtures/doc_questions.json`：HW1 P09 `search_docs` 的原始 20 題 live 測試資料，原封保留課程 `tests/fixtures/doc_questions.json` 的陣列格式、問題、答案別名與參考證據；`--task d01` 至 `d20` 直接從此檔選題。
 - `datasets/`：實驗文件與 email 來源描述。
 - `studies/`：已保存的實驗紀錄與比較。
 
@@ -52,3 +53,11 @@ HTML 閱讀頁可在本機重建，不納入 Git；已保存的紀錄可直接�
 [其他用法](docs/reproducibility.md) · [20 題歷史紀錄](studies/baseline-20/README.md) · [d06 prompt 比較](studies/d06/README.md)
 
 實驗使用 [CS329Z Assignment 1](https://github.com/cs329z/assignment1-harness) 整理的文件與 email 資料；詳見[資料來源](datasets/SOURCES.md)。
+
+## P01／P02 本機測試
+
+`python -m scripts.test01` 與 `python -m scripts.test02` 分別執行原始 deterministic 案例及完整的本機 Ollama live 測試，直接使用獨立 pipeline API。資料沿用 HW1 fixture，GT 僅供評分。[指令、門檻與輸出紀錄](scripts/README.md)。
+
+已驗證的本機實驗：[P01 分類，54/60](studies/p01/README.md) · [P02 摘要，5/5](studies/p02/README.md)。完整 request、原始 completion 與評分結果隨研究紀錄保存；後續執行仍寫入不納入 Git 的 `runs/`。
+
+本專案可獨立 checkout、安裝與測試，不需要課程 repository 或 PDF。所有程式、fixture 與執行資料都從本專案或其資料準備流程取得；課程網址僅用於來源註記與人工參考。

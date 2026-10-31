@@ -1,0 +1,15 @@
+{
+  "id": "em-03101",
+  "output": {
+    "category": "normal",
+    "reason": "This email requests a status update and decision on legal agreements but provides no specific deadline, allowing the recipient to respond at their convenience."
+  },
+  "error": null,
+  "reused_classifications": 0,
+  "fresh_model_calls": 1,
+  "passed": true,
+  "correct": true,
+  "valid_contract": true,
+  "unknown": false,
+  "reasons": []
+}

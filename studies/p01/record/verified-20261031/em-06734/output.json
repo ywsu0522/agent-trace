@@ -1,0 +1,10 @@
+{
+  "output": {
+    "category": "normal",
+    "reason": "This is a professional request for information regarding a future lunch meeting with no specific deadline or immediate operational impact."
+  },
+  "reused_classifications": 0,
+  "fresh_model_calls": 1,
+  "seconds": 18.333,
+  "error": null
+}

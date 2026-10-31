@@ -51,8 +51,14 @@ def plan(args):
         if not path.is_file():
             if '/' in task_id or '\\' in task_id or task_id in ('.', '..'):
                 raise FileNotFoundError(f'Task file not found: {task_id}')
-            path = root / 'configs/tasks' / f'{task_id}.json'
-        task = load(path)
+            # HW1 P09 uses the original shared fixture, not per-question configs.
+            path = root / 'tests/fixtures/doc_questions.json'
+            item = next((item for item in load(path) if item['id'] == task_id), None)
+            if item is None:
+                raise ValueError(f'Unknown HW1 P09 question: {task_id}')
+            task = {**item, 'expected_answers': item['answers'], 'document_result_budget': 6000}
+        else:
+            task = load(path)
         question = task['question']
     expected = args.expected_answer if args.expected_answer is not None else task.get('expected_answers', [])
     history = None

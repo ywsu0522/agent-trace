@@ -1,0 +1,15 @@
+{
+  "id": "em-21318",
+  "output": {
+    "category": "normal",
+    "reason": "This email is a routine status update regarding desk availability with no immediate deadline or critical action required."
+  },
+  "error": null,
+  "reused_classifications": 0,
+  "fresh_model_calls": 1,
+  "passed": true,
+  "correct": true,
+  "valid_contract": true,
+  "unknown": false,
+  "reasons": []
+}

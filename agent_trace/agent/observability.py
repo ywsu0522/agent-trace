@@ -184,7 +184,8 @@ class ObservedLM:
     def __call__(self, messages):
         call_id = uuid4().hex
         self.recorder.emit("model_request", role=self.role, call_id=call_id,
-                           model=getattr(self.lm, 'model', None), json_mode=getattr(self.lm, 'json_mode', None), messages=messages)
+                           model=getattr(self.lm, 'model', None), json_mode=(self.lm.request_json_mode(messages) if hasattr(self.lm, 'request_json_mode')
+                                      else getattr(self.lm, 'json_mode', None)), messages=messages)
         token = self.recorder.current_call.set(call_id)
         try:
             reply = self.lm(messages)

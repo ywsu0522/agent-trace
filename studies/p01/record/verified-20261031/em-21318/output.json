@@ -1,0 +1,10 @@
+{
+  "output": {
+    "category": "normal",
+    "reason": "This email is a routine status update regarding desk availability with no immediate deadline or critical action required."
+  },
+  "reused_classifications": 0,
+  "fresh_model_calls": 1,
+  "seconds": 13.724,
+  "error": null
+}

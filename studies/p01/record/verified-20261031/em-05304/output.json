@@ -1,0 +1,10 @@
+{
+  "output": {
+    "category": "normal",
+    "reason": "This is a routine administrative update regarding a new contact address without any immediate deadline or critical action required."
+  },
+  "reused_classifications": 0,
+  "fresh_model_calls": 1,
+  "seconds": 16.739,
+  "error": null
+}

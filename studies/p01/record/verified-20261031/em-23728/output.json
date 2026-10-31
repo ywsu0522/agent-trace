@@ -1,0 +1,10 @@
+{
+  "output": {
+    "category": "normal",
+    "reason": "This is a personal status update from a known colleague regarding an immediate action that will be completed within the same day."
+  },
+  "reused_classifications": 0,
+  "fresh_model_calls": 1,
+  "seconds": 14.865,
+  "error": null
+}

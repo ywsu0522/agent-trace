@@ -1,0 +1,15 @@
+{
+  "id": "em-17379",
+  "output": {
+    "category": "normal",
+    "reason": "This is a legitimate business request with no specific deadline mentioned, asking the recipient to research contracts and call a colleague for questions."
+  },
+  "error": null,
+  "reused_classifications": 0,
+  "fresh_model_calls": 1,
+  "passed": true,
+  "correct": true,
+  "valid_contract": true,
+  "unknown": false,
+  "reasons": []
+}

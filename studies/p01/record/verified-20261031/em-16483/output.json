@@ -1,0 +1,10 @@
+{
+  "output": {
+    "category": "urgent",
+    "reason": "The recipient has an immediate obligation to call the CFO before 4:00 PM today to prevent a termination notice scheduled for tomorrow."
+  },
+  "reused_classifications": 0,
+  "fresh_model_calls": 1,
+  "seconds": 16.264,
+  "error": null
+}

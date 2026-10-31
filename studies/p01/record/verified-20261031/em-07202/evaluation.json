@@ -1,0 +1,17 @@
+{
+  "id": "em-07202",
+  "output": {
+    "category": "normal",
+    "reason": "This is a legitimate operational update regarding a transmission schedule with no immediate deadline or critical outage requiring urgent action."
+  },
+  "error": null,
+  "reused_classifications": 0,
+  "fresh_model_calls": 1,
+  "passed": false,
+  "correct": false,
+  "valid_contract": true,
+  "unknown": false,
+  "reasons": [
+    "expected urgent, got normal"
+  ]
+}

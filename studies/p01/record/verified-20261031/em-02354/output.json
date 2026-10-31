@@ -1,0 +1,10 @@
+{
+  "output": {
+    "category": "ignore",
+    "reason": "This is a marketing newsletter promoting an event with no requirement for immediate action or deadline."
+  },
+  "reused_classifications": 0,
+  "fresh_model_calls": 1,
+  "seconds": 22.85,
+  "error": null
+}

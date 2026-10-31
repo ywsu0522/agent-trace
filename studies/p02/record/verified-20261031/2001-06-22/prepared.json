@@ -1,0 +1,899 @@
+{
+  "labels": [
+    {
+      "category": "normal",
+      "reason": "This is a routine scheduling inquiry regarding an event in the future with no immediate deadline requiring urgent action."
+    },
+    {
+      "category": "normal",
+      "reason": "This email provides a status update on a completed transaction with a financial deadline of over two weeks away, requiring no immediate action from the recipients."
+    },
+    {
+      "category": "normal",
+      "reason": "This email provides status updates on financial reconciliations for a project team without any immediate deadlines or urgent action requirements."
+    },
+    {
+      "category": "normal",
+      "reason": "This email is a business update discussing project status and potential opportunities without any immediate deadlines or critical action required by the recipients."
+    },
+    {
+      "category": "normal",
+      "reason": "This email is a standard business update regarding personnel decisions and role reassignments without any immediate deadlines or critical outages requiring urgent action."
+    },
+    {
+      "category": "ignore",
+      "reason": "This is an automated marketing offer sent to a subscriber who opted in, requiring no action and fitting the definition of advertising or newsletters."
+    },
+    {
+      "category": "normal",
+      "reason": "This email is an informational update about a briefing paper with no immediate deadline or action required from the recipients."
+    },
+    {
+      "category": "normal",
+      "reason": "This email provides a status update and information about a data issue without requiring immediate action or meeting a tight deadline."
+    },
+    {
+      "category": "urgent",
+      "reason": "The recipient must approve a $4.2 million wire transfer by 2:00 PM today to prevent suspension of deliveries, which is within the two-working-day deadline."
+    },
+    {
+      "category": "ignore",
+      "reason": "This is a mass announcement from Community Events regarding an upcoming bake sale that requires no action from the recipients."
+    },
+    {
+      "category": "normal",
+      "reason": "This is a standard business communication regarding legal document comments with no specified deadline or immediate action required."
+    },
+    {
+      "category": "normal",
+      "reason": "This is a standard informational update about meeting logistics with no immediate deadline or action required."
+    },
+    {
+      "category": "urgent",
+      "reason": "The recipient has a live operational problem requiring immediate action today, specifically approval of an emergency repair within the hour."
+    },
+    {
+      "category": "normal",
+      "reason": "This email is a routine status update regarding sample results sent to a large group of colleagues without any near-term deadlines or urgent issues requiring immediate action."
+    },
+    {
+      "category": "normal",
+      "reason": "This email is a routine request for feedback on a document prototype without any specified deadline or immediate action required."
+    },
+    {
+      "category": "normal",
+      "reason": "This is a personal message from a colleague expressing appreciation for a talk, with no deadlines or urgent operational issues requiring immediate action."
+    },
+    {
+      "category": "normal",
+      "reason": "This is a legitimate internal request forwarding information about Corporate Policy Committee members without an immediate deadline."
+    },
+    {
+      "category": "urgent",
+      "reason": "The recipient has a strict deadline of 5:00 PM today to sign a document, which is within the two-working-day threshold required for an urgent classification."
+    },
+    {
+      "category": "normal",
+      "reason": "This email is a routine status update delivering attachments from a past meeting to a large group of recipients without any near-term deadlines or urgent action required."
+    },
+    {
+      "category": "normal",
+      "reason": "This is a standard status update from an employee informing colleagues of their early departure and availability for the following workday."
+    },
+    {
+      "category": "normal",
+      "reason": "This is a status update regarding a filed regulatory protest sent to a large group of colleagues without any immediate deadline or action required."
+    },
+    {
+      "category": "ignore",
+      "reason": "This is a mass marketing announcement sent to a large distribution list with no specific deadline or personal obligation for the recipients."
+    },
+    {
+      "category": "normal",
+      "reason": "This email is a personal sharing of an interesting framework by a known colleague without any deadlines or urgent operational requirements."
+    },
+    {
+      "category": "normal",
+      "reason": "This is a personal business request for advice from a known contact without an immediate deadline or critical incident."
+    },
+    {
+      "category": "normal",
+      "reason": "This is a scheduling request for future interviews with no immediate deadline or live problem requiring urgent action."
+    },
+    {
+      "category": "normal",
+      "reason": "This is a personal congratulatory message from an acquaintance with no deadline or operational obligation."
+    },
+    {
+      "category": "normal",
+      "reason": "This email contains informational data about gas storage reports and a contact name without any near-term deadlines or urgent action requirements."
+    },
+    {
+      "category": "normal",
+      "reason": "This is a routine business request for scheduling and information sharing without an immediate deadline or critical outage."
+    },
+    {
+      "category": "normal",
+      "reason": "This is a legitimate business update regarding headcount projections and realignment planning without an immediate deadline requiring action today or within two working days."
+    },
+    {
+      "category": "ignore",
+      "reason": "This is an automated security notification regarding a password reset that requires no action from the recipient."
+    }
+  ],
+  "threads": [
+    {
+      "thread_id": "th-06447",
+      "priority": "urgent",
+      "emails": [
+        {
+          "priority": "urgent",
+          "email": {
+            "id": "em-08125",
+            "thread_id": "th-06447",
+            "reply_to": null,
+            "from": "noriko.hatakeyama@enron.com",
+            "to": [
+              "marisol.quintanar@enron.com",
+              "devrim.aksoy@enron.com"
+            ],
+            "date": "2001-06-22T13:42:00Z",
+            "subject": "Margin call from Orlin Valley Gas - need approval this morning",
+            "body": "Marisol,\n\nOrlin Valley Gas made a margin call on us this morning for $4.2 million. The wire has to leave by 2:00 PM today or they have the right to suspend deliveries under the master agreement. Treasury will not release it without your approval. Please call me or reply as soon as you see this.\n\nNoriko"
+          }
+        }
+      ]
+    },
+    {
+      "thread_id": "th-06467",
+      "priority": "urgent",
+      "emails": [
+        {
+          "priority": "urgent",
+          "email": {
+            "id": "em-08149",
+            "thread_id": "th-06467",
+            "reply_to": null,
+            "from": "halvard.ostby@enron.com",
+            "to": [
+              "annika.steenkamp@enron.com",
+              "florentino.urquiza@enron.com"
+            ],
+            "date": "2001-06-22T15:05:00Z",
+            "subject": "Leak at Bulrush Bend meter station",
+            "body": "Annika, Florentino,\n\nA contractor hit the inlet line at the Bulrush Bend meter station about twenty minutes ago. The station is shut in and nobody is hurt. I need gas control to reroute the noon nominations now, and I need one of you to call me within the hour to approve an emergency repair crew. My cell is 713-555-0142.\n\nHalvard"
+          }
+        }
+      ]
+    },
+    {
+      "thread_id": "th-06484",
+      "priority": "urgent",
+      "emails": [
+        {
+          "priority": "urgent",
+          "email": {
+            "id": "em-08169",
+            "thread_id": "th-06484",
+            "reply_to": null,
+            "from": "lucinda.farrowdale@enron.com",
+            "to": [
+              "bartholomew.nkemelu@enron.com"
+            ],
+            "date": "2001-06-22T16:30:00Z",
+            "subject": "Windrow Steel extension - signature needed by 5:00 today",
+            "body": "Bart,\n\nThe Windrow Steel supply contract expires at midnight tonight. Their counsel signed the extension this morning. I need your signature on it by 5:00 PM today so that I can get it back to them before it lapses. The signature page is on your chair.\n\nLucinda"
+          }
+        }
+      ]
+    },
+    {
+      "thread_id": "th-06195",
+      "priority": "normal",
+      "emails": [
+        {
+          "priority": "normal",
+          "email": {
+            "id": "em-08014",
+            "thread_id": "th-06195",
+            "reply_to": "em-07816",
+            "from": "steven.kean@enron.com",
+            "to": [
+              "lexi.elliott@enron.com",
+              "steven.kean@enron.com"
+            ],
+            "date": "2001-06-22T00:03:00Z",
+            "subject": "Re: Rice Happy Hour",
+            "body": "Steve will be in a Managing Director PRC that day - not sure if he will be out in time for a 5:30 event.\n\n\t\t\tMaureen\n\n\n\nFrom:\tLexi Elliott/ENRON@enronXgate on 06/21/2001 01:39 PM\nTo:\tSteven J Kean/NA/Enron@Enron\ncc:\t \n\nSubject:\tRice Happy Hour\n\nSteve:\n\nI am considering scheduling a Rice team/intern happy hour on July 24 (5:30 - 7:00).  Would you be available on this date or should I try to reschedule?\n\nThank you!\n\nlexi\n3-4585\n\n"
+          }
+        }
+      ]
+    },
+    {
+      "thread_id": "th-06357",
+      "priority": "normal",
+      "emails": [
+        {
+          "priority": "normal",
+          "email": {
+            "id": "em-08027",
+            "thread_id": "th-06357",
+            "reply_to": null,
+            "from": "christopher.calger@enron.com",
+            "to": [
+              "louise.kitchen@enron.com",
+              "john.lavorato@enron.com",
+              "joseph.deffner@enron.com",
+              "wes.colwell@enron.com",
+              "chip.schneider@enron.com",
+              "shirley.hudler@enron.com",
+              "don.miller@enron.com",
+              "jeff.donahue@enron.com"
+            ],
+            "date": "2001-06-22T02:30:00Z",
+            "subject": "Southwest Power Divestiture - Signed",
+            "body": "We received the $15MM L/C from Black Hills Corp. so we are done - we have a definitive purchase and sale agreement with Black Hills Energy Capital to divest of JEDI II/Enron's effective 100% membership interest in Southwest Power L.L.C.  Southwest's assets consist of Las Vegas Cogeneration L.P., Sunco, Ltd. L.L.C and Las Vegas Cogeneration II, L.L.C.  Financial closure is expected on or before August 31, 2001.  \n\n"
+          }
+        }
+      ]
+    },
+    {
+      "thread_id": "th-06364",
+      "priority": "normal",
+      "emails": [
+        {
+          "priority": "normal",
+          "email": {
+            "id": "em-08036",
+            "thread_id": "th-06364",
+            "reply_to": null,
+            "from": "jody.pierce@enron.com",
+            "to": [
+              "louise.kitchen@enron.com",
+              "georgeanne.hodges@enron.com",
+              "hope.vargas@enron.com"
+            ],
+            "date": "2001-06-22T03:35:00Z",
+            "subject": "Negative amounts on Asset List",
+            "body": "Louise,\n\nAs discussed, the Austin project  shows as a negative because the project was positive cash until mid-June. The City of Austin paid ENA in advance of the project costs actually being incurred.  By the end of this quarter, the Austin Project will have a positive asset balance of $750K to $1million.\n\nThe \"Global Assets (Cuiaba & BBPL)on EA's books\" line relates to development and reimbursable costs that were not moved over with the MTM piece.  While these costs were being transferred to G.A., a reimbursement was actually received for part of the BBPL costs.  Since we had moved the costs, the payment caused us to have a negative balance at May 31.  This is currently being reconciled and the balance will be $0 at quarter-end.\n\nCall if you need more information.\nRegards\nJody"
+          }
+        }
+      ]
+    },
+    {
+      "thread_id": "th-06391",
+      "priority": "normal",
+      "emails": [
+        {
+          "priority": "normal",
+          "email": {
+            "id": "em-08064",
+            "thread_id": "th-06391",
+            "reply_to": null,
+            "from": "christopher.calger@enron.com",
+            "to": [
+              "ben.jacoby@enron.com",
+              "brett.wiggs@enron.com",
+              "louise.kitchen@enron.com"
+            ],
+            "date": "2001-06-22T05:12:00Z",
+            "subject": "LM6000",
+            "body": "Guys,\n\nPortland General is long a Sep 30 LM6000 Sprint PC.  Their mini-peaker project has died.  They are giving us a first look before they give it to GE to re-market.   Price = $16.8MM +  115kv step-up transformer.   I could see buying 3-4 for QI but I don't have a need for such an early delivery.  East? Brazil?\n\n\nChris Calger\n503-464-3735"
+          }
+        }
+      ]
+    },
+    {
+      "thread_id": "th-06396",
+      "priority": "normal",
+      "emails": [
+        {
+          "priority": "normal",
+          "email": {
+            "id": "em-08072",
+            "thread_id": "th-06396",
+            "reply_to": null,
+            "from": "doug.wood@enron.com",
+            "to": [
+              "richard.shapiro@enron.com",
+              "richard.lewis@enron.com",
+              "eric.shaw@enron.com",
+              "paul.dawson@enron.com",
+              "paul.hennemeyer@enron.com",
+              "peter.styles@enron.com",
+              "sophie.kingsleylon@enron.com"
+            ],
+            "date": "2001-06-22T09:16:00Z",
+            "subject": "Brendan Devlin update",
+            "body": "Brendan & I have been in discussion over the last few days, as he was \nconcerned that his personal circumstances would prevent him from travelling \nout of Brussels for the next 6 months or so (except very occasionally), and \nabout how this would affect his ability to support the Continental Gas \nbusiness as he was hired to do.  Options included :\n\n (1) Brendan going back to the Commission for a year or two and reapproaching \nEnron after that period and \n (2) keeping him in Brussels for the interim period and redefining the role \nto focus less on gas and to pick up other EC related work on ecommerce, \nenvironment, coal, steel etc.\n\nWhere Brendan has been involved so far, he has shown valuable knowledge of \nand insight into the Commission's working practices.  Following discussion \nwith Eric, our recommendation is to keep Brendan in a Brussels position in \nthe interim, rather than risk the possibility that after 1 or 2 years he \nnever actually appears.  He should be available to transfer to London on a \ntemporary (and perhaps even permanent) basis in early 2002.  Under these \ncircumstances, I believe it would make more sense for Brendan to report to \nPeter Styles during this interim period.  Peter will open discussion with \nBrendan to define what he will be doing.  We'll need to consider separately \nhow to support the Continental Gas activity, given the hole this creates.  \n\nDBW"
+          }
+        }
+      ]
+    },
+    {
+      "thread_id": "th-06423",
+      "priority": "normal",
+      "emails": [
+        {
+          "priority": "normal",
+          "email": {
+            "id": "em-08100",
+            "thread_id": "th-06423",
+            "reply_to": null,
+            "from": "janet.butler@enron.com",
+            "to": [
+              "janet.butler@enron.com",
+              "rebecca.cantrell@enron.com",
+              "bill.cordes@enron.com",
+              "shelley.corman@enron.com",
+              "larry.deroin@enron.com",
+              "dari.dornan@enron.com",
+              "drew.fossum@enron.com",
+              "bambi.heckerman@enron.com",
+              "stanley.horton@enron.com",
+              "steven.kean@enron.com",
+              "robert.kilmer@enron.com",
+              "frazier.king@enron.com",
+              "steve.kirk@enron.com",
+              "teb.lokey@enron.com",
+              "dorothy.mccoppin@enron.com",
+              "mary.miller@enron.com",
+              "michael.moran@enron.com",
+              "ray.neppl@enron.com",
+              "maria.pavlou@enron.com",
+              "janet.place@enron.com",
+              "dave.schafer@enron.com",
+              "donna.scott@enron.com",
+              "susan.scott@enron.com",
+              "julia.white@enron.com"
+            ],
+            "date": "2001-06-22T13:21:00Z",
+            "subject": "Briefing Paper on FERC Mitigation Order",
+            "body": "Attached is a briefing paper on the recent FERC mitigation order for the \nCalifornia and western spot markets. The analysis was prepared by Ray Alvarez \nand provides a thorough analysis of the mitigation plan and the implications \nof these measures.\n"
+          }
+        }
+      ]
+    },
+    {
+      "thread_id": "th-06427",
+      "priority": "normal",
+      "emails": [
+        {
+          "priority": "normal",
+          "email": {
+            "id": "em-08104",
+            "thread_id": "th-06427",
+            "reply_to": null,
+            "from": "ryan.slinger@enron.com",
+            "to": [
+              "test.volume@enron.com"
+            ],
+            "date": "2001-06-22T13:34:31Z",
+            "subject": "Enpower to CAPS for 6/21/01",
+            "body": "There is no enpower to CAPS for 6/21 since the ISO computers went down and they do not have any finals for HE 21.  They said that some time around noon today they will try to repost the data after their guys recover it from the down servers.  Somebody in Houston or here may be able to just make the preferred the final for that hour, however this is something that I never learned how to do so I am going to have to pass on doing that.\n\nthanks,\n\nryan"
+          }
+        }
+      ]
+    },
+    {
+      "thread_id": "th-06453",
+      "priority": "normal",
+      "emails": [
+        {
+          "priority": "normal",
+          "email": {
+            "id": "em-08132",
+            "thread_id": "th-06453",
+            "reply_to": null,
+            "from": "marie.heard@enron.com",
+            "to": [
+              "jon.hoffmeister@anheuser-busch.com",
+              "mark.hentschell@anheuser-busch.com",
+              "jarrod.cyprow@enron.com",
+              "carol.north@enron.com",
+              "sara.shackleton@enron.com"
+            ],
+            "date": "2001-06-22T14:12:09Z",
+            "subject": "Comments to ISDA Master Agreement",
+            "body": "Gentlemen:\n\nPursuant to Jarrod Cyprow's request, I am attaching a clean and blacklined version of your form Schedule to the ISDA Master Agreement and Paragraph 13 to the ISDA Credit Support Annex, which reflect our comments to such forms.\n\nPlease do not hesitate to contact us with any questions.  We look forward to hearing your comments.\n\nThank you.\n\nMarie Heard\nSenior Legal Specialist\nEnron North America Corp.\nPhone:  (713) 853-3907\nFax:  (713) 646-3490\nmarie.heard@enron.com\n\n\n\t\t\t \t "
+          }
+        }
+      ]
+    },
+    {
+      "thread_id": "th-06466",
+      "priority": "normal",
+      "emails": [
+        {
+          "priority": "normal",
+          "email": {
+            "id": "em-08148",
+            "thread_id": "th-06466",
+            "reply_to": null,
+            "from": "garrick.hill@enron.com",
+            "to": [
+              "tom.motley@elpaso.com",
+              "j..farmer@enron.com",
+              "christopher.coffman@enron.com",
+              "charles.ward@enron.com"
+            ],
+            "date": "2001-06-22T14:49:16Z",
+            "subject": "Project Miracle - Gas Meeting",
+            "body": "FYI.  Today's meeting at 1:00 pm will be in 3 Allen Center, Conference Room 18C2.  Those attending from El Paso may go directly to the 18th floor and will be met in the elevator bank lobby.\n\nRH"
+          }
+        }
+      ]
+    },
+    {
+      "thread_id": "th-06468",
+      "priority": "normal",
+      "emails": [
+        {
+          "priority": "normal",
+          "email": {
+            "id": "em-08151",
+            "thread_id": "th-06468",
+            "reply_to": null,
+            "from": "team.kingman-needles@enron.com",
+            "to": [
+              "rich.jolly@enron.com",
+              "team.kingman-sta1@enron.com",
+              "team.kingman@enron.com",
+              "michel.nelson@enron.com",
+              "david.roensch@enron.com",
+              "butch.russell@enron.com",
+              "louis.soldano@enron.com",
+              "larry.campbell@enron.com",
+              "jeffery.fawcett@enron.com",
+              "michael.terraso@enron.com",
+              "william.kendrick@enron.com",
+              "earl.chanley@enron.com",
+              "ray.smith@enron.com",
+              "john.shafer@enron.com",
+              "randy.rice@enron.com",
+              "charlie.graham@enron.com"
+            ],
+            "date": "2001-06-22T15:11:00Z",
+            "subject": "PGE sample results",
+            "body": "See attached for this months sample run.   "
+          }
+        }
+      ]
+    },
+    {
+      "thread_id": "th-06474",
+      "priority": "normal",
+      "emails": [
+        {
+          "priority": "normal",
+          "email": {
+            "id": "em-08157",
+            "thread_id": "th-06474",
+            "reply_to": null,
+            "from": "ian.cooke@enron.com",
+            "to": [
+              "jonathan.mckay@enron.com"
+            ],
+            "date": "2001-06-22T15:59:20Z",
+            "subject": "Deloitte & Touche File",
+            "body": "Jon,\n\nHere is a prototype of the file we can send to Deloitte & Touche on a monthly basis.  Let me know what you think.\n\nIan  "
+          }
+        }
+      ]
+    },
+    {
+      "thread_id": "th-06478",
+      "priority": "normal",
+      "emails": [
+        {
+          "priority": "normal",
+          "email": {
+            "id": "em-08163",
+            "thread_id": "th-06478",
+            "reply_to": null,
+            "from": "victor.browner@enron.com",
+            "to": [
+              "jeff.skilling@enron.com"
+            ],
+            "date": "2001-06-22T16:21:24Z",
+            "subject": "Commonwealth Club Talk",
+            "body": "Dear Jeff, \n\nI just wanted to let you know that I thought your talk last night was inspirational.  \n\nI have been working in the San Francisco office for 2 years helping to permit sites for generating facilities.  During this time our team have had to endure more than our fair share of irrational and misinformed individuals.  One thing they didn't teach me at business school was how to educate people in a hostile and political environment while maintaining your dignity and humility.  Your example last night has certainly set a new personal standard for me to strive for.\n\nSincerely \n\nVictor Browner "
+          }
+        }
+      ]
+    },
+    {
+      "thread_id": "th-06482",
+      "priority": "normal",
+      "emails": [
+        {
+          "priority": "normal",
+          "email": {
+            "id": "em-08167",
+            "thread_id": "th-06482",
+            "reply_to": null,
+            "from": "gina.corteselli@enron.com",
+            "to": [
+              "steven.kean@enron.com",
+              "david.oxley@enron.com"
+            ],
+            "date": "2001-06-22T16:29:00Z",
+            "subject": "MD list with Policy Committee member",
+            "body": "Steve;\nDavid asked me to forward this to you, per your voice mail.  In addition, w=\ne=20\nwill provide each Corporate Policy Committee rep with a list of those MD=01=\n,s=20\nthey will be responsible for representing.\n\nPlease don=01,t hesitate to contact me should you have any additional quest=\nions=20\nor concerns.\n\nGina\n\n "
+          }
+        }
+      ]
+    },
+    {
+      "thread_id": "th-06487",
+      "priority": "normal",
+      "emails": [
+        {
+          "priority": "normal",
+          "email": {
+            "id": "em-08172",
+            "thread_id": "th-06487",
+            "reply_to": null,
+            "from": "ginger.dernehl@enron.com",
+            "to": [
+              "assad@elektro.com.br",
+              "alan.comnes@enron.com",
+              "alberto.levy@enron.com",
+              "aleck.dadson@enron.com",
+              "allison.navin@enron.com",
+              "amr.ibrahim@enron.com",
+              "amy.kim@enron.com",
+              "barbara.hueter@enron.com",
+              "bernadette.hawkins@enron.com",
+              "bevin.hunter@enron.com",
+              "bill.moore@enron.com",
+              "carin.nersesian@enron.com",
+              "carmen.perez@enron.com",
+              "carolyn.cooney@enron.com",
+              "charles.yeung@enron.com",
+              "chris.long@enron.com",
+              "christi.nicolay@enron.com",
+              "dan.staines@enron.com",
+              "daniel.allegretti@enron.com",
+              "dave.mangskau@enron.com",
+              "dave.perrino@enron.com",
+              "donald.lassere@enron.com",
+              "donna.fulton@enron.com",
+              "elizabeth.linnell@enron.com",
+              "eric.benson@enron.com",
+              "fino.tiberi@enron.com",
+              "frank.rishe@enron.com",
+              "geriann.warner@enron.com",
+              "germain.palmer@enron.com",
+              "ginger.dernehl@enron.com",
+              "gisele.braz@enron.com",
+              "gloria.ogenyi@enron.com",
+              "guillermo.canovas@enron.com",
+              "harry.kingerski@enron.com",
+              "howard.fromer@enron.com",
+              "jpr@ceibo.entelnet.bo",
+              "james.steffes@enron.com",
+              "janel.guerrero@enron.com",
+              "janine.migden@enron.com",
+              "jean.dressler@enron.com",
+              "jean.ryall@enron.com",
+              "jeff.dasovich@enron.com",
+              "joe.allen@enron.com",
+              "joe.connor@enron.com",
+              "john.shelk@enron.com",
+              "jose.bestard@enron.com",
+              "joseph.alamo@enron.com",
+              "kathleen.sullivan@enron.com",
+              "kerry.stroup@enron.com",
+              "kikumi.kishigami@enron.com",
+              "kirsten.bellas@enron.com",
+              "lara.leibman@enron.com",
+              "larry.decker@enron.com",
+              "laurie.knight@enron.com",
+              "leslie.lawner@enron.com",
+              "linda.noske@enron.com",
+              "linda.robertson@enron.com",
+              "lindsay.meade@enron.com",
+              "lisa.assaf@enron.com",
+              "lisa.yoho@enron.com",
+              "lora.sullivan@enron.com",
+              "luiz.maurer@enron.com",
+              "lysa.tracy@enron.com",
+              "marchris.robinson@enron.com",
+              "margaret.huson@enron.com",
+              "maria.arefieva@enron.com",
+              "maureen.mcvicker@enron.com",
+              "melinda.pharms@enron.com",
+              "mike.roan@enron.com",
+              "mona.petrochko@enron.com",
+              "nancy.hetrick@enron.com",
+              "pat.shortridge@enron.com",
+              "patrick.keene@enron.com",
+              "paul.kaufman@enron.com",
+              "ray.alvarez@enron.com",
+              "rebecca.cantrell@enron.com",
+              "richard.ingersoll@enron.com",
+              "richard.shapiro@enron.com",
+              "robert.frank@enron.com",
+              "robert.hemstock@enron.com",
+              "robert.neustaedter@enron.com",
+              "ron.mcnamara@enron.com",
+              "roy.boston@enron.com",
+              "rubena.buerger@enron.com",
+              "sarah.novosel@enron.com",
+              "scott.bolton@enron.com",
+              "sergio.assad@enron.com",
+              "stella.chan@enron.com",
+              "stephen.burns@enron.com",
+              "steve.montovano@enron.com",
+              "steve.walton@enron.com",
+              "steven.kean@enron.com",
+              "sue.nord@enron.com",
+              "susan.mara@enron.com",
+              "susan.landwehr@enron.com",
+              "susan.scott@enron.com",
+              "terri.miller@enron.com",
+              "thane.twiggs@enron.com",
+              "tom.briggs@enron.com",
+              "tom.hoatson@enron.com",
+              "vinio.floris@enron.com",
+              "andy.rodriquez@enron.com",
+              "jeffrey.keeler@enron.com",
+              "stacey.bolton@enron.com",
+              "mary.schoen@enron.com",
+              "lisa.jacobson@enron.com",
+              "miyung.buster@enron.com",
+              "lynnette.barnes@enron.com",
+              "linda.lawrence@enron.com",
+              "earlene.o'connell@enron.com",
+              "margo.reyna@enron.com",
+              "gus.perez@enron.com",
+              "angela.wilson@enron.com",
+              "sharonda.stephens@enron.com"
+            ],
+            "date": "2001-06-22T16:36:00Z",
+            "subject": "Colorado Presentations",
+            "body": "As promised, please find attached the presentations from the GA meeting in \nColorado, June 14, 2001.\n\n\n\n\n\n\ngngr\n713-853-7751"
+          }
+        }
+      ]
+    },
+    {
+      "thread_id": "th-06495",
+      "priority": "normal",
+      "emails": [
+        {
+          "priority": "normal",
+          "email": {
+            "id": "em-08180",
+            "thread_id": "th-06495",
+            "reply_to": null,
+            "from": "jill.chatterton@enron.com",
+            "to": [
+              "bill.williams@enron.com",
+              "cara.semperger@enron.com",
+              "heather.dunton@enron.com",
+              "fran.chang@enron.com",
+              "john.postlethwaite@enron.com",
+              "samantha.law@enron.com",
+              "tracy.ngo@enron.com",
+              "debra.davidson@enron.com",
+              "kathy.axford@enron.com",
+              "kathryn.sheppard@enron.com"
+            ],
+            "date": "2001-06-22T17:03:25Z",
+            "subject": "1/2 day of vacation",
+            "body": "I will be leaving early today around 12:00pm or soon after.  If there is anything you need before I leave, let me know.  \nOtherwise I will be back in the office on Monday.  If by chance you do need something after I leave\nKathy Sheppard can asist you. \n- Jill"
+          }
+        }
+      ]
+    },
+    {
+      "thread_id": "th-06498",
+      "priority": "normal",
+      "emails": [
+        {
+          "priority": "normal",
+          "email": {
+            "id": "em-08183",
+            "thread_id": "th-06498",
+            "reply_to": null,
+            "from": "susan.scott@enron.com",
+            "to": [
+              "rudy.acevedo@enron.com",
+              "mike.carson@enron.com",
+              "joe.connor@enron.com",
+              "david.fairley@enron.com",
+              "m..forney@enron.com",
+              "l..garcia@enron.com",
+              "juan.hernandez@enron.com",
+              "rogers.herndon@enron.com",
+              "elizabeth.johnston@enron.com",
+              "grace.kim@enron.com",
+              "heather.kroll@enron.com",
+              "gretchen.lotz@enron.com",
+              "george.mccormick@enron.com",
+              "ron.mcnamara@enron.com",
+              "ozzie.pagan@enron.com",
+              "laura.podurgiel@enron.com",
+              "bill.rust@enron.com",
+              "eric.saibi@enron.com",
+              "dan.staines@enron.com",
+              "jim.terrell@enron.com",
+              "joseph.wagner@enron.com",
+              "jeffrey.wilson@enron.com",
+              "christi.nicolay@enron.com",
+              "james.steffes@enron.com",
+              "donna.fulton@enron.com",
+              "sarah.novosel@enron.com"
+            ],
+            "date": "2001-06-22T17:11:19Z",
+            "subject": "Protest of Entergy ancillary services filing",
+            "body": "Today I filed on behalf of EPMI a brief protest of Entergy's proposed overhaul of the ancillary services provisions of its OATT.  The protest focuses on modifications we believe Entergy must make in order for the tariff provisions to be nondiscriminatory.  \n\nSusan Scott Lindberg\n713.853.0596\nsscott3@enron.com\n\n "
+          }
+        }
+      ]
+    },
+    {
+      "thread_id": "th-06510",
+      "priority": "normal",
+      "emails": [
+        {
+          "priority": "normal",
+          "email": {
+            "id": "em-08198",
+            "thread_id": "th-06510",
+            "reply_to": null,
+            "from": "luiz.maurer@enron.com",
+            "to": [
+              "richard.shapiro@enron.com"
+            ],
+            "date": "2001-06-22T18:19:00Z",
+            "subject": "Presentation to the Institutes of Americas",
+            "body": "You may find this interesting. A framework on the \"virtuous circle\" of \ncontracting. It may not be very applicable to the Anglo-Saxon culture. \nHowever, honoring contracts should not be taken for granted in other \ngeographies. There is an underlying message for the Government: if one is to \nbe serious and alleviate the rationing crisis, let's start honoring contracts \nand creating a responsible contracting mindset.\n\n\n\nLM"
+          }
+        }
+      ]
+    },
+    {
+      "thread_id": "th-06514",
+      "priority": "normal",
+      "emails": [
+        {
+          "priority": "normal",
+          "email": {
+            "id": "em-08202",
+            "thread_id": "th-06514",
+            "reply_to": null,
+            "from": "weulrich@aol.com",
+            "to": [
+              "jeff.skilling@enron.com"
+            ],
+            "date": "2001-06-22T18:46:35Z",
+            "subject": "Drop by?",
+            "body": "Jeff... As you may know, I recently shut down Viant's operations in Houston\nand have been considering several alternatives.  Could you spare a twenty\nminutes for us to get together as I would value your advice?\n\nWhile we have talked a few times, you may not be aware of my background.\nWould sending you a bio be helpful?\n\nThanks in advance... Walter.\nWalter Ulrich\n281 412 0155\nweulrich@aol.com"
+          }
+        }
+      ]
+    },
+    {
+      "thread_id": "th-06519",
+      "priority": "normal",
+      "emails": [
+        {
+          "priority": "normal",
+          "email": {
+            "id": "em-08207",
+            "thread_id": "th-06519",
+            "reply_to": null,
+            "from": "johnny.palmer@enron.com",
+            "to": [
+              "don.baughman@enron.com",
+              "kayne.coulter@enron.com",
+              "m..forney@enron.com",
+              "juan.hernandez@enron.com",
+              "kim.melodick@enron.com",
+              "lloyd.will@enron.com"
+            ],
+            "date": "2001-06-22T19:10:05Z",
+            "subject": "Mason Hamlin Interview 6/27/01",
+            "body": " \nPlease confirm your availability to interview Mason for a Real Time trading position on our E. Power 24 hour desk.  \n\nWednesday, June 27th\n9:00 - 9:30 Don Baughman\n9:30 - 10:00 Juan Hernandez\n10:00 - 10:30 Kayne Coulter\n10:30 - 11:00 John Forney\n\nThanks,\nJohnny"
+          }
+        }
+      ]
+    },
+    {
+      "thread_id": "th-06531",
+      "priority": "normal",
+      "emails": [
+        {
+          "priority": "normal",
+          "email": {
+            "id": "em-08222",
+            "thread_id": "th-06531",
+            "reply_to": null,
+            "from": "tskilling@tribune.com",
+            "to": [
+              "jeff.skilling@enron.com"
+            ],
+            "date": "2001-06-22T20:18:41Z",
+            "subject": "PIE THROWING EPISODE, BE SAFE!",
+            "body": "Dear Jeff,\n     Heard about the pie episode today in California.  From all the press\naccounts I've read, it sounds like you handled what had to be a difficult\nsituation admirably and, in the immediate wake such adolesence, still\nmanaged to clearly and articulately make your case about what's been going\non out there.  Congratulations---hats off to you, Jeff. I am glad you\nweren't hurt--please, Jeff, stay safe!\n    Have been following the whole California situation as best I can and\nhave been glued to the recent hearings on the subject in D.C. via C-SPAN.\nThey've made a mess of it and I don't envy you having to deal with that\nwhole situation.\n    The picture with you and Jeffrey from the Inaguration is terrific and\nsits on my table at home. Thank you for your thoughtfulness and pass my\nthanks along to Sherri for mailing it.  That whole trip was special and it\nwas an absolute joy to see Jeffrey.\n    Heard wonderful reports from Sue on the trip to Mark's wedding in\nIstanbul. Would have loved to have been there and I told Mark so.\n    Take care of yourself, Jeff.  I'm thinking of you through all this!\n                         Tom"
+          }
+        }
+      ]
+    },
+    {
+      "thread_id": "th-06534",
+      "priority": "normal",
+      "emails": [
+        {
+          "priority": "normal",
+          "email": {
+            "id": "em-08225",
+            "thread_id": "th-06534",
+            "reply_to": null,
+            "from": "chris.germany@enron.com",
+            "to": [
+              "scott.goodell@enron.com",
+              "john.hodge@enron.com",
+              "chris.germany@enron.com"
+            ],
+            "date": "2001-06-22T20:49:54Z",
+            "subject": "Texas Gas Storage",
+            "body": "Just so we all have the same info if I get hit by a truck.\n\n\nTotal working gas   53.8 BCF\n\n\nReport to AGA effective Fri, June 15, 2001   28.3 BCF full\nReport to AGA effective Fri, June 8, 2001     25.8 BCF full\n\nLast year  17.0 BCF full\n\n\nMy contact is Norman Fuchs, 270-688-6723"
+          }
+        }
+      ]
+    },
+    {
+      "thread_id": "th-06536",
+      "priority": "normal",
+      "emails": [
+        {
+          "priority": "normal",
+          "email": {
+            "id": "em-08227",
+            "thread_id": "th-06536",
+            "reply_to": null,
+            "from": "scott.campbell@enron.com",
+            "to": [
+              "jonathan.mckay@enron.com",
+              "jesus.guerra@enron.com"
+            ],
+            "date": "2001-06-22T20:58:02Z",
+            "subject": "Indicative Pricing",
+            "body": "John,\nWould it be possible for you to assign one person that is easily accessible to provide Jesus with indicative pricing for Empress throughout the month?  Possibly Ryan Watt? Maybe you could include Jesus on an email distribution list (if there is such a thing) to provide him with indicatives.  We have one customer in particular that likes kicking tires, and Jesus doesn't like bothering you guys all the time for him.    \n\nT. Scott Campbell\nEnron Energy Services Canada Co. Ltd.\n3500 Canterra Tower\n400 - 3rd Avenue S.W.\nCalgary, AB T2P 4H2\nph 403-974-6789\nfax 403-974-6991"
+          }
+        }
+      ]
+    },
+    {
+      "thread_id": "th-06540",
+      "priority": "normal",
+      "emails": [
+        {
+          "priority": "normal",
+          "email": {
+            "id": "em-08231",
+            "thread_id": "th-06540",
+            "reply_to": null,
+            "from": "donna.scott@enron.com",
+            "to": [
+              "shelley.corman@enron.com",
+              "lynn.blair@enron.com",
+              "steven.january@enron.com",
+              "sheila.nacey@enron.com",
+              "brad.holmes@enron.com",
+              "rick.dietz@enron.com",
+              "mike.bryant@enron.com"
+            ],
+            "date": "2001-06-22T21:19:00Z",
+            "subject": "Projected Headcount ending 2001 and 2002",
+            "body": "I submitted the estimated headcount worksheets today based on the assumptions from the following worksheet.  The worksheet reflects the cost center that each employee is identified under in the HR system.  Please review this information and start to think about how employees need to be realigned in 2002 to accurately reflect what company they should roll-up to.  We will need to identify this information soon for budget purposes.  For individuals that provide services for more than one company I will need a % breakout for each company.  If you have any questions, please advise.\nDonna\n\n "
+          }
+        }
+      ]
+    }
+  ]
+}

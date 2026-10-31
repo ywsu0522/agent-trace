@@ -1,0 +1,163 @@
+{
+  "problem": "HW1 p02",
+  "backend": "local Ollama",
+  "settings": {
+    "model": "qwen3.5:4b-q4_K_M",
+    "base_url": "http://127.0.0.1:11434",
+    "timeout": 600,
+    "temperature": 0,
+    "num_ctx": 4096,
+    "think": false,
+    "json_mode": false,
+    "task_options": {
+      "classify_priority": {
+        "json_mode": true,
+        "num_predict": 128,
+        "format": {
+          "type": "object",
+          "properties": {
+            "category": {
+              "type": "string",
+              "enum": [
+                "urgent",
+                "normal",
+                "ignore"
+              ]
+            },
+            "reason": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "category",
+            "reason"
+          ],
+          "additionalProperties": false
+        }
+      }
+    },
+    "num_gpu": 12,
+    "num_batch": 64
+  },
+  "fixture": "C:\\Users\\scien\\Desktop\\projects\\assignment1-harness\\agent-trace\\tests\\fixtures\\digest_days.json",
+  "fixture_sha256": "2f99d35f123cc0ea77bf9eb5493cf76648c871c3ae1b9a917c8e1e9dea61d25c",
+  "source_sha256": {
+    "agent_trace\\pipelines\\priority.py": "34c2a21e53b564abb79557dbc3e20f9e580e4f5a011f38b009f270c86d18eda6",
+    "agent_trace\\pipelines\\daily_digest.py": "95200aac8fa71954b41886c1ef2db893d057fd8478cfde68fe8250ec5855dd7b",
+    "agent_trace\\llm_ollama.py": "b841947d37d81475aad3dd693a6933b3ee4800c0d4538306f77cdce19a97064e",
+    "agent_trace\\pipeline_run.py": "d9c83009ffe582be1f8668b53b1e05f2519c7f356440964ee0fe48dc6f5b9e2d",
+    "scripts\\_common.py": "e0a800867cad06fb33eab542b3eda1b1697d63499ad3dd99dd79ceec1161be01",
+    "scripts\\test02.py": "b74c6fdec8b40955ddb602d2ae2693d818431221b9becea5a6134a30967be50f"
+  },
+  "workers": 2,
+  "corpus": "C:\\Users\\scien\\Desktop\\projects\\assignment1-harness\\agent-trace\\.cache\\emails.jsonl",
+  "corpus_sha256": "906d0cbc2b8cbabc76d7706056414495fd11c6bcedebe52cc7bf4bf55161cdd6",
+  "ollama_version": {
+    "version": "0.40.8"
+  },
+  "ollama_models": {
+    "models": [
+      {
+        "name": "qwen3:4b",
+        "model": "qwen3:4b",
+        "modified_at": "2026-10-31T12:46:26.9529139+08:00",
+        "size": 2497293931,
+        "digest": "359d7dd4bcdab3d86b87d73ac27966f4dbb9f5efdfcc75d34a8764a09474fae7",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "qwen3",
+          "families": [
+            "qwen3"
+          ],
+          "parameter_size": "4.0B",
+          "quantization_level": "Q4_K_M",
+          "context_length": 262144,
+          "embedding_length": 2560,
+          "runner": "ggml"
+        },
+        "capabilities": [
+          "completion",
+          "tools",
+          "thinking"
+        ]
+      },
+      {
+        "name": "qwen3:1.7b",
+        "model": "qwen3:1.7b",
+        "modified_at": "2026-10-31T12:14:06.7655584+08:00",
+        "size": 1359293444,
+        "digest": "8f68893c685c3ddff2aa3fffce2aa60a30bb2da65ca488b61fff134a4d1730e7",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "qwen3",
+          "families": [
+            "qwen3"
+          ],
+          "parameter_size": "2.0B",
+          "quantization_level": "Q4_K_M",
+          "context_length": 40960,
+          "embedding_length": 2048,
+          "runner": "ggml"
+        },
+        "capabilities": [
+          "completion",
+          "tools",
+          "thinking"
+        ]
+      },
+      {
+        "name": "nemotron-3-nano:4b",
+        "model": "nemotron-3-nano:4b",
+        "modified_at": "2026-10-09T00:48:22.0295843+08:00",
+        "size": 2837597147,
+        "digest": "6cc467f054393a55e98a74098abde0c762ffb6d1d8cd64becf30458f38886197",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "nemotron_h",
+          "families": [
+            "nemotron_h"
+          ],
+          "parameter_size": "4.0B",
+          "quantization_level": "Q4_K_M",
+          "context_length": 262144,
+          "embedding_length": 3136,
+          "runner": "ggml"
+        },
+        "capabilities": [
+          "completion",
+          "tools",
+          "thinking"
+        ]
+      },
+      {
+        "name": "qwen3.5:4b-q4_K_M",
+        "model": "qwen3.5:4b-q4_K_M",
+        "modified_at": "2026-10-09T00:18:30.3067336+08:00",
+        "size": 3324173934,
+        "digest": "d8b0f5e9760cd1682034f292d7ef72ec46f432149be0df7574bf2d6e92e38c04",
+        "details": {
+          "parent_model": "model.gguf",
+          "format": "gguf",
+          "family": "qwen35",
+          "families": [
+            "qwen35"
+          ],
+          "parameter_size": "4.2B",
+          "quantization_level": "Q4_K_M",
+          "context_length": 262144,
+          "embedding_length": 2560,
+          "runner": "llamacpp"
+        },
+        "capabilities": [
+          "completion",
+          "vision",
+          "tools",
+          "thinking"
+        ]
+      }
+    ]
+  }
+}

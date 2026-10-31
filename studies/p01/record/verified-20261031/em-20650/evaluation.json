@@ -1,0 +1,15 @@
+{
+  "id": "em-20650",
+  "output": {
+    "category": "urgent",
+    "reason": "The recipient has a live problem with an OSHA charge response deadline set for today, requiring immediate action or escalation."
+  },
+  "error": null,
+  "reused_classifications": 0,
+  "fresh_model_calls": 1,
+  "passed": true,
+  "correct": true,
+  "valid_contract": true,
+  "unknown": false,
+  "reasons": []
+}

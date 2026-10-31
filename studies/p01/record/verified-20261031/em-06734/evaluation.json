@@ -1,0 +1,17 @@
+{
+  "id": "em-06734",
+  "output": {
+    "category": "normal",
+    "reason": "This is a professional request for information regarding a future lunch meeting with no specific deadline or immediate operational impact."
+  },
+  "error": null,
+  "reused_classifications": 0,
+  "fresh_model_calls": 1,
+  "passed": false,
+  "correct": false,
+  "valid_contract": true,
+  "unknown": false,
+  "reasons": [
+    "expected urgent, got normal"
+  ]
+}

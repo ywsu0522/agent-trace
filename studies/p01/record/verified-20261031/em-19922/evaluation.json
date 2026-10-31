@@ -1,0 +1,15 @@
+{
+  "id": "em-19922",
+  "output": {
+    "category": "urgent",
+    "reason": "The recipient has a strict deadline of 1:00 PM today to resolve a failed payment that would result in interest penalties."
+  },
+  "error": null,
+  "reused_classifications": 0,
+  "fresh_model_calls": 1,
+  "passed": true,
+  "correct": true,
+  "valid_contract": true,
+  "unknown": false,
+  "reasons": []
+}

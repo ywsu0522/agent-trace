@@ -1,0 +1,10 @@
+{
+  "output": {
+    "category": "normal",
+    "reason": "This is a legitimate business request with no specific deadline mentioned, asking the recipient to research contracts and call a colleague for questions."
+  },
+  "reused_classifications": 0,
+  "fresh_model_calls": 1,
+  "seconds": 19.848,
+  "error": null
+}

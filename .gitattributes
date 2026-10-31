@@ -7,3 +7,4 @@ studies/d06/record/evidence/** -text
 studies/d06/record/environments/** -text
 configs/prompts/** -text -whitespace
 datasets/** -text -whitespace
+tests/fixtures/** -text -whitespace

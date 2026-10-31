@@ -1,0 +1,15 @@
+{
+  "id": "em-12417",
+  "output": {
+    "category": "urgent",
+    "reason": "The sender requires immediate information by the end of the day to prepare for a specific appointment scheduled at 2 pm that same afternoon."
+  },
+  "error": null,
+  "reused_classifications": 0,
+  "fresh_model_calls": 1,
+  "passed": true,
+  "correct": true,
+  "valid_contract": true,
+  "unknown": false,
+  "reasons": []
+}

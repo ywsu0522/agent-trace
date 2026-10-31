@@ -1,0 +1,10 @@
+{
+  "output": {
+    "category": "normal",
+    "reason": "This is a personal message from an acquaintance sharing family photos and updates without any work-related deadlines or obligations."
+  },
+  "reused_classifications": 0,
+  "fresh_model_calls": 1,
+  "seconds": 21.312,
+  "error": null
+}

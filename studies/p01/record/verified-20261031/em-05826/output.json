@@ -1,0 +1,10 @@
+{
+  "output": {
+    "category": "urgent",
+    "reason": "The recipient must act today to locate documents required to open an account, as the sender is leaving for a conference call and has no time to retrieve them personally."
+  },
+  "reused_classifications": 0,
+  "fresh_model_calls": 1,
+  "seconds": 24.168,
+  "error": null
+}

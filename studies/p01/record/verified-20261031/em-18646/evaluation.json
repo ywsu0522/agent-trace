@@ -1,0 +1,15 @@
+{
+  "id": "em-18646",
+  "output": {
+    "category": "urgent",
+    "reason": "The recipient has a direct obligation to provide an explanation for business variances by noon the next working day."
+  },
+  "error": null,
+  "reused_classifications": 0,
+  "fresh_model_calls": 1,
+  "passed": true,
+  "correct": true,
+  "valid_contract": true,
+  "unknown": false,
+  "reasons": []
+}

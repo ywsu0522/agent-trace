@@ -1,0 +1,10 @@
+{
+  "output": {
+    "category": "urgent",
+    "reason": "The recipient must act immediately today to prevent a live operational outage caused by an improperly scheduled shift."
+  },
+  "reused_classifications": 0,
+  "fresh_model_calls": 1,
+  "seconds": 39.701,
+  "error": null
+}

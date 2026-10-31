@@ -1,0 +1,638 @@
+{
+  "labels": [
+    {
+      "category": "ignore",
+      "reason": "This email is a mass marketing announcement about an event with no specific deadline or obligation for the recipients."
+    },
+    {
+      "category": "ignore",
+      "reason": "This is a mass marketing invitation to an industry conference sent to hundreds of recipients with no specific deadline or action required."
+    },
+    {
+      "category": "normal",
+      "reason": "This is a brief status update regarding a budget discussion with no immediate deadline or action required."
+    },
+    {
+      "category": "ignore",
+      "reason": "This is an unsolicited marketing offer sent to a recipient who did not request it, which the sender explicitly states they can opt out of without cost."
+    },
+    {
+      "category": "normal",
+      "reason": "This email is a forwarded status update regarding an upcoming workshop and a filing deadline set for two days away, which falls within the acceptable window but lacks the immediate live problem or critical action required for urgency."
+    },
+    {
+      "category": "normal",
+      "reason": "This is a standard work update providing tank capacity data with no near-term deadline or critical action required."
+    },
+    {
+      "category": "normal",
+      "reason": "This is a technical discussion email regarding market mechanics and pricing issues within a professional group, lacking any near-term deadlines or critical action requirements."
+    },
+    {
+      "category": "normal",
+      "reason": "This is a personal invitation for a wedding shower with no strict deadline, allowing recipients to respond at their convenience."
+    },
+    {
+      "category": "urgent",
+      "reason": "The email describes a live system outage with a hard deadline of 11:30 AM today requiring immediate action to submit nominations via fax."
+    },
+    {
+      "category": "normal",
+      "reason": "This email is a scheduling request with no specific deadline, allowing the recipient to choose a time at their convenience."
+    },
+    {
+      "category": "normal",
+      "reason": "This is a legitimate business email requesting specific data changes for a deal with no stated deadline or immediate action required."
+    },
+    {
+      "category": "normal",
+      "reason": "This email is a routine business request for document review without an immediate deadline or live problem requiring urgent action."
+    },
+    {
+      "category": "ignore",
+      "reason": "This email is an automated announcement from a committee to all employees regarding a company event, which requires no action from the recipients."
+    },
+    {
+      "category": "normal",
+      "reason": "This is a routine business inquiry regarding account status and expense processing without any near-term deadlines or critical outages."
+    },
+    {
+      "category": "normal",
+      "reason": "This email is a standard meeting invitation for a scheduled session with no immediate deadline or live problem requiring urgent action."
+    },
+    {
+      "category": "normal",
+      "reason": "This is a direct communication from a known colleague providing an update on a specific business matter without any near-term deadlines or critical outages."
+    },
+    {
+      "category": "urgent",
+      "reason": "The recipient has an immediate obligation to call the CFO before 4:00 PM today to prevent a termination notice scheduled for tomorrow."
+    },
+    {
+      "category": "ignore",
+      "reason": "This email is a forwarded advertisement for open office space with no specific deadline or action required from the recipients."
+    },
+    {
+      "category": "ignore",
+      "reason": "This email is a mass distribution announcement regarding a winter capacity program with no specific deadline or direct action required from the individual recipients."
+    },
+    {
+      "category": "ignore",
+      "reason": "This is a personal opinion piece regarding donation choices with no deadline, action required, or professional obligation for the recipient."
+    },
+    {
+      "category": "urgent",
+      "reason": "The email requires immediate action today with a strict deadline of 6:00 PM tonight for critical board book data."
+    },
+    {
+      "category": "normal",
+      "reason": "This is a routine status update regarding an employee's return date with no immediate deadline or action required."
+    },
+    {
+      "category": "normal",
+      "reason": "This is a legitimate business email requesting a minor action (initialing) without an immediate deadline or live outage."
+    },
+    {
+      "category": "normal",
+      "reason": "This email is a routine scheduling request for a meeting set for two working days away with no immediate deadline requiring urgent action."
+    },
+    {
+      "category": "normal",
+      "reason": "This email is a forwarded status update regarding a regulatory ruling and workshop scheduled for the following week, with no immediate deadline requiring action today or within two working days."
+    },
+    {
+      "category": "normal",
+      "reason": "This is a personal networking email from a job seeker sharing their resume with a potential contact, lacking any near-term deadlines or critical operational issues."
+    },
+    {
+      "category": "ignore",
+      "reason": "This is a mass marketing announcement sent to a large list of recipients regarding an optional social event with no operational impact or deadline requiring immediate action."
+    },
+    {
+      "category": "normal",
+      "reason": "This is a personal status update regarding a business dispute with no immediate deadline or critical action required from the recipient."
+    },
+    {
+      "category": "normal",
+      "reason": "This is a legitimate work request from a colleague asking for assistance with locating a contract and amendments without any specified deadline."
+    },
+    {
+      "category": "normal",
+      "reason": "This is a scheduling request for a meeting set for the following day with no immediate deadline requiring urgent action."
+    }
+  ],
+  "threads": [
+    {
+      "thread_id": "th-13453",
+      "priority": "urgent",
+      "emails": [
+        {
+          "priority": "urgent",
+          "email": {
+            "id": "em-16431",
+            "thread_id": "th-13453",
+            "reply_to": null,
+            "from": "priyanka.vedantham@enron.com",
+            "to": [
+              "florentino.urquiza@enron.com",
+              "annika.steenkamp@enron.com"
+            ],
+            "date": "2001-07-25T13:20:00Z",
+            "subject": "Halberd is down - nominations deadline is 11:30",
+            "body": "Florentino, Annika,\n\nThe Halberd scheduling system went down at 8:05 this morning and we do not have a time for it to come back. The nominations deadline is 11:30. Please start sending today's nominations by fax now and do not wait for the system. Reply to me so that I know you have seen this.\n\nPriyanka"
+          }
+        }
+      ]
+    },
+    {
+      "thread_id": "th-13497",
+      "priority": "urgent",
+      "emails": [
+        {
+          "priority": "urgent",
+          "email": {
+            "id": "em-16483",
+            "thread_id": "th-13497",
+            "reply_to": null,
+            "from": "bartholomew.nkemelu@enron.com",
+            "to": [
+              "marisol.quintanar@enron.com"
+            ],
+            "date": "2001-07-25T15:50:00Z",
+            "subject": "Dunleavy Paper threatening to terminate - please call their CFO today",
+            "body": "Marisol,\n\nDunleavy Paper was billed twice for June and their CFO is furious. He told me this morning that he will send a termination notice tomorrow unless he hears from someone senior today. Can you call him before 4:00 PM? His direct line is 713-555-0177. I will send you the account history in a minute.\n\nBart"
+          }
+        }
+      ]
+    },
+    {
+      "thread_id": "th-13534",
+      "priority": "urgent",
+      "emails": [
+        {
+          "priority": "urgent",
+          "email": {
+            "id": "em-16532",
+            "thread_id": "th-13534",
+            "reply_to": null,
+            "from": "marisol.quintanar@enron.com",
+            "to": [
+              "tobias.hallqvist@enron.com",
+              "cormac.delahunty@enron.com"
+            ],
+            "date": "2001-07-25T18:30:00Z",
+            "subject": "Quillwort numbers needed by 6:00 tonight",
+            "body": "Tobias, Cormac,\n\nThe board book goes to the printer at 7:00 tonight and the Quillwort valuation pages are still blank. I need the final numbers from both of you by 6:00 PM, no exceptions. If the model is not finished, send me what you have and tell me what is missing.\n\nMarisol"
+          }
+        }
+      ]
+    },
+    {
+      "thread_id": "th-13423",
+      "priority": "normal",
+      "emails": [
+        {
+          "priority": "normal",
+          "email": {
+            "id": "em-16392",
+            "thread_id": "th-13423",
+            "reply_to": null,
+            "from": "elizabeth.linnell@enron.com",
+            "to": [
+              "paul.kaufman@enron.com",
+              "alan.comnes@enron.com",
+              "susan.mara@enron.com",
+              "jeff.dasovich@enron.com"
+            ],
+            "date": "2001-07-25T07:39:00Z",
+            "subject": "Budget",
+            "body": "I'll send the Outside Services portion separately.  Thanks!"
+          }
+        }
+      ]
+    },
+    {
+      "thread_id": "th-13435",
+      "priority": "normal",
+      "emails": [
+        {
+          "priority": "normal",
+          "email": {
+            "id": "em-16404",
+            "thread_id": "th-13435",
+            "reply_to": null,
+            "from": "alan.comnes@enron.com",
+            "to": [
+              "michael.tribolet@enron.com",
+              "lisa.mellencamp@enron.com",
+              "jeff.dasovich@enron.com",
+              "susan.mara@enron.com",
+              "james.steffes@enron.com"
+            ],
+            "date": "2001-07-25T11:09:00Z",
+            "subject": "FW: Joint ACR Regarding DWR's Revenue Requirement And July 27, 2001 W orkshop",
+            "body": "[Comnes, Alan]=01;Asks for more data and sets a workshop on 7/24=01;\n[Comnes, Alan]=01;\n=01;\nAttached is an advance draft of a joint assigned Commissioners' ruling aski=\nng=20\nparties to comment on DWR's revised revenue requirement by August 3, 2001,=\n=20\nasking for additional information from DWR, and setting a workshop for July=\n=20\n27, 2001 at 9:00 am at the Commission to discuss the revenue requirement=20\nassumptions with representatives from DWR.\n\nDue to computer difficulties, this ruling will be filed with the Docket=20\nOffice tomorrow, July 25.=20\n\n<<joint ACR.doc>>=20\n\nJohn S. Wong=20\nCPUC - ALJ=20\n(415) 703-3130=20\n"
+          }
+        },
+        {
+          "priority": "normal",
+          "email": {
+            "id": "em-16600",
+            "thread_id": "th-13435",
+            "reply_to": "em-16404",
+            "from": "alan.comnes@enron.com",
+            "to": [
+              "michael.tribolet@enron.com",
+              "lisa.mellencamp@enron.com",
+              "jeff.dasovich@enron.com",
+              "susan.mara@enron.com",
+              "james.steffes@enron.com"
+            ],
+            "date": "2001-07-25T21:09:00Z",
+            "subject": "FW: Joint ACR Regarding DWR's Revenue Requirement And July 27, 2001 W orkshop",
+            "body": "[Comnes, Alan] Asks for more data and sets a workshop on 7/24 \n[Comnes, Alan] \n \nAttached is an advance draft of a joint assigned Commissioners' ruling asking parties to comment on DWR's revised revenue requirement by August 3, 2001, asking for additional information from DWR, and setting a workshop for July 27, 2001 at 9:00 am at the Commission to discuss the revenue requirement assumptions with representatives from DWR.\n\nDue to computer difficulties, this ruling will be filed with the Docket Office tomorrow, July 25. \n\n<<joint ACR.doc>> \n\nJohn S. Wong \nCPUC - ALJ \n(415) 703-3130 \n\n "
+          }
+        }
+      ]
+    },
+    {
+      "thread_id": "th-11923",
+      "priority": "normal",
+      "emails": [
+        {
+          "priority": "normal",
+          "email": {
+            "id": "em-16410",
+            "thread_id": "th-11923",
+            "reply_to": "em-14555",
+            "from": "duane.konen@enron.com",
+            "to": [
+              "larry.campbell@enron.com"
+            ],
+            "date": "2001-07-25T12:19:00Z",
+            "subject": "Re: EOTT Crude Oil Tanks",
+            "body": "Larry, \nThis is what I have for the crane area.\n\nMc Elroy Tank   pumps about 7,000 bls a day  Tank capacity is 5,000bls\n\nMcAfee Tank   pumps over 500 bls a day  Tank capacity is 10,000 bls \n\nAbel Sweet tank  pumps about 800bls a day  Tank capacity is 29,000bls\n\nupton station tank  pumps about 1600 a day  Tankk capacity is 29,750bls\n\nCrane station tanks\n\n1407         Tank capacity   122,000\n\n1410         Tank capacity    122,000\n\n1418         Tank capacity     122,000\n\n1337         Tank capacity      80,000\n\n1124         Tank capacity       80,000\n\n1381         Tank capacity       80,000\n\n1303         Tank capacity        122,000\n\n1380         Tank capacity        80,000\n\nAll tanks are pumped at Crane station at different times.\n\nLet me know what i have left off  and i will do my best to get the infomation \nto you.\n\nThank you \nDuane Konen\n915-638-5187"
+          }
+        }
+      ]
+    },
+    {
+      "thread_id": "th-13413",
+      "priority": "normal",
+      "emails": [
+        {
+          "priority": "normal",
+          "email": {
+            "id": "em-16417",
+            "thread_id": "th-13413",
+            "reply_to": "em-16382",
+            "from": "barkerde@nmenergy.com",
+            "to": [
+              "market_relations@nyiso.com",
+              "nyiso_tech_exchange@global2000.net"
+            ],
+            "date": "2001-07-25T13:00:37Z",
+            "subject": "Re: Voltage Limits",
+            "body": "\nbarkerde@nmenergy.com writes to the NYISO_TECH_EXCHANGE Discussion List:\n\n\n\nChuck,\n     I understand (barely)the mechanism which predicts/solves the voltage\nconstraints, my problem is more coming from the price visibility side. It's like\ndriving down the road with a speedometer swinging between 55 and 85 and a cop\nsitting in the medium. Do you speed up or slow down? Going the wrong way could\nget you a day in court. Multiple units OOM, Gen bid guarantees, BME' s $900 in\nevery zone, hugh positive congestion one hour, hugh negative congestion the next\n(Zone P), RT prices $60-90 and neighboring ISO's in the high hundreds (PJM) and\n$1000 for three hours in ISONE and one can only wait and see what the uplift\nwas. I may get my cocker spaniel to stick his head out the window and use the\nelevation of his ears as a speed estimate. How the heck does one drive in the\nNYISO market?\n"
+          }
+        }
+      ]
+    },
+    {
+      "thread_id": "th-13446",
+      "priority": "normal",
+      "emails": [
+        {
+          "priority": "normal",
+          "email": {
+            "id": "em-16422",
+            "thread_id": "th-13446",
+            "reply_to": null,
+            "from": "kontko@home.com",
+            "to": [
+              "chedleston@home.com",
+              "pat_scatena@ccm.sc.intel.com",
+              "jdasovic@enron.com",
+              "jlwalker@hotmail.com",
+              "lnewmansciarrino@elanpharma.com",
+              "lhom@hotmail.com",
+              "padysplace@aol.com",
+              "madeleinet@earthlink.net",
+              "mcgee.nora@epamail.epa.gov"
+            ],
+            "date": "2001-07-25T13:08:00Z",
+            "subject": "Wedding Shower for Alice and Jeff",
+            "body": "Hello, Pat and I were thinking it would be nice to have a wedding shower\nbbq for Alice and Jeff. I talked to Alice and Saturday, September 8th\nwoul be the best date. The 29th is a backup date. How does the 8th work\nfor you all.\nI thought maybe we could the normal bbq and have a cake. Maybe for\nthe gift we could all put in money and buy something substanial. What\nare your thoughts?  kari"
+          }
+        }
+      ]
+    },
+    {
+      "thread_id": "th-13462",
+      "priority": "normal",
+      "emails": [
+        {
+          "priority": "normal",
+          "email": {
+            "id": "em-16441",
+            "thread_id": "th-13462",
+            "reply_to": null,
+            "from": "chris.stokley@enron.com",
+            "to": [
+              "mechelle.atwood@enron.com"
+            ],
+            "date": "2001-07-25T13:52:08Z",
+            "subject": "MEETING",
+            "body": "Murray and I are both open most of the day tomorrow. Let me know what is convenient for you.\n\n\n\n\t\t\t\tChris"
+          }
+        }
+      ]
+    },
+    {
+      "thread_id": "th-13465",
+      "priority": "normal",
+      "emails": [
+        {
+          "priority": "normal",
+          "email": {
+            "id": "em-16444",
+            "thread_id": "th-13465",
+            "reply_to": null,
+            "from": "megan.parker@enron.com",
+            "to": [
+              "j..farmer@enron.com"
+            ],
+            "date": "2001-07-25T14:11:28Z",
+            "subject": "Tenaska IV Adjustments 2001",
+            "body": "Here are some changes I need for the Tenaska deal.  Let me know if you have any questions.\n\nDeal\t\tProd Month\t\n384258\t\tMay 2001\t\tchange demand fee from $2,026,347.17 to $1,926,685.34\n514353\t\tMay 2001\t\tchange volume from 45,000 to 44,138.  \n\t\t\t\t\t\tNominated Supply 1,368,295 (44,138/day)\n\t\t\t\t\t\tActual Deliveries    877,696\n384258\t\tJune 2001\t\tchange demand fee from $3,938,205.00 to $3,578,257.50\n514353\t\tJune 2001\t\tchange volume from 45,000 to 53,733\n\n\nThanks,\nMegan"
+          }
+        }
+      ]
+    },
+    {
+      "thread_id": "th-13467",
+      "priority": "normal",
+      "emails": [
+        {
+          "priority": "normal",
+          "email": {
+            "id": "em-16446",
+            "thread_id": "th-13467",
+            "reply_to": null,
+            "from": "marie.heard@enron.com",
+            "to": [
+              "wendi.lebrocq@enron.com"
+            ],
+            "date": "2001-07-25T14:13:04Z",
+            "subject": "Multiparty/multiproduct guaranty form",
+            "body": "Hi, Wendi!\n\nAttached is a form of multiparty/multiproduct guaranty that we would like for a counterparty to provide to us.  I checked with Tana and she said that this is the form we would use whether EOL or verbal transactions.\n\nLet me know if you have any questions or need anything else.\n\nMarie\n\n\n\t\t "
+          }
+        }
+      ]
+    },
+    {
+      "thread_id": "th-13473",
+      "priority": "normal",
+      "emails": [
+        {
+          "priority": "normal",
+          "email": {
+            "id": "em-16452",
+            "thread_id": "th-13473",
+            "reply_to": null,
+            "from": "chris.stokley@enron.com",
+            "to": [
+              "kathryn.sheppard@enron.com"
+            ],
+            "date": "2001-07-25T14:22:22Z",
+            "subject": "INFO",
+            "body": "Couple of questions:\n\n1)\tDid you have any luck getting me upgraded to Gold?\n2)\tDid they get back with you on the FF miles for automated check in?\n\n\n\nAlso, I will try to knock out my expenses today and send those to you. I also want to send you and e-mail I got from TAP and get your interpretation.\n\n\n\n\t\t\t\t\tChris"
+          }
+        }
+      ]
+    },
+    {
+      "thread_id": "th-13476",
+      "priority": "normal",
+      "emails": [
+        {
+          "priority": "normal",
+          "email": {
+            "id": "em-16456",
+            "thread_id": "th-13476",
+            "reply_to": null,
+            "from": "rika.imai@enron.com",
+            "to": [
+              "rika.imai@enron.com",
+              "lloyd.will@enron.com",
+              "kelly.holman@enron.com",
+              "michael.roan@enron.com",
+              "vikas.dwivedi@enron.com",
+              "martin.lin@enron.com",
+              "lance.cunningham@enron.com",
+              "moises.benchluch@enron.com",
+              "preston.ochsner@enron.com",
+              "john.grace@enron.com",
+              "anna.santucci@enron.com",
+              "jaime.gualy@enron.com",
+              "jubran.whalan@enron.com",
+              "cory.willis@enron.com",
+              "andrew.kandolha@enron.com",
+              "jeffrey.wilson@enron.com",
+              "hicham.benjelloun@enron.com",
+              "kevin.cline@enron.com",
+              "steve.gim@enron.com",
+              "jason.kaniss@enron.com",
+              "grace.kim@enron.com",
+              "peter.makkai@enron.com",
+              "seung-taek.oh@enron.com",
+              "paul.schiavone@enron.com",
+              "gulay.soykok@enron.com",
+              "d..thomas@enron.com",
+              "randy.katz@enron.com",
+              "iris.mack@enron.com",
+              "joseph.wagner@enron.com",
+              "jeff.wolfe@enron.com",
+              "benjamin.woods@enron.com"
+            ],
+            "date": "2001-07-25T14:28:48Z",
+            "subject": "Fundamentals Meeting",
+            "body": "MEETING ROOM : eb30c2\n\n\n1. Weather Update\n\n2.  Technical Analysis Update\n\n3. Oil 101 - Vikas Dwivedi   (3:00 - 4:30)\n\"Env\"\n\t\n\t\t\n\t\t\nFollowing Week\n\nAug 7 - Transmission 101 - Lance Cunningham & Martin Lin"
+          }
+        }
+      ]
+    },
+    {
+      "thread_id": "th-13490",
+      "priority": "normal",
+      "emails": [
+        {
+          "priority": "normal",
+          "email": {
+            "id": "em-16473",
+            "thread_id": "th-13490",
+            "reply_to": null,
+            "from": "diana.scholtes@enron.com",
+            "to": [
+              "kimberly.indelicato@enron.com"
+            ],
+            "date": "2001-07-25T15:13:57Z",
+            "subject": "BPA Confirm 31440",
+            "body": "Its a duplicate!  Young Linn called to inform us to disregard!\n\nDiana Scholtes"
+          }
+        }
+      ]
+    },
+    {
+      "thread_id": "th-13535",
+      "priority": "normal",
+      "emails": [
+        {
+          "priority": "normal",
+          "email": {
+            "id": "em-16533",
+            "thread_id": "th-13535",
+            "reply_to": null,
+            "from": "m..forney@enron.com",
+            "to": [
+              "lloyd.will@enron.com"
+            ],
+            "date": "2001-07-25T18:30:43Z",
+            "subject": "george Phillips",
+            "body": "\nLloyd,\nGeorge has departed for his planned vacation.   He will be back on the 30th, per his voice mail.\nI bring him in at that time.\n\n\n\nJMF\n"
+          }
+        }
+      ]
+    },
+    {
+      "thread_id": "th-13544",
+      "priority": "normal",
+      "emails": [
+        {
+          "priority": "normal",
+          "email": {
+            "id": "em-16543",
+            "thread_id": "th-13544",
+            "reply_to": null,
+            "from": "gerald.nemec@enron.com",
+            "to": [
+              "kathleen.carnahan@enron.com"
+            ],
+            "date": "2001-07-25T19:05:11Z",
+            "subject": "Termination letter",
+            "body": "Might be too late, but attached are the letters with my revisions.  Let me know if you still need me to initial.\n\n   "
+          }
+        }
+      ]
+    },
+    {
+      "thread_id": "th-13548",
+      "priority": "normal",
+      "emails": [
+        {
+          "priority": "normal",
+          "email": {
+            "id": "em-16549",
+            "thread_id": "th-13548",
+            "reply_to": null,
+            "from": "d..gros@enron.com",
+            "to": [
+              "d..gros@enron.com",
+              "sally.beck@enron.com",
+              "beth.perlman@enron.com",
+              "christina.valdez@enron.com",
+              "r..westbrook@enron.com"
+            ],
+            "date": "2001-07-25T19:14:39Z",
+            "subject": "Sally and Beth  CL sign off Mtg.",
+            "body": "Please plan to attend a meeting in Tom's office to discuss CommodityLogic sign off.  This meeting will take place on Tuesday, July 31st at 1:30 pm - 2:00 pm.  If you have any questions, please feel free to contact me.\n\nThanks,\nBrenda\nx31914"
+          }
+        }
+      ]
+    },
+    {
+      "thread_id": "th-13589",
+      "priority": "normal",
+      "emails": [
+        {
+          "priority": "normal",
+          "email": {
+            "id": "em-16601",
+            "thread_id": "th-13589",
+            "reply_to": null,
+            "from": "gene2222@msn.com",
+            "to": [
+              "khyatt@enron.com"
+            ],
+            "date": "2001-07-25T21:10:28Z",
+            "subject": "Gene May resume'",
+            "body": "Hi Kevin:  My sister, Michelle Otteman, suggested I forward my resume' to you for Enron's consideration.  As you can tell from the document my primary interest/background is Finance; however, in keeping with Enron's reputation for innovation, I am \"open\".\n \nI appreciate your help.  Recently the temp in Michigan has been in the 90's; I think I could get used to Houston.\nThanks again,\nGene      "
+          }
+        }
+      ]
+    },
+    {
+      "thread_id": "th-13621",
+      "priority": "normal",
+      "emails": [
+        {
+          "priority": "normal",
+          "email": {
+            "id": "em-16646",
+            "thread_id": "th-13621",
+            "reply_to": null,
+            "from": "v..porter@enron.com",
+            "to": [
+              "bill.williams@enron.com"
+            ],
+            "date": "2001-07-25T22:35:04Z",
+            "subject": "Ken Larson conversation",
+            "body": "Hey Bill,\n\nI bought 20 MW spin from Solice at 12:05 PM (HE14 purchase).  At 15:00, I had a conversation with Ken Larson who disputed the sale.  He thought he had sold 25 MW spin.  A few minutes later, he was abusive to Mark.\n\nThanks,\n\nDavid."
+          }
+        }
+      ]
+    },
+    {
+      "thread_id": "th-13626",
+      "priority": "normal",
+      "emails": [
+        {
+          "priority": "normal",
+          "email": {
+            "id": "em-16652",
+            "thread_id": "th-13626",
+            "reply_to": null,
+            "from": "debra.perlingiere@enron.com",
+            "to": [
+              "stacey.richardson@enron.com"
+            ],
+            "date": "2001-07-25T22:59:30Z",
+            "subject": "Dynegy  Agreement",
+            "body": "\nI have not been able to find contract # 96001003 in Livelink?  Can you help.  I also need all amendments that go along with this agreement.\n\nThanks\n\nDebra Perlingiere\nEnron North America Legal\n1400 Smith Street, EB 3885\nHouston, Texas 77002\ndperlin@enron\n713-853-7658\n713-646-3490 Fax\n\n"
+          }
+        }
+      ]
+    },
+    {
+      "thread_id": "th-13631",
+      "priority": "normal",
+      "emails": [
+        {
+          "priority": "normal",
+          "email": {
+            "id": "em-16660",
+            "thread_id": "th-13631",
+            "reply_to": null,
+            "from": "lynn.blair@enron.com",
+            "to": [
+              "bradley.holmes@enron.com"
+            ],
+            "date": "2001-07-25T23:54:21Z",
+            "subject": "Brad/Call Williams/Kern/Socal Issue",
+            "body": "When: Thursday, July 26, 2001 9:30 AM-10:00 AM (GMT-06:00) Central Time (US & Canada).\n\n*~*~*~*~*~*~*~*~*~*\n\nBrad, let's try calling Mike or Ed Thursday mg at 9:30?  Does that work for you"
+          }
+        }
+      ]
+    }
+  ]
+}

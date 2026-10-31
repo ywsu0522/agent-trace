@@ -1,0 +1,17 @@
+{
+  "id": "em-04298",
+  "output": {
+    "category": "normal",
+    "reason": "This is a direct business request from a colleague asking for documentation, but it lacks a specific deadline or indication of an immediate outage."
+  },
+  "error": null,
+  "reused_classifications": 0,
+  "fresh_model_calls": 1,
+  "passed": false,
+  "correct": false,
+  "valid_contract": true,
+  "unknown": false,
+  "reasons": [
+    "expected urgent, got normal"
+  ]
+}

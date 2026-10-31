@@ -1,0 +1,15 @@
+{
+  "id": "em-08511",
+  "output": {
+    "category": "urgent",
+    "reason": "The recipient faces an immediate operational outage preventing communication with the CAISO, creating a potential violation of their generator agreement that requires action today or by the next working day."
+  },
+  "error": null,
+  "reused_classifications": 0,
+  "fresh_model_calls": 1,
+  "passed": true,
+  "correct": true,
+  "valid_contract": true,
+  "unknown": false,
+  "reasons": []
+}

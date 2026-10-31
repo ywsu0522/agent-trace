@@ -1,0 +1,15 @@
+{
+  "id": "em-13229",
+  "output": {
+    "category": "normal",
+    "reason": "This email is a personal update sharing an overheard comment about company leadership without any deadlines, action requests, or critical issues requiring immediate decision-making."
+  },
+  "error": null,
+  "reused_classifications": 0,
+  "fresh_model_calls": 1,
+  "passed": true,
+  "correct": true,
+  "valid_contract": true,
+  "unknown": false,
+  "reasons": []
+}

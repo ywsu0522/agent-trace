@@ -1,0 +1,10 @@
+{
+  "output": {
+    "category": "ignore",
+    "reason": "This is an automated marketing email from a prize machine service that the recipient agreed to receive, requiring no action."
+  },
+  "reused_classifications": 0,
+  "fresh_model_calls": 1,
+  "seconds": 23.779,
+  "error": null
+}

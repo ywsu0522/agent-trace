@@ -1,0 +1,15 @@
+{
+  "id": "em-01027",
+  "output": {
+    "category": "ignore",
+    "reason": "This email is unsolicited spam advertising merchant account services with no specific recipient obligation or deadline."
+  },
+  "error": null,
+  "reused_classifications": 0,
+  "fresh_model_calls": 1,
+  "passed": true,
+  "correct": true,
+  "valid_contract": true,
+  "unknown": false,
+  "reasons": []
+}

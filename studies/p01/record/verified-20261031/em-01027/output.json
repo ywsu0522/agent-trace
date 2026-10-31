@@ -1,0 +1,10 @@
+{
+  "output": {
+    "category": "ignore",
+    "reason": "This email is unsolicited spam advertising merchant account services with no specific recipient obligation or deadline."
+  },
+  "reused_classifications": 0,
+  "fresh_model_calls": 1,
+  "seconds": 38.332,
+  "error": null
+}
