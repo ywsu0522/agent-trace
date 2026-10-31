@@ -61,7 +61,7 @@ def test_no_official_runtime_or_test_helper_imports():
 
 def test_document_pages_preserve_historical_boundaries(tmp_path):
     system = (STUDY / 'record/environments/E4.system.txt').read_text(encoding='utf-8')
-    registry = build_registry(lambda messages: 'unused', Corpus(ROOT / 'datasets/d06/docs', tmp_path / 'absent'), system)
+    registry = build_registry(lambda messages: 'unused', Corpus(ROOT / 'datasets/docs', tmp_path / 'absent'), system)
     first = json.loads(registry.execute('read_doc', {'doc_id': 'gridlens-api-spec'}).content)
     second = json.loads(registry.execute('read_doc', {'doc_id': 'gridlens-api-spec', 'start_line': 90}).content)
     assert (first['start_line'], first['end_line'], first['total_lines']) == (1, 89, 131)
@@ -69,7 +69,7 @@ def test_document_pages_preserve_historical_boundaries(tmp_path):
 
 
 def test_search_results_equal_all_archived_document_searches(tmp_path):
-    corpus = Corpus(ROOT / 'datasets/d06/docs', tmp_path / 'absent')
+    corpus = Corpus(ROOT / 'datasets/docs', tmp_path / 'absent')
     manifest = json.loads((STUDY / 'manifest.json').read_text(encoding='utf-8'))
     verified = 0
     for entry in manifest['runs']:
@@ -184,7 +184,7 @@ def test_explicit_environment_cannot_silently_modify_a_snapshot(tmp_path, monkey
 
 def test_custom_system_catalogue_controls_schema_validation(tmp_path):
     system = 'Tool: read_doc\nDescription: custom research tool\nParameters JSON Schema: {"type":"object","properties":{"doc_id":{"type":"string"}},"required":["doc_id"],"additionalProperties":false}'
-    registry = build_registry(lambda _: '', Corpus(ROOT / 'datasets/d06/docs', tmp_path / 'unused'), system)
+    registry = build_registry(lambda _: '', Corpus(ROOT / 'datasets/docs', tmp_path / 'unused'), system)
     assert registry.execute('read_doc', {}).status == 'invalid_args'
     assert registry.execute('read_doc', {'doc_id': 'gridlens-api-spec'}).status == 'ok'
 

@@ -1,7 +1,7 @@
 {
   "source_repository": "https://github.com/cs329z/assignment1-harness",
   "commit": "c6cab03d161e4e8db8a9e2c12caf8e353b079beb",
-  "purpose": "Document corpus for the archived d06 study; source paths were data/docs/*.md",
+  "purpose": "Shared Cardinal Energy document corpus for document retrieval and agent evaluation; source paths were data/docs/*.md",
   "sha256": {
     "architecture-overview.md": "af434f8e57ce2f3e1a564b9064beef57647fa9b2c5fdd29eeba9e8cd4203103c",
     "benefits-summary-2026.md": "ddaa4de19ae54f07942a113836baa24d7cc885c938d7a3f54f9b2c898feed922",

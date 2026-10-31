@@ -45,7 +45,7 @@ uv run pytest
 - `agent_trace/`：agent loop、工具註冊與參數驗證、BM25 retrieval、Ollama client、trace 與報告。
 - `configs/`：agent profiles 與 prompt。
 - `tests/fixtures/doc_questions.json`：HW1 P09 `search_docs` 的原始 20 題 live 測試資料，原封保留課程 `tests/fixtures/doc_questions.json` 的陣列格式、問題、答案別名與參考證據；`--task d01` 至 `d20` 直接從此檔選題。
-- `datasets/`：實驗文件與 email 來源描述。
+- `datasets/docs/`：共用的 24 份 Cardinal Energy 文件；`datasets/docs.provenance.json` 保存來源與 checksum，`datasets/email-source.json` 描述共用 email archive。
 - `studies/`：已保存的實驗紀錄與比較。
 
 HTML 閱讀頁可在本機重建，不納入 Git；已保存的紀錄可直接閱讀 Markdown。

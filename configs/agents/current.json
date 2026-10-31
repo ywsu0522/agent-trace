@@ -16,6 +16,6 @@
   "aux_json_mode": true,
   "runtime": "agent_trace 0.2.0",
   "historical_note": "Default for future research; E3 and all earlier stages remain archived. No 20-question score is available for E4.",
-  "documents": "datasets/d06/docs",
+  "documents": "datasets/docs",
   "model_digest": "d8b0f5e9760cd1682034f292d7ef72ec46f432149be0df7574bf2d6e92e38c04"
 }

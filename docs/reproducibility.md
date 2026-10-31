@@ -15,6 +15,8 @@ uv run agent-trace run --task d02 --dry-run
 
 可用 `--docs DIR`、`--emails PATH` 指定自己的 corpus，或用 `--system PATH` 修改 prompt。缺少工具所需資料時會在模型呼叫前停止。`--probe` 只觀察起手決策，不執行工具。
 
+共用文件語料位於 `datasets/docs/`，來源與 checksum 見 `datasets/docs.provenance.json`；email archive 預設位於 `.cache/emails.jsonl`。這兩份語料獨立於測試題目與 `studies/d06/` 等單題研究紀錄。歷史紀錄中的舊資料路徑保留原樣，新執行使用目前設定的共用路徑。
+
 ```sh
 uv run agent-trace prepare-data --archive /path/to/emails.jsonl.gz
 uv run agent-trace prepare-data --download

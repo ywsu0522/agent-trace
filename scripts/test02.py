@@ -50,7 +50,7 @@ def main(argv=None):
     if not isinstance(items, list) or not items:
         raise ValueError('Digest fixture must contain at least one day')
     # Use exactly the fixture's IDs and order, not every email on that date.
-    corpus = Corpus(asset_root() / 'datasets/d06/docs', args.emails)
+    corpus = Corpus(asset_root() / 'datasets/docs', args.emails)
     by_id = {email['id']: email for email in corpus.emails()}
     emails = {item['date']: [by_id[email_id] for email_id in item['email_ids']] for item in items}
     return run_cases(args, 'p02', items,

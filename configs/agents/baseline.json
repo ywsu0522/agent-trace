@@ -16,6 +16,6 @@
   "aux_json_mode": true,
   "runtime": "agent_trace 0.2.0",
   "historical_note": "15/20 refers to the original E0 prompt/tool descriptions; original batch did not save HTTP sampling parameters. Values above are explicit reproduction settings, not recovered HTTP evidence.",
-  "documents": "datasets/d06/docs",
+  "documents": "datasets/docs",
   "model_digest": "d8b0f5e9760cd1682034f292d7ef72ec46f432149be0df7574bf2d6e92e38c04"
 }
