@@ -15,3 +15,6 @@
 - `tests/fixtures/doc_questions.json`：HW1 P09 `search_docs` 的 20 題問題、答案別名與文件證據，原始 JSON 原封保留；執行時不讀取外部課程目錄。
 - `tests/fixtures/digest_days.json`：HW1 P02 `daily_digest` 的 5 天指定信件 ID、必提別名群組與禁提詞，原始 JSON 原封保留；信件本身由 email archive 取得。
 - `tests/test_priority.py`、`tests/test_daily_digest.py`：原始 deterministic 案例移植，僅調整 imports、API 呼叫及離線模型替身；不匯入課程程式包。Live 評分腳本位於 `scripts/test01.py`、`scripts/test02.py`，沿用原始門檻與比對規則。
+
+- `tests/fixtures/bm25_queries.json`：HW1 P03 的原始 17 個查詢與相關 email IDs，原始 JSON 原封保留。
+- `tests/test_bm25.py`、`tests/test_email_qa.py`、`tests/test_tool_registry.py`、`tests/test_agent_loop.py`：P03／P04／P05／P07 原始 deterministic 案例移植；保留案例、參數與判準，分別由 `scripts/test03.py`、`test04.py`、`test05.py`、`test07.py` 執行。共用的離線模型與合成工具移植至 `tests/scripted_lm.py`、`tests/fixture_tools.py`；不依賴外部課程目錄或 provider SDK。

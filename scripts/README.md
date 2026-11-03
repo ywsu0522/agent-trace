@@ -1,4 +1,4 @@
-# HW1 pipeline evaluation
+# HW1 pipeline and agent evaluation
 
 Run all commands from the agent-trace root. The scripts call agent-trace APIs directly; they never import the HW1 Python package. Live always means the local Ollama HTTP server, with no external API or API key.
 
@@ -39,3 +39,31 @@ If only the P02 writing prompt changes, explicitly reuse completed classificatio
 This requires the same model settings, model digest and priority implementation. Only byte-equivalent classification messages are matched; new inputs still invoke Ollama. Every reused response must have matching original native HTTP evidence. Reuse is recorded as `classification_replay` with the original file hash and call ID, and never creates fake HTTP events. All five writing calls remain fresh local inference; summaries report both reused classifications and fresh model calls. Source runs are kept intact and may have failed output checks, but must have completed every day without inference errors. Writer completions and GT are never used as classification cache entries.
 
 Priority makes one rubric-based classification call and parses its category/reason reply, preserving legacy label-only replies. The original classifier logic is retained; raw completions and parsed outputs are separately recorded, and no GT enters this step.
+
+
+## P03, P04, P05 and P07 deterministic evaluation
+
+These entry points run only deterministic tests and need no Ollama server:
+
+```powershell
+.venv/Scripts/python.exe -m scripts.test03 --mode deterministic
+.venv/Scripts/python.exe -m scripts.test04 --mode deterministic
+.venv/Scripts/python.exe -m scripts.test05 --mode deterministic
+.venv/Scripts/python.exe -m scripts.test07 --mode deterministic
+```
+
+`--mode deterministic` is optional; it is the only supported mode for these four scripts. Each accepts `--out NEW_DIRECTORY`. P03 also accepts `--emails PATH` (default `.cache/emails.jsonl`). Prepare that archive explicitly with `agent-trace prepare-data --archive PATH` or `agent-trace prepare-data --download`; the test runners never download data. P03 verifies the complete archive's checksum and 26,278-email count before archive tests; a missing or different corpus fails instead of skipping tests or substituting a subset.
+
+| Script | Original deterministic cases | Direct application API |
+|---|---:|---|
+| `test03` | 18 | `agent_trace.pipelines.bm25.build`, `rank` |
+| `test04` | 12 | `agent_trace.pipelines.email_qa.answer_email_question` |
+| `test05` | 44 | `agent_trace.agent.registry.ToolRegistry` |
+| `test07` | 31 | `agent_trace.agent.session.AgentSession` with `ToolRegistry` |
+
+The port preserves original test inputs, parametrization and assertions. Imports and adapter calls use independent local APIs. `tests/scripted_lm.py` ports only the provider-free scripted model; `tests/fixture_tools.py` retains the original synthetic tool schemas and behavior. P07 formats its scripted calls through the existing `agent_trace.agent.protocol.format_tool_call`; P06's own test suite is outside these runs. An `offline_only` fixture blocks provider requests and socket connections for all four suites.
+
+Each run writes `metadata.json` (command, Python version, code/fixture hashes and the P03 corpus hash), `pytest.log`, `junit.xml` (individual results and captured output) and `results.json`. Default folders are `runs/pXX-deterministic-TIMESTAMP/`. A nonzero pytest exit, any failed/error/skipped case, or a case count different from the original makes the script fail. P03 includes the original numeric score, full-archive recall and timing tests; run it without competing workloads when assessing its time limits.
+
+
+P03's timing checks exposed a query-time bottleneck on this host. The BM25 index now stores each document's query-independent length-normalization factor, while term contributions and query scores are still computed at search time. The first matching term initializes scores directly, avoiding repeated missing-key lookups and additions to zero; later terms accumulate normally. The original scoring formula, test cases and timing thresholds remain unchanged.

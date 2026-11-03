@@ -24,9 +24,13 @@ def build(docs: list[str]) -> dict:
         for term, tf in counts.items():
             postings[term].append([doc_idx, tf])
     n = len(lengths)
+    avgdl = sum(lengths) / n if n else 0.0
+    # Query-independent denominator factors; preserve the original operation order.
+    length_norms = [K1 * (1 - B + B * length / avgdl) for length in lengths] if avgdl else [0.0] * n
     return {
         "N": n,
-        "avgdl": sum(lengths) / n if n else 0.0,
+        "avgdl": avgdl,
+        "length_norms": length_norms,
         "doc_lengths": lengths,
         "postings": dict(postings),     # index["postings"][term] = [[0, 3], [2, 1], [doc_idx, tf], ...]
     }
@@ -57,16 +61,26 @@ def _score(index: dict, terms: list[str], *, collect_parts: bool = False):
     if index["N"] == 0:
         return scores, parts
 
+    length_norms = index["length_norms"]
+    tf_scale = K1 + 1
     for term in terms:
         hits = index["postings"].get(term, [])      # index["postings"]: term -> [[doc_idx, tf]]
         if not hits:
             continue
         df = len(hits)
         idf = math.log(1 + (index["N"] - df + 0.5) / (df + 0.5))
+        if not scores:
+            # The first matching term needs no addition to zero or missing-key lookup.
+            scores = defaultdict(float, {
+                doc_idx: idf * tf * tf_scale / (tf + length_norms[doc_idx])
+                for doc_idx, tf in hits
+            })
+            if parts is not None:
+                for doc_idx, value in scores.items():
+                    parts[doc_idx][term] = value
+            continue
         for doc_idx, tf in hits:
-            length = index["doc_lengths"][doc_idx]
-            norm = 1 - B + B * length / index["avgdl"]
-            bm25 = idf * tf * (K1 + 1) / (tf + K1 * norm)
+            bm25 = idf * tf * tf_scale / (tf + length_norms[doc_idx])
             scores[doc_idx] += bm25
             if parts is not None:
                 parts[doc_idx][term] = bm25
