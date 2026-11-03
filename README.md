@@ -16,6 +16,8 @@
 
 每回合將目前 messages 送給模型；如果回覆是工具呼叫，就驗證參數、執行工具，把結果加入 messages 後繼續。模型輸出一般文字或達到回合上限時結束。
 
+目前 `current` 使用 E5：email 問答由主 agent 透過 `search_emails`（BM25）與 `read_email` 搜尋、閱讀及回答，工具目錄已移除 `email_qa`。P04 pipeline 保留作獨立測試；E0-E4 的原始工具清單與歷史重現支援仍保留。
+
 [查看這次執行的完整 request、completion 與工具結果](studies/baseline-20/record/d02/trace.md)。這是保存的真實紀錄；重新推論時，模型輸出與工具路徑可能不同。
 
 ## 執行

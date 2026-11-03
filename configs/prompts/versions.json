@@ -28,5 +28,11 @@
     "label": "明確 read_doc 分頁描述",
     "parent": "E3",
     "sha256": "e22ad82e59eb0f4f59639dbc7eacdc407ac3507c5731d29fd174a32a12b37284"
+  },
+  {
+    "id": "E5",
+    "label": "使用 search_emails 與 read_email，移除 email_qa 工具",
+    "parent": "E4",
+    "sha256": "9277c4bfa6707a2bd355e30edd957adfd66deb2e6d7dd311f2fdea259677a88c"
   }
 ]

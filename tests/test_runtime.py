@@ -61,7 +61,7 @@ def test_no_official_runtime_or_test_helper_imports():
 
 def test_document_pages_preserve_historical_boundaries(tmp_path):
     system = (STUDY / 'record/environments/E4.system.txt').read_text(encoding='utf-8')
-    registry = build_registry(lambda messages: 'unused', Corpus(ROOT / 'datasets/docs', tmp_path / 'absent'), system)
+    registry = build_registry(lambda messages: 'unused', Corpus(ROOT / 'datasets/docs', tmp_path / 'absent'), system, archived_email_qa=True)
     first = json.loads(registry.execute('read_doc', {'doc_id': 'gridlens-api-spec'}).content)
     second = json.loads(registry.execute('read_doc', {'doc_id': 'gridlens-api-spec', 'start_line': 90}).content)
     assert (first['start_line'], first['end_line'], first['total_lines']) == (1, 89, 131)
@@ -75,7 +75,7 @@ def test_search_results_equal_all_archived_document_searches(tmp_path):
     for entry in manifest['runs']:
         events = archived(entry['id'])
         system = next(e['messages'][0]['content'] for e in events if e['kind'] == 'model_request' and e['role'] == 'agent')
-        registry = build_registry(lambda messages: 'unused', corpus, system)
+        registry = build_registry(lambda messages: 'unused', corpus, system, archived_email_qa=True)
         args = None
         for event in events:
             if event['kind'] != 'agent_event':
@@ -154,14 +154,14 @@ def test_custom_prompt_is_not_mislabeled_as_unchanged_environment(tmp_path, caps
     assert json.loads(capsys.readouterr().out)['environment'].startswith('custom-')
 
 
-@pytest.mark.parametrize('agent,environment', [('current', 'E4'), ('baseline', 'E0')])
+@pytest.mark.parametrize('agent,environment', [('current', 'E5'), ('baseline', 'E0')])
 def test_named_agent_profiles_preserve_both_versions(capsys, agent, environment):
     assert main(['run', '--agent', agent, '--dry-run']) == 0
     config = json.loads(capsys.readouterr().out)
     assert config['environment'] == environment
     assert config['agent_profile']['id'] == agent
     assert config['model'] == MODEL and config['num_ctx'] == 8192
-    expected = (STUDY / f'record/environments/{environment}.system.txt').read_text(encoding='utf-8')
+    expected = (ROOT / f'configs/prompts/{environment}.system.txt').read_text(encoding='utf-8')
     assert config['system_sha256'] == hashlib.sha256(expected.encode()).hexdigest()
 
 
@@ -203,3 +203,63 @@ def test_register_copies_evidence_and_rejects_overwrite(tmp_path):
     assert main(args) == 0
     assert (manifest.parent / 'record/evidence/new-run.jsonl').read_bytes() == b'original evidence\n'
     assert main(args) == 1
+
+
+
+def test_current_toolset_retires_email_qa_and_keeps_direct_email_tools(tmp_path):
+    profile = json.loads((ROOT / 'configs/agents/current.json').read_text())
+    system = (ROOT / profile['system_prompt']).read_text(encoding='utf-8')
+    registry = build_registry(lambda _: pytest.fail('Unexpected auxiliary call'),
+                              Corpus(ROOT / 'datasets/docs', tmp_path / 'absent'), system)
+    names = [schema['name'] for schema in registry.schemas()]
+    assert 'email_qa' not in names and 'email_qa' not in system
+    assert {'search_emails', 'read_email'} <= set(names)
+    assert registry.execute('email_qa', {'question': 'Any question'}).status == 'unknown_tool'
+
+
+def test_archived_email_qa_catalogue_requires_explicit_compatibility(tmp_path):
+    system = (ROOT / 'configs/prompts/E4.system.txt').read_text(encoding='utf-8')
+    corpus = Corpus(ROOT / 'datasets/docs', tmp_path / 'absent')
+    with pytest.raises(ValueError, match='email_qa is retired'):
+        build_registry(lambda _: 'unused', corpus, system)
+    registry = build_registry(lambda _: 'unused', corpus, system, archived_email_qa=True)
+    assert 'email_qa' in {schema['name'] for schema in registry.schemas()}
+
+
+def test_current_agent_searches_and_reads_email_without_auxiliary_calls(tmp_path, monkeypatch):
+    from agent_trace.agent.protocol import format_tool_call
+    from agent_trace.types import ToolCall
+
+    email = {'id': 'em-test', 'subject': 'Project Cedar', 'date': '2001-06-01T00:00:00Z',
+             'body': 'Background information. ' * 40 + 'Cedar deadline: November 9.'}
+    emails = tmp_path / 'emails.jsonl'
+    emails.write_text(json.dumps(email) + '\n', encoding='utf-8')
+    replies = [
+        format_tool_call('', ToolCall('search_emails', {'query': 'Cedar', 'k': 1})),
+        format_tool_call('', ToolCall('read_email', {'email_id': 'em-test'})),
+        'Cedar deadline: November 9. [em-test]',
+    ]
+    payloads = []
+
+    def request(self, endpoint, payload=None):
+        if endpoint == '/api/version': return {'version': 'offline-test'}
+        if endpoint == '/api/tags': return {'models': [{'name': MODEL}]}
+        assert endpoint == '/api/chat'
+        assert 'email_qa' not in payload['messages'][0]['content']
+        index = len(payloads)
+        if index == 1:
+            assert 'em-test' in payload['messages'][-1]['content']
+            assert 'November 9' not in payload['messages'][-1]['content']
+        if index == 2:
+            assert 'November 9' in payload['messages'][-1]['content']
+        payloads.append(deepcopy(payload))
+        return {'message': {'content': replies[index]}}
+
+    monkeypatch.setattr(OllamaClient, '_request', request)
+    out = tmp_path / 'direct-email-run'
+    assert main(['run', 'When is the Cedar deadline?', '--emails', str(emails), '--out', str(out)]) == 0
+    result = json.loads((out / 'result.json').read_text())
+    assert result['status'] == 'done'
+    assert result['tool_sequence'] == ['search_emails', 'read_email']
+    assert result['agent_requests'] == 3 and result['aux_requests'] == 0
+    assert len(payloads) == 3

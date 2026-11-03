@@ -166,7 +166,9 @@ def execute(args):
             main = RecordedClient(run.recorder, 'agent', **options, json_mode=False)
             aux = run.observe(RecordedClient(run.recorder, 'aux', **options, json_mode=config['agent_profile']['aux_json_mode']), 'aux')
             if config['mode'] == 'full':
-                session = AgentSession(main, build_registry(aux, corpus, config['system']),
+                archived_email_qa = args.system is None and config['environment'] in ('E0', 'E1', 'E2', 'E3', 'E4')
+                registry = build_registry(aux, corpus, config['system'], archived_email_qa=archived_email_qa)
+                session = AgentSession(main, registry,
                                        AgentConfig(max_turns=config['max_turns'], token_budget=config['agent_profile']['token_budget'], aux_lm=aux))
                 session.messages[0]['content'] = config['system']
                 run.send(session, config['question'])

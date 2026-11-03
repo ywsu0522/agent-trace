@@ -9,7 +9,7 @@ uv run agent-trace run --task d06 --agent baseline
 uv run agent-trace run --task d02 --dry-run
 ```
 
-`current` 使用 E4 prompt；`baseline` 使用 E0。任意問題預設不評分；使用 `--expected-answer` 提供接受字串，或使用 `--task d01` 至 `d20`。答案字串命中與證據是否充分是不同判準。
+`current` 使用 E5 prompt；`baseline` 使用 E0。任意問題預設不評分；使用 `--expected-answer` 提供接受字串，或使用 `--task d01` 至 `d20`。答案字串命中與證據是否充分是不同判準。
 
 `d01` 至 `d20` 直接讀取 `tests/fixtures/doc_questions.json`，這是 HW1 P09 `search_docs` 專用的 20 題 live 測試資料，沿用原始陣列與欄位格式。`answers` 供評分使用；`doc_id`、`line` 是參考證據，`stale` 是部分題目的過時答案，目前不自動核對證據或過時答案。模型只收到問題，這些標準答案欄位不會加入 prompt。自訂單題仍可使用 `--task FILE.json`。
 
@@ -56,7 +56,7 @@ uv run agent-trace build
 
 ## 歷史實驗
 
-[20 題紀錄](../studies/baseline-20/README.md) 使用 E0；保存的答案字串命中為 15/20。E4 尚未完整重跑全部 20 題。[d06](../studies/d06/README.md) 保存 prompt 修改與固定 request 重播比較。
+[20 題紀錄](../studies/baseline-20/README.md) 使用 E0；保存的答案字串命中為 15/20。E4 與目前的 E5 尚未完整重跑全部 20 題。[d06](../studies/d06/README.md) 保存 prompt 修改與固定 request 重播比較。
 
 保存紀錄可直接離線閱讀。新推論可能因硬體、Ollama 版本及模型的非確定性而改變輸出與工具路徑。`reproduce` 會準備資料並核對模型 digest；一般 `run` 允許使用不同模型。
 
@@ -68,4 +68,9 @@ uv build --wheel
 uv run python tools/audit_publication.py
 ```
 
-Python 版本由 `.python-version` 指定，依賴由 `uv.lock` 鎖定。工具實作包含文件、email 搜尋／讀取、email QA 與 daily digest；歷史 prompt 另外列出的 terminal、memory、ask_user 在此 runtime 中未實作。
+Python 版本由 `.python-version` 指定，依賴由 `uv.lock` 鎖定。目前工具實作包含文件、email 搜尋／讀取與 daily digest；歷史 prompt 另外列出的 terminal、memory、ask_user 在此 runtime 中未實作。
+
+
+目前 E5 的 email 問答由主 agent 自行呼叫 `search_emails`（BM25 排名、ID 與預覽）及 `read_email`（完整信件），再決定下一個搜尋或回答；工具目錄不再提供 `email_qa`。這條路徑依 session 的回合與 token 預算停止，不套用 P04 pipeline 的三次搜尋上限。
+
+P04 的 `answer_email_question` 與 deterministic 測試保留為獨立 pipeline 實驗。E0-E4 的 prompt／工具快照保留原樣；只有透過 `--env E0` 至 `--env E4` 或 `--agent baseline` 選用舊環境時，runtime 才啟用封存用的 `email_qa` 相容處理。直接建立 registry 預設不啟用此工具；新的自訂 prompt 應使用 search/read 工具。

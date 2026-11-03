@@ -8,7 +8,6 @@ from agent_trace.agent.registry import ToolRegistry
 from agent_trace.pipelines.bm25 import build
 from agent_trace.pipelines.doc_retrieval import build_doc_index, search_docs as doc_search, read_doc as doc_read
 from agent_trace.pipelines.email_retrieval import EmailBM25Retriever
-from agent_trace.pipelines.email_qa import answer_email_question
 from agent_trace.pipelines.daily_digest import generate_digest
 from agent_trace.types import ToolSpec
 
@@ -24,7 +23,10 @@ def catalogue_from_system(system):
     return schemas
 
 
-def build_registry(aux_lm, corpus, system):
+def build_registry(aux_lm, corpus, system, *, archived_email_qa=False):
+    schemas = catalogue_from_system(system)
+    if not archived_email_qa and any(s['name'] == 'email_qa' for s in schemas):
+        raise ValueError('email_qa is retired from the current toolset; use search_emails and read_email, or an archived --env E0-E4')
     index = None
     emails = None
     by_id = {}
@@ -61,12 +63,18 @@ def build_registry(aux_lm, corpus, system):
         email_search()
         return json.dumps(by_id[email_id], ensure_ascii=False)
 
-    def email_qa(question):
-        return json.dumps(answer_email_question(question, email_search(), aux_lm, max_hops=3, verbose=False), ensure_ascii=False)
-
     implemented = {'search_docs': search_docs, 'read_doc': read_doc, 'search_emails': search_emails,
-                   'read_email': read_email, 'email_qa': email_qa,
+                   'read_email': read_email,
                    'daily_digest': lambda date: generate_digest(corpus.emails_on(date), aux_lm)}
+
+    # Only explicitly selected archived environments retain the old nested pipeline.
+    if archived_email_qa:
+        from agent_trace.pipelines.email_qa import answer_email_question
+
+        def archived_qa(question):
+            return json.dumps(answer_email_question(question, email_search(), aux_lm, max_hops=3, verbose=False), ensure_ascii=False)
+
+        implemented['email_qa'] = archived_qa
 
     def unavailable(name):
         def tool(**kwargs):
@@ -76,4 +84,4 @@ def build_registry(aux_lm, corpus, system):
     return ToolRegistry([ToolSpec(s['name'], s['description'], s['parameters'],
                                   implemented.get(s['name'], unavailable(s['name'])),
                                   read_only=s['name'] != 'run_terminal')
-                         for s in catalogue_from_system(system)])
+                         for s in schemas])
