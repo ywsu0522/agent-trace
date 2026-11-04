@@ -1,0 +1,10 @@
+{
+  "id": "d16",
+  "label": "d16",
+  "kind": "full",
+  "stage": "new-runs",
+  "source": "events.jsonl",
+  "metadata": "metadata.json",
+  "result": "result.json",
+  "notes": "Independent runtime 0.2.0; automatic facts in trace.html; research interpretation is separate."
+}

@@ -1,0 +1,58 @@
+{
+  "task": "d06",
+  "retrospective": true,
+  "not_full_benchmark": true,
+  "actual_fresh_model_calls": 2,
+  "rows": [
+    {
+      "condition": "archived_baseline",
+      "text": "Version 1 of the GridLens API will be shut down on **2027-08-25**.\n\nThis date is confirmed in the \"GridLens Release Notes, 2025 to 2026\" document (ID: `gridlens-release-notes`), which states under the GridLens 4.10 release section that requests to API version 1 paths now return a warning header stating the shutdown date. The document also notes in the GridLens 4.8 release that this shutdown date is stated in the API specification, and the last update to the release notes is dated 2026-08-25, aligning with the planned release cycle ending in August 2027.",
+      "fresh_calls": 0,
+      "extra_reads": 0,
+      "total_requests_for_policy": 6,
+      "total_model_tokens_estimate": 23205,
+      "answer_match": false,
+      "stale_match": false,
+      "method": "HW1 normalized whole-token aliases; not semantic support verification"
+    },
+    {
+      "condition": "review_only",
+      "text": null,
+      "error": {
+        "type": "RuntimeError",
+        "message": "Ollama HTTP 500: {\"error\":\"llama-server process has terminated: exit status 0xc0000409: The system detected an overrun of a stack-based buffer in this application. This overrun could potentially allow a malicious user to gain control of this application.: CUDA error: shared object initialization failed\\nCUDA error\"}. Check `ollama list` and --model."
+      },
+      "fresh_calls": 1,
+      "extra_reads": 0,
+      "read_attempts": 0,
+      "total_document_tokens_estimate": 5142,
+      "total_requests_for_policy": 7,
+      "total_model_tokens_estimate": 27837,
+      "native_prompt_tokens": null,
+      "native_completion_tokens": null,
+      "native_total_duration_ns": null,
+      "answer_match": false,
+      "stale_match": false,
+      "method": "HW1 normalized whole-token aliases; not semantic support verification",
+      "reference_line_in_extra_read": false
+    },
+    {
+      "condition": "continue_then_review",
+      "text": "Version 1 of the GridLens API will be shut down on **2026-12-31**.\n\nThe draft answer incorrectly cited **2027-08-25** as the shutdown date. The evidence confirms that:\n1.  The \"GridLens Release Notes, 2025 to 2026\" (ID: `gridlens-release-notes`) states in the GridLens 4.10 release section that requests to API version 1 paths return a warning header stating the shutdown date [1](file://gridlens-release-notes#L39).\n2.  The \"GridLens Ingestion API Specification\" (ID: `gridlens-api-spec`) explicitly states in section 10.3 that \"API version 1 will be shut down on 2026-12-31\" [2](file://gridlens-api-spec#L97).\n3.  The draft's reference to the shutdown date being stated in the API specification aligns with this finding, but the specific date provided in the draft was incorrect.\n\n**Supporting Evidence:**\n*   **ID: `gridlens-release-notes`**, Line 39: \"Note for Customer Success: requests to API version 1 paths now return a warning header that states the shutdown date.\"\n*   **ID: `gridlens-api-spec`**, Line 97-98: \"API version 1 will be shut down on 2026-12-31. After that date, requests to `/v1` paths return status 410.\"",
+      "error": null,
+      "fresh_calls": 1,
+      "extra_reads": 1,
+      "read_attempts": 1,
+      "total_document_tokens_estimate": 5855,
+      "total_requests_for_policy": 7,
+      "total_model_tokens_estimate": 28840,
+      "native_prompt_tokens": 5541,
+      "native_completion_tokens": 346,
+      "native_total_duration_ns": 281060819700,
+      "answer_match": true,
+      "stale_match": false,
+      "method": "HW1 normalized whole-token aliases; not semantic support verification",
+      "reference_line_in_extra_read": true
+    }
+  ]
+}

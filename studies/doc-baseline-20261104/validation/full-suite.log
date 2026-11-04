@@ -1,0 +1,29 @@
+................................................F....................... [ 32%]
+........................................................................ [ 65%]
+........................................................................ [ 97%]
+.....                                                                    [100%]
+================================== FAILURES ===================================
+___________________________ test_archive_query_time ___________________________
+
+archive = [{'id': 'em-00001', 'thread_id': 'th-00001', 'reply_to': None, 'from': 's..ward@enron.com', ...}, {'id': 'em-00002', '...', ...}, {'id': 'em-00006', 'thread_id': 'th-00006', 'reply_to': None, 'from': 'arsystem@mailman.enron.com', ...}, ...]
+
+    def test_archive_query_time(archive):
+        index = archive_index(archive)
+        queries = [item["query"] for item in load_fixture("bm25_queries.json")]
+        start = time.perf_counter()
+        for query in queries:
+            rank(index, query, 10)
+        mean = (time.perf_counter() - start) / len(queries)
+        print(f"mean query time: {mean * 1000:.1f} ms over {len(queries)} queries")
+>       assert mean < QUERY_SECONDS, (
+            f"Mean query time is {mean * 1000:.1f} ms over {len(queries)} queries; "
+            f"the limit is {QUERY_SECONDS * 1000:.0f} ms."
+        )
+E       AssertionError: Mean query time is 26.7 ms over 17 queries; the limit is 20 ms.
+E       assert 0.02670223529361572 < 0.02
+
+tests\test_bm25.py:262: AssertionError
+---------------------------- Captured stdout call -----------------------------
+mean query time: 26.7 ms over 17 queries
+=========================== short test summary info ===========================
+FAILED tests/test_bm25.py::test_archive_query_time - AssertionError: Mean que...

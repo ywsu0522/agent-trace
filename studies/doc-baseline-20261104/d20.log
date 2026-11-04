@@ -1,0 +1,21 @@
+{
+  "output": "C:\\Users\\scien\\Desktop\\projects\\agent-trace\\runs\\doc-baseline-20-20261104-222912\\d20",
+  "text": "Based on the retrieved documents, specifically the **Benefits Summary, Plan Year 2026**, you can spend up to **$1,800 per calendar year** on learning that relates to your current role or a role you are working toward. This allowance covers conferences and online courses for your own development.\n\n**Relevant Evidence:**\n*   **Document ID:** `benefits-summary-2026`\n*   **Snippet:** \"Each full-time employee may spend up to $1,800 per calendar year on learning that relates to their current role or a role they are working toward.\"",
+  "status": "done",
+  "error": null,
+  "id": "d20",
+  "condition": "current",
+  "seconds": 164.463,
+  "answer_match": true,
+  "answer_match_method": "exact substring; not a semantic judge",
+  "agent_requests": 3,
+  "aux_requests": 0,
+  "tool_sequence": [
+    "search_docs",
+    "search_docs"
+  ],
+  "tools_executed": true,
+  "parse_error": null,
+  "events": "events.jsonl",
+  "report": "trace.html"
+}

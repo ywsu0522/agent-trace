@@ -1,0 +1,23 @@
+{
+  "text": "The EmberOS error code that means the sensor mesh link was lost is **E-214**.\n\nAccording to Section 11.2 of the EmberOS 3 Firmware Specification, E-214 is defined as \"Sensor mesh link lost\". Additionally, Section 11.3 states that this error is raised by the M4 when a joined sensor has sent no report for 15 minutes and is cleared when the sensor reports again.\n\n**Answer:** E-214\n**Source:** `firmware-spec-emberos` (Section 11.2)",
+  "status": "done",
+  "error": null,
+  "id": "d09",
+  "condition": "current",
+  "seconds": 361.827,
+  "answer_match": true,
+  "answer_match_method": "exact substring; not a semantic judge",
+  "agent_requests": 6,
+  "aux_requests": 0,
+  "tool_sequence": [
+    "search_docs",
+    "search_docs",
+    "search_docs",
+    "read_doc",
+    "read_doc"
+  ],
+  "tools_executed": true,
+  "parse_error": null,
+  "events": "events.jsonl",
+  "report": "trace.html"
+}

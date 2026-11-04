@@ -1,0 +1,20 @@
+{
+  "text": "The postmortem draft is due within **5 business days** of the incident resolution.\n\nThis information comes from the \"On-Call and Incident Process\" document (doc_id: `oncall-incident-process`), which states: \"The draft is due within 5 business days of resolution.\"",
+  "status": "done",
+  "error": null,
+  "id": "d10",
+  "condition": "current",
+  "seconds": 205.958,
+  "answer_match": true,
+  "answer_match_method": "exact substring; not a semantic judge",
+  "agent_requests": 3,
+  "aux_requests": 0,
+  "tool_sequence": [
+    "search_docs",
+    "search_docs"
+  ],
+  "tools_executed": true,
+  "parse_error": null,
+  "events": "events.jsonl",
+  "report": "trace.html"
+}

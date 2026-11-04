@@ -1,0 +1,20 @@
+{
+  "output": "C:\\Users\\scien\\Desktop\\projects\\agent-trace\\runs\\doc-baseline-20-20261104-222912\\d15",
+  "text": "Based on the retrieved documents, specifically the announcement titled \"Announcement: Three In-Office Days for Hybrid Teams\" (doc_id: `people-announcement-2026-05-office-days`), hybrid employees are required to work from the office on **Tuesday, Wednesday, and Thursday**.\n\nThis policy is effective starting June 1, 2026.\n\n**Relevant Email ID:** `people-announcement-2026-05-office-days`",
+  "status": "done",
+  "error": null,
+  "id": "d15",
+  "condition": "current",
+  "seconds": 79.136,
+  "answer_match": true,
+  "answer_match_method": "exact substring; not a semantic judge",
+  "agent_requests": 2,
+  "aux_requests": 0,
+  "tool_sequence": [
+    "search_docs"
+  ],
+  "tools_executed": true,
+  "parse_error": null,
+  "events": "events.jsonl",
+  "report": "trace.html"
+}

@@ -1,0 +1,57 @@
+{
+  "task": "d06",
+  "retrospective": true,
+  "not_full_benchmark": true,
+  "actual_fresh_model_calls": 2,
+  "rows": [
+    {
+      "condition": "archived_baseline",
+      "text": "Version 1 of the GridLens API will be shut down on **2027-08-25**.\n\nThis date is confirmed in the \"GridLens Release Notes, 2025 to 2026\" document (ID: `gridlens-release-notes`), which states under the GridLens 4.10 release section that requests to API version 1 paths now return a warning header stating the shutdown date. The document also notes in the GridLens 4.8 release that this shutdown date is stated in the API specification, and the last update to the release notes is dated 2026-08-25, aligning with the planned release cycle ending in August 2027.",
+      "fresh_calls": 0,
+      "extra_reads": 0,
+      "total_requests_for_policy": 6,
+      "total_model_tokens_estimate": 23205,
+      "answer_match": false,
+      "stale_match": false,
+      "method": "HW1 normalized whole-token aliases; not semantic support verification"
+    },
+    {
+      "condition": "review_only",
+      "text": "The draft answer is incorrect because it claims the shutdown date is **2027-08-25**, but the provided documents do not contain this specific date.\n\n**Correction:**\nThe evidence confirms that API version 1 will be shut down on **2026-08-25**.\n\n*   The \"GridLens Release Notes, 2025 to 2026\" (ID: `gridlens-release-notes`) states in the GridLens 4.10 release section (Released: 2026-08-25) that \"requests to API version 1 paths now return a warning header that states the shutdown date.\"\n*   The same document notes in the GridLens 4.8 release section (Released: 2026-02-24) that \"the shutdown date for API version 1 is now stated in the API specification.\"\n*   The \"GridLens Ingestion API Specification\" (ID: `gridlens-api-spec`) does not explicitly list the shutdown date in the provided snippets, but the release notes confirm the date is stated there and aligns with the release cycle ending on **2026-08-25**.\n\nThe draft incorrectly inferred a future date of 2027 based on an \"August\" mention without specific evidence for the year 2027. The document explicitly links the shutdown notice to the release date of August 25, 2026.\n\n**Final Answer:**\nVersion 1 of the GridLens API will be shut down on **2026-08-25**. This is confirmed by the \"GridLens Release Notes, 2025 to 2026\" document (ID: `gridlens-release-notes`), which states in",
+      "error": null,
+      "fresh_calls": 1,
+      "extra_reads": 0,
+      "read_attempts": 0,
+      "incremental_seconds": 187.265,
+      "total_document_tokens_estimate": 5142,
+      "total_requests_for_policy": 7,
+      "total_model_tokens_estimate": 28172,
+      "native_prompt_tokens": 4689,
+      "native_completion_tokens": 384,
+      "native_total_duration_ns": 187145846200,
+      "answer_match": false,
+      "stale_match": false,
+      "method": "HW1 normalized whole-token aliases; not semantic support verification",
+      "reference_line_in_extra_read": false
+    },
+    {
+      "condition": "continue_then_review",
+      "text": "Version 1 of the GridLens API will be shut down on **2026-12-31**.\n\nThe draft answer incorrectly cited a date of 2027-08-25 based on an assumption about the release cycle. The correct date is explicitly stated in the \"GridLens Ingestion API Specification\" (ID: `gridlens-api-spec`) under section **10.3**, which reads: \"API version 1 will be shut down on 2026-12-31.\" This information was also confirmed in the \"GridLens Release Notes, 2025 to 2026\" (ID: `gridlens-release-notes`), where the GridLens 4.8 release notes state that the shutdown date is now stated in the API specification.\n\n**Supporting Evidence:**\n*   **Document ID:** `gridlens-api-spec`, Line 103: \"API version 1 will be shut down on 2026-12-31.\"\n*   **Document ID:** `gridlens-release-notes`, Line 58: \"Note for Customer Success: the shutdown date for API version 1 is now stated in the API specification.\"",
+      "error": null,
+      "fresh_calls": 1,
+      "extra_reads": 1,
+      "read_attempts": 1,
+      "incremental_seconds": 100.225,
+      "total_document_tokens_estimate": 5855,
+      "total_requests_for_policy": 7,
+      "total_model_tokens_estimate": 28777,
+      "native_prompt_tokens": 5541,
+      "native_completion_tokens": 262,
+      "native_total_duration_ns": 100079938400,
+      "answer_match": true,
+      "stale_match": false,
+      "method": "HW1 normalized whole-token aliases; not semantic support verification",
+      "reference_line_in_extra_read": true
+    }
+  ]
+}

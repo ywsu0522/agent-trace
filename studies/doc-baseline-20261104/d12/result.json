@@ -1,0 +1,20 @@
+{
+  "text": "The daily meal limit for business travel within the United States is **$75 per day**. This limit covers breakfast, lunch, dinner, and tips. On the day of departure and the day of return, the limit is half of the daily amount ($37.50).\n\n**Source:** Travel and Expense Policy (2026), Section 6: \"Meals while traveling\" (doc_id: expense-policy-2026).",
+  "status": "done",
+  "error": null,
+  "id": "d12",
+  "condition": "current",
+  "seconds": 166.14,
+  "answer_match": true,
+  "answer_match_method": "exact substring; not a semantic judge",
+  "agent_requests": 3,
+  "aux_requests": 0,
+  "tool_sequence": [
+    "search_docs",
+    "read_doc"
+  ],
+  "tools_executed": true,
+  "parse_error": null,
+  "events": "events.jsonl",
+  "report": "trace.html"
+}

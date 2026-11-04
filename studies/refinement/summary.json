@@ -1,0 +1,22 @@
+{
+  "date": "2026-11-04",
+  "retrospective": true,
+  "unique_questions": 2,
+  "source_trajectories": 3,
+  "experiment_groups": 4,
+  "actual_new_http_requests": 6,
+  "completed_responses": 5,
+  "http_errors": 1,
+  "native_prompt_tokens_in_successful_responses": 24680,
+  "native_completion_tokens_in_successful_responses": 1393,
+  "failed_request_native_tokens": null,
+  "paired_repeat_messages_and_settings_identical_to_initial": true,
+  "not_an_e5_benchmark": true,
+  "notes": [
+    "Archived baseline inference was not rerun.",
+    "One repeat was made because the initial review-only request hit a CUDA initialization error.",
+    "All four groups are retained, including the failure and both controls.",
+    "The incorrect review-only completion reached its 384-token output limit.",
+    "Token sums above cover only the five successful new HTTP responses, not unknown failed-request usage or historical baselines."
+  ]
+}

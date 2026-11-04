@@ -67,3 +67,17 @@ Each run writes `metadata.json` (command, Python version, code/fixture hashes an
 
 
 P03's timing checks exposed a query-time bottleneck on this host. The BM25 index now stores each document's query-independent length-normalization factor, while term contributions and query scores are still computed at search time. The first matching term initializes scores directly, avoiding repeated missing-key lookups and additions to zero; later terms accumulate normally. The original scoring formula, test cases and timing thresholds remain unchanged.
+
+## P09 current-agent baseline
+
+`python -m scripts.test09` runs the original `doc_questions.json` d01-d20 in order through the existing CLI, creating a fresh AgentSession per question. It uses the current prompt and model settings unchanged, with no repair or response reuse. `--out NEW_DIRECTORY` selects a new result folder.
+
+The runner saves the fixture/configuration/prompt, source hashes, per-question raw HTTP evidence and traces, incremental `progress.json`, and final `results.json`/`README.md`. It continues after individual inference failures and records them explicitly. Answer aliases, the 6000-token document-result limit and reference-line exposure are evaluated after generation; evidence support is not semantically judged. The document-result limit is currently a scoring rule rather than a hard agent-loop stop.
+
+The [2026-11-04 batch and subsequent evidence review](../studies/doc-baseline-20261104/README.md) are archived together. Its original automatic scores remain unchanged; review is a separate sidecar covering every answer, added claims, citations and stopping behavior. Completing the batch runner alone does not finish that review.
+
+## Bounded document refinement study
+
+`python -m scripts.refine_docs --source studies/d06/record/runs/protocol-after --task d06` prepares a retrospective review-only versus continue-then-review comparison without inference. Add `--mode live` for local Ollama; each condition permits at most one model call, and continuation allows one extra document read by default. Both consume the original run's document-result budget; no gold selects the continuation or final answer. Outputs include source/code hashes, native HTTP evidence, raw answers and cost accounting in a new `runs/` folder.
+
+This is an archived-draft intervention, not a fresh current-agent benchmark or a full Self-Refine reproduction. See [scope, controls and limits](../docs/qa-development.md).

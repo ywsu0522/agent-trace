@@ -1,0 +1,8 @@
+{
+  "id": "d09",
+  "status": "done",
+  "error": null,
+  "answer_match": true,
+  "answer_match_method": "archived fixture matcher; not a semantic judge",
+  "text": "The error code that means the sensor mesh link was lost is **E-214**.\n\nAccording to Section 11.2 of the \"EmberOS 3 Firmware Specification\" (document ID: `firmware-spec-emberos`), the table lists error codes and their meanings, where E-214 corresponds to \"Sensor mesh link lost\". Additionally, Section 11.3 confirms that this error is raised by the M4 when a joined sensor has sent no report for 15 minutes.\n\n**Answer:** E-214\n**Evidence ID:** firmware-spec-emberos"
+}

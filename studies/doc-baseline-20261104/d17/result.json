@@ -1,0 +1,21 @@
+{
+  "text": "Cardinal Energy reimburses up to **$65 per month** for gym membership expenses. This is part of the Wellness allowance, which covers eligible expenses such as fitness facility dues. The reimbursement must be submitted in Ledgerly under the Wellness category, and unused amounts do not roll over from month to month.\n\nRelevant document ID: `benefits-summary-2026`",
+  "status": "done",
+  "error": null,
+  "id": "d17",
+  "condition": "current",
+  "seconds": 111.406,
+  "answer_match": true,
+  "answer_match_method": "exact substring; not a semantic judge",
+  "agent_requests": 4,
+  "aux_requests": 0,
+  "tool_sequence": [
+    "search_docs",
+    "search_docs",
+    "search_docs"
+  ],
+  "tools_executed": true,
+  "parse_error": null,
+  "events": "events.jsonl",
+  "report": "trace.html"
+}

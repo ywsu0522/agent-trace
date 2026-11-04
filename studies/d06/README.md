@@ -29,4 +29,4 @@ flowchart LR
 
 [完整研究解讀與限制](RESEARCH.md) · [原始證據 hashes](record/integrity.json) · [研究 manifest](manifest.json)
 
-重跑：`uv run agent-trace run --task d06 --agent current`。預設新 run 會直接產生 trace，不需要 build；需要離線 HTML 索引與比較頁時執行 `uv run agent-trace build`，再於本機開啟 `studies/d06/record/index.html`；產生的 HTML 不納入版本控制。
+以目前 prompt 新跑：`uv run agent-trace run --task d06`。本文 E 編號是當時的實驗標籤，沿革與限制見[實驗紀錄](../../docs/prompt-experiments.md)，目前 CLI 不提供版本選單。預設新 run 會直接產生 trace，不需要 build；需要離線 HTML 索引與比較頁時執行 `uv run agent-trace build`，再於本機開啟 `studies/d06/record/index.html`；產生的 HTML 不納入版本控制。

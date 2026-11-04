@@ -13,4 +13,4 @@ else
     fi
 fi
 "$uv_binary" sync --locked --extra test
-"$uv_binary" run --locked agent-trace reproduce --task "${1:-d02}" --agent "${2:-current}" --trace
+"$uv_binary" run --locked agent-trace reproduce --task "${1:-d02}" --trace

@@ -1,0 +1,30 @@
+{
+  "method": "Post-hoc mechanical spot checks of the cited shutdown sentence; not a complete semantic verifier.",
+  "not_used_for_generation_or_selection": true,
+  "checks": [
+    {
+      "group": "d06-initial",
+      "condition": "continue_then_review",
+      "document": "gridlens-api-spec",
+      "claimed_line": 97,
+      "actual_quote_line": 120,
+      "quote": "API version 1 will be shut down on 2026-12-31",
+      "quote_supported_in_document": true,
+      "claimed_line_contains_quote": false,
+      "claimed_line_text": "",
+      "actual_line_text": "10.3 API version 1 will be shut down on 2026-12-31. After that date, requests to `/v1` paths return status 410. Version 1 differs from version 2 mainly in authentication (static API keys) and in batch size (1,000 readings). Customer Success is contacting every customer that still sends version 1 traffic."
+    },
+    {
+      "group": "d06-paired-repeat",
+      "condition": "continue_then_review",
+      "document": "gridlens-api-spec",
+      "claimed_line": 103,
+      "actual_quote_line": 120,
+      "quote": "API version 1 will be shut down on 2026-12-31",
+      "quote_supported_in_document": true,
+      "claimed_line_contains_quote": false,
+      "claimed_line_text": "| 404 | `not_found` | The meter or resource does not exist. |",
+      "actual_line_text": "10.3 API version 1 will be shut down on 2026-12-31. After that date, requests to `/v1` paths return status 410. Version 1 differs from version 2 mainly in authentication (static API keys) and in batch size (1,000 readings). Customer Success is contacting every customer that still sends version 1 traffic."
+    }
+  ]
+}

@@ -6,7 +6,6 @@ import json
 from pathlib import Path
 import re
 
-from agent_trace.paths import asset_root
 from agent_trace.traces import dump, read_events, write_report, route, table_cell
 
 
@@ -39,9 +38,7 @@ def report_path(source, out=None, *, kind=None, expected_answers=None, result=No
     if first and 'environment' not in context:
         system = next((m['content'] for m in first['messages'] if m.get('role') == 'system'), '')
         sha = hashlib.sha256(system.encode('utf-8')).hexdigest()
-        versions = optional_json(asset_root() / 'configs/prompts/versions.json')
-        known = next((v['id'] for v in versions if v['sha256'] == sha), None)
-        context['environment'] = known or 'custom-' + sha[:10]
+        context['environment'] = 'prompt-' + sha[:10]
     trace = write_report(source, out or folder, metadata=metadata, result=result, context=context)
     print(dump({'report': str(Path(out or folder).resolve() / 'trace.html'),
                 'main_requests': trace['main_count'], 'aux_requests': trace['aux_count'], 'status': trace['status']}))

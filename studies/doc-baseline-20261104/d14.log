@@ -1,0 +1,20 @@
+{
+  "output": "C:\\Users\\scien\\Desktop\\projects\\agent-trace\\runs\\doc-baseline-20-20261104-222912\\d14",
+  "text": "Based on the company policy, you can carry over **up to 10 days (80 hours)** of unused PTO into the next calendar year. This rule applies starting with the rollover from 2025 into 2026, and any carried-over PTO must be used by June 30 of that year.\n\n**Relevant Email ID:** `people-announcement-2025-11-pto-carryover`",
+  "status": "done",
+  "error": null,
+  "id": "d14",
+  "condition": "current",
+  "seconds": 100.386,
+  "answer_match": true,
+  "answer_match_method": "exact substring; not a semantic judge",
+  "agent_requests": 2,
+  "aux_requests": 0,
+  "tool_sequence": [
+    "search_docs"
+  ],
+  "tools_executed": true,
+  "parse_error": null,
+  "events": "events.jsonl",
+  "report": "trace.html"
+}

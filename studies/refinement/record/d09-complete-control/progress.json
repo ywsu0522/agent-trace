@@ -1,0 +1,42 @@
+[
+  {
+    "condition": "archived_baseline",
+    "text": "The error code that means the sensor mesh link was lost is **E-214**.\n\nAccording to Section 11.2 of the \"EmberOS 3 Firmware Specification\" (document ID: `firmware-spec-emberos`), the table lists error codes and their meanings, where E-214 corresponds to \"Sensor mesh link lost\". Additionally, Section 11.3 confirms that this error is raised by the M4 when a joined sensor has sent no report for 15 minutes.\n\n**Answer:** E-214\n**Evidence ID:** firmware-spec-emberos",
+    "fresh_calls": 0,
+    "extra_reads": 0,
+    "total_requests_for_policy": 5,
+    "total_model_tokens_estimate": 17030,
+    "answer_match": true,
+    "stale_match": false,
+    "method": "HW1 normalized whole-token aliases; not semantic support verification"
+  },
+  {
+    "condition": "review_only",
+    "text": "The error code that means the sensor mesh link was lost is **E-214**.\n\nAccording to Section 11.2 of the \"EmberOS 3 Firmware Specification\" (document ID: `firmware-spec-emberos`), the table lists error codes and their meanings, where E-214 corresponds to \"Sensor mesh link lost\". Additionally, Section 11.3 confirms that this error is raised by the M4 when a joined sensor has sent no report for 15 minutes.\n\n**Answer:** E-214\n**Evidence ID:** firmware-spec-emberos",
+    "error": null,
+    "fresh_calls": 1,
+    "extra_reads": 0,
+    "read_attempts": 0,
+    "incremental_seconds": 118.855,
+    "total_document_tokens_estimate": 4430,
+    "total_requests_for_policy": 6,
+    "total_model_tokens_estimate": 21925,
+    "native_prompt_tokens": 5029,
+    "native_completion_tokens": 127,
+    "native_total_duration_ns": 118667293900,
+    "output_truncated": false,
+    "answer_match": true,
+    "stale_match": false,
+    "method": "HW1 normalized whole-token aliases; not semantic support verification",
+    "reference_line_in_extra_read": false
+  },
+  {
+    "condition": "continue_then_review",
+    "skipped": true,
+    "reason": "no_unread_continuation",
+    "fresh_calls": 0,
+    "extra_reads": 0,
+    "text": null,
+    "answer_match": null
+  }
+]

@@ -6,7 +6,7 @@
 
 問題：**What is the minimum password length under the IT and Security Policy?**
 
-以下摘自已保存的 d02 執行紀錄，使用 `qwen3.5:4b-q4_K_M` 與 baseline 設定：
+以下摘自已保存的 d02 歷史執行紀錄，使用 `qwen3.5:4b-q4_K_M` 與當時的原始 prompt：
 
 | 回合 | Agent 動作 | 執行結果 |
 |---|---|---|
@@ -16,7 +16,7 @@
 
 每回合將目前 messages 送給模型；如果回覆是工具呼叫，就驗證參數、執行工具，把結果加入 messages 後繼續。模型輸出一般文字或達到回合上限時結束。
 
-目前 `current` 使用 E5：email 問答由主 agent 透過 `search_emails`（BM25）與 `read_email` 搜尋、閱讀及回答，工具目錄已移除 `email_qa`。P04 pipeline 保留作獨立測試；E0-E4 的原始工具清單與歷史重現支援仍保留。
+程式只有一份目前設定與 system prompt：email 問答由主 agent 透過 `search_emails`（BM25）與 `read_email` 搜尋、閱讀及回答，預設工具目錄不提供 `email_qa`；P04 pipeline 保留作獨立測試。歷史 E0–E5 的改動、單題過度調整風險與後續評估流程記在[實驗紀錄](docs/prompt-experiments.md)，不作為程式的版本選項。
 
 [查看這次執行的完整 request、completion 與工具結果](studies/baseline-20/record/d02/trace.md)。這是保存的真實紀錄；重新推論時，模型輸出與工具路徑可能不同。
 
@@ -30,7 +30,7 @@ cd agent-trace
 ollama pull qwen3.5:4b-q4_K_M
 uv sync --locked --extra test
 uv run agent-trace prepare-data --download
-uv run agent-trace run --task d02 --agent baseline --trace
+uv run agent-trace run --task d02 --trace
 ```
 
 文件已包含在 repo；email archive 另行下載並核對 checksum。預設工具目錄也包含 email 工具，因此完整執行前需準備 archive。
@@ -45,14 +45,14 @@ uv run pytest
 ## 程式與實驗紀錄
 
 - `agent_trace/`：agent loop、工具註冊與參數驗證、BM25 retrieval、Ollama client、trace 與報告。
-- `configs/`：agent profiles 與 prompt。
+- `configs/`：唯一的目前 agent 設定與 system prompt。
 - `tests/fixtures/doc_questions.json`：HW1 P09 `search_docs` 的原始 20 題 live 測試資料，原封保留課程 `tests/fixtures/doc_questions.json` 的陣列格式、問題、答案別名與參考證據；`--task d01` 至 `d20` 直接從此檔選題。
 - `datasets/docs/`：共用的 24 份 Cardinal Energy 文件；`datasets/docs.provenance.json` 保存來源與 checksum，`datasets/email-source.json` 描述共用 email archive。
 - `studies/`：已保存的實驗紀錄與比較。
 
 HTML 閱讀頁可在本機重建，不納入 Git；已保存的紀錄可直接閱讀 Markdown。
 
-[其他用法](docs/reproducibility.md) · [20 題歷史紀錄](studies/baseline-20/README.md) · [d06 prompt 比較](studies/d06/README.md)
+[其他用法](docs/reproducibility.md) · [目前 20 題 baseline](studies/doc-baseline-20261104/README.md) · [20 題歷史紀錄](studies/baseline-20/README.md) · [d06 prompt 比較](studies/d06/README.md)
 
 實驗使用 [CS329Z Assignment 1](https://github.com/cs329z/assignment1-harness) 整理的文件與 email 資料；詳見[資料來源](datasets/SOURCES.md)。
 
@@ -63,3 +63,7 @@ HTML 閱讀頁可在本機重建，不納入 Git；已保存的紀錄可直接�
 已驗證的本機實驗：[P01 分類，54/60](studies/p01/README.md) · [P02 摘要，5/5](studies/p02/README.md)。完整 request、原始 completion 與評分結果隨研究紀錄保存；後續執行仍寫入不納入 Git 的 `runs/`。
 
 本專案可獨立 checkout、安裝與測試，不需要課程 repository 或 PDF。所有程式、fixture 與執行資料都從本專案或其資料準備流程取得；課程網址僅用於來源註記與人工參考。
+
+近期研發聚焦[可靠取證 QA 與有上限的 test-time 補救](docs/qa-development.md)。`python -m scripts.refine_docs` 可針對保存的完整 run 比較一次 review 與補頁後 review；[首輪實驗](studies/refinement/README.md)保存補救、控制及失敗案例。這是獨立的歷史案例實驗，不改動目前 prompt 或歷史紀錄，也不代替完整 benchmark。
+
+目前 prompt 已完成 [20 題新 baseline 與逐題證據審查](studies/doc-baseline-20261104/README.md)：答案別名命中與核心答案有來源支持均為 18/20，19/20 題符合文件結果預算；完整回覆的事實支持為 17 題有支持、1 題部分支持、2 題缺乏支持。批次尚未完整通過，並保留引用類型誤標、截斷回覆被視為 `done` 及預算未於執行時強制限制等問題。新 baseline 與舊 E0 的差異不作為單一 prompt 改動的因果成效。

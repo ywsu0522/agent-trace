@@ -1,12 +1,9 @@
 {
   "profile_version": 1,
   "id": "current",
-  "label": "Current concise research configuration",
-  "environment": "E5",
-  "system_prompt": "configs/prompts/E5.system.txt",
+  "label": "Current agent configuration",
+  "system_prompt": "configs/prompts/system.txt",
   "system_sha256": "9277c4bfa6707a2bd355e30edd957adfd66deb2e6d7dd311f2fdea259677a88c",
-  "tool_catalogue": "configs/prompts/E5.tools.json",
-  "tool_catalogue_sha256": "1046155da0bd4fb8f8ea03befadda4b4489995b7b3bd2155a45e6b2167742916",
   "model": "qwen3.5:4b-q4_K_M",
   "temperature": 0,
   "think": false,
@@ -15,7 +12,7 @@
   "token_budget": 400000,
   "aux_json_mode": true,
   "runtime": "agent_trace 0.2.0",
-  "historical_note": "Default for future research: direct email search/read tools, without email_qa. E0-E4 remain archived. No 20-question score is available for E5.",
+  "historical_note": "Single current prompt. Historical prompt experiments are documented in docs/prompt-experiments.md; they are not runtime presets.",
   "documents": "datasets/docs",
   "model_digest": "d8b0f5e9760cd1682034f292d7ef72ec46f432149be0df7574bf2d6e92e38c04"
 }

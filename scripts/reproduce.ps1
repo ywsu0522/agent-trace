@@ -1,6 +1,5 @@
 param(
     [string]$Task = 'd02',
-    [ValidateSet('current', 'baseline')][string]$Agent = 'current',
     [switch]$PrepareOnly,
     [switch]$SkipData,
     [switch]$LocalUv,
@@ -33,7 +32,7 @@ try {
         if ($LASTEXITCODE -ne 0) { throw 'Corpus download or checksum verification failed.' }
     }
     if (!$PrepareOnly) {
-        $runArgs = @('run', '--locked', 'agent-trace', 'reproduce', '--task', $Task, '--agent', $Agent, '--trace')
+        $runArgs = @('run', '--locked', 'agent-trace', 'reproduce', '--task', $Task, '--trace')
         if ($Out) { $runArgs += @('--out', $Out) }
         & $uvBinary @runArgs
         if ($LASTEXITCODE -ne 0) { throw 'Agent execution failed; inspect the printed report path.' }

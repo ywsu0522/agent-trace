@@ -4,12 +4,11 @@
 
 ```sh
 uv run agent-trace run "What is the minimum password length?" --trace
-uv run agent-trace run --task d06 --agent current
-uv run agent-trace run --task d06 --agent baseline
+uv run agent-trace run --task d06
 uv run agent-trace run --task d02 --dry-run
 ```
 
-`current` 使用 E5 prompt；`baseline` 使用 E0。任意問題預設不評分；使用 `--expected-answer` 提供接受字串，或使用 `--task d01` 至 `d20`。答案字串命中與證據是否充分是不同判準。
+一般執行只讀取 `configs/agents/current.json` 與 `configs/prompts/system.txt`，沒有 prompt 版本選單。任意問題預設不評分；使用 `--expected-answer` 提供接受字串，或使用 `--task d01` 至 `d20`。答案字串命中與證據是否充分是不同判準。
 
 `d01` 至 `d20` 直接讀取 `tests/fixtures/doc_questions.json`，這是 HW1 P09 `search_docs` 專用的 20 題 live 測試資料，沿用原始陣列與欄位格式。`answers` 供評分使用；`doc_id`、`line` 是參考證據，`stale` 是部分題目的過時答案，目前不自動核對證據或過時答案。模型只收到問題，這些標準答案欄位不會加入 prompt。自訂單題仍可使用 `--task FILE.json`。
 
@@ -24,7 +23,7 @@ uv run agent-trace prepare-data --download
 
 兩種方式均核對 corpus checksum；資料解壓至忽略追蹤的 `.cache/emails.jsonl`。
 
-Windows 也可使用 `powershell -NoProfile -ExecutionPolicy Bypass -File scripts/reproduce.ps1 -Task d02`；macOS/Linux 可使用 `sh scripts/reproduce.sh d02 current`。這些入口會準備 uv、依賴與資料，需先自行啟動 Ollama。
+Windows 也可使用 `powershell -NoProfile -ExecutionPolicy Bypass -File scripts/reproduce.ps1 -Task d02`；macOS/Linux 可使用 `sh scripts/reproduce.sh d02`。這些入口會準備 uv、依賴與資料，需先自行啟動 Ollama。
 
 ## 輸出與離線閱讀
 
@@ -33,7 +32,7 @@ Windows 也可使用 `powershell -NoProfile -ExecutionPolicy Bypass -File script
 ```sh
 uv run agent-trace report runs/my-run
 uv run agent-trace report path/to/events.jsonl --out runs/imported
-uv run agent-trace replay --request runs/my-run/initial-request.json --agent current
+uv run agent-trace replay --request runs/my-run/initial-request.json
 ```
 
 `report` 不呼叫模型。`replay` 只發送一次主 request，不執行工具。強制終止或斷電後，可從已保存的事件重建報告；不完整的最後一筆事件會標示缺漏。
@@ -56,7 +55,7 @@ uv run agent-trace build
 
 ## 歷史實驗
 
-[20 題紀錄](../studies/baseline-20/README.md) 使用 E0；保存的答案字串命中為 15/20。E4 與目前的 E5 尚未完整重跑全部 20 題。[d06](../studies/d06/README.md) 保存 prompt 修改與固定 request 重播比較。
+[歷史 20 題紀錄](../studies/baseline-20/README.md) 使用當時的 E0 prompt，答案字串命中為 15/20。[目前 prompt 的 2026-11-04 baseline](../studies/doc-baseline-20261104/README.md) 已重新執行全部 20 題並完成逐題證據審查：18/20 答案命中與核心支持、19/20 文件預算合格，仍有附帶敘述、引用與停止問題。不同時期的兩輪結果不能隔離 prompt 效果。[d06](../studies/d06/README.md) 保存 prompt 修改與固定 request 重播比較。E 編號只屬[歷史實驗紀錄](prompt-experiments.md)，不是目前 CLI 可選的執行模式。
 
 保存紀錄可直接離線閱讀。新推論可能因硬體、Ollama 版本及模型的非確定性而改變輸出與工具路徑。`reproduce` 會準備資料並核對模型 digest；一般 `run` 允許使用不同模型。
 
@@ -71,6 +70,6 @@ uv run python tools/audit_publication.py
 Python 版本由 `.python-version` 指定，依賴由 `uv.lock` 鎖定。目前工具實作包含文件、email 搜尋／讀取與 daily digest；歷史 prompt 另外列出的 terminal、memory、ask_user 在此 runtime 中未實作。
 
 
-目前 E5 的 email 問答由主 agent 自行呼叫 `search_emails`（BM25 排名、ID 與預覽）及 `read_email`（完整信件），再決定下一個搜尋或回答；工具目錄不再提供 `email_qa`。這條路徑依 session 的回合與 token 預算停止，不套用 P04 pipeline 的三次搜尋上限。
+目前的 email 問答由主 agent 自行呼叫 `search_emails`（BM25 排名、ID 與預覽）及 `read_email`（完整信件），再決定下一個搜尋或回答；預設工具目錄不提供 `email_qa`。這條路徑依單次 `send()` 的回合與估算 token 預算停止，不套用 P04 pipeline 的三次搜尋上限。
 
-P04 的 `answer_email_question` 與 deterministic 測試保留為獨立 pipeline 實驗。E0-E4 的 prompt／工具快照保留原樣；只有透過 `--env E0` 至 `--env E4` 或 `--agent baseline` 選用舊環境時，runtime 才啟用封存用的 `email_qa` 相容處理。直接建立 registry 預設不啟用此工具；新的自訂 prompt 應使用 search/read 工具。
+P04 的 `answer_email_question` 與 deterministic 測試保留為獨立 pipeline 實驗。Registry 統一按傳入 prompt 的工具目錄綁定實作，不依歷史版本切換。一般執行不暴露巢狀 `email_qa`；通用 `--system FILE` 可供一次性研究自行指定工具目錄。歷史原文保留在 `studies/`，移除了 runtime 內的 E 編號預設與獨立 baseline 設定。

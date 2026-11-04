@@ -60,8 +60,8 @@ def test_no_official_runtime_or_test_helper_imports():
 
 
 def test_document_pages_preserve_historical_boundaries(tmp_path):
-    system = (STUDY / 'record/environments/E4.system.txt').read_text(encoding='utf-8')
-    registry = build_registry(lambda messages: 'unused', Corpus(ROOT / 'datasets/docs', tmp_path / 'absent'), system, archived_email_qa=True)
+    system = (ROOT / 'configs/prompts/system.txt').read_text(encoding='utf-8')
+    registry = build_registry(lambda messages: 'unused', Corpus(ROOT / 'datasets/docs', tmp_path / 'absent'), system)
     first = json.loads(registry.execute('read_doc', {'doc_id': 'gridlens-api-spec'}).content)
     second = json.loads(registry.execute('read_doc', {'doc_id': 'gridlens-api-spec', 'start_line': 90}).content)
     assert (first['start_line'], first['end_line'], first['total_lines']) == (1, 89, 131)
@@ -74,8 +74,8 @@ def test_search_results_equal_all_archived_document_searches(tmp_path):
     verified = 0
     for entry in manifest['runs']:
         events = archived(entry['id'])
-        system = next(e['messages'][0]['content'] for e in events if e['kind'] == 'model_request' and e['role'] == 'agent')
-        registry = build_registry(lambda messages: 'unused', corpus, system, archived_email_qa=True)
+        system = (ROOT / 'configs/prompts/system.txt').read_text(encoding='utf-8')
+        registry = build_registry(lambda messages: 'unused', corpus, system)
         args = None
         for event in events:
             if event['kind'] != 'agent_event':
@@ -94,7 +94,8 @@ def test_full_document_run_replays_identical_requests_and_tool_feedback(tmp_path
     emails = tmp_path / 'empty.jsonl'
     emails.touch()
     output = tmp_path / 'full-run'
-    assert main(['run', '--env', 'E3', '--emails', str(emails), '--out', str(output)]) == 0
+    system = STUDY / 'record/environments/E3.system.txt'
+    assert main(['run', '--system', str(system), '--emails', str(emails), '--out', str(output)]) == 0
     result = json.loads((output / 'result.json').read_text())
     assert result['agent_requests'] == 6 and result['aux_requests'] == 0
     assert result['tool_sequence'][-2:] == ['read_doc', 'read_doc']
@@ -109,7 +110,8 @@ def test_full_email_corpus_runs_replay_identical_requests(tmp_path, monkeypatch,
         pytest.skip('Optional historical email corpus: run prepare-data first')
     pending = replay_http(monkeypatch, archived(run_id))
     output = tmp_path / 'run'
-    assert main(['run', '--env', environment, '--emails', str(emails), '--out', str(output)]) == 0
+    system = STUDY / f'record/environments/{environment}.system.txt'
+    assert main(['run', '--system', str(system), '--emails', str(emails), '--out', str(output)]) == 0
     assert not pending
     result = json.loads((output / 'result.json').read_text())
     assert result['agent_requests'] == 6
@@ -129,16 +131,17 @@ def test_decision_replay_changes_only_system_and_executes_no_tool(tmp_path, monk
 
     monkeypatch.setattr(OllamaClient, '_request', request)
     output = tmp_path / 'replay'
-    assert main(['replay', 'paging-after', '--turn', '4', '--env', 'E3', '--out', str(output)]) == 0
+    system_path = STUDY / 'record/environments/E3.system.txt'
+    assert main(['replay', 'paging-after', '--turn', '4', '--system', str(system_path), '--out', str(output)]) == 0
     assert captured[0][1:] == history[1:] and captured[0][0]['content'] == system
     assert json.loads((output / 'result.json').read_text())['tools_executed'] is False
 
 
 def test_dry_run_never_calls_a_provider(monkeypatch, capsys):
     monkeypatch.setattr(OllamaClient, '_request', lambda *a, **k: pytest.fail('Dry run contacted provider'))
-    assert main(['run', '--env', 'E4', '--dry-run']) == 0
+    assert main(['run', '--dry-run']) == 0
     plan = json.loads(capsys.readouterr().out)
-    assert plan['system_sha256'] == hashlib.sha256((STUDY / 'record/environments/E4.system.txt').read_text(encoding='utf-8').encode()).hexdigest()
+    assert plan['system_sha256'] == hashlib.sha256((ROOT / 'configs/prompts/system.txt').read_text(encoding='utf-8').encode()).hexdigest()
 
 
 def test_missing_full_corpus_fails_before_model_request(tmp_path, monkeypatch):
@@ -154,15 +157,22 @@ def test_custom_prompt_is_not_mislabeled_as_unchanged_environment(tmp_path, caps
     assert json.loads(capsys.readouterr().out)['environment'].startswith('custom-')
 
 
-@pytest.mark.parametrize('agent,environment', [('current', 'E5'), ('baseline', 'E0')])
-def test_named_agent_profiles_preserve_both_versions(capsys, agent, environment):
-    assert main(['run', '--agent', agent, '--dry-run']) == 0
+def test_single_current_configuration_has_no_prompt_presets(capsys):
+    assert main(['run', '--dry-run']) == 0
     config = json.loads(capsys.readouterr().out)
-    assert config['environment'] == environment
-    assert config['agent_profile']['id'] == agent
+    assert config['environment'] == 'current'
+    assert config['agent_profile']['id'] == 'current'
     assert config['model'] == MODEL and config['num_ctx'] == 8192
-    expected = (ROOT / f'configs/prompts/{environment}.system.txt').read_text(encoding='utf-8')
+    expected = (ROOT / 'configs/prompts/system.txt').read_text(encoding='utf-8')
     assert config['system_sha256'] == hashlib.sha256(expected.encode()).hexdigest()
+
+
+@pytest.mark.parametrize('option,value', [('--env', 'E3'), ('--agent', 'baseline')])
+def test_historical_prompt_labels_are_not_cli_options(monkeypatch, option, value):
+    monkeypatch.setattr(OllamaClient, '_request', lambda *a, **k: pytest.fail('Invalid option contacted provider'))
+    with pytest.raises(SystemExit) as exc:
+        main(['run', option, value, '--dry-run'])
+    assert exc.value.code == 2
 
 
 def test_bad_email_archive_is_rejected(tmp_path):
@@ -173,13 +183,13 @@ def test_bad_email_archive_is_rejected(tmp_path):
     assert not (tmp_path / 'emails.jsonl').exists()
 
 
-def test_explicit_environment_cannot_silently_modify_a_snapshot(tmp_path, monkeypatch):
+def test_current_prompt_cannot_silently_differ_from_its_checksum(tmp_path, monkeypatch):
     import agent_trace.execution as execution
     import shutil
     shutil.copytree(ROOT / 'configs', tmp_path / 'configs')
-    (tmp_path / 'configs/prompts/E3.system.txt').write_text('modified original snapshot', encoding='utf-8')
+    (tmp_path / 'configs/prompts/system.txt').write_text('modified default prompt', encoding='utf-8')
     monkeypatch.setattr(execution, 'asset_root', lambda: tmp_path)
-    assert main(['run', '--env', 'E3', '--dry-run']) == 1
+    assert main(['run', '--dry-run']) == 1
 
 
 def test_custom_system_catalogue_controls_schema_validation(tmp_path):
@@ -217,12 +227,10 @@ def test_current_toolset_retires_email_qa_and_keeps_direct_email_tools(tmp_path)
     assert registry.execute('email_qa', {'question': 'Any question'}).status == 'unknown_tool'
 
 
-def test_archived_email_qa_catalogue_requires_explicit_compatibility(tmp_path):
-    system = (ROOT / 'configs/prompts/E4.system.txt').read_text(encoding='utf-8')
+def test_explicit_prompt_catalogue_binds_pipeline_without_environment_switch(tmp_path):
+    system = (STUDY / 'record/environments/E4.system.txt').read_text(encoding='utf-8')
     corpus = Corpus(ROOT / 'datasets/docs', tmp_path / 'absent')
-    with pytest.raises(ValueError, match='email_qa is retired'):
-        build_registry(lambda _: 'unused', corpus, system)
-    registry = build_registry(lambda _: 'unused', corpus, system, archived_email_qa=True)
+    registry = build_registry(lambda _: 'unused', corpus, system)
     assert 'email_qa' in {schema['name'] for schema in registry.schemas()}
 
 

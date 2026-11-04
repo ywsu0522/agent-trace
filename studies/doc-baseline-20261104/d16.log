@@ -1,0 +1,20 @@
+{
+  "output": "C:\\Users\\scien\\Desktop\\projects\\agent-trace\\runs\\doc-baseline-20-20261104-222912\\d16",
+  "text": "The weekly stipend for the primary on-call engineer is **$500**. This amount applies to rotations starting on or after March 2, 2026, and includes an additional $250 bonus for weeks containing a company holiday or during winter closure.\n\n**Source:** `engineering-announcement-2026-02-oncall-stipend`",
+  "status": "done",
+  "error": null,
+  "id": "d16",
+  "condition": "current",
+  "seconds": 70.781,
+  "answer_match": true,
+  "answer_match_method": "exact substring; not a semantic judge",
+  "agent_requests": 2,
+  "aux_requests": 0,
+  "tool_sequence": [
+    "search_docs"
+  ],
+  "tools_executed": true,
+  "parse_error": null,
+  "events": "events.jsonl",
+  "report": "trace.html"
+}

@@ -1,0 +1,910 @@
+{
+  "schema_version": 1,
+  "reviewed_at": "2026-11-04T16:03:10.038864+00:00",
+  "reviewer": "Codex assistant, explicit post-hoc reading in this conversation",
+  "method": "Read all final answers and actual tool evidence; verify quoted support against corpus and next HTTP request. No new generation or answer repair.",
+  "rubric": {
+    "core_answer_support": "Does the requested main fact have support in evidence sent to the agent?",
+    "full_response_support": "Do substantive added claims have support? Inference from a partial snippet is labeled partial, not automatically false.",
+    "citation_status": "Are the cited document and section correct, and is a document mislabeled as email?",
+    "warnings": "Precision issues are recorded separately and do not automatically negate factual support."
+  },
+  "limitations": [
+    "One assistant review, not independent multiple-rater agreement or a trained semantic verifier.",
+    "Recorded messages show what was sent; they do not prove which earlier tokens the backend retained internally.",
+    "Full-corpus counter-evidence was consulted only after generation; it was not supplied to the agent.",
+    "No new overall pass threshold is invented by this review."
+  ],
+  "original_results_sha256": "f9d08179ead4e7135027b6b7e7bee023cdea4fbe89e2752c292030ad33152a2d",
+  "summary": {
+    "reviewed": 20,
+    "core_answers_supported": 18,
+    "full_response_support_counts": {
+      "supported": 17,
+      "unsupported": 2,
+      "partial": 1
+    },
+    "citation_source_type_mislabeled": [
+      "d08",
+      "d14",
+      "d15"
+    ],
+    "precision_warnings": [
+      "d01",
+      "d16",
+      "d19"
+    ],
+    "final_length_stop_marked_done": [
+      "d06",
+      "d18"
+    ],
+    "native_requests_checked": 78,
+    "new_ollama_inference_calls": 0
+  },
+  "rows": [
+    {
+      "id": "d01",
+      "question": "Who manages the Firmware team?",
+      "core_answer_support": "supported",
+      "full_response_support": "supported",
+      "citation_status": "accurate",
+      "review_note": "Nadia Ferreira 與 Firmware Engineering Manager 身分由實際 snippet 支持；不必只認 fixture 的 org-chart。Heron 的附帶角色描述較籠統，原文件為 Product manager，snippet 從 manager 開始而漏掉前綴。",
+      "warnings": [
+        "role_precision"
+      ],
+      "evidence": [
+        {
+          "doc_id": "firmware-spec-emberos",
+          "line_start": 6,
+          "line_end": 6,
+          "tool": "search_docs",
+          "turn": 1,
+          "tool_index": 0,
+          "quote": "Owner: Firmware team (Nadia Ferreira, Firmware Engineering Manager)",
+          "sent_in_next_model_request": true,
+          "trace_link": "d01/trace.md#turn-1"
+        },
+        {
+          "doc_id": "firmware-spec-emberos",
+          "line_start": 3,
+          "line_end": 3,
+          "tool": "search_docs",
+          "turn": 1,
+          "tool_index": 0,
+          "quote": "Document number: FW-SPEC-003",
+          "sent_in_next_model_request": true,
+          "trace_link": "d01/trace.md#turn-1"
+        },
+        {
+          "doc_id": "project-heron-brief",
+          "line_start": 6,
+          "line_end": 6,
+          "tool": "search_docs",
+          "turn": 1,
+          "tool_index": 0,
+          "quote": "manager: Rohan Kapoor",
+          "sent_in_next_model_request": true,
+          "trace_link": "d01/trace.md#turn-1"
+        }
+      ],
+      "final_native_stop": "stop",
+      "final_prompt_tokens": 1911,
+      "final_completion_tokens": 141,
+      "session_status": "done",
+      "trace_sha256": "3ff1c2765e24d1ed3cd86963cbdd0b9c9b80547fac837636e97297877036f346",
+      "events_sha256": "65e3d7918c47427e0e4f2a51e937617173092ca5a9bad0bcd71d1ddc047fb354"
+    },
+    {
+      "id": "d02",
+      "question": "What is the minimum password length under the IT and Security Policy?",
+      "core_answer_support": "supported",
+      "full_response_support": "supported",
+      "citation_status": "accurate",
+      "review_note": "14 characters、政策編號／版本與 Section 3 均在已讀內容中。",
+      "warnings": [],
+      "evidence": [
+        {
+          "doc_id": "it-security-policy",
+          "line_start": 3,
+          "line_end": 3,
+          "tool": "search_docs",
+          "turn": 1,
+          "tool_index": 0,
+          "quote": "Policy number: SEC-400, version 3.0",
+          "sent_in_next_model_request": true,
+          "trace_link": "d02/trace.md#turn-1"
+        },
+        {
+          "doc_id": "it-security-policy",
+          "line_start": 27,
+          "line_end": 27,
+          "tool": "read_doc",
+          "turn": 2,
+          "tool_index": 0,
+          "quote": "## 3. Accounts and passwords",
+          "sent_in_next_model_request": true,
+          "trace_link": "d02/trace.md#turn-2"
+        },
+        {
+          "doc_id": "it-security-policy",
+          "line_start": 30,
+          "line_end": 30,
+          "tool": "read_doc",
+          "turn": 2,
+          "tool_index": 0,
+          "quote": "Passwords must be at least 14 characters long.",
+          "sent_in_next_model_request": true,
+          "trace_link": "d02/trace.md#turn-2"
+        }
+      ],
+      "final_native_stop": "stop",
+      "final_prompt_tokens": 3322,
+      "final_completion_tokens": 60,
+      "session_status": "done",
+      "trace_sha256": "8cce422c24fe3351a2d966f7becd01bdbb62e39b234f0733f0cc94faca5438af",
+      "events_sha256": "33141f9b2dbc9f1e434b920ebc04c1551c1bafb8cddcfeb2a9d0bdd65a22fd90"
+    },
+    {
+      "id": "d03",
+      "question": "How many requests per minute may one client make to the GridLens Ingestion API?",
+      "core_answer_support": "supported",
+      "full_response_support": "supported",
+      "citation_status": "accurate",
+      "review_note": "600 requests/min、429、Retry-After 與 Enterprise 申請較高上限均有已讀證據，引用 4.1 正確。",
+      "warnings": [],
+      "evidence": [
+        {
+          "doc_id": "gridlens-api-spec",
+          "line_start": 3,
+          "line_end": 3,
+          "tool": "search_docs",
+          "turn": 1,
+          "tool_index": 0,
+          "quote": "Document number: API-SPEC-002",
+          "sent_in_next_model_request": true,
+          "trace_link": "d03/trace.md#turn-1"
+        },
+        {
+          "doc_id": "gridlens-api-spec",
+          "line_start": 4,
+          "line_end": 4,
+          "tool": "search_docs",
+          "turn": 1,
+          "tool_index": 0,
+          "quote": "Version: 2.1",
+          "sent_in_next_model_request": true,
+          "trace_link": "d03/trace.md#turn-1"
+        },
+        {
+          "doc_id": "gridlens-api-spec",
+          "line_start": 42,
+          "line_end": 42,
+          "tool": "read_doc",
+          "turn": 2,
+          "tool_index": 0,
+          "quote": "4.1 Each client may make up to 600 requests per minute. A request over the limit receives status 429 with a `Retry-After` header that gives the number of seconds to wait.",
+          "sent_in_next_model_request": true,
+          "trace_link": "d03/trace.md#turn-2"
+        },
+        {
+          "doc_id": "gridlens-api-spec",
+          "line_start": 48,
+          "line_end": 48,
+          "tool": "read_doc",
+          "turn": 2,
+          "tool_index": 0,
+          "quote": "4.4 Enterprise customers may ask for higher limits through their Customer Success Manager.",
+          "sent_in_next_model_request": true,
+          "trace_link": "d03/trace.md#turn-2"
+        }
+      ],
+      "final_native_stop": "stop",
+      "final_prompt_tokens": 3717,
+      "final_completion_tokens": 112,
+      "session_status": "done",
+      "trace_sha256": "e487c05c738d5ec94b752c7406833270f545663f8fa9ed679f6ff98873eb09a4",
+      "events_sha256": "d0aa63cce92600bdf098782e838637b92d434f1c4f637f60dc392fd7163d2c63"
+    },
+    {
+      "id": "d04",
+      "question": "What is the price per meter per month of the GridLens Professional tier?",
+      "core_answer_support": "supported",
+      "full_response_support": "supported",
+      "citation_status": "accurate",
+      "review_note": "Professional 每 meter 每月 $1.40 與 Pricing and contracts 章節均在已讀視窗中。",
+      "warnings": [],
+      "evidence": [
+        {
+          "doc_id": "gridlens-product-faq",
+          "line_start": 87,
+          "line_end": 87,
+          "tool": "read_doc",
+          "turn": 2,
+          "tool_index": 0,
+          "quote": "## Pricing and contracts",
+          "sent_in_next_model_request": true,
+          "trace_link": "d04/trace.md#turn-2"
+        },
+        {
+          "doc_id": "gridlens-product-faq",
+          "line_start": 95,
+          "line_end": 95,
+          "tool": "read_doc",
+          "turn": 2,
+          "tool_index": 0,
+          "quote": "| Professional | $1.40 |",
+          "sent_in_next_model_request": true,
+          "trace_link": "d04/trace.md#turn-2"
+        }
+      ],
+      "final_native_stop": "stop",
+      "final_prompt_tokens": 3476,
+      "final_completion_tokens": 65,
+      "session_status": "done",
+      "trace_sha256": "555aaf7726efae642c7772ebea856ace992e3b5838145370624c348484291072",
+      "events_sha256": "1b6eb3df6208ca5e91742c72ac360f75d3257bd6a4a70b3bf80898cdcb59b8be"
+    },
+    {
+      "id": "d05",
+      "question": "Who is the technical lead for Project Kestrel?",
+      "core_answer_support": "supported",
+      "full_response_support": "supported",
+      "citation_status": "accurate",
+      "review_note": "Jonas Weber 及 Senior Data Scientist 身分均在實際搜尋 snippet 中。",
+      "warnings": [],
+      "evidence": [
+        {
+          "doc_id": "project-kestrel-brief",
+          "line_start": 5,
+          "line_end": 5,
+          "tool": "search_docs",
+          "turn": 1,
+          "tool_index": 0,
+          "quote": "Technical lead: Jonas Weber, Senior Data Scientist",
+          "sent_in_next_model_request": true,
+          "trace_link": "d05/trace.md#turn-1"
+        }
+      ],
+      "final_native_stop": "stop",
+      "final_prompt_tokens": 1835,
+      "final_completion_tokens": 67,
+      "session_status": "done",
+      "trace_sha256": "042ceaf08a5a547f0f5e10aa4e967320838cd47fdf5b01bab27e758c6bb13d7c",
+      "events_sha256": "f8ad968eb8a1859fd800bc3b19d99d10dc0e73e17c737d879914b5ba3dc9ffc5"
+    },
+    {
+      "id": "d06",
+      "question": "On what date will version 1 of the GridLens API be shut down?",
+      "core_answer_support": "unsupported",
+      "full_response_support": "unsupported",
+      "citation_status": "insufficient",
+      "review_note": "沒有回答關閉日期；只搜尋文件與 email，未 read_doc。摘要缺少日期不能支持整份文件未記載的結論。原文件第 120 行實際有日期，但沒有進入工具觀察。最後原生回覆因 length 停止，session 卻標 done。",
+      "warnings": [
+        "missing_evidence",
+        "false_absence_inference",
+        "final_length_stop"
+      ],
+      "evidence": [],
+      "final_native_stop": "length",
+      "final_prompt_tokens": 8131,
+      "final_completion_tokens": 61,
+      "session_status": "done",
+      "trace_sha256": "d41e1a06c84d5d33d0eff98b41ceb83e1b9dadba2ea17b2fb9d2f3f458cbf786",
+      "events_sha256": "7cc6c180fe309ba0fa79a5bdd5626eda7a3887a9060de76abdf73fddd15aa073"
+    },
+    {
+      "id": "d07",
+      "question": "For how many working days does Cardinal Energy pay full salary during jury duty?",
+      "core_answer_support": "supported",
+      "full_response_support": "supported",
+      "citation_status": "accurate",
+      "review_note": "第三次搜尋的 snippet 已完整呈現每曆年最多 10 working days 全薪陪審服務；沒有 read_doc 不等於缺乏支持。",
+      "warnings": [],
+      "evidence": [
+        {
+          "doc_id": "employee-handbook",
+          "line_start": 132,
+          "line_end": 132,
+          "tool": "search_docs",
+          "turn": 3,
+          "tool_index": 0,
+          "quote": "Cardinal Energy pays your full salary for up to 10 working days of jury service per calendar year.",
+          "sent_in_next_model_request": true,
+          "trace_link": "d07/trace.md#turn-3"
+        }
+      ],
+      "final_native_stop": "stop",
+      "final_prompt_tokens": 3171,
+      "final_completion_tokens": 71,
+      "session_status": "done",
+      "trace_sha256": "383bcea09e8fe4a89d6434a223cd1d3064703a3026f0d541ecff11e876046b98",
+      "events_sha256": "491d54f1ace3f2b7d0c36bd6e92a0812c6308efd04d3f6ccbfd251e82b4e74a6"
+    },
+    {
+      "id": "d08",
+      "question": "What is the phone number of the anonymous ethics hotline?",
+      "core_answer_support": "supported",
+      "full_response_support": "supported",
+      "citation_status": "source_type_mislabeled",
+      "review_note": "電話與 Section 34 正確，已讀到第 258 行；employee-handbook 是文件 doc_id，輸出卻標為 Email ID。",
+      "warnings": [
+        "source_type_label"
+      ],
+      "evidence": [
+        {
+          "doc_id": "employee-handbook",
+          "line_start": 256,
+          "line_end": 256,
+          "tool": "read_doc",
+          "turn": 4,
+          "tool_index": 0,
+          "quote": "## 34. Raising concerns and the ethics hotline",
+          "sent_in_next_model_request": true,
+          "trace_link": "d08/trace.md#turn-4"
+        },
+        {
+          "doc_id": "employee-handbook",
+          "line_start": 258,
+          "line_end": 258,
+          "tool": "read_doc",
+          "turn": 5,
+          "tool_index": 0,
+          "quote": "call the ethics hotline at 1-800-555-0142.",
+          "sent_in_next_model_request": true,
+          "trace_link": "d08/trace.md#turn-5"
+        }
+      ],
+      "final_native_stop": "stop",
+      "final_prompt_tokens": 6811,
+      "final_completion_tokens": 58,
+      "session_status": "done",
+      "trace_sha256": "f08d4b02a3d89b332176fd4793dff1642c3542b2799b407a36d6696445e5241d",
+      "events_sha256": "41b7b9454b3a934537643aa03d8d00705b05979100b5b3a57295e19b466a16f4"
+    },
+    {
+      "id": "d09",
+      "question": "Which EmberOS error code means that the sensor mesh link was lost?",
+      "core_answer_support": "supported",
+      "full_response_support": "supported",
+      "citation_status": "accurate",
+      "review_note": "E-214、11.2、11.3、M4／15 分鐘及恢復條件全部在已讀視窗內。",
+      "warnings": [],
+      "evidence": [
+        {
+          "doc_id": "firmware-spec-emberos",
+          "line_start": 129,
+          "line_end": 129,
+          "tool": "read_doc",
+          "turn": 5,
+          "tool_index": 0,
+          "quote": "11.2 Error codes are reported as events.",
+          "sent_in_next_model_request": true,
+          "trace_link": "d09/trace.md#turn-5"
+        },
+        {
+          "doc_id": "firmware-spec-emberos",
+          "line_start": 136,
+          "line_end": 136,
+          "tool": "read_doc",
+          "turn": 5,
+          "tool_index": 0,
+          "quote": "| E-214 | Sensor mesh link lost |",
+          "sent_in_next_model_request": true,
+          "trace_link": "d09/trace.md#turn-5"
+        },
+        {
+          "doc_id": "firmware-spec-emberos",
+          "line_start": 143,
+          "line_end": 143,
+          "tool": "read_doc",
+          "turn": 5,
+          "tool_index": 0,
+          "quote": "11.3 E-214 is raised by the M4 when a joined sensor has sent no report for 15 minutes. It is cleared when the sensor reports again.",
+          "sent_in_next_model_request": true,
+          "trace_link": "d09/trace.md#turn-5"
+        }
+      ],
+      "final_native_stop": "stop",
+      "final_prompt_tokens": 6951,
+      "final_completion_tokens": 123,
+      "session_status": "done",
+      "trace_sha256": "a787e548c4869694202bb752bd1bb6445974ac07712f0c136cfa0d8ca447a23a",
+      "events_sha256": "87bcb6187590f3c66b341f12adc18953498050969bbdeb8d3155034feb7513f7"
+    },
+    {
+      "id": "d10",
+      "question": "How many business days after an incident is resolved is the postmortem draft due?",
+      "core_answer_support": "supported",
+      "full_response_support": "supported",
+      "citation_status": "accurate",
+      "review_note": "第二次搜尋 snippet 明載 draft 於 resolution 後 5 business days 到期；文件來源正確。",
+      "warnings": [],
+      "evidence": [
+        {
+          "doc_id": "oncall-incident-process",
+          "line_start": 96,
+          "line_end": 96,
+          "tool": "search_docs",
+          "turn": 2,
+          "tool_index": 0,
+          "quote": "The draft is due within 5 business days of resolution.",
+          "sent_in_next_model_request": true,
+          "trace_link": "d10/trace.md#turn-2"
+        }
+      ],
+      "final_native_stop": "stop",
+      "final_prompt_tokens": 2839,
+      "final_completion_tokens": 62,
+      "session_status": "done",
+      "trace_sha256": "2fef1731af20e0b647b5888bb85374187a5c7599fa22f72195d079d02c6c8490",
+      "events_sha256": "735dda5e6283127913d6f06b9380ca19d3cf1595ed5e69ee58a2935332178bd1"
+    },
+    {
+      "id": "d11",
+      "question": "What is the recovery time objective for GridLens after a regional failure?",
+      "core_answer_support": "supported",
+      "full_response_support": "supported",
+      "citation_status": "accurate",
+      "review_note": "4 hours、Section 5 與 Oregon/us-west 對應 Virginia/us-east 災難復原區均有已讀支持。",
+      "warnings": [],
+      "evidence": [
+        {
+          "doc_id": "architecture-overview",
+          "line_start": 57,
+          "line_end": 57,
+          "tool": "read_doc",
+          "turn": 3,
+          "tool_index": 0,
+          "quote": "## 5. Recovery targets",
+          "sent_in_next_model_request": true,
+          "trace_link": "d11/trace.md#turn-3"
+        },
+        {
+          "doc_id": "architecture-overview",
+          "line_start": 61,
+          "line_end": 61,
+          "tool": "read_doc",
+          "turn": 3,
+          "tool_index": 0,
+          "quote": "The recovery time objective is 4 hours: service in the recovery region must be available within that time.",
+          "sent_in_next_model_request": true,
+          "trace_link": "d11/trace.md#turn-3"
+        },
+        {
+          "doc_id": "architecture-overview",
+          "line_start": 51,
+          "line_end": 51,
+          "tool": "read_doc",
+          "turn": 3,
+          "tool_index": 0,
+          "quote": "| us-west | Oregon | Primary for customers in North America |",
+          "sent_in_next_model_request": true,
+          "trace_link": "d11/trace.md#turn-3"
+        },
+        {
+          "doc_id": "architecture-overview",
+          "line_start": 52,
+          "line_end": 52,
+          "tool": "read_doc",
+          "turn": 3,
+          "tool_index": 0,
+          "quote": "| us-east | Virginia | Disaster recovery for us-west |",
+          "sent_in_next_model_request": true,
+          "trace_link": "d11/trace.md#turn-3"
+        }
+      ],
+      "final_native_stop": "stop",
+      "final_prompt_tokens": 4484,
+      "final_completion_tokens": 102,
+      "session_status": "done",
+      "trace_sha256": "f0bd20b22fed22446a440165f732cefe808e3054b38b8029e75cd44385e5a1e7",
+      "events_sha256": "ab7dddc71acebceb93537f7712d296229b799ce30bbc477ce5079ad53f3b3bbf"
+    },
+    {
+      "id": "d12",
+      "question": "What is the daily meal limit when I travel on business within the United States?",
+      "core_answer_support": "supported",
+      "full_response_support": "supported",
+      "citation_status": "accurate",
+      "review_note": "$75、餐別與小費、出發／返程半額均有已讀來源；$37.50 是 75/2 的正確推算，並非捏造引文。引用 2026 版 Section 6 正確。",
+      "warnings": [],
+      "evidence": [
+        {
+          "doc_id": "expense-policy-2026",
+          "line_start": 38,
+          "line_end": 38,
+          "tool": "read_doc",
+          "turn": 2,
+          "tool_index": 0,
+          "quote": "## 6. Meals while traveling",
+          "sent_in_next_model_request": true,
+          "trace_link": "d12/trace.md#turn-2"
+        },
+        {
+          "doc_id": "expense-policy-2026",
+          "line_start": 40,
+          "line_end": 40,
+          "tool": "read_doc",
+          "turn": 2,
+          "tool_index": 0,
+          "quote": "meals are reimbursed up to a daily limit of $75 per day for domestic travel",
+          "sent_in_next_model_request": true,
+          "trace_link": "d12/trace.md#turn-2"
+        },
+        {
+          "doc_id": "expense-policy-2026",
+          "line_start": 40,
+          "line_end": 40,
+          "tool": "read_doc",
+          "turn": 2,
+          "tool_index": 0,
+          "quote": "The limit covers breakfast, lunch, dinner, and tips.",
+          "sent_in_next_model_request": true,
+          "trace_link": "d12/trace.md#turn-2"
+        },
+        {
+          "doc_id": "expense-policy-2026",
+          "line_start": 40,
+          "line_end": 40,
+          "tool": "read_doc",
+          "turn": 2,
+          "tool_index": 0,
+          "quote": "On the day you depart and the day you return, the limit is half of the daily amount.",
+          "sent_in_next_model_request": true,
+          "trace_link": "d12/trace.md#turn-2"
+        }
+      ],
+      "final_native_stop": "stop",
+      "final_prompt_tokens": 3505,
+      "final_completion_tokens": 94,
+      "session_status": "done",
+      "trace_sha256": "014a23236b4853b93564027b398c0b5d7f5e327cd83ed81419f0d716612b8ee4",
+      "events_sha256": "72d07cbd2af593cb316cd253680151755be0463c9ffe15fb1b677e042bd3d18e"
+    },
+    {
+      "id": "d13",
+      "question": "Above what amount does a single expense need approval from my department's vice president?",
+      "core_answer_support": "supported",
+      "full_response_support": "supported",
+      "citation_status": "accurate",
+      "review_note": "新 $750 門檻、生效日與舊 March policy 的 $750–$1,000 區間都在 snippet 內。提及舊金額屬正確歷史對照，不是答成舊政策。",
+      "warnings": [],
+      "evidence": [
+        {
+          "doc_id": "finance-memo-2026-08-approval-thresholds",
+          "line_start": 4,
+          "line_end": 4,
+          "tool": "search_docs",
+          "turn": 1,
+          "tool_index": 0,
+          "quote": "Effective: 2026-09-01",
+          "sent_in_next_model_request": true,
+          "trace_link": "d13/trace.md#turn-1"
+        },
+        {
+          "doc_id": "finance-memo-2026-08-approval-thresholds",
+          "line_start": 13,
+          "line_end": 13,
+          "tool": "search_docs",
+          "turn": 1,
+          "tool_index": 0,
+          "quote": "From 2026-09-01, any single expense over $750 requires approval from your department's vice president",
+          "sent_in_next_model_request": true,
+          "trace_link": "d13/trace.md#turn-1"
+        },
+        {
+          "doc_id": "finance-memo-2026-08-approval-thresholds",
+          "line_start": 9,
+          "line_end": 9,
+          "tool": "search_docs",
+          "turn": 1,
+          "tool_index": 0,
+          "quote": "individual expenses between $750 and $1,000, which under the March policy reach Finance with only a manager's approval.",
+          "sent_in_next_model_request": true,
+          "trace_link": "d13/trace.md#turn-1"
+        }
+      ],
+      "final_native_stop": "stop",
+      "final_prompt_tokens": 1950,
+      "final_completion_tokens": 132,
+      "session_status": "done",
+      "trace_sha256": "cef918abdd595a122a54945e361c4aaeef9c3babe912d1d8138db071c4a1d930",
+      "events_sha256": "ad23bb3cb3846cf76e385497b0c88751a9a155f62ee049ae4c1f8a03232780c1"
+    },
+    {
+      "id": "d14",
+      "question": "How many days of unused PTO can I carry over into the next calendar year?",
+      "core_answer_support": "supported",
+      "full_response_support": "supported",
+      "citation_status": "source_type_mislabeled",
+      "review_note": "10 days/80 hours、2025→2026 起適用及 June 30 截止都有 snippet 支持；公告是文件，卻標成 Relevant Email ID。",
+      "warnings": [
+        "source_type_label"
+      ],
+      "evidence": [
+        {
+          "doc_id": "people-announcement-2025-11-pto-carryover",
+          "line_start": 11,
+          "line_end": 11,
+          "tool": "search_docs",
+          "turn": 1,
+          "tool_index": 0,
+          "quote": "Starting with the rollover from 2025 into 2026, you may carry over up to 10 days (80 hours) of unused PTO into the next calendar year. Carried-over PTO must be used by June 30 of that year.",
+          "sent_in_next_model_request": true,
+          "trace_link": "d14/trace.md#turn-1"
+        }
+      ],
+      "final_native_stop": "stop",
+      "final_prompt_tokens": 1938,
+      "final_completion_tokens": 97,
+      "session_status": "done",
+      "trace_sha256": "bc482365e727caa94abd19eb1a445d7b14e9db1f18d48a7b0c71c1a0dabf17b6",
+      "events_sha256": "a80066d301789957b6dc5616358285f35477a8e8e081059a307a526a3ca850c1"
+    },
+    {
+      "id": "d15",
+      "question": "Which days of the week are hybrid employees required to work from the office?",
+      "core_answer_support": "supported",
+      "full_response_support": "supported",
+      "citation_status": "source_type_mislabeled",
+      "review_note": "Tuesday/Wednesday/Thursday 與 2026-06-01 生效日均有 snippet 支持；公告 doc_id 被標成 Relevant Email ID。",
+      "warnings": [
+        "source_type_label"
+      ],
+      "evidence": [
+        {
+          "doc_id": "people-announcement-2026-05-office-days",
+          "line_start": 7,
+          "line_end": 7,
+          "tool": "search_docs",
+          "turn": 1,
+          "tool_index": 0,
+          "quote": "Starting 2026-06-01, hybrid employees will work from their assigned office at least 3 days each week. The anchor days will be Tuesday, Wednesday, and Thursday.",
+          "sent_in_next_model_request": true,
+          "trace_link": "d15/trace.md#turn-1"
+        }
+      ],
+      "final_native_stop": "stop",
+      "final_prompt_tokens": 1893,
+      "final_completion_tokens": 100,
+      "session_status": "done",
+      "trace_sha256": "9320ab0ddc870ee2fbfb99e3538ba49e282f89dea517779e560c04b4814bcaec",
+      "events_sha256": "b2965c97eb80c92cb660e3cd515c465430599cc619fb8d03c1fda38e66b0d26c"
+    },
+    {
+      "id": "d16",
+      "question": "How much is the weekly stipend for the primary on-call engineer?",
+      "core_answer_support": "supported",
+      "full_response_support": "supported",
+      "citation_status": "accurate",
+      "review_note": "$500、2026-03-02 與假日／winter closure 額外 $250 均有 snippet 支持。includes an additional 的用語容易含混，建議寫成 $500 加上條件式額外 $250。",
+      "warnings": [
+        "bonus_wording_precision"
+      ],
+      "evidence": [
+        {
+          "doc_id": "engineering-announcement-2026-02-oncall-stipend",
+          "line_start": 7,
+          "line_end": 7,
+          "tool": "search_docs",
+          "turn": 1,
+          "tool_index": 0,
+          "quote": "The new amounts apply to rotations that start on or after 2026-03-02.",
+          "sent_in_next_model_request": true,
+          "trace_link": "d16/trace.md#turn-1"
+        },
+        {
+          "doc_id": "engineering-announcement-2026-02-oncall-stipend",
+          "line_start": 11,
+          "line_end": 11,
+          "tool": "search_docs",
+          "turn": 1,
+          "tool_index": 0,
+          "quote": "| Primary | $500 |",
+          "sent_in_next_model_request": true,
+          "trace_link": "d16/trace.md#turn-1"
+        },
+        {
+          "doc_id": "engineering-announcement-2026-02-oncall-stipend",
+          "line_start": 14,
+          "line_end": 14,
+          "tool": "search_docs",
+          "turn": 1,
+          "tool_index": 0,
+          "quote": "An engineer who is primary or secondary during a week that contains a company holiday, or during the winter closure, receives an additional $250 for that week.",
+          "sent_in_next_model_request": true,
+          "trace_link": "d16/trace.md#turn-1"
+        }
+      ],
+      "final_native_stop": "stop",
+      "final_prompt_tokens": 1995,
+      "final_completion_tokens": 79,
+      "session_status": "done",
+      "trace_sha256": "f66b7bc7ab6519a8743357d9a152756f3fb44ac82cba7435590723121c1a16e6",
+      "events_sha256": "5410835fbefa50a1ace906731204e9f25456b07299bcba8fbe0ff82ae652ac97"
+    },
+    {
+      "id": "d17",
+      "question": "How much will Cardinal Energy reimburse each month for my gym membership?",
+      "core_answer_support": "supported",
+      "full_response_support": "supported",
+      "citation_status": "accurate",
+      "review_note": "$65/月、fitness facility dues、Ledgerly/Wellness 與不結轉均在第三次搜尋的同一 snippet 內。",
+      "warnings": [],
+      "evidence": [
+        {
+          "doc_id": "benefits-summary-2026",
+          "line_start": 31,
+          "line_end": 31,
+          "tool": "search_docs",
+          "turn": 3,
+          "tool_index": 0,
+          "quote": "Cardinal Energy reimburses up to $65 per month",
+          "sent_in_next_model_request": true,
+          "trace_link": "d17/trace.md#turn-3"
+        },
+        {
+          "doc_id": "benefits-summary-2026",
+          "line_start": 31,
+          "line_end": 31,
+          "tool": "search_docs",
+          "turn": 3,
+          "tool_index": 0,
+          "quote": "Eligible expenses include fitness facility dues",
+          "sent_in_next_model_request": true,
+          "trace_link": "d17/trace.md#turn-3"
+        },
+        {
+          "doc_id": "benefits-summary-2026",
+          "line_start": 31,
+          "line_end": 31,
+          "tool": "search_docs",
+          "turn": 3,
+          "tool_index": 0,
+          "quote": "Submit the expense in Ledgerly under the Wellness category.",
+          "sent_in_next_model_request": true,
+          "trace_link": "d17/trace.md#turn-3"
+        },
+        {
+          "doc_id": "benefits-summary-2026",
+          "line_start": 31,
+          "line_end": 31,
+          "tool": "search_docs",
+          "turn": 3,
+          "tool_index": 0,
+          "quote": "Unused amounts do not roll over from month to month.",
+          "sent_in_next_model_request": true,
+          "trace_link": "d17/trace.md#turn-3"
+        }
+      ],
+      "final_native_stop": "stop",
+      "final_prompt_tokens": 3077,
+      "final_completion_tokens": 79,
+      "session_status": "done",
+      "trace_sha256": "41f6dc08467d6a20405677f14bc701637cb2e19a19b0f1e4a0962bb567fc85b7",
+      "events_sha256": "5f20d30e2340c3c6ef1a39ed1eba4ae480393115a27329527718cb06274b7933"
+    },
+    {
+      "id": "d18",
+      "question": "My laptop was stolen. What phone extension do I call to report it?",
+      "core_answer_support": "unsupported",
+      "full_response_support": "unsupported",
+      "citation_status": "insufficient",
+      "review_note": "未回答分機，未讀 Security policy 正文。引用的 em-22128 只談舊公司電腦／支票與 Security desk，無法回答 Cardinal 通報分機。文件結果超過 6000，最後原生回覆 length-stop 後仍被當 done。",
+      "warnings": [
+        "missing_evidence",
+        "irrelevant_email",
+        "document_budget_exceeded",
+        "final_length_stop"
+      ],
+      "evidence": [],
+      "final_native_stop": "length",
+      "final_prompt_tokens": 8098,
+      "final_completion_tokens": 94,
+      "session_status": "done",
+      "trace_sha256": "fa01fd814dac65627dbbf67bde6e02b8be44ab42cacdd96795b03c6ef00a6a8a",
+      "events_sha256": "3367fb9c03e753c2670a7855e45c92ea245000e85e65128ce1273d2389e26f3f"
+    },
+    {
+      "id": "d19",
+      "question": "When is payday?",
+      "core_answer_support": "supported",
+      "full_response_support": "supported",
+      "citation_status": "accurate",
+      "review_note": "semi-monthly、15th 與 last business day、遇假日提前及 PeopleHub 均有已讀支持；摘要條列用 or 有歧義，但同一輸出的直接引文正確使用 and。",
+      "warnings": [
+        "payday_conjunction_precision"
+      ],
+      "evidence": [
+        {
+          "doc_id": "employee-handbook",
+          "line_start": 68,
+          "line_end": 68,
+          "tool": "read_doc",
+          "turn": 4,
+          "tool_index": 0,
+          "quote": "## 8. Compensation and payroll",
+          "sent_in_next_model_request": true,
+          "trace_link": "d19/trace.md#turn-4"
+        },
+        {
+          "doc_id": "employee-handbook",
+          "line_start": 70,
+          "line_end": 70,
+          "tool": "read_doc",
+          "turn": 5,
+          "tool_index": 0,
+          "quote": "Salaries are disbursed semi-monthly, on the 15th and on the last business day of each month. If the 15th falls on a weekend or a bank holiday, the deposit is made on the business day before. Pay statements are available in PeopleHub.",
+          "sent_in_next_model_request": true,
+          "trace_link": "d19/trace.md#turn-5"
+        }
+      ],
+      "final_native_stop": "stop",
+      "final_prompt_tokens": 6105,
+      "final_completion_tokens": 156,
+      "session_status": "done",
+      "trace_sha256": "faff8932cf5c0a0f4a57eccd2d681a5544627dc585cfe46827cab55012e3e6f4",
+      "events_sha256": "91dec481937bcf46700039c7cc65d34d4fb73de103e06b569097f5b64640d2d3"
+    },
+    {
+      "id": "d20",
+      "question": "How much can I spend per year on conferences and online courses for my own development?",
+      "core_answer_support": "supported",
+      "full_response_support": "partial",
+      "citation_status": "accurate",
+      "review_note": "$1,800/年與 current/target role 的 learning 範圍有 snippet 支持。snippet 在 Eligible 一詞後截斷，沒有呈現 event registration/coursework 清單；會議／線上課程明確適用是從題意與 learning 類別推得，未由實際送入內容完整核對。完整語料確實列出該清單，屬事後查核，不能回填為 agent 已看過。",
+      "warnings": [
+        "additional_scope_inferred_from_partial_snippet"
+      ],
+      "evidence": [
+        {
+          "doc_id": "benefits-summary-2026",
+          "line_start": 35,
+          "line_end": 35,
+          "tool": "search_docs",
+          "turn": 2,
+          "tool_index": 0,
+          "quote": "Each full-time employee may spend up to $1,800 per calendar year on learning that relates to their current role or a role they are working toward.",
+          "sent_in_next_model_request": true,
+          "trace_link": "d20/trace.md#turn-2"
+        }
+      ],
+      "final_native_stop": "stop",
+      "final_prompt_tokens": 2822,
+      "final_completion_tokens": 128,
+      "session_status": "done",
+      "trace_sha256": "e752ff1700307108526f6cd760faa8f6f8bc777fca4d2d6f102dcf8a8c5977f6",
+      "events_sha256": "3436701626ccc98a648b69bd3bb68ce1e2ff4fef9d40a28310a3ff9e883990a6"
+    }
+  ],
+  "posthoc_counter_evidence": [
+    {
+      "case": "d06",
+      "doc_id": "gridlens-api-spec",
+      "line": 120,
+      "quote": "API version 1 will be shut down on 2026-12-31.",
+      "origin": "full-corpus post-hoc review, not additional agent retrieval"
+    },
+    {
+      "case": "d18",
+      "doc_id": "it-security-policy",
+      "line": 57,
+      "quote": "Call the Security hotline at extension 4911",
+      "origin": "full-corpus post-hoc review, not additional agent retrieval"
+    },
+    {
+      "case": "d20",
+      "doc_id": "benefits-summary-2026",
+      "line": 35,
+      "quote": "Eligible expenses include event registration fees, coursework, certification examinations, and books.",
+      "origin": "full-corpus post-hoc review, not additional agent retrieval"
+    },
+    {
+      "case": "d01",
+      "doc_id": "project-heron-brief",
+      "line": 6,
+      "quote": "Product manager: Rohan Kapoor",
+      "origin": "full-corpus post-hoc review, not additional agent retrieval"
+    }
+  ]
+}

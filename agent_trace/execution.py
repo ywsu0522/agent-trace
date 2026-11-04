@@ -27,19 +27,12 @@ def write_json(path, value):
 def plan(args):
     from agent_trace.data import file_hash
     root = asset_root()
-    profile = load(root / 'configs/agents' / f'{args.agent}.json')
-    environment = args.env or profile['environment']
-    versions = load(root / 'configs/prompts/versions.json')
-    declared = next((v for v in versions if v['id'] == environment), None)
-    if declared is None and args.system is None:
-        raise ValueError(f'Unknown environment: {environment}; use --system for a new condition')
-    system_path = args.system or root / 'configs/prompts' / f'{environment}.system.txt'
+    profile = load(root / 'configs/agents/current.json')
+    system_path = args.system or root / profile['system_prompt']
     system = Path(system_path).read_text(encoding='utf-8')
     system_hash = hashlib.sha256(system.encode('utf-8')).hexdigest()
-    if args.system is None and system_hash != declared['sha256']:
-        raise ValueError('Archived prompt snapshot changed; create a new --system file')
-    if args.system is None and environment == profile['environment'] and system_hash != profile['system_sha256']:
-        raise ValueError('Pinned prompt snapshot changed; create a new --system file')
+    if args.system is None and system_hash != profile['system_sha256']:
+        raise ValueError('Current prompt checksum differs from the configuration; record the change and update its checksum')
     question = getattr(args, 'question', None)
     if question and args.task:
         raise ValueError('Use a question OR --task; do not score a new question with another task\'s answer')
@@ -98,7 +91,7 @@ def plan(args):
             'model': args.model or profile['model'], 'temperature': profile['temperature'],
             'think': profile['think'], 'num_ctx': profile['num_ctx'],
             'max_turns': args.max_turns if args.max_turns is not None else profile['max_turns'],
-            'environment': environment if args.system is None else 'custom-' + system_hash[:10],
+            'environment': 'current' if args.system is None else 'custom-' + system_hash[:10],
             'agent_profile': profile, 'runtime_version': RUNTIME_VERSION}
 
 
@@ -113,10 +106,6 @@ def execute(args):
 
     config = plan(args)
     catalogue = catalogue_from_system(config['system'])
-    if args.system is None and config['environment'] == config['agent_profile']['environment']:
-        sha = hashlib.sha256(json.dumps(catalogue, ensure_ascii=False, sort_keys=True, separators=(',', ':')).encode()).hexdigest()
-        if sha != config['agent_profile']['tool_catalogue_sha256']:
-            raise ValueError('Pinned tool descriptions or schemas changed; create a new research condition')
     if config['max_turns'] < 1:
         raise ValueError('max-turns must be >= 1')
     if args.dry_run:
@@ -166,8 +155,7 @@ def execute(args):
             main = RecordedClient(run.recorder, 'agent', **options, json_mode=False)
             aux = run.observe(RecordedClient(run.recorder, 'aux', **options, json_mode=config['agent_profile']['aux_json_mode']), 'aux')
             if config['mode'] == 'full':
-                archived_email_qa = args.system is None and config['environment'] in ('E0', 'E1', 'E2', 'E3', 'E4')
-                registry = build_registry(aux, corpus, config['system'], archived_email_qa=archived_email_qa)
+                registry = build_registry(aux, corpus, config['system'])
                 session = AgentSession(main, registry,
                                        AgentConfig(max_turns=config['max_turns'], token_budget=config['agent_profile']['token_budget'], aux_lm=aux))
                 session.messages[0]['content'] = config['system']

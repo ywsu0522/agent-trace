@@ -1,0 +1,7 @@
+{
+  "output": "Version 1 of the GridLens API will be shut down on **2026-12-31**.\n\nThe draft answer incorrectly cited a date of 2027-08-25 based on an assumption about the release cycle. The correct date is explicitly stated in the \"GridLens Ingestion API Specification\" (ID: `gridlens-api-spec`) under section **10.3**, which reads: \"API version 1 will be shut down on 2026-12-31.\" This information was also confirmed in the \"GridLens Release Notes, 2025 to 2026\" (ID: `gridlens-release-notes`), where the GridLens 4.8 release notes state that the shutdown date is now stated in the API specification.\n\n**Supporting Evidence:**\n*   **Document ID:** `gridlens-api-spec`, Line 103: \"API version 1 will be shut down on 2026-12-31.\"\n*   **Document ID:** `gridlens-release-notes`, Line 58: \"Note for Customer Success: the shutdown date for API version 1 is now stated in the API specification.\"",
+  "reused_classifications": 0,
+  "fresh_model_calls": 1,
+  "seconds": 100.177,
+  "error": null
+}

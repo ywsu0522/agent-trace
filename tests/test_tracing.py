@@ -209,7 +209,7 @@ def test_saved_request_replay_does_not_inherit_default_task_answer(tmp_path, cap
 def test_docs_only_catalogue_does_not_require_email_corpus(tmp_path, monkeypatch):
     from agent_trace.agent.protocol import render_tools
     from agent_trace.runtime import catalogue_from_system
-    original = (ROOT / 'configs/prompts/E4.system.txt').read_text(encoding='utf-8')
+    original = (ROOT / 'configs/prompts/system.txt').read_text(encoding='utf-8')
     schemas = [s for s in catalogue_from_system(original) if s['name'] == 'read_doc']
     system = tmp_path / 'docs-only.txt'
     system.write_text(render_tools(schemas), encoding='utf-8')
